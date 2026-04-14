@@ -1,0 +1,1626 @@
+[
+  {
+    "id": "T01",
+    "category": "futurex_direction",
+    "question": "Will NVIDIA stock be higher on March 16, 2026 than on March 09, 2026?",
+    "ground_truth": "No",
+    "scoring": "exact_match",
+    "abel_nodes": [
+      "NVDA.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "observe_NVDA.price": {
+          "ok": false,
+          "status_code": 400,
+          "message": "Prediction is temporarily unavailable for this node.",
+          "error": {
+            "code": "invalid_request",
+            "message": "Prediction is temporarily unavailable for this node.",
+            "details": {
+              "reason": "prediction_temporarily_unavailable",
+              "reason_display": "Prediction temporarily unavailable",
+              "reason_subtype": "insufficient_predictive_context",
+              "reason_subtype_display": "Insufficient predictive context",
+              "target_node": "NVDA.price",
+              "graph_version": "CausalNodeV3",
+              "model_version": "linear_rolling_w7500_s168"
+            }
+          },
+          "response_payload": {
+            "cap_version": "0.2.2",
+            "request_id": "2779d233-9037-4e70-8d78-d02bbc712294",
+            "verb": "extensions.abel.observe_predict_resolved_time",
+            "status": "error",
+            "error": {
+              "code": "invalid_request",
+              "message": "Prediction is temporarily unavailable for this node.",
+              "details": {
+                "reason": "prediction_temporarily_unavailable",
+                "reason_display": "Prediction temporarily unavailable",
+                "reason_subtype": "insufficient_predictive_context",
+                "reason_subtype_display": "Insufficient predictive context",
+                "target_node": "NVDA.price",
+                "graph_version": "CausalNodeV3",
+                "model_version": "linear_rolling_w7500_s168"
+              }
+            }
+          }
+        },
+        "neighbors_NVDA.price": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "c099ec30-b47b-44a1-9013-3a5c33fcad4c",
+          "verb": "graph.neighbors",
+          "status": "success",
+          "result": {
+            "reasoning_mode": "identified_causal_effect",
+            "identification_status": "identified",
+            "assumptions": [
+              "causal_sufficiency",
+              "faithfulness",
+              "no_instantaneous_effects",
+              "no_latent_confounders_addressed",
+              "abel_structural_summary_only",
+              "abel_hidden_field_policy"
+            ],
+            "node_id": "NVDA.price",
+            "scope": "parents",
+            "neighbors": [],
+            "total_candidate_count": 0,
+            "truncated": false,
+            "edge_semantics": "identified_causal_effect",
+            "display_name": "NVIDIA Corporation stock price"
+          },
+          "provenance": {
+            "algorithm": "primitive.explain",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 9,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        },
+        "consensus": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "6dbb4fde-3b23-4287-8a7e-0a4b0081a102",
+          "verb": "extensions.abel.discover_consensus",
+          "status": "success",
+          "result": {
+            "response_detail": "compact",
+            "items": []
+          },
+          "provenance": {
+            "algorithm": "extension.discovery.discover_consensus",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 2,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T02",
+    "category": "futurex_direction",
+    "question": "Will Bitcoin close above USD $100,000 on 31 January 2026?",
+    "ground_truth": "No",
+    "scoring": "exact_match",
+    "abel_nodes": [
+      "BTCUSD.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "observe_BTCUSD.price": {
+          "ok": false,
+          "status_code": 400,
+          "message": "Prediction is temporarily unavailable for this node.",
+          "error": {
+            "code": "invalid_request",
+            "message": "Prediction is temporarily unavailable for this node.",
+            "details": {
+              "reason": "prediction_temporarily_unavailable",
+              "reason_display": "Prediction temporarily unavailable",
+              "reason_subtype": "insufficient_predictive_context",
+              "reason_subtype_display": "Insufficient predictive context",
+              "target_node": "BTCUSD.price",
+              "graph_version": "CausalNodeV3",
+              "model_version": "linear_rolling_w7500_s168"
+            }
+          },
+          "response_payload": {
+            "cap_version": "0.2.2",
+            "request_id": "4654edee-ad7f-4362-b217-c2f349ad49fd",
+            "verb": "extensions.abel.observe_predict_resolved_time",
+            "status": "error",
+            "error": {
+              "code": "invalid_request",
+              "message": "Prediction is temporarily unavailable for this node.",
+              "details": {
+                "reason": "prediction_temporarily_unavailable",
+                "reason_display": "Prediction temporarily unavailable",
+                "reason_subtype": "insufficient_predictive_context",
+                "reason_subtype_display": "Insufficient predictive context",
+                "target_node": "BTCUSD.price",
+                "graph_version": "CausalNodeV3",
+                "model_version": "linear_rolling_w7500_s168"
+              }
+            }
+          }
+        },
+        "neighbors_BTCUSD.price": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "d353a8dc-3a5d-4c63-9379-3df569bac6c1",
+          "verb": "graph.neighbors",
+          "status": "success",
+          "result": {
+            "reasoning_mode": "identified_causal_effect",
+            "identification_status": "identified",
+            "assumptions": [
+              "causal_sufficiency",
+              "faithfulness",
+              "no_instantaneous_effects",
+              "no_latent_confounders_addressed",
+              "abel_structural_summary_only",
+              "abel_hidden_field_policy"
+            ],
+            "node_id": "BTCUSD.price",
+            "scope": "parents",
+            "neighbors": [],
+            "total_candidate_count": 0,
+            "truncated": false,
+            "edge_semantics": "identified_causal_effect",
+            "display_name": "Bitcoin price"
+          },
+          "provenance": {
+            "algorithm": "primitive.explain",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 9,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T03",
+    "category": "futurex_direction",
+    "question": "Bitcoin below $82K in January 2026?",
+    "ground_truth": "Yes",
+    "scoring": "exact_match",
+    "abel_nodes": [
+      "BTCUSD.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "observe_BTCUSD.price": {
+          "ok": false,
+          "status_code": 400,
+          "message": "Prediction is temporarily unavailable for this node.",
+          "error": {
+            "code": "invalid_request",
+            "message": "Prediction is temporarily unavailable for this node.",
+            "details": {
+              "reason": "prediction_temporarily_unavailable",
+              "reason_display": "Prediction temporarily unavailable",
+              "reason_subtype": "insufficient_predictive_context",
+              "reason_subtype_display": "Insufficient predictive context",
+              "target_node": "BTCUSD.price",
+              "graph_version": "CausalNodeV3",
+              "model_version": "linear_rolling_w7500_s168"
+            }
+          },
+          "response_payload": {
+            "cap_version": "0.2.2",
+            "request_id": "8d4428b4-a8f9-44ef-94a1-e1a748f1e65d",
+            "verb": "extensions.abel.observe_predict_resolved_time",
+            "status": "error",
+            "error": {
+              "code": "invalid_request",
+              "message": "Prediction is temporarily unavailable for this node.",
+              "details": {
+                "reason": "prediction_temporarily_unavailable",
+                "reason_display": "Prediction temporarily unavailable",
+                "reason_subtype": "insufficient_predictive_context",
+                "reason_subtype_display": "Insufficient predictive context",
+                "target_node": "BTCUSD.price",
+                "graph_version": "CausalNodeV3",
+                "model_version": "linear_rolling_w7500_s168"
+              }
+            }
+          }
+        },
+        "neighbors_BTCUSD.price": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "9b8e9f57-83b6-42bd-95e0-0864e9213156",
+          "verb": "graph.neighbors",
+          "status": "success",
+          "result": {
+            "reasoning_mode": "identified_causal_effect",
+            "identification_status": "identified",
+            "assumptions": [
+              "causal_sufficiency",
+              "faithfulness",
+              "no_instantaneous_effects",
+              "no_latent_confounders_addressed",
+              "abel_structural_summary_only",
+              "abel_hidden_field_policy"
+            ],
+            "node_id": "BTCUSD.price",
+            "scope": "parents",
+            "neighbors": [],
+            "total_candidate_count": 0,
+            "truncated": false,
+            "edge_semantics": "identified_causal_effect",
+            "display_name": "Bitcoin price"
+          },
+          "provenance": {
+            "algorithm": "primitive.explain",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 9,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        },
+        "fragility": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "b9909203-db56-40e8-b78c-29bf66629b11",
+          "verb": "extensions.abel.discover_fragility",
+          "status": "success",
+          "result": {
+            "response_detail": "compact",
+            "items": [],
+            "severity_level": "medium",
+            "is_ready": true,
+            "ready_ratio": 1.0,
+            "ready_nodes": 11339
+          },
+          "provenance": {
+            "algorithm": "extension.discovery.discover_fragility",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 42,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T04",
+    "category": "futurex_direction",
+    "question": "Will the US PCE annual inflation be greater than 2.9% in January 2026?",
+    "ground_truth": "No",
+    "scoring": "exact_match",
+    "abel_nodes": [
+      "PCE.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "observe_PCE.price": {
+          "ok": false,
+          "status_code": 404,
+          "message": "Target node not found in graph CausalNodeV3: PCE.price",
+          "error": {
+            "code": "node_not_found",
+            "message": "Target node not found in graph CausalNodeV3: PCE.price",
+            "details": {}
+          },
+          "response_payload": {
+            "cap_version": "0.2.2",
+            "request_id": "981ceffe-b2ce-4fd5-ad66-1cd423a2579c",
+            "verb": "extensions.abel.observe_predict_resolved_time",
+            "status": "error",
+            "error": {
+              "code": "node_not_found",
+              "message": "Target node not found in graph CausalNodeV3: PCE.price",
+              "details": {}
+            }
+          }
+        },
+        "neighbors_PCE.price": {
+          "ok": false,
+          "status_code": 404,
+          "message": "Target node not found in graph CausalNodeV3: PCE.price",
+          "error": {
+            "code": "node_not_found",
+            "message": "Target node not found in graph CausalNodeV3: PCE.price",
+            "details": {}
+          },
+          "response_payload": {
+            "cap_version": "0.2.2",
+            "request_id": "314d2b4b-be29-4e36-b942-c39926fd13ca",
+            "verb": "graph.neighbors",
+            "status": "error",
+            "error": {
+              "code": "node_not_found",
+              "message": "Target node not found in graph CausalNodeV3: PCE.price",
+              "details": {}
+            }
+          }
+        }
+      },
+      "has_signal": false
+    }
+  },
+  {
+    "id": "T05",
+    "category": "futurex_direction",
+    "question": "Stock prices (AAPL, NVDA, MSFT, GOOG, AMZN, TSLA) on March 13: higher than on March 6, 2026?",
+    "ground_truth": "Yes",
+    "scoring": "exact_match",
+    "abel_nodes": [
+      "AAPL.price",
+      "NVDA.price",
+      "TSLA.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "observe_AAPL.price": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "3667a447-f4e0-4e62-a5d0-20dbbf1c7a17",
+          "verb": "extensions.abel.observe_predict_resolved_time",
+          "status": "success",
+          "result": {
+            "target_node": "AAPL.price",
+            "target_display_name": "Apple Inc. stock price",
+            "resolved_target_time": "2026-04-18T14:00:00Z",
+            "prediction": 0.0025,
+            "drivers": [
+              "PRIMEUSD.price",
+              "AREB.price"
+            ],
+            "driver_nodes": [
+              {
+                "node_id": "PRIMEUSD.price",
+                "display_name": "Echelon Prime price"
+              },
+              {
+                "node_id": "AREB.price",
+                "display_name": "American Rebel Holdings, Inc. stock price"
+              }
+            ]
+          },
+          "provenance": {
+            "algorithm": "primitive.predict",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 13,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        },
+        "observe_NVDA.price": {
+          "ok": false,
+          "status_code": 400,
+          "message": "Prediction is temporarily unavailable for this node.",
+          "error": {
+            "code": "invalid_request",
+            "message": "Prediction is temporarily unavailable for this node.",
+            "details": {
+              "reason": "prediction_temporarily_unavailable",
+              "reason_display": "Prediction temporarily unavailable",
+              "reason_subtype": "insufficient_predictive_context",
+              "reason_subtype_display": "Insufficient predictive context",
+              "target_node": "NVDA.price",
+              "graph_version": "CausalNodeV3",
+              "model_version": "linear_rolling_w7500_s168"
+            }
+          },
+          "response_payload": {
+            "cap_version": "0.2.2",
+            "request_id": "a5a8c2c1-696d-4a89-978f-d450c3c0501b",
+            "verb": "extensions.abel.observe_predict_resolved_time",
+            "status": "error",
+            "error": {
+              "code": "invalid_request",
+              "message": "Prediction is temporarily unavailable for this node.",
+              "details": {
+                "reason": "prediction_temporarily_unavailable",
+                "reason_display": "Prediction temporarily unavailable",
+                "reason_subtype": "insufficient_predictive_context",
+                "reason_subtype_display": "Insufficient predictive context",
+                "target_node": "NVDA.price",
+                "graph_version": "CausalNodeV3",
+                "model_version": "linear_rolling_w7500_s168"
+              }
+            }
+          }
+        },
+        "observe_TSLA.price": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "b9ee303e-39ca-474e-8c6a-53df05533536",
+          "verb": "extensions.abel.observe_predict_resolved_time",
+          "status": "success",
+          "result": {
+            "target_node": "TSLA.price",
+            "target_display_name": "Tesla, Inc. stock price",
+            "resolved_target_time": "2026-04-25T20:00:00Z",
+            "prediction": 0.0105,
+            "drivers": [
+              "SFIUSD.price",
+              "IMOUSD.price"
+            ],
+            "driver_nodes": [
+              {
+                "node_id": "SFIUSD.price",
+                "display_name": "saffron.finance price"
+              },
+              {
+                "node_id": "IMOUSD.price",
+                "display_name": "IMO price"
+              }
+            ]
+          },
+          "provenance": {
+            "algorithm": "primitive.predict",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 15,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        },
+        "consensus": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "c7921687-47ad-4128-b0aa-4325492861bf",
+          "verb": "extensions.abel.discover_consensus",
+          "status": "success",
+          "result": {
+            "response_detail": "compact",
+            "items": []
+          },
+          "provenance": {
+            "algorithm": "extension.discovery.discover_consensus",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 2,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T06",
+    "category": "futurex_direction",
+    "question": "China's monthly consumer inflation (CPI) greater than 0.2% in February 2026?",
+    "ground_truth": "Yes",
+    "scoring": "exact_match",
+    "abel_nodes": [],
+    "abel_findings": {
+      "ops_results": {},
+      "has_signal": false
+    }
+  },
+  {
+    "id": "T07",
+    "category": "futurex_direction",
+    "question": "Q1 2026 S&P 500 total return: positive or negative?",
+    "ground_truth": "negative",
+    "scoring": "exact_match",
+    "abel_nodes": [
+      "SPX.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "observe_SPX.price": {
+          "ok": false,
+          "status_code": 404,
+          "message": "Target node not found in graph CausalNodeV3: SPX.price",
+          "error": {
+            "code": "node_not_found",
+            "message": "Target node not found in graph CausalNodeV3: SPX.price",
+            "details": {}
+          },
+          "response_payload": {
+            "cap_version": "0.2.2",
+            "request_id": "fa487ead-12a2-4342-a0bb-73ba3f8bab5c",
+            "verb": "extensions.abel.observe_predict_resolved_time",
+            "status": "error",
+            "error": {
+              "code": "node_not_found",
+              "message": "Target node not found in graph CausalNodeV3: SPX.price",
+              "details": {}
+            }
+          }
+        },
+        "neighbors_SPX.price": {
+          "ok": false,
+          "status_code": 404,
+          "message": "Target node not found in graph CausalNodeV3: SPX.price",
+          "error": {
+            "code": "node_not_found",
+            "message": "Target node not found in graph CausalNodeV3: SPX.price",
+            "details": {}
+          },
+          "response_payload": {
+            "cap_version": "0.2.2",
+            "request_id": "dd62c16b-7bb6-448f-b1fe-447cce88b3b3",
+            "verb": "graph.neighbors",
+            "status": "error",
+            "error": {
+              "code": "node_not_found",
+              "message": "Target node not found in graph CausalNodeV3: SPX.price",
+              "details": {}
+            }
+          }
+        },
+        "fragility": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "7e088a93-3947-46bf-bd10-9c7b07521b31",
+          "verb": "extensions.abel.discover_fragility",
+          "status": "success",
+          "result": {
+            "response_detail": "compact",
+            "items": [],
+            "severity_level": "medium",
+            "is_ready": true,
+            "ready_ratio": 1.0,
+            "ready_nodes": 11339
+          },
+          "provenance": {
+            "algorithm": "extension.discovery.discover_fragility",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 2,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T08",
+    "category": "causal_transmission",
+    "question": "Does a shock to the 10-year Treasury yield causally propagate to NVIDIA stock price? If so, through what mechanism and with what sign?",
+    "ground_truth": "negative_transmission",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "treasuryRateYear10",
+      "NVDA.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "paths_treasuryRateYear10_NVDA.price": {
+          "ok": false,
+          "status_code": -1,
+          "message": "Input does not look like a ticker or public node id. Map the proxy phrase to a ticker first, then probe '<ticker>.price' or '<ticker>.volume'.",
+          "error": null,
+          "response_payload": {}
+        },
+        "intervene_treasuryRateYear10_NVDA.price": {
+          "ok": false,
+          "status_code": 400,
+          "message": "treatment_node must use Abel public node form '<ticker>.price' or '<ticker>.volume'.",
+          "error": {
+            "code": "invalid_request",
+            "message": "treatment_node must use Abel public node form '<ticker>.price' or '<ticker>.volume'.",
+            "details": {
+              "supported_graph_id": "abel-main",
+              "supported_graph_versions": [
+                "CausalNodeV2",
+                "CausalNodeV3"
+              ],
+              "supported_node_suffixes": [
+                "close",
+                "volume"
+              ]
+            }
+          },
+          "response_payload": {
+            "cap_version": "0.2.2",
+            "request_id": "46802ded-4ca7-4385-89b2-7d63a3c0a962",
+            "verb": "extensions.abel.intervene_time_lag",
+            "status": "error",
+            "error": {
+              "code": "invalid_request",
+              "message": "treatment_node must use Abel public node form '<ticker>.price' or '<ticker>.volume'.",
+              "details": {
+                "supported_graph_id": "abel-main",
+                "supported_graph_versions": [
+                  "CausalNodeV2",
+                  "CausalNodeV3"
+                ],
+                "supported_node_suffixes": [
+                  "close",
+                  "volume"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "has_signal": false
+    }
+  },
+  {
+    "id": "T09",
+    "category": "causal_transmission",
+    "question": "What is the causal relationship between crude oil prices and airline stock performance? What is the transmission mechanism?",
+    "ground_truth": "negative_transmission",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "CL.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "neighbors_CL.price": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "28cc6020-e84c-4d69-8ffe-a1c9f549e109",
+          "verb": "graph.neighbors",
+          "status": "success",
+          "result": {
+            "reasoning_mode": "identified_causal_effect",
+            "identification_status": "identified",
+            "assumptions": [
+              "causal_sufficiency",
+              "faithfulness",
+              "no_instantaneous_effects",
+              "no_latent_confounders_addressed",
+              "abel_structural_summary_only",
+              "abel_hidden_field_policy"
+            ],
+            "node_id": "CL.price",
+            "scope": "parents",
+            "neighbors": [
+              {
+                "node_id": "ECCX.price",
+                "roles": [
+                  "parent"
+                ],
+                "display_name": "Eagle Point Credit Company Inc. 6.6875% NT 28 stock price"
+              },
+              {
+                "node_id": "IMOUSD.price",
+                "roles": [
+                  "parent"
+                ],
+                "display_name": "IMO price"
+              },
+              {
+                "node_id": "IZM.price",
+                "roles": [
+                  "parent"
+                ],
+                "display_name": "ICZOOM Group Inc. stock price"
+              },
+              {
+                "node_id": "MOBUSD.price",
+                "roles": [
+                  "parent"
+                ],
+                "display_name": "MobileCoin price"
+              },
+              {
+                "node_id": "PRIMEUSD.price",
+                "roles": [
+                  "parent"
+                ],
+                "display_name": "Echelon Prime price"
+              }
+            ],
+            "total_candidate_count": 6,
+            "truncated": true,
+            "edge_semantics": "identified_causal_effect",
+            "display_name": "Colgate-Palmolive Company stock price"
+          },
+          "provenance": {
+            "algorithm": "primitive.explain",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 15,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T10",
+    "category": "causal_transmission",
+    "question": "If NVIDIA stock price drops 10%, what happens to AMD stock price? Is there causal transmission or just correlation?",
+    "ground_truth": "positive_comovement",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "NVDA.price",
+      "AMD.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "paths_NVDA.price_AMD.price": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "d0849dd3-50ba-4a83-a083-fd00fc5f45b7",
+          "verb": "graph.paths",
+          "status": "success",
+          "result": {
+            "reasoning_mode": "structural_semantics",
+            "identification_status": "not_applicable",
+            "assumptions": [
+              "causal_sufficiency",
+              "faithfulness",
+              "no_instantaneous_effects",
+              "no_latent_confounders_addressed",
+              "abel_structural_summary_only",
+              "abel_hidden_field_policy"
+            ],
+            "source_node_id": "NVDA.price",
+            "target_node_id": "AMD.price",
+            "connected": false,
+            "path_count": 0,
+            "paths": [],
+            "source_display_name": "NVIDIA Corporation stock price",
+            "target_display_name": "Advanced Micro Devices, Inc. stock price"
+          },
+          "provenance": {
+            "algorithm": "PCMCI",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 11,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        },
+        "intervene_NVDA.price_AMD.price": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "5c922f4f-3f6e-4c2b-b389-15229355fe44",
+          "verb": "extensions.abel.intervene_time_lag",
+          "status": "success",
+          "result": {
+            "treatment_node": "NVDA.price",
+            "treatment_display_name": "NVIDIA Corporation stock price",
+            "treatment_value": 0.05,
+            "model": "linear",
+            "delta_unit": "return",
+            "horizon_steps": 24,
+            "outcome_node": "AMD.price",
+            "outcome_display_name": "Advanced Micro Devices, Inc. stock price",
+            "effect_support": "no_structural_path",
+            "reachable": false,
+            "path_count": 0,
+            "reasoning_mode": "graph_propagation",
+            "total_events": 1,
+            "identification_status": "not_formally_identified",
+            "assumptions": [
+              "causal_sufficiency",
+              "faithfulness",
+              "no_instantaneous_effects",
+              "linearity",
+              "no_latent_confounders_addressed",
+              "abel_graph_propagation_approximation",
+              "abel_single_pulse_intervention",
+              "abel_hidden_field_policy"
+            ]
+          },
+          "provenance": {
+            "algorithm": "PCMCI",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 7,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T11",
+    "category": "causal_transmission",
+    "question": "What drives Tesla's stock price? List the top causal drivers from the graph.",
+    "ground_truth": "structural_drivers",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "TSLA.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "neighbors_TSLA.price": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "7c3ee42c-2cb9-42e8-8db8-35ddb58f8c5d",
+          "verb": "graph.neighbors",
+          "status": "success",
+          "result": {
+            "reasoning_mode": "identified_causal_effect",
+            "identification_status": "identified",
+            "assumptions": [
+              "causal_sufficiency",
+              "faithfulness",
+              "no_instantaneous_effects",
+              "no_latent_confounders_addressed",
+              "abel_structural_summary_only",
+              "abel_hidden_field_policy"
+            ],
+            "node_id": "TSLA.price",
+            "scope": "parents",
+            "neighbors": [
+              {
+                "node_id": "IMOUSD.price",
+                "roles": [
+                  "parent"
+                ],
+                "display_name": "IMO price"
+              },
+              {
+                "node_id": "SFIUSD.price",
+                "roles": [
+                  "parent"
+                ],
+                "display_name": "saffron.finance price"
+              }
+            ],
+            "total_candidate_count": 2,
+            "truncated": false,
+            "edge_semantics": "identified_causal_effect",
+            "display_name": "Tesla, Inc. stock price"
+          },
+          "provenance": {
+            "algorithm": "primitive.explain",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 15,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        },
+        "consensus": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "ab7b4b6f-c1f7-4518-91e5-cf1812611122",
+          "verb": "extensions.abel.discover_consensus",
+          "status": "success",
+          "result": {
+            "response_detail": "compact",
+            "items": []
+          },
+          "provenance": {
+            "algorithm": "extension.discovery.discover_consensus",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 2,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T12",
+    "category": "causal_transmission",
+    "question": "Is there a causal path from Bitcoin price to Coinbase stock? What is the transmission mechanism?",
+    "ground_truth": "positive_transmission",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "BTCUSD.price",
+      "COIN.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "paths_BTCUSD.price_COIN.price": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "9996c80a-64d3-497e-994f-9b7b9927f2e8",
+          "verb": "graph.paths",
+          "status": "success",
+          "result": {
+            "reasoning_mode": "structural_semantics",
+            "identification_status": "not_applicable",
+            "assumptions": [
+              "causal_sufficiency",
+              "faithfulness",
+              "no_instantaneous_effects",
+              "no_latent_confounders_addressed",
+              "abel_structural_summary_only",
+              "abel_hidden_field_policy"
+            ],
+            "source_node_id": "BTCUSD.price",
+            "target_node_id": "COIN.price",
+            "connected": false,
+            "path_count": 0,
+            "paths": [],
+            "source_display_name": "Bitcoin price",
+            "target_display_name": "Coinbase Global, Inc. stock price"
+          },
+          "provenance": {
+            "algorithm": "PCMCI",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 11,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        },
+        "intervene_BTCUSD.price_COIN.price": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "01798751-7c1d-4a25-860f-54fa0b974dcb",
+          "verb": "extensions.abel.intervene_time_lag",
+          "status": "success",
+          "result": {
+            "treatment_node": "BTCUSD.price",
+            "treatment_display_name": "Bitcoin price",
+            "treatment_value": 0.05,
+            "model": "linear",
+            "delta_unit": "return",
+            "horizon_steps": 24,
+            "outcome_node": "COIN.price",
+            "outcome_display_name": "Coinbase Global, Inc. stock price",
+            "effect_support": "no_structural_path",
+            "reachable": false,
+            "path_count": 0,
+            "reasoning_mode": "graph_propagation",
+            "total_events": 1,
+            "identification_status": "not_formally_identified",
+            "assumptions": [
+              "causal_sufficiency",
+              "faithfulness",
+              "no_instantaneous_effects",
+              "linearity",
+              "no_latent_confounders_addressed",
+              "abel_graph_propagation_approximation",
+              "abel_single_pulse_intervention",
+              "abel_hidden_field_policy"
+            ]
+          },
+          "provenance": {
+            "algorithm": "PCMCI",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 6,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T13",
+    "category": "causal_transmission",
+    "question": "How does the 10-year Treasury yield affect real estate stocks (e.g., SLG, WELL)? What is the causal direction?",
+    "ground_truth": "negative_transmission",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "treasuryRateYear10",
+      "SLG.price",
+      "WELL.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "paths_treasuryRateYear10_SLG.price": {
+          "ok": false,
+          "status_code": -1,
+          "message": "Input does not look like a ticker or public node id. Map the proxy phrase to a ticker first, then probe '<ticker>.price' or '<ticker>.volume'.",
+          "error": null,
+          "response_payload": {}
+        },
+        "intervene_treasuryRateYear10_SLG.price": {
+          "ok": false,
+          "status_code": 400,
+          "message": "treatment_node must use Abel public node form '<ticker>.price' or '<ticker>.volume'.",
+          "error": {
+            "code": "invalid_request",
+            "message": "treatment_node must use Abel public node form '<ticker>.price' or '<ticker>.volume'.",
+            "details": {
+              "supported_graph_id": "abel-main",
+              "supported_graph_versions": [
+                "CausalNodeV2",
+                "CausalNodeV3"
+              ],
+              "supported_node_suffixes": [
+                "close",
+                "volume"
+              ]
+            }
+          },
+          "response_payload": {
+            "cap_version": "0.2.2",
+            "request_id": "bcba74fe-ac32-4707-bbf1-51953a635f46",
+            "verb": "extensions.abel.intervene_time_lag",
+            "status": "error",
+            "error": {
+              "code": "invalid_request",
+              "message": "treatment_node must use Abel public node form '<ticker>.price' or '<ticker>.volume'.",
+              "details": {
+                "supported_graph_id": "abel-main",
+                "supported_graph_versions": [
+                  "CausalNodeV2",
+                  "CausalNodeV3"
+                ],
+                "supported_node_suffixes": [
+                  "close",
+                  "volume"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "has_signal": false
+    }
+  },
+  {
+    "id": "T14",
+    "category": "intervention",
+    "question": "If the 10-year Treasury rate increases by 50bps, what is the estimated effect on Apple stock price over a 1-month horizon?",
+    "ground_truth": "negative_effect",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "treasuryRateYear10",
+      "AAPL.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "intervene_treasuryRateYear10_AAPL.price": {
+          "ok": false,
+          "status_code": 422,
+          "message": "CAP request validation failed.",
+          "error": {
+            "code": "invalid_request",
+            "message": "CAP request validation failed.",
+            "details": {
+              "errors": [
+                {
+                  "type": "less_than_equal",
+                  "loc": [
+                    "params",
+                    "horizon_steps"
+                  ],
+                  "msg": "Input should be less than or equal to 168",
+                  "input": 170,
+                  "ctx": {
+                    "le": 168
+                  },
+                  "url": "https://errors.pydantic.dev/2.12/v/less_than_equal"
+                }
+              ]
+            }
+          },
+          "response_payload": {
+            "cap_version": "0.2.2",
+            "request_id": "aee85ac0-3559-4e8d-aa9c-689344b4d94e",
+            "verb": "extensions.abel.intervene_time_lag",
+            "status": "error",
+            "error": {
+              "code": "invalid_request",
+              "message": "CAP request validation failed.",
+              "details": {
+                "errors": [
+                  {
+                    "type": "less_than_equal",
+                    "loc": [
+                      "params",
+                      "horizon_steps"
+                    ],
+                    "msg": "Input should be less than or equal to 168",
+                    "input": 170,
+                    "ctx": {
+                      "le": 168
+                    },
+                    "url": "https://errors.pydantic.dev/2.12/v/less_than_equal"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "has_signal": false
+    }
+  },
+  {
+    "id": "T15",
+    "category": "intervention",
+    "question": "If Bitcoin drops 20%, what is the propagated effect on Ethereum price? What is the time lag?",
+    "ground_truth": "negative_effect",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "BTCUSD.price",
+      "ETHUSD.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "intervene_BTCUSD.price_ETHUSD.price": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "1c7c4f13-2c7e-42c6-b34e-f5366494e9f2",
+          "verb": "extensions.abel.intervene_time_lag",
+          "status": "success",
+          "result": {
+            "treatment_node": "BTCUSD.price",
+            "treatment_display_name": "Bitcoin price",
+            "treatment_value": -0.2,
+            "model": "linear",
+            "delta_unit": "return",
+            "horizon_steps": 42,
+            "outcome_node": "ETHUSD.price",
+            "outcome_display_name": "Ethereum price",
+            "effect_support": "no_structural_path",
+            "reachable": false,
+            "path_count": 0,
+            "reasoning_mode": "graph_propagation",
+            "total_events": 1,
+            "identification_status": "not_formally_identified",
+            "assumptions": [
+              "causal_sufficiency",
+              "faithfulness",
+              "no_instantaneous_effects",
+              "linearity",
+              "no_latent_confounders_addressed",
+              "abel_graph_propagation_approximation",
+              "abel_single_pulse_intervention",
+              "abel_hidden_field_policy"
+            ]
+          },
+          "provenance": {
+            "algorithm": "PCMCI",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 7,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T16",
+    "category": "intervention",
+    "question": "If crude oil prices spike 15%, what downstream effects propagate to transportation and industrial stocks?",
+    "ground_truth": "negative_downstream",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "CL.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "neighbors_CL.price": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "071c9558-1ffb-41e1-926c-97a5bdfd38aa",
+          "verb": "graph.neighbors",
+          "status": "success",
+          "result": {
+            "reasoning_mode": "identified_causal_effect",
+            "identification_status": "identified",
+            "assumptions": [
+              "causal_sufficiency",
+              "faithfulness",
+              "no_instantaneous_effects",
+              "no_latent_confounders_addressed",
+              "abel_structural_summary_only",
+              "abel_hidden_field_policy"
+            ],
+            "node_id": "CL.price",
+            "scope": "parents",
+            "neighbors": [
+              {
+                "node_id": "ECCX.price",
+                "roles": [
+                  "parent"
+                ],
+                "display_name": "Eagle Point Credit Company Inc. 6.6875% NT 28 stock price"
+              },
+              {
+                "node_id": "IMOUSD.price",
+                "roles": [
+                  "parent"
+                ],
+                "display_name": "IMO price"
+              },
+              {
+                "node_id": "IZM.price",
+                "roles": [
+                  "parent"
+                ],
+                "display_name": "ICZOOM Group Inc. stock price"
+              },
+              {
+                "node_id": "MOBUSD.price",
+                "roles": [
+                  "parent"
+                ],
+                "display_name": "MobileCoin price"
+              },
+              {
+                "node_id": "PRIMEUSD.price",
+                "roles": [
+                  "parent"
+                ],
+                "display_name": "Echelon Prime price"
+              }
+            ],
+            "total_candidate_count": 6,
+            "truncated": true,
+            "edge_semantics": "identified_causal_effect",
+            "display_name": "Colgate-Palmolive Company stock price"
+          },
+          "provenance": {
+            "algorithm": "primitive.explain",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 13,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T17",
+    "category": "intervention",
+    "question": "What is the fragility profile of semiconductor stocks? Which nodes are single points of failure?",
+    "ground_truth": "fragility_analysis",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "NVDA.price",
+      "AMD.price",
+      "INTC.price",
+      "QCOM.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "fragility": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "60fb630e-e52d-4916-b01f-10002f33c245",
+          "verb": "extensions.abel.discover_fragility",
+          "status": "success",
+          "result": {
+            "response_detail": "compact",
+            "items": [],
+            "severity_level": "medium",
+            "is_ready": true,
+            "ready_ratio": 1.0,
+            "ready_nodes": 11339
+          },
+          "provenance": {
+            "algorithm": "extension.discovery.discover_fragility",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 2,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        },
+        "consensus": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "49e63fa4-b50b-44fa-b95c-7a2eed5993b2",
+          "verb": "extensions.abel.discover_consensus",
+          "status": "success",
+          "result": {
+            "response_detail": "compact",
+            "items": []
+          },
+          "provenance": {
+            "algorithm": "extension.discovery.discover_consensus",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 2,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T18",
+    "category": "intervention",
+    "question": "If we intervene to increase the unemployment rate, what is the predicted effect on consumer discretionary stocks?",
+    "ground_truth": "negative_effect",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "unemploymentRate"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "neighbors_unemploymentRate": {
+          "ok": false,
+          "status_code": -1,
+          "message": "Input does not look like a ticker or public node id. Map the proxy phrase to a ticker first, then probe '<ticker>.price' or '<ticker>.volume'.",
+          "error": null,
+          "response_payload": {}
+        }
+      },
+      "has_signal": false
+    }
+  },
+  {
+    "id": "T19",
+    "category": "structural_discovery",
+    "question": "What are the consensus downstream effects of a simultaneous move in NVIDIA and AMD? Which sectors get pulled along?",
+    "ground_truth": "consensus_sectors",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "NVDA.price",
+      "AMD.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "consensus": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "861d294e-7b61-4954-8c3a-b7e1ac950016",
+          "verb": "extensions.abel.discover_consensus",
+          "status": "success",
+          "result": {
+            "response_detail": "compact",
+            "items": []
+          },
+          "provenance": {
+            "algorithm": "extension.discovery.discover_consensus",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 2,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T20",
+    "category": "structural_discovery",
+    "question": "What are the contrarian dynamics around Bitcoin? What nodes move OPPOSITE to BTC?",
+    "ground_truth": "deconsensus_nodes",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "BTCUSD.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "deconsensus": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "e45d513c-ef2d-483b-bb4b-7e4791be4c62",
+          "verb": "extensions.abel.discover_deconsensus",
+          "status": "success",
+          "result": {
+            "response_detail": "compact",
+            "items": [],
+            "contrast_level": "medium"
+          },
+          "provenance": {
+            "algorithm": "extension.discovery.discover_deconsensus",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 4,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T21",
+    "category": "structural_discovery",
+    "question": "Map the Markov blanket of the 10-year Treasury rate. What is its complete informational neighborhood?",
+    "ground_truth": "markov_blanket",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "treasuryRateYear10"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "markov_blanket": {
+          "ok": true,
+          "status_code": 200,
+          "cap_version": "0.2.2",
+          "request_id": "0405aa7d-7b3a-4ccc-8219-9f39f86fe3a1",
+          "verb": "graph.markov_blanket",
+          "status": "success",
+          "result": {
+            "reasoning_mode": "structural_semantics",
+            "identification_status": "not_applicable",
+            "assumptions": [
+              "causal_sufficiency",
+              "faithfulness",
+              "no_instantaneous_effects",
+              "no_latent_confounders_addressed",
+              "abel_structural_summary_only",
+              "abel_hidden_field_policy"
+            ],
+            "node_id": "treasuryRateYear10",
+            "neighbors": [
+              {
+                "node_id": "15YearFixedRateMortgageAverage",
+                "roles": [
+                  "child",
+                  "parent",
+                  "spouse"
+                ],
+                "display_name": "15-Year Fixed Mortgage Rate"
+              },
+              {
+                "node_id": "30YearFixedRateMortgageAverage",
+                "roles": [
+                  "child",
+                  "parent",
+                  "spouse"
+                ],
+                "display_name": "30-Year Fixed Mortgage Rate"
+              },
+              {
+                "node_id": "3MonthOr90DayRatesAndYieldsCertificatesOfDeposit",
+                "roles": [
+                  "parent",
+                  "spouse"
+                ],
+                "display_name": "3-Month Certificate of Deposit Yield"
+              },
+              {
+                "node_id": "CPI",
+                "roles": [
+                  "child",
+                  "parent",
+                  "spouse"
+                ],
+                "display_name": "Consumer Price Index"
+              },
+              {
+                "node_id": "GDP",
+                "roles": [
+                  "parent",
+                  "spouse"
+                ],
+                "display_name": "Gross Domestic Product"
+              },
+              {
+                "node_id": "commercialBankInterestRateOnCreditCardPlansAllAccounts",
+                "roles": [
+                  "child",
+                  "parent",
+                  "spouse"
+                ],
+                "display_name": "Credit Card Interest Rate"
+              },
+              {
+                "node_id": "consumerSentiment",
+                "roles": [
+                  "child",
+                  "parent",
+                  "spouse"
+                ],
+                "display_name": "Consumer Sentiment"
+              },
+              {
+                "node_id": "durableGoods",
+                "roles": [
+                  "child",
+                  "parent",
+                  "spouse"
+                ],
+                "display_name": "Durable Goods"
+              },
+              {
+                "node_id": "federalFunds",
+                "roles": [
+                  "child",
+                  "parent",
+                  "spouse"
+                ],
+                "display_name": "Federal Funds Rate"
+              },
+              {
+                "node_id": "industrialProductionTotalIndex",
+                "roles": [
+                  "child",
+                  "parent",
+                  "spouse"
+                ],
+                "display_name": "Industrial Production Index"
+              }
+            ],
+            "total_candidate_count": 20,
+            "truncated": true,
+            "edge_semantics": "markov_blanket_membership",
+            "display_name": "10-Year Treasury Rate"
+          },
+          "provenance": {
+            "algorithm": "primitive.explain",
+            "graph_version": "CausalNodeV3",
+            "computation_time_ms": 40,
+            "server_name": "abel-graph-computer",
+            "server_version": "0.1.0",
+            "cap_spec_version": "0.2.2"
+          }
+        },
+        "neighbors_treasuryRateYear10": {
+          "ok": false,
+          "status_code": -1,
+          "message": "Input does not look like a ticker or public node id. Map the proxy phrase to a ticker first, then probe '<ticker>.price' or '<ticker>.volume'.",
+          "error": null,
+          "response_payload": {}
+        }
+      },
+      "has_signal": true
+    }
+  },
+  {
+    "id": "T22",
+    "category": "structural_discovery",
+    "question": "Find the causal path from the unemployment rate to tech stock prices. How many hops? What are the intermediate nodes?",
+    "ground_truth": "causal_path",
+    "scoring": "causal_rubric",
+    "abel_nodes": [
+      "unemploymentRate",
+      "NVDA.price"
+    ],
+    "abel_findings": {
+      "ops_results": {
+        "paths_unemploymentRate_NVDA.price": {
+          "ok": false,
+          "status_code": -1,
+          "message": "Input does not look like a ticker or public node id. Map the proxy phrase to a ticker first, then probe '<ticker>.price' or '<ticker>.volume'.",
+          "error": null,
+          "response_payload": {}
+        }
+      },
+      "has_signal": false
+    }
+  }
+]

@@ -1,0 +1,210 @@
+{
+  "benchmark_name": "Abel Causal Advantage Benchmark (ACAB)",
+  "version": "0.1.0",
+  "created": "2026-04-13",
+  "description": "A benchmark of questions where Claude Code + causal-abel skill significantly outperforms Claude Code alone. Derived from empirical A/B testing against FutureX-Past and custom causal reasoning questions. Focuses on structural causal discovery, intervention analysis, and causal transmission where Abel's graph provides data-backed evidence unavailable to pure LLM reasoning.",
+  "methodology": {
+    "source_benchmarks": ["FutureX-Past (Apache 2.0)", "EconCausal (CC-BY-NC-4.0)", "CLadder (MIT)", "Custom causal reasoning questions"],
+    "evaluation_method": "A/B comparison: same LLM (Claude Opus 4.6) with vs without Abel skill",
+    "scoring": {
+      "exact_match": "Binary questions: 1 (correct) or 0 (wrong)",
+      "causal_rubric": "0-3 scale: 0=no insight, 1=directionally correct but shallow, 2=correct mechanism with structural evidence, 3=complete causal chain with graph-backed evidence"
+    },
+    "selection_criteria": "Abel-augmented score > Base score by at least 1 point",
+    "total_tested": 37,
+    "total_selected": 8,
+    "base_total_score": "23/52 (44.2%)",
+    "abel_total_score": "33/52 (63.5%)",
+    "net_improvement": "+19.2 percentage points"
+  },
+  "summary_stats": {
+    "by_category": {
+      "futurex_direction": {"tested": 7, "selected": 0, "base_pct": 42.9, "abel_pct": 42.9, "delta": 0},
+      "causal_transmission": {"tested": 6, "selected": 3, "base_pct": 50.0, "abel_pct": 61.1, "delta": 11.1},
+      "intervention": {"tested": 5, "selected": 2, "base_pct": 40.0, "abel_pct": 53.3, "delta": 13.3},
+      "structural_discovery": {"tested": 4, "selected": 3, "base_pct": 41.7, "abel_pct": 91.7, "delta": 50.0}
+    },
+    "strongest_abel_capabilities": [
+      "Markov blanket analysis (complete informational neighborhood)",
+      "Consensus discovery (downstream propagation mapping)",
+      "Deconsensus discovery (contrarian dynamics identification)",
+      "Fragility analysis (single points of failure)",
+      "Structural 'no path' findings (distinguishing causation from correlation)"
+    ],
+    "abel_limitations": [
+      "Macro node format incompatibility with paths/intervene API (treasuryRateYear10, unemploymentRate)",
+      "No crypto-to-crypto structural paths (BTC→ETH, BTC→COIN missing)",
+      "Observe predictions temporarily unavailable on weekends/holidays",
+      "Micro-economic academic causal relationships not in graph (EconCausal benchmark: 0/15 coverage)"
+    ]
+  },
+  "questions": [
+    {
+      "id": "ACAB-001",
+      "category": "causal_transmission",
+      "source": "custom",
+      "question": "What is the causal relationship between crude oil prices and airline stock performance? What is the transmission mechanism?",
+      "expected_answer": "Negative transmission: higher oil prices → higher jet fuel costs → lower airline profit margins → lower airline stock prices",
+      "ground_truth_type": "causal_direction",
+      "ground_truth": "negative_transmission",
+      "abel_advantage": 1,
+      "abel_signal": "medium",
+      "why_abel_helps": "Abel identifies CL.price structural neighborhood including specific energy/shipping/logistics nodes (IMO, Eagle Point Credit, ICZOOM), providing data-backed evidence of the oil supply chain transmission network. Base reasoning gives correct direction but no structural evidence.",
+      "required_abel_ops": ["query_node", "neighbors(CL.price, parents)", "node_description"],
+      "scoring": "causal_rubric",
+      "base_expected_score": 1,
+      "abel_expected_score": 2,
+      "difficulty": "medium"
+    },
+    {
+      "id": "ACAB-002",
+      "category": "causal_transmission",
+      "source": "custom",
+      "question": "If NVIDIA stock price drops 10%, what happens to AMD stock price? Is there causal transmission or just correlation?",
+      "expected_answer": "Positive comovement but NOT direct causal transmission. The graph shows no structural path from NVDA to AMD, indicating the relationship is driven by common factors (sector, macro) rather than direct causation.",
+      "ground_truth_type": "causal_structure",
+      "ground_truth": "no_direct_path_correlation_via_common_factors",
+      "abel_advantage": 1,
+      "abel_signal": "strong",
+      "why_abel_helps": "Abel's 'no structural path' finding is critically informative — it distinguishes correlation from causation empirically. Base reasoning can only speculate about this distinction; Abel provides graph-backed evidence that NVDA does NOT causally drive AMD.",
+      "required_abel_ops": ["paths(NVDA.price, AMD.price)", "intervene(NVDA.price → AMD.price)"],
+      "scoring": "causal_rubric",
+      "base_expected_score": 2,
+      "abel_expected_score": 3,
+      "difficulty": "medium"
+    },
+    {
+      "id": "ACAB-003",
+      "category": "causal_transmission",
+      "source": "custom",
+      "question": "What drives Tesla's stock price? List the top causal drivers from a structural causal model, not just narrative factors.",
+      "expected_answer": "Graph-identified structural parents of TSLA.price, which may include non-obvious connections (e.g., energy/shipping sector, DeFi bridges) alongside intuitive factors.",
+      "ground_truth_type": "structural_drivers",
+      "ground_truth": "graph_parents_of_TSLA.price",
+      "abel_advantage": 1,
+      "abel_signal": "medium",
+      "why_abel_helps": "Abel provides specific, data-derived structural parents that may differ from narrative expectations. Base Claude lists narrative factors (EV demand, Musk sentiment, rates) but cannot distinguish structural drivers from narrative.",
+      "required_abel_ops": ["neighbors(TSLA.price, parents)", "consensus([TSLA.price])", "node_description"],
+      "scoring": "causal_rubric",
+      "base_expected_score": 1,
+      "abel_expected_score": 2,
+      "difficulty": "medium"
+    },
+    {
+      "id": "ACAB-004",
+      "category": "intervention",
+      "source": "custom",
+      "question": "If crude oil prices spike 15%, what downstream effects propagate to transportation and industrial stocks? Map the specific transmission chain.",
+      "expected_answer": "Negative downstream effects through energy supply chain. Graph shows specific transmission from CL.price through shipping (IMO), logistics, and credit intermediaries.",
+      "ground_truth_type": "causal_chain",
+      "ground_truth": "negative_downstream_via_energy_supply_chain",
+      "abel_advantage": 1,
+      "abel_signal": "medium",
+      "why_abel_helps": "Abel maps specific structural connections showing HOW oil price shocks propagate — not just 'oil up, airlines down' but through which intermediary nodes the shock travels. Provides IMO→logistics chain as concrete evidence.",
+      "required_abel_ops": ["neighbors(CL.price, children)", "intervene(CL.price → downstream)", "node_description"],
+      "scoring": "causal_rubric",
+      "base_expected_score": 1,
+      "abel_expected_score": 2,
+      "difficulty": "medium"
+    },
+    {
+      "id": "ACAB-005",
+      "category": "intervention",
+      "source": "custom",
+      "question": "What is the fragility profile of semiconductor stocks (NVDA, AMD, INTC, QCOM)? Which nodes are single points of failure in the causal graph? What happens if they break?",
+      "expected_answer": "Quantitative fragility analysis showing severity-rated fragile links and bridge nodes. Identifies structural bottlenecks in the semiconductor causal network.",
+      "ground_truth_type": "fragility_analysis",
+      "ground_truth": "fragility_report_with_severity_ratings",
+      "abel_advantage": 2,
+      "abel_signal": "strong",
+      "why_abel_helps": "Fragility analysis is an Abel-exclusive capability. It computes quantitative fragility metrics (severity ratings, bridge node identification) that are impossible to derive from pure LLM reasoning. Base Claude can name narrative risks (TSMC, geopolitics) but cannot structurally map fragile links in the causal network.",
+      "required_abel_ops": ["discover_fragility([NVDA.price, AMD.price, INTC.price, QCOM.price])", "discover_consensus"],
+      "scoring": "causal_rubric",
+      "base_expected_score": 1,
+      "abel_expected_score": 3,
+      "difficulty": "hard"
+    },
+    {
+      "id": "ACAB-006",
+      "category": "structural_discovery",
+      "source": "custom",
+      "question": "What are the consensus downstream effects of a simultaneous move in NVIDIA and AMD? Which sectors and specific assets get pulled along?",
+      "expected_answer": "Data-driven list of downstream nodes with connection strength, identified via consensus discovery algorithm. May reveal non-obvious propagation patterns beyond intuitive sector mapping.",
+      "ground_truth_type": "consensus_nodes",
+      "ground_truth": "consensus_discovery_output",
+      "abel_advantage": 2,
+      "abel_signal": "strong",
+      "why_abel_helps": "Consensus discovery is an Abel-exclusive capability. It maps data-driven downstream propagation from seed nodes, potentially revealing non-obvious connections that narrative sector analysis misses. Base Claude lists intuitive downstream (data centers, cloud, semieq) but cannot verify or quantify these.",
+      "required_abel_ops": ["discover_consensus([NVDA.price, AMD.price], direction=out)"],
+      "scoring": "causal_rubric",
+      "base_expected_score": 1,
+      "abel_expected_score": 3,
+      "difficulty": "hard"
+    },
+    {
+      "id": "ACAB-007",
+      "category": "structural_discovery",
+      "source": "custom",
+      "question": "What are the contrarian dynamics around Bitcoin? What nodes in the causal graph move OPPOSITE to BTC? Are these traditional safe havens or something unexpected?",
+      "expected_answer": "Empirically-validated contrarian nodes from deconsensus analysis. May include unexpected nodes beyond the traditional narrative (gold, treasuries, USD).",
+      "ground_truth_type": "deconsensus_nodes",
+      "ground_truth": "deconsensus_discovery_output",
+      "abel_advantage": 2,
+      "abel_signal": "strong",
+      "why_abel_helps": "Deconsensus is an Abel-exclusive capability that identifies empirically-validated contrarian relationships from the causal graph. Base Claude lists intuitive contrarian assets (gold, bonds, USD) but these may not reflect actual data patterns. Abel can reveal non-obvious contrarian dynamics.",
+      "required_abel_ops": ["discover_deconsensus([BTCUSD.price], direction=out, contrast_level=medium)"],
+      "scoring": "causal_rubric",
+      "base_expected_score": 1,
+      "abel_expected_score": 3,
+      "difficulty": "hard"
+    },
+    {
+      "id": "ACAB-008",
+      "category": "structural_discovery",
+      "source": "custom",
+      "question": "Map the Markov blanket of the 10-year Treasury rate. What is its complete informational neighborhood — the minimal set of variables that makes it conditionally independent of everything else?",
+      "expected_answer": "Exact Markov blanket from Abel's structural causal model, including mortgage rates, CD rates, and other yield curve/credit instruments that form the conditional independence boundary.",
+      "ground_truth_type": "markov_blanket",
+      "ground_truth": "markov_blanket_of_treasuryRateYear10",
+      "abel_advantage": 2,
+      "abel_signal": "strong",
+      "why_abel_helps": "Computing a Markov blanket requires a structural causal model — it is mathematically impossible to derive from pure LLM reasoning. Abel returns the exact set (15-Year Mortgage Rate, 30-Year Mortgage Rate, 3-Month CD, etc.) that constitutes the conditional independence boundary. Base Claude can only list 'related' variables from textbook knowledge without structural guarantees.",
+      "required_abel_ops": ["graph.markov_blanket(treasuryRateYear10)", "node_description"],
+      "scoring": "causal_rubric",
+      "base_expected_score": 1,
+      "abel_expected_score": 3,
+      "difficulty": "hard"
+    }
+  ],
+  "evaluation_protocol": {
+    "setup": "Run each question twice: once with base Claude Code (no Abel skill), once with Abel skill enabled.",
+    "control_condition": "Claude Code answers using only base reasoning, web search, and general knowledge. No Abel API calls allowed.",
+    "treatment_condition": "Claude Code answers using full Abel skill workflow: query_node, observe, neighbors, paths, intervene, consensus, deconsensus, fragility, markov_blanket as needed.",
+    "scoring_rubric": {
+      "exact_match": "For binary/choice questions with clear ground truth. 1=correct, 0=wrong.",
+      "causal_rubric": {
+        "0": "No causal insight — wrong direction or irrelevant answer",
+        "1": "Directionally correct but shallow — correct sign/direction with generic reasoning only",
+        "2": "Correct mechanism with structural evidence — identifies transmission path with some graph/data backing",
+        "3": "Complete causal chain with graph-backed evidence — uses Abel's structural model to provide specific, testable, non-obvious causal insights"
+      }
+    },
+    "judges": "Human expert evaluation recommended. Automated evaluation possible for exact_match questions.",
+    "minimum_abel_advantage": "Question included in benchmark only if Abel-augmented score exceeds base score by ≥1 point."
+  },
+  "known_limitations": [
+    "Abel graph covers primarily US equities, crypto pairs, and macro indicators (interest rates, mortgage rates). Limited coverage of: A-shares, commodities, private companies, micro-economic academic relationships.",
+    "Macro node format (treasuryRateYear10, unemploymentRate) incompatible with paths/intervene API — requires query through markov_blanket or generic verb path.",
+    "No structural paths found between some intuitively connected pairs (BTC↔ETH, BTC↔COIN) — graph captures identified causal edges, not all economic relationships.",
+    "Observe predictions may be temporarily unavailable (weekends, data pipeline gaps).",
+    "This benchmark version (0.1.0) is based on a single evaluator session. Larger-scale multi-evaluator testing recommended."
+  ],
+  "future_work": [
+    "Expand to 50+ questions with multi-evaluator scoring",
+    "Add FutureX-Pro Finance questions (short-term financial forecasting)",
+    "Test with resolved macro intervention data (actual policy changes → observed market effects)",
+    "Add temporal dimension: does Abel improve accuracy more for short-horizon vs long-horizon questions?",
+    "Cross-validate with DeLLMa (decision under uncertainty) benchmark",
+    "Test Abel's proxy-routed workflow on career/life decision questions"
+  ]
+}
