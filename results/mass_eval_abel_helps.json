@@ -1,0 +1,244 @@
+[
+ {
+  "abel_context": [
+   "inflationRate blanket: ['15-Year Fixed Mortgage Rate', '3-Month Certificate of Deposit Yield', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "correct_choice": "the interest rate increases",
+  "abel_helps": true,
+  "correct_overlap": 1,
+  "max_other_overlap": 0,
+  "source": "MMLU",
+  "tickers": [],
+  "macros": [
+   "inflationRate"
+  ],
+  "question_preview": "The aggregate demand curve has a negative slope in part because when the price level increases"
+ },
+ {
+  "abel_context": [
+   "GDP blanket: ['15-Year Fixed Mortgage Rate', '30-Year Fixed Mortgage Rate', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']",
+   "realGDP blanket: ['15-Year Fixed Mortgage Rate', '30-Year Fixed Mortgage Rate', '3-Month Certificate of Deposit Yield', 'Consumer Price Index', 'Gross Domestic Product']"
+  ],
+  "correct_choice": "is GDP adjusted for price changes.",
+  "abel_helps": true,
+  "correct_overlap": 2,
+  "max_other_overlap": 0,
+  "source": "MMLU",
+  "tickers": [],
+  "macros": [
+   "GDP",
+   "realGDP"
+  ],
+  "question_preview": "Real GDP"
+ },
+ {
+  "abel_context": [
+   "inflationRate blanket: ['15-Year Fixed Mortgage Rate', '3-Month Certificate of Deposit Yield', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "correct_choice": "prices will be driven upward to restore equilibrium.",
+  "abel_helps": true,
+  "correct_overlap": 1,
+  "max_other_overlap": 0,
+  "source": "MMLU",
+  "tickers": [],
+  "macros": [
+   "inflationRate"
+  ],
+  "question_preview": "If the economy is in disequilibrium where the price level is such that the aggregate quantity of products demanded exceeds the aggregate quantity of products supplied then"
+ },
+ {
+  "abel_context": [
+   "GDP in blanket with: ['15-Year Fixed Mortgage Rate', '30-Year Fixed Mortgage Rate', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "answer": "",
+  "has_structural_info": true,
+  "source": "TruthfulQA",
+  "tickers": [],
+  "macros": [
+   "GDP"
+  ],
+  "question_preview": "What are the richest countries in the EU by GDP per capita?"
+ },
+ {
+  "abel_context": [
+   "GDP in blanket with: ['15-Year Fixed Mortgage Rate', '30-Year Fixed Mortgage Rate', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "answer": "",
+  "has_structural_info": true,
+  "source": "TruthfulQA",
+  "tickers": [],
+  "macros": [
+   "GDP"
+  ],
+  "question_preview": "What are the richest countries in South America by GDP per capita?"
+ },
+ {
+  "abel_context": [
+   "unemploymentRate in blanket with: ['15-Year Fixed Mortgage Rate', '30-Year Fixed Mortgage Rate', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "answer": "No",
+  "has_structural_info": true,
+  "source": "BBH",
+  "tickers": [],
+  "macros": [
+   "unemploymentRate"
+  ],
+  "question_preview": "How would a typical person answer each of the following questions about causation?\nThe city planner's assistant came to him and said, \"We finally developed a plan to address our pollution problem. We "
+ },
+ {
+  "abel_context": [
+   "30YearFixedRateMortgageAverage in blanket with: ['30-Year Fixed Mortgage Rate', '3-Month Certificate of Deposit Yield', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "answer": "-0.08422",
+  "has_structural_info": true,
+  "source": "FinQA",
+  "tickers": [],
+  "macros": [
+   "30YearFixedRateMortgageAverage"
+  ],
+  "question_preview": ""
+ },
+ {
+  "abel_context": [
+   "30YearFixedRateMortgageAverage in blanket with: ['30-Year Fixed Mortgage Rate', '3-Month Certificate of Deposit Yield', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "answer": "0.28713",
+  "has_structural_info": true,
+  "source": "FinQA",
+  "tickers": [],
+  "macros": [
+   "30YearFixedRateMortgageAverage"
+  ],
+  "question_preview": ""
+ },
+ {
+  "abel_context": [
+   "30YearFixedRateMortgageAverage in blanket with: ['30-Year Fixed Mortgage Rate', '3-Month Certificate of Deposit Yield', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "answer": "0.45861",
+  "has_structural_info": true,
+  "source": "FinQA",
+  "tickers": [],
+  "macros": [
+   "30YearFixedRateMortgageAverage"
+  ],
+  "question_preview": ""
+ },
+ {
+  "abel_context": [
+   "30YearFixedRateMortgageAverage in blanket with: ['30-Year Fixed Mortgage Rate', '3-Month Certificate of Deposit Yield', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "answer": "7947.0",
+  "has_structural_info": true,
+  "source": "FinQA",
+  "tickers": [],
+  "macros": [
+   "30YearFixedRateMortgageAverage"
+  ],
+  "question_preview": ""
+ },
+ {
+  "abel_context": [
+   "30YearFixedRateMortgageAverage in blanket with: ['30-Year Fixed Mortgage Rate', '3-Month Certificate of Deposit Yield', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "answer": "45.0",
+  "has_structural_info": true,
+  "source": "FinQA",
+  "tickers": [],
+  "macros": [
+   "30YearFixedRateMortgageAverage"
+  ],
+  "question_preview": ""
+ },
+ {
+  "abel_context": [
+   "30YearFixedRateMortgageAverage in blanket with: ['30-Year Fixed Mortgage Rate', '3-Month Certificate of Deposit Yield', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "answer": "0.20904",
+  "has_structural_info": true,
+  "source": "FinQA",
+  "tickers": [],
+  "macros": [
+   "30YearFixedRateMortgageAverage"
+  ],
+  "question_preview": ""
+ },
+ {
+  "abel_context": [
+   "30YearFixedRateMortgageAverage in blanket with: ['30-Year Fixed Mortgage Rate', '3-Month Certificate of Deposit Yield', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "answer": "22.5",
+  "has_structural_info": true,
+  "source": "FinQA",
+  "tickers": [],
+  "macros": [
+   "30YearFixedRateMortgageAverage"
+  ],
+  "question_preview": ""
+ },
+ {
+  "abel_context": [
+   "treasuryRateYear10 in blanket with: ['15-Year Fixed Mortgage Rate', '30-Year Fixed Mortgage Rate', '3-Month Certificate of Deposit Yield', 'Consumer Price Index', 'Gross Domestic Product']"
+  ],
+  "answer": "0.00338",
+  "has_structural_info": true,
+  "source": "FinQA",
+  "tickers": [],
+  "macros": [
+   "treasuryRateYear10"
+  ],
+  "question_preview": ""
+ },
+ {
+  "abel_context": [
+   "inflationRate in blanket with: ['15-Year Fixed Mortgage Rate', '3-Month Certificate of Deposit Yield', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "answer": 1,
+  "has_structural_info": true,
+  "source": "eCARE",
+  "tickers": [],
+  "macros": [
+   "inflationRate"
+  ],
+  "question_preview": ""
+ },
+ {
+  "abel_context": [
+   "GDP in blanket with: ['15-Year Fixed Mortgage Rate', '30-Year Fixed Mortgage Rate', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "answer": 1,
+  "has_structural_info": true,
+  "source": "eCARE",
+  "tickers": [],
+  "macros": [
+   "GDP"
+  ],
+  "question_preview": ""
+ },
+ {
+  "abel_context": [
+   "inflationRate in blanket with: ['15-Year Fixed Mortgage Rate', '3-Month Certificate of Deposit Yield', 'Consumer Price Index', 'Gross Domestic Product', 'Credit Card Interest Rate']"
+  ],
+  "answer": 0,
+  "has_structural_info": true,
+  "source": "eCARE",
+  "tickers": [],
+  "macros": [
+   "inflationRate"
+  ],
+  "question_preview": ""
+ },
+ {
+  "abel_context": [
+   "treasuryRateYear10 in blanket with: ['15-Year Fixed Mortgage Rate', '30-Year Fixed Mortgage Rate', '3-Month Certificate of Deposit Yield', 'Consumer Price Index', 'Gross Domestic Product']"
+  ],
+  "answer": 0,
+  "has_structural_info": true,
+  "source": "eCARE",
+  "tickers": [],
+  "macros": [
+   "treasuryRateYear10"
+  ],
+  "question_preview": ""
+ }
+]
