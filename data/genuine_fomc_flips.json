@@ -1,0 +1,317 @@
+[
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 4,
+    "text": "However, we have also found that excluding volatile food and energy prices generally gives a better ",
+    "base": "hawkish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 8,
+    "text": "Rather, members agreed that inflation was likely to moderate in coming quarters,",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "reason": "Abel: inflation 'likely to moderate' implies concern about current high inflation (hawkish context)"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 11,
+    "text": "In the productivity boom that followed World War I, a chief technological innovation was the spread ",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 15,
+    "text": "But I want to emphasize that we do have a commitment to raising inflation to 2 percent.",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "reason": "Abel: text expresses concern about weakness via GDP->unemploymentRate->easing"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 16,
+    "text": "The Committee decided to keep the target range for the federal funds rate at 0 to 1/4 percent and ex",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: conditional forward guidance is neutral (neither pure ease nor tighten)"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 18,
+    "text": "As a consequence, a sustainable, non-inflationary expansion is likely to involve some moderation in ",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "reason": "Abel: text expresses concern about inflation/overheating via inflationRate->federalFunds"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 27,
+    "text": "Although inflation remained remarkably subdued and any increase in inflationary pressures likely wou",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "reason": "Abel: downside concern maps through GDP->federalFunds->easing path"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 31,
+    "text": "At the same time, the staff viewed the risks around its outlook for the unemployment rate as roughly",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: balanced/symmetric language indicates neutral stance"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 32,
+    "text": "We found that a surprise increase of 25 basis points in the funds rate target typically results in a",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text describes theoretical/historical mechanism, not a policy stance"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 33,
+    "text": "Operationally, maintaining price stability requires abiding by the Taylor principle of raising nomin",
+    "base": "hawkish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text describes theoretical/historical mechanism, not a policy stance"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 61,
+    "text": "However, household spending had been relatively robust during the cyclical downturn and likely had o",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 64,
+    "text": "In connection with the risks associated with an early start to policy normalization, many participan",
+    "base": "hawkish",
+    "skill": "dovish",
+    "gt": "neutral",
+    "reason": "Base='hawkish', Skill='dovish', GT='neutral'"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 76,
+    "text": "Members agreed that the statement should continue to convey that inflation risks remained of greates",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "reason": "Abel: text expresses concern about inflation/overheating via inflationRate->federalFunds"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 79,
+    "text": "With the risks to the forecast for economic activity tilted to the downside, the risks to the inflat",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "reason": "Abel: text expresses concern about weakness via GDP->unemploymentRate->easing"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 85,
+    "text": "Fourth and finally, the statement codifies the key lesson from the Global Financial Crisisâ€”that fi",
+    "base": "hawkish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 87,
+    "text": "At the same time, the incentive to take advantage of increasingly efficient high-tech equipment and ",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 88,
+    "text": "Members referred, however, to a number of favorable factors that should continue to support at least",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 91,
+    "text": "For example, the evidence suggests that changes in the demographic composition of the labor force af",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 94,
+    "text": "The staff continued to view the uncertainty around its projections for real GDP growth, the unemploy",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 101,
+    "text": "However, indicators of economic activity in Japan and Brazil remained weak.",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 104,
+    "text": "Mortgage credit conditions generally remained tight over the intermeeting period, though signs of ea",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 105,
+    "text": "Some members nonetheless referred to indications of increasing expenditures for various categories o",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 113,
+    "text": "These members expected that the target range would be maintained at this level until they were confi",
+    "base": "hawkish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 115,
+    "text": "Participants expected that productivity growth would pick up as firms slowed hiring to a pace more i",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 133,
+    "text": "The extent and timing of any additional firming that may be needed to address these risks will depen",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "reason": "Abel: text expresses concern about inflation/overheating via inflationRate->federalFunds"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 134,
+    "text": "The literature on this topic extends at least as far back as William Brainardâ€™s original paper on ",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text describes theoretical/historical mechanism, not a policy stance"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 144,
+    "text": "Thus, knowing where productivity growth is headed is, in many respects, equivalent to foreseeing our",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 147,
+    "text": "The stock market soared, and--remarkably enough--core inflation moderated.",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 148,
+    "text": "One participant suggested that the Committee could announce an additional, lower set of thresholds f",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 150,
+    "text": "While participants generally felt that the pace of underlying productivity growth remained robust, c",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 153,
+    "text": "Homebuilding was forecast to decline somewhat but to stabilize at a relatively high level in the con",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 155,
+    "text": "Although some of the recent data on economic activity had been better than anticipated, most partici",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 157,
+    "text": "Participants noted that the improved performance of investment suggested that the expansion was beco",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: balanced/symmetric language indicates neutral stance"
+  },
+  {
+    "file": "results/expand_fomc_0_results.json",
+    "eval_id": 163,
+    "text": "That projection, along with the path to year-three inflation, should help the public differentiate s",
+    "base": "hawkish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern"
+  },
+  {
+    "file": "results/batch_3_results.json",
+    "eval_id": "Q0341",
+    "text": "",
+    "base": "hawkish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "reason": "FOMC stance. H=2 D=0 N=0. Concepts: ['interest rate', 'inflation']. Abel macro blanket: inflation<->federalFunds<->GDP<->unemployment."
+  }
+]

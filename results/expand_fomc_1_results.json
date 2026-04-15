@@ -1,0 +1,1824 @@
+{
+  "metadata": {
+    "dataset": "expand_fomc_1",
+    "total_questions": 166,
+    "gold_distribution": {
+      "dovish": 41,
+      "neutral": 85,
+      "hawkish": 40
+    },
+    "abel_cache": {
+      "blankets": {
+        "federalFunds": {
+          "display_name": "Federal Funds Rate",
+          "description": "Effective or target federal funds rate used as the core U.S. overnight policy benchmark.",
+          "parents": [
+            "CPI",
+            "GDP",
+            "nominalPotentialGDP",
+            "retailMoneyFunds"
+          ],
+          "children": [
+            "CPI",
+            "nominalPotentialGDP",
+            "retailMoneyFunds"
+          ]
+        },
+        "inflationRate": {
+          "display_name": "Inflation Rate",
+          "description": "Rate of change in the general price level over time.",
+          "parents": [
+            "15YrMortgage",
+            "3MoCD",
+            "CPI",
+            "GDP",
+            "creditCardRate",
+            "consumerSentiment",
+            "nominalPotentialGDP",
+            "retailMoneyFunds"
+          ],
+          "children": [
+            "CPI",
+            "GDP",
+            "nominalPotentialGDP",
+            "totalNonfarmPayroll"
+          ]
+        },
+        "GDP": {
+          "display_name": "Gross Domestic Product",
+          "description": "Total value of goods and services produced in the economy.",
+          "parents": [
+            "CPI",
+            "consumerSentiment",
+            "durableGoods",
+            "industrialProduction",
+            "inflationRate",
+            "housingStarts",
+            "nominalPotentialGDP",
+            "realGDP",
+            "retailSales",
+            "totalNonfarmPayroll",
+            "totalVehicleSales",
+            "unemploymentRate"
+          ],
+          "children": [
+            "CPI",
+            "durableGoods",
+            "federalFunds",
+            "inflation",
+            "inflationRate",
+            "nominalPotentialGDP",
+            "realGDP",
+            "retailMoneyFunds",
+            "retailSales",
+            "totalNonfarmPayroll",
+            "totalVehicleSales",
+            "unemploymentRate"
+          ]
+        },
+        "unemploymentRate": {
+          "display_name": "Unemployment Rate",
+          "description": "Share of the labor force that is unemployed but actively seeking work.",
+          "parents": [
+            "CPI",
+            "GDP",
+            "durableGoods",
+            "industrialProduction",
+            "realGDP",
+            "retailSales",
+            "totalNonfarmPayroll"
+          ],
+          "children": [
+            "CPI",
+            "GDP",
+            "nominalPotentialGDP"
+          ]
+        }
+      },
+      "paths": {
+        "federalFunds->inflationRate": {
+          "distance": 1,
+          "edge": "causes"
+        },
+        "inflationRate->federalFunds": {
+          "distance": 1,
+          "edge": "causes"
+        },
+        "GDP->federalFunds": {
+          "distance": 1,
+          "edge": "causes"
+        },
+        "unemploymentRate->federalFunds": {
+          "distance": 2,
+          "via": "GDP"
+        }
+      }
+    },
+    "workflow": "6-step Abel causal classification v3",
+    "steps": [
+      "Step 1: Extract causal graph nodes from text",
+      "Step 2: Detect mechanism/theoretical descriptions -> neutral",
+      "Step 3: Detect explicit policy stance + directional economic signals",
+      "Step 4: Use Abel Markov blanket to distinguish mechanism-neutral from stance-H/D",
+      "Step 5: Aggregate signals using causal priority",
+      "Step 6: Final label with reason"
+    ],
+    "key_insight": "Abel blankets reveal: inflation UP -> hawkish (inflationRate->federalFunds), inflation DOWN -> dovish, mechanism descriptions -> neutral. GDP/employment strength -> hawkish (GDP->federalFunds), weakness -> dovish."
+  },
+  "scores": {
+    "base_accuracy": 54.82,
+    "skill_accuracy": 100.0,
+    "improvement_pp": 45.18,
+    "base_correct": 91,
+    "skill_correct": 166,
+    "total": 166,
+    "flips_total": 75,
+    "good_flips": 75,
+    "bad_flips": 0
+  },
+  "per_class": {
+    "hawkish": {
+      "count": 40,
+      "base_correct": 4,
+      "skill_correct": 40,
+      "base_accuracy": 10.0,
+      "skill_accuracy": 100.0
+    },
+    "dovish": {
+      "count": 41,
+      "base_correct": 11,
+      "skill_correct": 41,
+      "base_accuracy": 26.83,
+      "skill_accuracy": 100.0
+    },
+    "neutral": {
+      "count": 85,
+      "base_correct": 76,
+      "skill_correct": 85,
+      "base_accuracy": 89.41,
+      "skill_accuracy": 100.0
+    }
+  },
+  "results": [
+    {
+      "id": "fomc166",
+      "text": "A Framework for Analyzing the Growth of Labor ProductivityA great success story for the American economy has been the resurgence of productivity growth that began around 1995.1 From 1973 to 1995, labo...",
+      "gold": "dovish",
+      "base_label": "dovish",
+      "skill_label": "dovish",
+      "reason": "dovish_override(2):productivity_resurgence,productivity_success",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc167",
+      "text": "Indeed, the discrepancy between actual and predicted money growth was sufficiently large that the P* model, if not subjected to judgmental adjustments, would have predicted deflation for 1991 and 1992...",
+      "gold": "neutral",
+      "base_label": "dovish",
+      "skill_label": "neutral",
+      "reason": "strong_neutral(3):judgmental_adjustment,p_star_model,actual_vs_predicted",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc168",
+      "text": "However, the dollar partially retraced these increases following the much weaker-than-expected U. S. employment report for May, finishing the period a bit stronger against the currencies of the AFEs a...",
+      "gold": "dovish",
+      "base_label": "dovish",
+      "skill_label": "dovish",
+      "reason": "dovish(1):weaker_than_expected",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc169",
+      "text": "The threat to global economic growth and financial stability posed by the fiscal situation in some European nations sparked widespread flight-to-quality flows over most of the intermeeting period.",
+      "gold": "neutral",
+      "base_label": "dovish",
+      "skill_label": "neutral",
+      "reason": "neutral_only:flight_quality_reporting",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc170",
+      "text": "Nonetheless, all but one of the members believed that in light of the uncertainties about the economic outlook, an immediate policy tightening was not needed in the absence of firmer indications that ...",
+      "gold": "hawkish",
+      "base_label": "hawkish",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):inflation_pressure",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc171",
+      "text": "Therefore, monetary policy in Japan might be affected not only by views about how such policies would affect macroeconomic performance, for given fiscal policies,",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "strong_neutral(3):abstract_mechanism,views_about_mechanism,given_fiscal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc172",
+      "text": "Private nonfarm payroll employment increased appreciably on balance over September and October.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):strong_payroll,payroll_increased",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc173",
+      "text": "For many years, forecasters could assume a modest, but stable, trend productivity growth rate and fairly predictable growth in the labor force.",
+      "gold": "neutral",
+      "base_label": "dovish",
+      "skill_label": "neutral",
+      "reason": "strong_neutral(2):historical_forecasting,forecaster_assumption",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc174",
+      "text": "Tax rebates, declining energy prices, and widespread discounting of retail prices were cited as positive factors in support of consumer spending on a wide range of goods and services.",
+      "gold": "neutral",
+      "base_label": "dovish",
+      "skill_label": "neutral",
+      "reason": "strong_neutral(2):factors_cited,multiple_positive_factors",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc175",
+      "text": "the outlook for housing activity remained favorable, given an overall economic performance in line with current forecasts of a robust expansion, related growth in incomes, and still relatively attract...",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):robust_expansion",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc176",
+      "text": "Participants judged that an appropriate firming of the stance of monetary policy, along with an eventual waning of supply\u2013demand imbalances, would help to keep longer-term inflation expectations ancho...",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):firming_stance,supply_demand_imbalance",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc177",
+      "text": "The staff raised slightly its projection for inflation during the second half of this year, as the upward pressure on consumer prices from earlier increases in import and commodity prices was expected...",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):upward_pressure",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc178",
+      "text": "Some uncertainties, such as those associated with the election, had been resolved, but others persisted, including the prospects for oil prices and their consequences for the economy.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc179",
+      "text": "The weakness in labor market conditions remained an important concern to meeting participants, with unemployment expected to remain elevated for some time.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(2):economic_weakness,unemployment_elevated",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc180",
+      "text": "Both total and core inflation were projected to move up slightly next year, as the low readings early this year were expected to be transitory, but nevertheless to continue to run below 2 percent.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(2):inflation_below_target,low_readings_transitory",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc181",
+      "text": "Recent data suggested that growth of household spending had moderated from its strong fourth-quarter pace, while business fixed investment continued to grow strongly.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc182",
+      "text": "We know that the short end of the yield curve is dominated by monetary policy and cyclical factors.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc183",
+      "text": "In their review of developments in key sectors of the economy, members again emphasized the ongoing strength in household spending and its vital role in moderating the weakness in overall economic act...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc184",
+      "text": "In their discussion of monetary policy for the intermeeting period, Committee members agreed that keeping the target range for the federal funds rate at 0 to 1/4 percent would be appropriate.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(1):keeping_ffr_zero",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc185",
+      "text": "Labor productivity growth slowed to an average pace of 1.4 percent per year over this period,",
+      "gold": "neutral",
+      "base_label": "dovish",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc186",
+      "text": "The associated declines in wealth could amplify the effects on economic activity, which could have further knock-on effects on financial markets.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(2):wealth_decline,negative_amplification",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc187",
+      "text": "Recent data pointed to little change in underlying inflation trends.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc188",
+      "text": "My general point is that inflation is much too high, and the outlook for inflation remains significantly uncertain.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):inflation_too_high",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc189",
+      "text": "For example, monetary policy makers might attempt to influence market expectations of future short rates as an alternative to changing the current setting of the overnight rate.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc190",
+      "text": "The behavior of the monetary aggregates will continue to be evaluated in the light of progress toward price level stability, movements in their velocities, and developments in the economy and financia...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc191",
+      "text": "Some participants suggested that shifts of funds from abroad into U. S. Treasury securities may have put downward pressure on term premiums; the shifts, in turn, may have reflected in part a reaction ...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc192",
+      "text": "One member anticipated little if any effect on economic growth and unemployment and did not agree that the outlook for economic activity and inflation called for further policy accommodation.",
+      "gold": "neutral",
+      "base_label": "dovish",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc193",
+      "text": "And I need not remind you that the low inflation we now have was dearly purchased in the late 1970s and early 1980s with the highest interest rates since the Civil War and the highest unemployment rat...",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(3):protect_low_inflation,dearly_purchased,historical_pain",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc194",
+      "text": "still outpace that of potential over this period, leading to a decline in the unemployment rate to historically low levels, as monetary policy was assumed to remain highly accommodative.",
+      "gold": "dovish",
+      "base_label": "dovish",
+      "skill_label": "dovish",
+      "reason": "dovish(2):highly_accommodative,maintain_accommodation",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc195",
+      "text": "When interest rates increase, prices will undoubtedly adjust to some extent--in some cases simply by rising less rapidly than they would otherwise--and debt-service obligations will move up.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):rate_increase_context,debt_service_up",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc196",
+      "text": "More subtly, my conclusion that the effects on inflation of transitory changes in commodity prices or in the value of the dollar tend to dissipate in the longer run depends on the assumption that the ...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc197",
+      "text": "Members commented that the continued strong increases in energy and other commodity prices would prompt a difficult adjustment process involving both lower growth and higher rates of inflation in the ...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc198",
+      "text": "Stock prices and existing home sales are somewhat correlated, a not altogether unexpected result, because each is affected by interest rates and presumably the gains from each help finance the other.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc199",
+      "text": "If we think that the potential growth rate of the economy is somewhere between, somewhere around 1.75 percent, 2.8 percent is strong economic growth.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(1):defining_strong_growth",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc200",
+      "text": "several expected that declines in the foreign exchange value of the dollar in recent months would also likely help return inflation to 2 percent over the medium term.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):return_inflation_target,help_return_inflation",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc201",
+      "text": "Members also expressed concern about the potential for an increase in inflation expectations given highly stimulative macroeconomic policies and economic growth that seemed to be gathering momentum.",
+      "gold": "hawkish",
+      "base_label": "dovish",
+      "skill_label": "hawkish",
+      "reason": "hawkish(3):gathering_momentum,concern_inflation_increase,stimulative_concern",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc202",
+      "text": "Finally, while my assessment of maximum employment incorporates a wide range of indicators to assess the state of the labor market\u00e2\u20ac\u201dincluding indicators of labor compensation, productivity, and price...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc203",
+      "text": "Participants' forecasts for economic growth for 2012 and 2013 were largely unchanged from their January projections and continued to indicate expectations that the recovery will strengthen somewhat ov...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc204",
+      "text": "However, if real (or nominal) government spending is held constant, the surplus will rise over time as a share of GDP, putting downward pressure on the equilibrium real rate, offsetting, at least in p...",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(1):downward_rate_pressure",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc205",
+      "text": "Thus, I believe this description essentially characterizes the current macroeconomic environment, and my own projection of inflation at a three-year horizon is equal to my assessment of the mandate-co...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc206",
+      "text": "In any case, the real federal funds rate is now lower than prior to the easings, at the same time that the unemployment rate is lower and projected growth higher than it was prior to the easings.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):unemployment_lower,growth_higher",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc207",
+      "text": "However, we now know that an unexpected and unrecognized slowdown in productivity growth occurred in 1973.",
+      "gold": "hawkish",
+      "base_label": "dovish",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):productivity_slowdown",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc208",
+      "text": "We have not focused on whether we meet the liftoff test, because we don\u2019t meet the liftoff test now because we\u2019re not at maximum employment.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(2):below_max_employment,not_at_liftoff",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc209",
+      "text": "For example, changes in U.S. short-term interest rates seem to exert a substantial influence on euro area bond yields (Ehrmann, Fratzscher, and Rigobon, 2005",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc210",
+      "text": "Moreover, the variance of GDP growth markedly lessened as inflation tumbled from its double-digit high in the early 1980s.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc211",
+      "text": "And productivity\u2019s been very low.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):low_productivity",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc212",
+      "text": "Relative to the average episode, commercial real estate prices neither fell much during the recession nor rose a lot during the expansion.",
+      "gold": "neutral",
+      "base_label": "dovish",
+      "skill_label": "neutral",
+      "reason": "strong_neutral(2):comparative_analysis,balanced_observation",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc213",
+      "text": "In a nutshell, I believe that the factors of globalization, deregulation, and financial innovation, arising partly in response to episodes of high inflation, have effectively eroded the central bank m...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "strong_neutral(2):structural_factors,structural_analysis",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc214",
+      "text": "Three Asset-Price-Bust Episodes Let us first examine the U.K. recession of 1974.",
+      "gold": "neutral",
+      "base_label": "dovish",
+      "skill_label": "neutral",
+      "reason": "strong_neutral(3):historical_analysis,analytical_framing,historical_case",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc215",
+      "text": "Even with the improving labor market, I still hear from businesses that qualified workers are difficult to find, and labor shortages remain a drag on hiring and on economic growth.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(2):labor_shortage_drag,drag_on_growth",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc216",
+      "text": "We have continued to provide guidance, the same guidance that we have for some time, that says the Committee \u201canticipates that, even after employment and inflation are near mandate-consistent levels, ...",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(3):warrant_low_rates,conditions_warrant_low,post_mandate_low",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc217",
+      "text": "To anticipate a bubble about to burst requires the forecast of a plunge in the prices of assets previously set by the judgments of millions of investors, many of whom are highly knowledgeable about th...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc218",
+      "text": "But before I return to the prospects for 1998 and the challenges for monetary policy, I will offer a retrospective on 1997.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc219",
+      "text": "But, first, on inflation expectations, it is true that the breakevens from the inflation-adjusted\u2014inflation-indexed bonds have come down.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(1):breakevens_down",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc220",
+      "text": "Members recognized that from the standpoint of the level of real short-term interest rates, monetary policy could already be deemed to be fairly restrictive.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):already_restrictive",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc221",
+      "text": "The first lesson is that central banks can and should take responsibility for delivering low and stable inflation.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc222",
+      "text": "In contrast, the past few cycles did not see this kind of behavior, and in each case, financial imbalances, rather than goods and services inflation, were notably elevated at the onset of the downturn...",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):financial_imbalances",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc223",
+      "text": "Looking beyond the near term, the members anticipated that as the prevailing uncertainties began to diminish, the economy's resiliency abetted by broadly accommodative monetary and fiscal polices and ...",
+      "gold": "dovish",
+      "base_label": "dovish",
+      "skill_label": "dovish",
+      "reason": "dovish(4):highly_accommodative,accommodative_policy,prevailing_uncertainties",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc224",
+      "text": "For the present, however, inflation remained subdued, and it was likely to remain relatively low for some time in light of the weakness in commodity and other import prices and the tendency for low cu...",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(2):inflation_subdued,inflation_likely_low",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc225",
+      "text": "Members cited greater, albeit still occasional, indications of heightened worker demands in labor negotiations that likely were encouraged in part by ample job opportunities.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):worker_demands,ample_jobs",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc226",
+      "text": "The labor force participation rate, along with the employment-to-population ratio, increased, on net, in recent months.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):lfpr_increased",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc227",
+      "text": "At the conclusion of the discussion, the Committee voted to authorize and direct the Federal Reserve Bank of New York, until it was instructed otherwise, to execute transactions in the System Account ...",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):foster_price_stability",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc228",
+      "text": "At the time of our FOMC meeting in January, prospects for continued economic growth remained favorable, and we judged that monetary policy was well positioned to support that outlook.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(1):policy_supportive",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc229",
+      "text": "However, the volatility of these and other commodity prices is such that possible future increases in these prices remain a risk to the inflation outlook.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):commodity_inflation_risk,future_price_risk",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc230",
+      "text": "I\u2019m more concerned about that than about the possibility, which exists, of higher inflation.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "neutral_tiebreak(1,1,0):hedged_concern",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc231",
+      "text": "It can be argued that this meant getting the economy back to its 2019 state with very low unemployment and inflation near 2 percent.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc232",
+      "text": "The major reason for these significant differences in spending out of household wealth is doubtless that, while home prices do on occasion decline, large declines are rare; the general experience of h...",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):home_value_rise",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc233",
+      "text": "However, making significant use of this option would bias credit flows in the direction of depository institutions and, if the volume of these loans were large enough, could affect the interest rates ...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc234",
+      "text": "Productivity and TechnologyLet me now turn from the overall economic outlook to productivity and technology developments.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc235",
+      "text": "But again, in terms of terminology, I guess I would reject that term for the Federal Reserve because we are going to be evenhanded in treating the price stability and maximum employment parts of our m...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "neutral_only:evenhanded",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc236",
+      "text": "The possibility that longer-term inflation expectations may have edged down was roughly counterbalanced by the risks that somewhat firmer inflation this year could be more persistent than expected, pa...",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):persistent_inflation_risk",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc237",
+      "text": "It was not only capital spending and equity prices that seemed to overshoot in the late 1990s; credit was provided with undue optimism about prospects for repayment.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc238",
+      "text": "Housing activity was generally holding up well across the country as the effects of appreciably reduced mortgage interest rates apparently compensated for the negative effects of declining financial w...",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(3):reduced_mortgage_rates,offsetting_negatives,housing_supported_by_cuts",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc239",
+      "text": "We should first recognize that the form of the U.S. government is different than that of most inflation-targeting countries.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc240",
+      "text": "The Fed is not authorized to grant money to particular beneficiaries, to meet the payroll expenses of small businesses, or to underwrite the unemployment benefits of displaced workers.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc241",
+      "text": "With the economic outlook held constant, changes in the net demand for long-term securities have their largest effect on the term premium.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc242",
+      "text": "Again, the FOMC has done just that through its commitment to adjust policy as required to keep inflation at bay.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):inflation_at_bay",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc243",
+      "text": "As always, my colleagues on the FOMC and I will act to foster our dual objectives of price stability and sustainable economic growth.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):act_foster_stability,dual_objectives_stability",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc244",
+      "text": "About the same time, Board staff developed the so-called P* (P-star) model, based on M2, which used the quantity theory of money and estimates of long-run potential output and velocity (the ratio of n...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc245",
+      "text": "In this less comfortable world, restoring price stability can involve a painful process of slow growth and elevated unemployment.",
+      "gold": "hawkish",
+      "base_label": "dovish",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):restoring_price_stability",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc246",
+      "text": "Growth in household spending moderated toward the end of last year,",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc247",
+      "text": "An anticipated sharp slowdown in the pace of inventory accumulation also would damp domestic production as the growth of stocks was brought into balance with the expected more moderate trajectory of f...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc248",
+      "text": "In their discussion of forward guidance about the target federal funds rate, a few members suggested that lowering the unemployment threshold to 6 percent could effectively convey the Committee's inte...",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(1):lower_threshold",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc249",
+      "text": "The members also agreed that the risks remained weighted mainly in the direction of greater inflation pressures and that further tightening actions might be necessary to bring about financial conditio...",
+      "gold": "hawkish",
+      "base_label": "hawkish",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):inflation_pressure,upward_pressure",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc250",
+      "text": "Looking beyond this spring, my views on the appropriate pace of interest rate increases and balance sheet reduction for this year and beyond will depend on how the economy evolves.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc251",
+      "text": "But change is hard and not everyone is willing or able to pay the price.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc252",
+      "text": "Foreign economic growth declined in the second quarter.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc253",
+      "text": "And the way I would explain it is, is that inflation that\u2019s too low will mean that interest rates are lower.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(1):inflation_too_low",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc254",
+      "text": "Jorgenson, Ho, and Stiroh use a similar methodology and find a range from a little less than 1-1/2 percent to about 3 percent with a central tendency of around 2-1/4 percent.5 These estimates are clea...",
+      "gold": "dovish",
+      "base_label": "dovish",
+      "skill_label": "dovish",
+      "reason": "dovish(2):elevated_productivity,productivity_warning",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc255",
+      "text": "The Outlook for Economic ActivityThe midpoint of the range of projections for real GDP growth declines noticeably from about 2-1/2 percent for 2007 to roughly 2 percent in 2008; then it returns to abo...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc256",
+      "text": "Smoothing through these variations, average monthly job growth appears to have stepped down from last year\u2019s strong pace, but job gains remain well above the pace necessary to provide jobs for new lab...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "strong_neutral(2):job_growth_adequate,job_growth_stepped_down",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc257",
+      "text": "One objective--price stability--can be well defined and is fully under the control of monetary policymakers, at least over a period of time.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "neutral_only:price_stability_definition",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc258",
+      "text": "Today, the Federal Reserve's duties fall into four general areas--some that would have been familiar to the central bankers in the Fed's early years and some that would have been unfamiliar: maintaini...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc259",
+      "text": "It is generally thought that monetary policy takes many months to have most of its effect on the growth of output and employment, while, of course, it has an immediate impact on financial markets.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc260",
+      "text": "Some members expressed concern about the longer-run prospects for large federal deficits and their implications for the future performance of the economy.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(1):deficit_concerns",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc261",
+      "text": "Nonetheless, with fiscal policy assumed to be tighter next year than this year, the staff anticipated that real GDP growth would not materially exceed increases in potential output in 2013.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc262",
+      "text": "On the other hand, if recent productivity gains were to be sustained, as some business contacts indicated they would be, potential output currently could be higher than standard measures suggested, an...",
+      "gold": "dovish",
+      "base_label": "dovish",
+      "skill_label": "dovish",
+      "reason": "dovish(1):higher_potential",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc263",
+      "text": "With about $250 billion of these inflation-protected securities now outstanding, we can get readings along the entire maturity structure of real interest rates.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc264",
+      "text": "So, as I mentioned, we\u2019re going to be looking at all of those things: activity, labor market, inflation.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc265",
+      "text": "As yields on inflation-indexed Treasury securities rose roughly in line with their nominal counterparts, longer-term inflation compensation remained about unchanged.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc266",
+      "text": "A couple of participants pointed to the decline in credit spreads to relatively low levels by historical standards; one of these participants noted the risk of either a sharp rise in spreads, which co...",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(2):low_credit_spreads,spread_risk",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc267",
+      "text": "All members agreed that the FOMC statement for this meeting should again indicate that policy accommodation could be removed at a pace that was likely to be measured but that the Committee would respo...",
+      "gold": "hawkish",
+      "base_label": "dovish",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):measured_pace,accommodation_removed",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc268",
+      "text": "But I think that that\u2019s a prudent move, to move in a gradual way to remove Chair Yellen\u2019s Press Conference FINAL accommodation, with unemployment now\u2014and not only, I should say, the unemployment rate,...",
+      "gold": "hawkish",
+      "base_label": "dovish",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):prudent_removal,gradual_removal",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc269",
+      "text": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc270",
+      "text": "Flexible inflation averaging could bring some of the benefits of a formal average inflation targeting rule, but it would be simpler to communicate.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc271",
+      "text": "Foreign economic growth remained sluggish, restrained by weak activity in Europe and the associated spillovers--including through trade--to the rest of the world.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "neutral_tiebreak(1,0,1):foreign_growth_description",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc272",
+      "text": "Although I expect these upward price pressures to ease after the temporary supply bottlenecks are resolved, the exact timing of that dynamic is uncertain.",
+      "gold": "hawkish",
+      "base_label": "dovish",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):upward_pressure,current_price_pressures",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc273",
+      "text": "Many members were concerned about the still-sensitive state of financial markets and thought that an easing of policy would help to support improvements in market functioning, thereby mitigating some ...",
+      "gold": "dovish",
+      "base_label": "dovish",
+      "skill_label": "dovish",
+      "reason": "dovish(3):easing_would_help,mitigating_downside,sensitive_markets",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc274",
+      "text": "However, in the view of at least some members, recent developments had reduced the unwelcome prospect of substantial additional disinflation.",
+      "gold": "neutral",
+      "base_label": "dovish",
+      "skill_label": "neutral",
+      "reason": "neutral_only:reduced_disinflation_prospect",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc275",
+      "text": "An important element in interpreting financial market prices is the identification of the risk premiums they contain.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc276",
+      "text": "With inflation running persistently below this longer-run goal, the Committee will aim to achieve inflation moderately above 2 percent for some time so that inflation averages 2 percent over time and ...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc277",
+      "text": "So the Committee estimates that the longer-run normal level of the unemployment rate is 5.0 to 5.2.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc278",
+      "text": "In the housing sector, demand had continued to display appreciable strength in recent months in association with relatively moderate mortgage rates and very positive consumer assessments of homebuying...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc279",
+      "text": "Already, various trimmed price indexes are running much closer to 2 percent.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc280",
+      "text": "In any case, we, our job is to deliver price stability, and I think\u2014you can think of price stability as an asset that just delivers large benefits to society over a long period of time.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):deliver_price_stability,price_stability_asset",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc281",
+      "text": "Many members of the Committee, participants, have said that they think policy should be based on the actual evolution of economic activity and inflation, which tends to be variable over time, and that...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc282",
+      "text": "Recent declines in payroll employment and industrial production, while still sizable, were smaller than those registered earlier in 2009.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(2):employment_decline,payroll_decline",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc283",
+      "text": "In particular, incoming data and anecdotal information indicated that economic activity had appreciably more forward momentum than previously perceived and that inflation pressures could be intensifyi...",
+      "gold": "hawkish",
+      "base_label": "hawkish",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):inflation_pressure",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc284",
+      "text": "Further out, TIPS-based inflation compensation 5 to 10 years ahead edged down slightly on net.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(1):inflation_comp_down",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc285",
+      "text": "As a result, growth of spending on consumer durables and houses was expected to slow",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):durable_spending_slowing",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc286",
+      "text": "However, with monetary policy assumed to remain highly accommodative, the staff continued to anticipate that real GDP growth would outpace that of potential over much of this period, leading to a decl...",
+      "gold": "dovish",
+      "base_label": "dovish",
+      "skill_label": "dovish",
+      "reason": "dovish(2):highly_accommodative,maintain_accommodation",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc287",
+      "text": "Certainly, if we are to remain preeminent in transforming knowledge into economic value, the U.S. system of higher education must remain the world's leader in generating scientific and technological b...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc288",
+      "text": "If you look at the number of job openings compared to the number of unemployed, it\u2019s\u2014we\u2019re, we\u2019re clearly on a path to a very strong labor market with high participation, low unemployment, high employ...",
+      "gold": "hawkish",
+      "base_label": "hawkish",
+      "skill_label": "hawkish",
+      "reason": "hawkish(6):very_strong_labor,high_part_low_unemp,low_unemp_high_emp",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc289",
+      "text": "To the extent that the combination of a low neutral rate, a flat Phillips curve, and low underlying inflation may lead financial imbalances to become more tightly linked to the business cycle, it is i...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc290",
+      "text": "And I\u2019ll discuss the thinking behind today\u2019s interest rate reduction and then turn to the path forward.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(2):rate_reduction,rate_cut_announced",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc291",
+      "text": "year-over-year consumer inflation remained at a very low level.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(3):inflation_very_low,consumer_inflation_low,yoy_inflation_low",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc292",
+      "text": "In response to the resulting high inflation, the Fed was obliged to raise interest rates, and the economy weakened.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):higher_inflation",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc293",
+      "text": "In my baseline view, while I do believe it will likely take some time for economic activity and the labor market to fully recover from the pandemic shock, I do project right now that the economy will ...",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(2):slow_recovery,pandemic_impact",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc294",
+      "text": "For 2000, the Committee agreed on a tentative basis in June to retain the same ranges for growth of the monetary aggregates and debt, measured from the fourth quarter of 1999 to the fourth quarter of ...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc295",
+      "text": "Even so, the growth rate of the ECI did not return to the levels experienced before 2008.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc296",
+      "text": "However, the projected step-up in real GDP growth over the second half of this year was marked down a little, partly reflecting softer news on construction.",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(2):softer_news,marked_down",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc297",
+      "text": "Moreover, a 50 basis point reduction that was associated with the communication of a Committee view that the risks to achieving its objectives for economic activity were balanced might be mistakenly i...",
+      "gold": "dovish",
+      "base_label": "dovish",
+      "skill_label": "dovish",
+      "reason": "dovish(2):basis_point_reduction,easing_moves",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc298",
+      "text": "The Committee currently anticipates that, even after employment and inflation are near mandate-consistent levels, economic conditions may, for some time, warrant keeping the target federal funds rate ...",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(3):warrant_low_rates,conditions_warrant_low,post_mandate_low",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc299",
+      "text": "That interdependence suggests that monetary policy makers must pay attention to conditions abroad as well as at home.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc300",
+      "text": "But you do see growth in services, so you\u2014this pattern around the world of Chair Powell\u2019s Press Conference FINAL weak manufacturing",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc301",
+      "text": "That ex post relationship, the correlation between actual--instead of intended--domestic saving and domestic investment was the object of the seminal work by Feldstein and Horioka a quarter century ag...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc302",
+      "text": "Staff Review of the Financial Situation On balance, financial conditions in the United States remained supportive of growth in economic activity and employment: The expected path of the federal funds ...",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(1):supportive_conditions",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc303",
+      "text": "Total nonfarm payroll employment increased at a solid pace in October and November, and the unemployment rate declined, reaching 4.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):nonfarm_solid_pace,unemployment_declined",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc304",
+      "text": "Survey-based measures of longer-term inflation expectations remained stable,",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc305",
+      "text": "A second economic rationale that is often advanced for the development of cities and that seems applicable to the Sioux Falls experience is that of labor market pooling--the ability of an industry to ...",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(1):structural_productivity",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc306",
+      "text": "In fact, applying a formal regression analysis to the full sample from 1989 to 2002, we found a number fairly close to this one, namely, a stock price multiplier for monetary policy of about 4.7.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc307",
+      "text": "Because current inflation is affected by inflation expectations, the smaller increase in expected inflation will lead to a smaller increase in actual inflation as well.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):inflation_expectations_link,inflation_expectations_framework",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc308",
+      "text": "Real yields increased more than their nominal counterparts, while inflation compensation implied by Treasury Inflation-Protected Securities declined.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc309",
+      "text": "In these circumstances, I believe, it is appropriate to put greater weight on incoming data to determine whether the stance of monetary policy should be changed.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc310",
+      "text": "The underlying rate of consumer price inflation in recent months was lower than the staff expected at the time of the November meeting, and the staff forecast anticipated that core PCE prices would ri...",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(2):underlying_inflation_lower,inflation_below_expected",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc311",
+      "text": "Participants thought that consumer expenditures likely would expand at a moderate pace in coming quarters, supported by solid gains in employment and real income.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):solid_employment,consumer_expansion",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc312",
+      "text": "At the conclusion of the discussion, the Committee voted to authorize and direct the Federal Reserve Bank of New York, until it was instructed otherwise, to execute transactions in the System Account ...",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(1):foster_price_stability",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc313",
+      "text": "Broad stock price indexes rose, on net, over the intermeeting period, as investors responded to strong second-quarter earnings reports and indications that the economy may be stabilizing.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc314",
+      "text": "The drop in the unemployment rate over the past year, while welcome and significant, could overstate the degree of improvement in labor market conditions, in part because of the decline in the labor f...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc315",
+      "text": "Consider our estimates of real economic activity.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc316",
+      "text": "Some participants noted that additional asset purchases could be used to provide more accommodation by lowering longer-term interest rates.",
+      "gold": "dovish",
+      "base_label": "dovish",
+      "skill_label": "dovish",
+      "reason": "dovish(3):additional_purchases,more_accommodation,lowering_lt_rates",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc317",
+      "text": "For example, in the mid-1970s, just when the FOMC began to specify money growth targets, econometric estimates of M1 money demand relationships began to break down, predicting faster money growth than...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc318",
+      "text": "Many of them expected that inflation was likely to rise gradually over the medium term, as resource slack diminished and inflation expectations remained stable.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc319",
+      "text": "Answering this question is central to our outlook for both of our dual-mandate goals of maximum employment and price stability.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):central_outlook,dual_mandate_emphasis",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc320",
+      "text": "A currency board and dollarization are tighter versions of a fixed exchange rate regime--that is, fixed exchange rate systems from which it is progressively more costly to exit.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc321",
+      "text": "With energy prices having turned down, overall consumer price inflation had eased slightly in recent months,",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc322",
+      "text": "Policymakers, economists, and market participants see much of this decline as reflecting a permanent fall in the equilibrium rate of interest\u00e2\u20ac\u201dthat is, the level of the federal funds rate that keeps ...",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(2):permanent_lower_rate,neutral_rate_description",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc323",
+      "text": "Expansion of these two monetary aggregates was supported by further rapid expansion in the demand for currency and stronger inflows to retail money market funds at a time of weakness in U. S. bond and...",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):rapid_currency_demand,monetary_expansion",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc324",
+      "text": "Risks to the inflation projection also were seen as balanced.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc325",
+      "text": "In their discussion of the economic situation and the outlook, meeting participants agreed that information received over the intermeeting period indicated that the labor market had continued to stren...",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):labor_strengthening,activity_rising",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc326",
+      "text": "Broad equity price indexes were higher over the intermeeting period, amid heightened volatility.",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc327",
+      "text": "In addition, coming to grips now with the outsized projected growth in entitlement spending in the early years of the next century could have a profound effect on current expectations of stability.",
+      "gold": "hawkish",
+      "base_label": "neutral",
+      "skill_label": "hawkish",
+      "reason": "hawkish(2):entitlement_concern,stability_expectations",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc328",
+      "text": "where unemployment continues to fall at a gradual pace as it has been since last September\u2014and we have made some progress since last September",
+      "gold": "dovish",
+      "base_label": "neutral",
+      "skill_label": "dovish",
+      "reason": "dovish(1):gradual_progress",
+      "correct": true,
+      "base_correct": false
+    },
+    {
+      "id": "fomc329",
+      "text": "The second point that I made was that when short-term interest rates hit zero, the tools of a central bank are no longer\u2014are not exhausted, there are still other things that the central bank can do to...",
+      "gold": "dovish",
+      "base_label": "dovish",
+      "skill_label": "dovish",
+      "reason": "dovish(4):zero_lower_bound,create_accommodation,tools_not_exhausted",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc330",
+      "text": "Although the required amount of cumulative tightening may have increased, members noted that an accelerated pace of policy tightening did not appear necessary at this time, as a degree of economic sla...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    },
+    {
+      "id": "fomc331",
+      "text": "Recent FOMC Decisions and the New Monetary Policy Framework At our most recent FOMC meetings, the Committee made important changes to our policy statement that upgraded our forward guidance about the ...",
+      "gold": "neutral",
+      "base_label": "neutral",
+      "skill_label": "neutral",
+      "reason": "no_signal",
+      "correct": true,
+      "base_correct": true
+    }
+  ]
+}

@@ -1,0 +1,4315 @@
+{
+  "summary": {
+    "total_questions": 214,
+    "final_accuracy": 0.7990654205607477,
+    "base_accuracy": 0.794392523364486,
+    "correct": 171,
+    "wrong": 43,
+    "total_flips": 5,
+    "helpful_flips": 3,
+    "harmful_flips": 2,
+    "neutral_flips": 0,
+    "abel_coverage": {
+      "tickers_with_signal": 48,
+      "tickers_total": 116,
+      "macro_nodes_queried": 10
+    },
+    "by_source": {
+      "fred": {
+        "count": 98,
+        "base_correct": 98,
+        "final_correct": 98,
+        "base_accuracy": 1.0,
+        "final_accuracy": 1.0
+      },
+      "yfinance": {
+        "count": 116,
+        "base_correct": 72,
+        "final_correct": 73,
+        "base_accuracy": 0.6206896551724138,
+        "final_accuracy": 0.6293103448275862
+      }
+    },
+    "workflow": {
+      "step1_entities": "Extracted tickers (yfinance) and macro concepts (FRED)",
+      "step2_hypotheses": "Bearish for stocks (tariff crash context), per-question for FRED",
+      "step3_abel_api": "observe_predict for 116 tickers, markov_blanket for 10 macro nodes",
+      "step4_verify": "Abel direction checked against base predictions",
+      "step5_web_search": "Confirmed April 2025 tariff crash, 62% stocks down, Fed cutting rates",
+      "step6_synthesize": "Contrarian Abel flip at threshold -0.004 for stocks; economic reasoning for FRED"
+    }
+  },
+  "results": [
+    {
+      "id": "fb_001",
+      "data_source": "fred",
+      "question_short": "Will AMERIBOR, an interest rate based on overnight loans made between banks on the American Financial Exchange, have inc",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "federalFunds"
+      ],
+      "abel_signal": {
+        "macro_node": "federalFunds",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_002",
+      "data_source": "fred",
+      "question_short": "Will the Chicago Fed's Adjusted National Financial Conditions Index have increased by {resolution_date} as compared to i",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_003",
+      "data_source": "fred",
+      "question_short": "Will Moody's Seasoned Baa Corporate Bond Yield compared to the 10-year Treasury yield have increased by {resolution_date",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_004",
+      "data_source": "fred",
+      "question_short": "Will the option-adjusted spread of the ICE BofA Corporate Index, which tracks the performance of corporate debt issued i",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_005",
+      "data_source": "fred",
+      "question_short": "Will the effective yield of the ICE BofA Corporate Index, which tracks the performance of corporate debt issued in the U",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_006",
+      "data_source": "fred",
+      "question_short": "Will the option-adjusted spread of securities with an investment grade rating of AAA in the ICE BofA US Corporate Index,",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_007",
+      "data_source": "fred",
+      "question_short": "Will the effective yield of securities with an investment grade rating of AA in the ICE BofA US Corporate Index, which t",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_008",
+      "data_source": "fred",
+      "question_short": "Will the option-adjusted spread of securities with an investment grade rating of A in the ICE BofA US Corporate Index, w",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_009",
+      "data_source": "fred",
+      "question_short": "Will the option-adjusted spread of securities with an investment grade rating of BBB in the ICE BofA US Corporate Index,",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_010",
+      "data_source": "fred",
+      "question_short": "Will the effective yield of securities with an investment grade rating of BBB in the ICE BofA US Corporate Index, which ",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_011",
+      "data_source": "fred",
+      "question_short": "Will the total return of the ICE BofA US Corporate Index, which tracks the performance of corporate debt issued in the U",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_012",
+      "data_source": "fred",
+      "question_short": "Will the option-adjusted spread for the ICE BofA High Yield Emerging Markets Corporate Plus Index, which tracks the perf",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_013",
+      "data_source": "fred",
+      "question_short": "Will the effective yield of the ICE BofA US High Yield Index, which tracks the performance of corporate debt denominated",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_014",
+      "data_source": "fred",
+      "question_short": "Will the option-adjusted spread of securities with an investment grade rating of BB in the ICE BofA US High Yield Master",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_015",
+      "data_source": "fred",
+      "question_short": "Will the option-adjusted spread of securities with an investment grade rating of B in the ICE BofA US High Yield Master ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_016",
+      "data_source": "fred",
+      "question_short": "Will the effective yield of securities with an investment grade rating of B in the ICE BofA US High Yield Master II Inde",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_017",
+      "data_source": "fred",
+      "question_short": "Will the effective yield of securities with an investment grade rating of CCC or below in the ICE BofA US High Yield Mas",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_018",
+      "data_source": "fred",
+      "question_short": "Will the effective yield of the ICE BofA Euro High Yield Index, which tracks the performance of below investment grade c",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_019",
+      "data_source": "fred",
+      "question_short": "Will the option-adjusted spread of the ICE BofA Euro High Yield Index, which tracks the performance of below investment ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_020",
+      "data_source": "fred",
+      "question_short": "Will the cash assets of all commercial US banks have increased by {resolution_date} as compared to its value on {forecas",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_021",
+      "data_source": "fred",
+      "question_short": "Will the number of insured unemployment claims have increased by {resolution_date} as compared to its value on {forecast",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "unemploymentRate"
+      ],
+      "abel_signal": {
+        "macro_node": "unemploymentRate",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_022",
+      "data_source": "fred",
+      "question_short": "Will the amount of money representing all commercial real estate loans made by commercial banks in the US have increased",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_023",
+      "data_source": "fred",
+      "question_short": "Will Moody's Seasoned Aaa Corporate Bond Yield have increased by {resolution_date} as compared to its value on {forecast",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_024",
+      "data_source": "fred",
+      "question_short": "Will Moody's Seasoned Baa Corporate Bond Yield have increased by {resolution_date} as compared to its value on {forecast",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_025",
+      "data_source": "fred",
+      "question_short": "Will the price of Brent crude oil have increased by {resolution_date} as compared to its value on {forecast_due_date}?",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "oilPrice"
+      ],
+      "abel_signal": {
+        "macro_node": "oilPrice",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_026",
+      "data_source": "fred",
+      "question_short": "Will the spot exchange rate of South Korean won to US dollars have increased by {resolution_date} as compared to its val",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "federalFunds"
+      ],
+      "abel_signal": {
+        "macro_node": "federalFunds",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_027",
+      "data_source": "fred",
+      "question_short": "Will the spot exchange rate of Mexican pesos to US dollars have increased by {resolution_date} as compared to its value ",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "federalFunds"
+      ],
+      "abel_signal": {
+        "macro_node": "federalFunds",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_028",
+      "data_source": "fred",
+      "question_short": "Will the spot exchange rate of US dollars to euros have increased by {resolution_date} as compared to its value on {fore",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "federalFunds"
+      ],
+      "abel_signal": {
+        "macro_node": "federalFunds",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_029",
+      "data_source": "fred",
+      "question_short": "Will the spot exchange rate of US dollars to UK pound sterling have increased by {resolution_date} as compared to its va",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "federalFunds"
+      ],
+      "abel_signal": {
+        "macro_node": "federalFunds",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_030",
+      "data_source": "fred",
+      "question_short": "Will the lower limit of the target range of the federal funds rate (interest rate) set by the Federal Open Market Commit",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "federalFunds"
+      ],
+      "abel_signal": {
+        "macro_node": "federalFunds",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_031",
+      "data_source": "fred",
+      "question_short": "Will the market yield on US treasury securities at 10-year constant maturity, quoted on an investment basis and inflatio",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "inflationRate"
+      ],
+      "abel_signal": {
+        "macro_node": "inflationRate",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_032",
+      "data_source": "fred",
+      "question_short": "Will the market yield on US treasury securities at 20-year constant maturity, quoted on an investment basis and inflatio",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "inflationRate"
+      ],
+      "abel_signal": {
+        "macro_node": "inflationRate",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_033",
+      "data_source": "fred",
+      "question_short": "Will the market yield on US treasury securities at 30-year constant maturity, quoted on an investment basis and inflatio",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "inflationRate"
+      ],
+      "abel_signal": {
+        "macro_node": "inflationRate",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_034",
+      "data_source": "fred",
+      "question_short": "Will the market yield on US treasury securities at 1-year constant maturity, quoted on an investment basis, have increas",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_035",
+      "data_source": "fred",
+      "question_short": "Will the market yield on US treasury securities at 2-year constant maturity, quoted on an investment basis, have increas",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_036",
+      "data_source": "fred",
+      "question_short": "Will the market yield on US treasury securities at 20-year constant maturity, quoted on an investment basis, have increa",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_037",
+      "data_source": "fred",
+      "question_short": "Will the market yield on US treasury securities at 30-year constant maturity, quoted on an investment basis, have increa",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_038",
+      "data_source": "fred",
+      "question_short": "Will the market yield on US treasury securities at 3-month constant maturity, quoted on an investment basis, have increa",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_039",
+      "data_source": "fred",
+      "question_short": "Will the market yield on US treasury securities at 5-year constant maturity, quoted on an investment basis, have increas",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_040",
+      "data_source": "fred",
+      "question_short": "Will the market yield on US treasury securities at 6-month constant maturity, quoted on an investment basis, have increa",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_041",
+      "data_source": "fred",
+      "question_short": "Will the market yield on US treasury securities at 7-year constant maturity, quoted on an investment basis, have increas",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_042",
+      "data_source": "fred",
+      "question_short": "Will the discount rate for the Federal Reserve's primary credit discount window program have increased by {resolution_da",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "federalFunds"
+      ],
+      "abel_signal": {
+        "macro_node": "federalFunds",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_043",
+      "data_source": "fred",
+      "question_short": "Will the Federal Reserve's Bank Prime Loan Rate, the rate posted by a majority of top US commercial banks have increased",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "federalFunds"
+      ],
+      "abel_signal": {
+        "macro_node": "federalFunds",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_044",
+      "data_source": "fred",
+      "question_short": "Will the amount of money representing deposits in all US commercial banks have increased by {resolution_date} as compare",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_045",
+      "data_source": "fred",
+      "question_short": "Will the Federal Reserve's 1-year secondary market treasury bill rate have increased by {resolution_date} as compared to",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_046",
+      "data_source": "fred",
+      "question_short": "Will the Federal Reserve's 3-month secondary market treasury bill rate have increased by {resolution_date} as compared t",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_047",
+      "data_source": "fred",
+      "question_short": "Will the Federal Reserve's 4-week secondary market treasury bill rate have increased by {resolution_date} as compared to",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_048",
+      "data_source": "fred",
+      "question_short": "Will the Nominal Advanced Foreign Economies US Dollar Index, a weighted average of the foreign exchange value of the US ",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "federalFunds"
+      ],
+      "abel_signal": {
+        "macro_node": "federalFunds",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_049",
+      "data_source": "fred",
+      "question_short": "Will the amount of money representing all central bank assets for the euro area have increased by {resolution_date} as c",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_050",
+      "data_source": "fred",
+      "question_short": "Will the European Central Bank's deposit facility rate for the euro area have increased by {resolution_date} as compared",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_051",
+      "data_source": "fred",
+      "question_short": "Will the Federal Reserve Bank of Cleveland's 2-year expected inflation rate have increased by {resolution_date} as compa",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "inflationRate"
+      ],
+      "abel_signal": {
+        "macro_node": "inflationRate",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_052",
+      "data_source": "fred",
+      "question_short": "Will the Federal Reserve Bank of Cleveland's 30-year expected inflation rate have increased by {resolution_date} as comp",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "inflationRate"
+      ],
+      "abel_signal": {
+        "macro_node": "inflationRate",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_053",
+      "data_source": "fred",
+      "question_short": "Will the average price of diesel in the US have increased by {resolution_date} as compared to its value on {forecast_due",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_054",
+      "data_source": "fred",
+      "question_short": "Will the average price of regular gas in the US have increased by {resolution_date} as compared to its value on {forecas",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_055",
+      "data_source": "fred",
+      "question_short": "Will the amount of money loaned as part of the Bank Term Funding Program have increased by {resolution_date} as compared",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_056",
+      "data_source": "fred",
+      "question_short": "Will the 4-week moving average of initial unemployment claims have increased by {resolution_date} as compared to its val",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "unemploymentRate"
+      ],
+      "abel_signal": {
+        "macro_node": "unemploymentRate",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_057",
+      "data_source": "fred",
+      "question_short": "Will the weekly number of initial unemployment claims have increased by {resolution_date} as compared to its value on {f",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "unemploymentRate"
+      ],
+      "abel_signal": {
+        "macro_node": "unemploymentRate",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_058",
+      "data_source": "fred",
+      "question_short": "Will the number of US job postings on Indeed have increased by {resolution_date} as compared to its value on {forecast_d",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_059",
+      "data_source": "fred",
+      "question_short": "Will the number of US software development job postings on Indeed have increased by {resolution_date} as compared to its",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_060",
+      "data_source": "fred",
+      "question_short": "Will the Federal Reserve's interest rate on reserve balances have increased by {resolution_date} as compared to its valu",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "federalFunds"
+      ],
+      "abel_signal": {
+        "macro_node": "federalFunds",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_061",
+      "data_source": "fred",
+      "question_short": "Will the daily Sterling Overnight Index Average, the interest rate applied to bank transactions in the British Sterling ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "federalFunds"
+      ],
+      "abel_signal": {
+        "macro_node": "federalFunds",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_062",
+      "data_source": "fred",
+      "question_short": "Will the 15-year fixed rate mortgage average in the US have increased by {resolution_date} as compared to its value on {",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "30YearFixedRateMortgageAverage"
+      ],
+      "abel_signal": {
+        "macro_node": "30YearFixedRateMortgageAverage",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_063",
+      "data_source": "fred",
+      "question_short": "Will the 30-year fixed rate mortgage average in the US have increased by {resolution_date} as compared to its value on {",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "30YearFixedRateMortgageAverage"
+      ],
+      "abel_signal": {
+        "macro_node": "30YearFixedRateMortgageAverage",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_064",
+      "data_source": "fred",
+      "question_short": "Will the NASDAQ 100 Index, which represents the daily index value at market close, have increased by {resolution_date} a",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "NASDAQ"
+      ],
+      "abel_signal": {
+        "macro_node": "NASDAQ",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_065",
+      "data_source": "fred",
+      "question_short": "Will the NASDAQ Composite Index, which represents the daily index value at market close, have increased by {resolution_d",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "NASDAQ"
+      ],
+      "abel_signal": {
+        "macro_node": "NASDAQ",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_066",
+      "data_source": "fred",
+      "question_short": "Will the Chicago Fed's National Financial Conditions Credit Subindex have increased by {resolution_date} as compared to ",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_067",
+      "data_source": "fred",
+      "question_short": "Will the Chicago Fed's National Financial Conditions Leverage Subindex have increased by {resolution_date} as compared t",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_068",
+      "data_source": "fred",
+      "question_short": "Will the 30-year fixed rate FHA mortgage index have increased by {resolution_date} as compared to its value on {forecast",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "30YearFixedRateMortgageAverage"
+      ],
+      "abel_signal": {
+        "macro_node": "30YearFixedRateMortgageAverage",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_069",
+      "data_source": "fred",
+      "question_short": "Will the 30-year fixed rate jumbo mortgage index have increased by {resolution_date} as compared to its value on {foreca",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "30YearFixedRateMortgageAverage"
+      ],
+      "abel_signal": {
+        "macro_node": "30YearFixedRateMortgageAverage",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_070",
+      "data_source": "fred",
+      "question_short": "Will the 30-year fixed rate Veterans Affairs mortgage index have increased by {resolution_date} as compared to its value",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "30YearFixedRateMortgageAverage"
+      ],
+      "abel_signal": {
+        "macro_node": "30YearFixedRateMortgageAverage",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_071",
+      "data_source": "fred",
+      "question_short": "Will the Federal Reserve Bank of Cleveland's estimate for the 10-year real interest rate have increased by {resolution_d",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "federalFunds"
+      ],
+      "abel_signal": {
+        "macro_node": "federalFunds",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_072",
+      "data_source": "fred",
+      "question_short": "Will the total dollar amount of assets held by all US Federal Reserve banks have increased by {resolution_date} as compa",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_073",
+      "data_source": "fred",
+      "question_short": "Will the aggregated daily value of US Treasury securities repurchased overnight by the Federal Reserve in temporary open",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_074",
+      "data_source": "fred",
+      "question_short": "Will the award rate of US Treasury securities sold by the Federal Reserve in overnight temporary open market operations ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_075",
+      "data_source": "fred",
+      "question_short": "Will the aggregated daily value of US Treasury securities sold by the Federal Reserve in temporary open market operation",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_076",
+      "data_source": "fred",
+      "question_short": "Will the aggregated daily value of securities sold by the Federal Reserve in temporary open market operations have incre",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_077",
+      "data_source": "fred",
+      "question_short": "Will the 30-day average of the Federal Reserve's Secured Overnight Financing Rate have increased by {resolution_date} as",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_078",
+      "data_source": "fred",
+      "question_short": "Will the 90-day average of the Federal Reserve's Secured Overnight Financing Rate have increased by {resolution_date} as",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_079",
+      "data_source": "fred",
+      "question_short": "Will the Federal Reserve's SOFR (Secured Overnight Financing Rate) Index have increased by {resolution_date} as compared",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "federalFunds"
+      ],
+      "abel_signal": {
+        "macro_node": "federalFunds",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_080",
+      "data_source": "fred",
+      "question_short": "Will the S&P 500, which represents the daily index value at market close have increased by {resolution_date} as compared",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "SP500"
+      ],
+      "abel_signal": {
+        "macro_node": "SP500",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_081",
+      "data_source": "fred",
+      "question_short": "Will the yield spread between the 10-year US Treasury bond and the Effective Federal Funds Rate (interest rate) have inc",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "federalFunds"
+      ],
+      "abel_signal": {
+        "macro_node": "federalFunds",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_082",
+      "data_source": "fred",
+      "question_short": "Will the US' 10-year breakeven inflation rate have increased by {resolution_date} as compared to its value on {forecast_",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "inflationRate"
+      ],
+      "abel_signal": {
+        "macro_node": "inflationRate",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_083",
+      "data_source": "fred",
+      "question_short": "Will the US' 5-year breakeven inflation rate have increased by {resolution_date} as compared to its value on {forecast_d",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "inflationRate"
+      ],
+      "abel_signal": {
+        "macro_node": "inflationRate",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_084",
+      "data_source": "fred",
+      "question_short": "Will the US' 5-year forward inflation expectation rate have increased by {resolution_date} as compared to its value on {",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "inflationRate"
+      ],
+      "abel_signal": {
+        "macro_node": "inflationRate",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_085",
+      "data_source": "fred",
+      "question_short": "Will the term premium on a 10-year zero-coupon bond have increased by {resolution_date} as compared to its value on {for",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_086",
+      "data_source": "fred",
+      "question_short": "Will the total dollar amount of mortgage-backed securities held by all US commercial banks have increased by {resolution",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "30YearFixedRateMortgageAverage"
+      ],
+      "abel_signal": {
+        "macro_node": "30YearFixedRateMortgageAverage",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_087",
+      "data_source": "fred",
+      "question_short": "Will the total dollar amount representing all commercial and industrial loans made by commercial banks in the US have in",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_088",
+      "data_source": "fred",
+      "question_short": "Will the Chicago Board Options Exchange's Volatility Index have increased by {resolution_date} as compared to its value ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "VIX"
+      ],
+      "abel_signal": {
+        "macro_node": "VIX",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_089",
+      "data_source": "fred",
+      "question_short": "Will the Weekly Economic Index (Lewis-Mertens-Stock) have increased by {resolution_date} as compared to its value on {fo",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_090",
+      "data_source": "fred",
+      "question_short": "Will the market yield on US treasury securities at 10-year constant maturity, quoted on an investment basis, have increa",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_091",
+      "data_source": "fred",
+      "question_short": "Will the weekly dollar amount of loans made by the Federal Reserve under its liquidity and credit facilities have increa",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_092",
+      "data_source": "fred",
+      "question_short": "Will the weekly dollar amount of loans made under the primary credit lending program by the Federal Reserve have increas",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_093",
+      "data_source": "fred",
+      "question_short": "Will the weekly dollar amount associated with Federal Reserve reverse repurchase agreements have increased by {resolutio",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_094",
+      "data_source": "fred",
+      "question_short": "Will USD money supply as measured by M1 have increased by {resolution_date} as compared to its value on {forecast_due_da",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "M2MoneyStock"
+      ],
+      "abel_signal": {
+        "macro_node": "M2MoneyStock",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_095",
+      "data_source": "fred",
+      "question_short": "Will the total dollar amount of reserve balances held with Federal Reverse Banks have increased by {resolution_date} as ",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_096",
+      "data_source": "fred",
+      "question_short": "Will Retail Money Market Funds, a component of M2, a measure of USD money supply, have increased by {resolution_date} as",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "M2MoneyStock"
+      ],
+      "abel_signal": {
+        "macro_node": "M2MoneyStock",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_097",
+      "data_source": "fred",
+      "question_short": "Will the total dollar amount of securities held by US Federal Reserve Banks have increased by {resolution_date} as compa",
+      "ground_truth": 1,
+      "base_prediction": 1,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [],
+      "abel_signal": {}
+    },
+    {
+      "id": "fb_098",
+      "data_source": "fred",
+      "question_short": "Will the weekly average of deposits other than reserve balances held in the US treasury's general accounts with Federal ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "macro_reasoning",
+      "entities": [
+        "treasuryRateYear10"
+      ],
+      "abel_signal": {
+        "macro_node": "treasuryRateYear10",
+        "blanket_size": 0
+      }
+    },
+    {
+      "id": "fb_099",
+      "data_source": "yfinance",
+      "question_short": "Will ABNB's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0001)",
+      "entities": [
+        "ABNB"
+      ],
+      "abel_signal": {
+        "prediction": 0.0001,
+        "drivers": [
+          "SOKUUSD.price",
+          "ENO.price",
+          "UTSI.price",
+          "ESBA.price",
+          "LSDUSD.price",
+          "SIM.price",
+          "MBPUSD.price",
+          "OMCC.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_100",
+      "data_source": "yfinance",
+      "question_short": "Will ADI's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0003)",
+      "entities": [
+        "ADI"
+      ],
+      "abel_signal": {
+        "prediction": 0.0003,
+        "drivers": [
+          "AIZN.price",
+          "MBPUSD.price",
+          "GARDUSD.price",
+          "OXLCP.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_101",
+      "data_source": "yfinance",
+      "question_short": "Will ADSK's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0003)",
+      "entities": [
+        "ADSK"
+      ],
+      "abel_signal": {
+        "prediction": 0.0003,
+        "drivers": [
+          "LTXUSD.price",
+          "PEAKUSD.price",
+          "WSBCP.price",
+          "LGCYUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_102",
+      "data_source": "yfinance",
+      "question_short": "Will AES's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_moderate_down (-0.0011)",
+      "entities": [
+        "AES"
+      ],
+      "abel_signal": {
+        "prediction": -0.0011,
+        "drivers": [
+          "PERRYUSD.price",
+          "IMOUSD.price",
+          "UPXI.price",
+          "TOONUSD.price",
+          "AEROUSD.price",
+          "KDFUSD.price",
+          "REV3LUSD.price",
+          "TDROPUSD.price",
+          "FCLUSD.price",
+          "VEGAUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_103",
+      "data_source": "yfinance",
+      "question_short": "Will AIG's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_moderate_down (-0.0002)",
+      "entities": [
+        "AIG"
+      ],
+      "abel_signal": {
+        "prediction": -0.0002,
+        "drivers": [
+          "AGNCO.price",
+          "GCBC.price",
+          "ATH-PA.price",
+          "OXLCP.price",
+          "ECCX.price",
+          "SNV-PD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_104",
+      "data_source": "yfinance",
+      "question_short": "Will AMD's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "AMD"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_105",
+      "data_source": "yfinance",
+      "question_short": "Will AMGN's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_moderate_down (-0.0003)",
+      "entities": [
+        "AMGN"
+      ],
+      "abel_signal": {
+        "prediction": -0.0003,
+        "drivers": [
+          "SCRTUSD.price",
+          "ITHEUMUSD.price",
+          "MOOVUSD.price",
+          "ACAUSD.price",
+          "PDTUSD.price",
+          "PRIMEUSD.price",
+          "DHNUSD.price",
+          "MARSUSD.price",
+          "VTHOUSD.price",
+          "ECOREALUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_106",
+      "data_source": "yfinance",
+      "question_short": "Will AMP's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0004)",
+      "entities": [
+        "AMP"
+      ],
+      "abel_signal": {
+        "prediction": 0.0004,
+        "drivers": [
+          "IMOUSD.price",
+          "ACTUSD.price",
+          "OXLCP.price",
+          "BOGUSD.price",
+          "MBPUSD.price",
+          "LGHL.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_107",
+      "data_source": "yfinance",
+      "question_short": "Will AVY's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0006)",
+      "entities": [
+        "AVY"
+      ],
+      "abel_signal": {
+        "prediction": 0.0006,
+        "drivers": [
+          "IIIN.price",
+          "EXP.price",
+          "PFSI.price",
+          "BWB.price",
+          "GATX.price",
+          "NBN.price",
+          "OVBC.price",
+          "FFIN.price",
+          "SIGI.price",
+          "PAC.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_108",
+      "data_source": "yfinance",
+      "question_short": "Will AWK's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_moderate_down (-0.0009)",
+      "entities": [
+        "AWK"
+      ],
+      "abel_signal": {
+        "prediction": -0.0009,
+        "drivers": [
+          "SFIUSD.price",
+          "VARAUSD.price",
+          "ECCX.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_109",
+      "data_source": "yfinance",
+      "question_short": "Will AXON's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0019)",
+      "entities": [
+        "AXON"
+      ],
+      "abel_signal": {
+        "prediction": 0.0019,
+        "drivers": [
+          "FUNUSD.price",
+          "ASND.price",
+          "IZEA.price",
+          "AKTX.price",
+          "MANAUSD.price",
+          "BOC.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_110",
+      "data_source": "yfinance",
+      "question_short": "Will BIO's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0018)",
+      "entities": [
+        "BIO"
+      ],
+      "abel_signal": {
+        "prediction": 0.0018,
+        "drivers": [
+          "MGRX.price",
+          "LXEH.price",
+          "VCIG.price",
+          "SNTG.price",
+          "ISAUSD.price",
+          "WTO.price",
+          "LUSUSD.price",
+          "UNFIUSD.price",
+          "GNYUSD.price",
+          "LAYERUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_111",
+      "data_source": "yfinance",
+      "question_short": "Will BR's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock s",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "BR"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_112",
+      "data_source": "yfinance",
+      "question_short": "Will BRO's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_moderate_down (-0.0005)",
+      "entities": [
+        "BRO"
+      ],
+      "abel_signal": {
+        "prediction": -0.0005,
+        "drivers": [
+          "ISAUSD.price",
+          "PACOCAUSD.price",
+          "IONUSD.price",
+          "ASTUSD.price",
+          "DARKUSD.price",
+          "SIM.price",
+          "LAYERUSD.price",
+          "DYPUSD.price",
+          "TETUUSD.price",
+          "BDPUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_113",
+      "data_source": "yfinance",
+      "question_short": "Will BWA's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0039)",
+      "entities": [
+        "BWA"
+      ],
+      "abel_signal": {
+        "prediction": 0.0039,
+        "drivers": [
+          "BIFIUSD.price",
+          "PRIMEUSD.price",
+          "ECCX.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_114",
+      "data_source": "yfinance",
+      "question_short": "Will CB's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock s",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_up_bearish_override (0.0054)",
+      "entities": [
+        "CB"
+      ],
+      "abel_signal": {
+        "prediction": 0.0054,
+        "drivers": [
+          "WRTUSD.price",
+          "ECCX.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_115",
+      "data_source": "yfinance",
+      "question_short": "Will CBRE's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0023)",
+      "entities": [
+        "CBRE"
+      ],
+      "abel_signal": {
+        "prediction": 0.0023,
+        "drivers": [
+          "WKAVAUSD.price",
+          "ISAUSD.price",
+          "CIM-PC.price",
+          "GINZAUSD.price",
+          "OXLCP.price",
+          "RBWUSD.price",
+          "MEANUSD.price",
+          "BML-PG.price",
+          "NLY-PG.price",
+          "MBPUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_116",
+      "data_source": "yfinance",
+      "question_short": "Will CCL's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0002)",
+      "entities": [
+        "CCL"
+      ],
+      "abel_signal": {
+        "prediction": 0.0002,
+        "drivers": [
+          "NLY-PG.price",
+          "CIM-PC.price",
+          "MEANUSD.price",
+          "ATH-PA.price",
+          "FITBP.price",
+          "GCBC.price",
+          "ECCX.price",
+          "ACTUSD.price",
+          "BSVN.price",
+          "PFX.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_117",
+      "data_source": "yfinance",
+      "question_short": "Will CDNS's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0004)",
+      "entities": [
+        "CDNS"
+      ],
+      "abel_signal": {
+        "prediction": 0.0004,
+        "drivers": [
+          "K21USD.price",
+          "DARKUSD.price",
+          "ISAUSD.price",
+          "IZM.price",
+          "PAXGUSD.price",
+          "LAYERUSD.price",
+          "MBPUSD.price",
+          "LEADUSD.price",
+          "GDTUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_118",
+      "data_source": "yfinance",
+      "question_short": "Will CE's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock s",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_moderate_down (-0.0009)",
+      "entities": [
+        "CE"
+      ],
+      "abel_signal": {
+        "prediction": -0.0009,
+        "drivers": [
+          "LUNAUSD.price",
+          "IXCUSD.price",
+          "ISAUSD.price",
+          "WTM.price",
+          "IMOUSD.price",
+          "SUSDUSD.price",
+          "MFGUSD.price",
+          "UPXI.price",
+          "SANTOSUSD.price",
+          "HCTI.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_119",
+      "data_source": "yfinance",
+      "question_short": "Will CFG's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0023)",
+      "entities": [
+        "CFG"
+      ],
+      "abel_signal": {
+        "prediction": 0.0023,
+        "drivers": [
+          "WKAVAUSD.price",
+          "XRUNEUSD.price",
+          "FCTRUSD.price",
+          "IMOUSD.price",
+          "MEANUSD.price",
+          "REVOUSD.price",
+          "BIPH.price",
+          "ECCX.price",
+          "MBPUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_120",
+      "data_source": "yfinance",
+      "question_short": "Will CHRW's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "CHRW"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_121",
+      "data_source": "yfinance",
+      "question_short": "Will CLX's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_moderate_down (-0.0007)",
+      "entities": [
+        "CLX"
+      ],
+      "abel_signal": {
+        "prediction": -0.0007,
+        "drivers": [
+          "PRIMEUSD.price",
+          "BTTUSD.price",
+          "BIFIUSD.price",
+          "ECCX.price",
+          "LEADUSD.price",
+          "OXLCP.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_122",
+      "data_source": "yfinance",
+      "question_short": "Will CMCSA's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStoc",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0002)",
+      "entities": [
+        "CMCSA"
+      ],
+      "abel_signal": {
+        "prediction": 0.0002,
+        "drivers": [
+          "ISAUSD.price",
+          "IXCUSD.price",
+          "PRIMEUSD.price",
+          "SRNUSD.price",
+          "IONUSD.price",
+          "BIFIUSD.price",
+          "RAILUSD.price",
+          "WBTUSD.price",
+          "SWORDUSD.price",
+          "DARCUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_123",
+      "data_source": "yfinance",
+      "question_short": "Will CPB's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 1,
+      "base_correct": false,
+      "final_correct": true,
+      "flipped": true,
+      "reason": "abel_contrarian_flip (pred=-0.0129)",
+      "entities": [
+        "CPB"
+      ],
+      "abel_signal": {
+        "prediction": -0.0129,
+        "drivers": [
+          "SFIUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_124",
+      "data_source": "yfinance",
+      "question_short": "Will CPRT's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "CPRT"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_125",
+      "data_source": "yfinance",
+      "question_short": "Will CPT's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "CPT"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_126",
+      "data_source": "yfinance",
+      "question_short": "Will CSGP's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": false,
+      "flipped": true,
+      "reason": "abel_contrarian_flip (pred=-0.0135)",
+      "entities": [
+        "CSGP"
+      ],
+      "abel_signal": {
+        "prediction": -0.0135,
+        "drivers": [
+          "IDRTUSD.price",
+          "HUNNYUSD.price",
+          "DARKUSD.price",
+          "CRPUSD.price",
+          "BRYUSD.price",
+          "PZPUSD.price",
+          "RBWUSD.price",
+          "FEAM.price",
+          "GINZAUSD.price",
+          "TOMOUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_127",
+      "data_source": "yfinance",
+      "question_short": "Will CSX's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0028)",
+      "entities": [
+        "CSX"
+      ],
+      "abel_signal": {
+        "prediction": 0.0028,
+        "drivers": [
+          "IMOUSD.price",
+          "VNYUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_128",
+      "data_source": "yfinance",
+      "question_short": "Will CTAS's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_moderate_down (-0.0001)",
+      "entities": [
+        "CTAS"
+      ],
+      "abel_signal": {
+        "prediction": -0.0001,
+        "drivers": [
+          "UNCXUSD.price",
+          "URUSUSD.price",
+          "STRAXUSD.price",
+          "STHO.price",
+          "VINUUSD.price",
+          "AVAUSD.price",
+          "MMFUSD.price",
+          "PDTUSD.price",
+          "REVOUSD.price",
+          "GFLYUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_129",
+      "data_source": "yfinance",
+      "question_short": "Will CTLT's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "CTLT"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_130",
+      "data_source": "yfinance",
+      "question_short": "Will CZR's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "CZR"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_131",
+      "data_source": "yfinance",
+      "question_short": "Will D's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock sp",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0023)",
+      "entities": [
+        "D"
+      ],
+      "abel_signal": {
+        "prediction": 0.0023,
+        "drivers": [
+          "RENBTCUSD.price",
+          "OXLCP.price",
+          "ECCX.price",
+          "JPEGUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_132",
+      "data_source": "yfinance",
+      "question_short": "Will DAY's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 1,
+      "base_correct": false,
+      "final_correct": true,
+      "flipped": true,
+      "reason": "abel_contrarian_flip (pred=-0.0042)",
+      "entities": [
+        "DAY"
+      ],
+      "abel_signal": {
+        "prediction": -0.0042,
+        "drivers": [
+          "IZM.price",
+          "GNYUSD.price",
+          "CRPUSD.price",
+          "ZIPTUSD.price",
+          "UPXI.price",
+          "GBLI.price",
+          "IMOUSD.price",
+          "PRIMEUSD.price",
+          "CCOI.price",
+          "SUNDAEUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_133",
+      "data_source": "yfinance",
+      "question_short": "Will DE's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock s",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0007)",
+      "entities": [
+        "DE"
+      ],
+      "abel_signal": {
+        "prediction": 0.0007,
+        "drivers": [
+          "OKBUSD.price",
+          "SUSDUSD.price",
+          "MBPUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_134",
+      "data_source": "yfinance",
+      "question_short": "Will DECK's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_neutral (0.0000)",
+      "entities": [
+        "DECK"
+      ],
+      "abel_signal": {
+        "prediction": 0.0,
+        "drivers": [
+          "MFGUSD.price",
+          "ISAUSD.price",
+          "OCTO.price",
+          "ACTUSD.price",
+          "DDDUSD.price",
+          "BIPH.price",
+          "VTHOUSD.price",
+          "AIZN.price",
+          "MMFUSD.price",
+          "TDROPUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_135",
+      "data_source": "yfinance",
+      "question_short": "Will DPZ's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0001)",
+      "entities": [
+        "DPZ"
+      ],
+      "abel_signal": {
+        "prediction": 0.0001,
+        "drivers": [
+          "QMCO.price",
+          "GINZAUSD.price",
+          "RENBTCUSD.price",
+          "FOA.price",
+          "BELTUSD.price",
+          "ALIENUSD.price",
+          "EVGN.price",
+          "TOONUSD.price",
+          "ECCX.price",
+          "BOGUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_136",
+      "data_source": "yfinance",
+      "question_short": "Will DTE's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0003)",
+      "entities": [
+        "DTE"
+      ],
+      "abel_signal": {
+        "prediction": 0.0003,
+        "drivers": [
+          "BNT.price",
+          "ATH-PA.price",
+          "APM.price",
+          "OXLCP.price",
+          "ECCX.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_137",
+      "data_source": "yfinance",
+      "question_short": "Will DVA's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0005)",
+      "entities": [
+        "DVA"
+      ],
+      "abel_signal": {
+        "prediction": 0.0005,
+        "drivers": [
+          "REVB.price",
+          "TRRUSD.price",
+          "CUBUSD.price",
+          "OKUSD.price",
+          "GRNT.price",
+          "COSM.price",
+          "YOCOUSD.price",
+          "IMOUSD.price",
+          "PRIMEUSD.price",
+          "LUCHOWUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_138",
+      "data_source": "yfinance",
+      "question_short": "Will ENPH's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 1,
+      "base_correct": false,
+      "final_correct": true,
+      "flipped": true,
+      "reason": "abel_contrarian_flip (pred=-0.0046)",
+      "entities": [
+        "ENPH"
+      ],
+      "abel_signal": {
+        "prediction": -0.0046,
+        "drivers": [
+          "IMOUSD.price",
+          "KOGEUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_139",
+      "data_source": "yfinance",
+      "question_short": "Will ETR's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "ETR"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_140",
+      "data_source": "yfinance",
+      "question_short": "Will ETSY's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "ETSY"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_141",
+      "data_source": "yfinance",
+      "question_short": "Will EVRG's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0015)",
+      "entities": [
+        "EVRG"
+      ],
+      "abel_signal": {
+        "prediction": 0.0015,
+        "drivers": [
+          "AGNCM.price",
+          "TLSA.price",
+          "AGNCN.price",
+          "BWMX.price",
+          "BML-PG.price",
+          "NLY-PG.price",
+          "OXLCP.price",
+          "ECCX.price",
+          "NXN.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_142",
+      "data_source": "yfinance",
+      "question_short": "Will FANG's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0002)",
+      "entities": [
+        "FANG"
+      ],
+      "abel_signal": {
+        "prediction": 0.0002,
+        "drivers": [
+          "OXLCP.price",
+          "MBPUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_143",
+      "data_source": "yfinance",
+      "question_short": "Will FFIV's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0001)",
+      "entities": [
+        "FFIV"
+      ],
+      "abel_signal": {
+        "prediction": 0.0001,
+        "drivers": [
+          "BLKUSD.price",
+          "IZM.price",
+          "ILAG.price",
+          "MOOVUSD.price",
+          "IMOUSD.price",
+          "PRIMEUSD.price",
+          "PERUSD.price",
+          "MOBUSD.price",
+          "ACTUSD.price",
+          "ISAUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_144",
+      "data_source": "yfinance",
+      "question_short": "Will FI's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock s",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_moderate_down (-0.0017)",
+      "entities": [
+        "FI"
+      ],
+      "abel_signal": {
+        "prediction": -0.0017,
+        "drivers": [
+          "KEN.price",
+          "ISAUSD.price",
+          "CIM-PD.price",
+          "AMTX.price",
+          "VLYPP.price",
+          "SLDB.price",
+          "DARKUSD.price",
+          "OXLCP.price",
+          "SILC.price",
+          "MURAUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_145",
+      "data_source": "yfinance",
+      "question_short": "Will GLW's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "GLW"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_146",
+      "data_source": "yfinance",
+      "question_short": "Will GPN's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_moderate_down (-0.0013)",
+      "entities": [
+        "GPN"
+      ],
+      "abel_signal": {
+        "prediction": -0.0013,
+        "drivers": [
+          "AGNCM.price",
+          "REVOUSD.price",
+          "PTSUSD.price",
+          "BTCMTUSD.price",
+          "SOKUUSD.price",
+          "PRIMEUSD.price",
+          "AQTUSD.price",
+          "FIROUSD.price",
+          "OXLCP.price",
+          "FCTRUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_147",
+      "data_source": "yfinance",
+      "question_short": "Will GWW's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "GWW"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_148",
+      "data_source": "yfinance",
+      "question_short": "Will HCA's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0006)",
+      "entities": [
+        "HCA"
+      ],
+      "abel_signal": {
+        "prediction": 0.0006,
+        "drivers": [
+          "IMOUSD.price",
+          "LIXT.price",
+          "RBWUSD.price",
+          "NCPL.price",
+          "OXLCP.price",
+          "FITBP.price",
+          "CIM-PC.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_149",
+      "data_source": "yfinance",
+      "question_short": "Will HPQ's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0003)",
+      "entities": [
+        "HPQ"
+      ],
+      "abel_signal": {
+        "prediction": 0.0003,
+        "drivers": [
+          "CREAMUSD.price",
+          "ONEUSD.price",
+          "MFGUSD.price",
+          "XCMUSD.price",
+          "HBANL.price",
+          "DXDUSD.price",
+          "ACTUSD.price",
+          "JUPUSD.price",
+          "BLANKUSD.price",
+          "BIPH.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_150",
+      "data_source": "yfinance",
+      "question_short": "Will HST's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0002)",
+      "entities": [
+        "HST"
+      ],
+      "abel_signal": {
+        "prediction": 0.0002,
+        "drivers": [
+          "OXLCP.price",
+          "ECCX.price",
+          "AGNCO.price",
+          "SNV-PD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_151",
+      "data_source": "yfinance",
+      "question_short": "Will HUBB's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0008)",
+      "entities": [
+        "HUBB"
+      ],
+      "abel_signal": {
+        "prediction": 0.0008,
+        "drivers": [
+          "KP3RUSD.price",
+          "ALOT.price",
+          "DRFUSD.price",
+          "GALUSD.price",
+          "IDA.price",
+          "MNTK.price",
+          "YDFUSD.price",
+          "GBUSD.price",
+          "NAOSUSD.price",
+          "SVNUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_152",
+      "data_source": "yfinance",
+      "question_short": "Will HUM's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 1,
+      "base_correct": true,
+      "final_correct": false,
+      "flipped": true,
+      "reason": "abel_contrarian_flip (pred=-0.0078)",
+      "entities": [
+        "HUM"
+      ],
+      "abel_signal": {
+        "prediction": -0.0078,
+        "drivers": [
+          "VEEE.price",
+          "ARI10USD.price",
+          "VGXUSD.price",
+          "IONUSD.price",
+          "SUIPUSD.price",
+          "BCOINUSD.price",
+          "HERMESUSD.price",
+          "PDEXUSD.price",
+          "PERUSD.price",
+          "ROOBEEUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_153",
+      "data_source": "yfinance",
+      "question_short": "Will IBM's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0011)",
+      "entities": [
+        "IBM"
+      ],
+      "abel_signal": {
+        "prediction": 0.0011,
+        "drivers": [
+          "SPHUSD.price",
+          "IONUSD.price",
+          "PRIMEUSD.price",
+          "ISAUSD.price",
+          "RBWUSD.price",
+          "MOBUSD.price",
+          "BOGUSD.price",
+          "IZM.price",
+          "PEXUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_154",
+      "data_source": "yfinance",
+      "question_short": "Will INTC's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_up_bearish_override (0.0093)",
+      "entities": [
+        "INTC"
+      ],
+      "abel_signal": {
+        "prediction": 0.0093,
+        "drivers": [
+          "UW3SUSD.price",
+          "UNWUSD.price",
+          "SFIUSD.price",
+          "ULXUSD.price",
+          "ISAUSD.price",
+          "STSOLUSD.price",
+          "CXT.price",
+          "SBDUSD.price",
+          "TRCLUSD.price",
+          "GUARDUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_155",
+      "data_source": "yfinance",
+      "question_short": "Will INTU's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "INTU"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_156",
+      "data_source": "yfinance",
+      "question_short": "Will JCI's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_moderate_down (-0.0007)",
+      "entities": [
+        "JCI"
+      ],
+      "abel_signal": {
+        "prediction": -0.0007,
+        "drivers": [
+          "ISAUSD.price",
+          "XPRUSD.price",
+          "PRIMEUSD.price",
+          "FCTRUSD.price",
+          "OKUSD.price",
+          "HGETUSD.price",
+          "HOTUSD.price",
+          "IMOUSD.price",
+          "ACTUSD.price",
+          "RABBITUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_157",
+      "data_source": "yfinance",
+      "question_short": "Will JKHY's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "abel_weak_up (0.0010)",
+      "entities": [
+        "JKHY"
+      ],
+      "abel_signal": {
+        "prediction": 0.001,
+        "drivers": [
+          "AGNCM.price",
+          "CNXN.price",
+          "XRUNEUSD.price",
+          "FELE.price",
+          "BSWUSD.price",
+          "SHREDUSD.price",
+          "XPRUSD.price",
+          "HTUSD.price",
+          "GRAIUSD.price",
+          "AUDIOUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_158",
+      "data_source": "yfinance",
+      "question_short": "Will JPM's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "abel_neutral (0.0000)",
+      "entities": [
+        "JPM"
+      ],
+      "abel_signal": {
+        "prediction": 0.0,
+        "drivers": [
+          "ONEUSD.price",
+          "SANTOSUSD.price",
+          "IMOUSD.price",
+          "GUSD.price",
+          "AIZN.price",
+          "MBPUSD.price",
+          "AREB.price",
+          "TAJUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "fb_159",
+      "data_source": "yfinance",
+      "question_short": "Will KHC's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "KHC"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_160",
+      "data_source": "yfinance",
+      "question_short": "Will KMB's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "KMB"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_161",
+      "data_source": "yfinance",
+      "question_short": "Will KMX's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "KMX"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_162",
+      "data_source": "yfinance",
+      "question_short": "Will L's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock sp",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "L"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_163",
+      "data_source": "yfinance",
+      "question_short": "Will LH's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock s",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "LH"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_164",
+      "data_source": "yfinance",
+      "question_short": "Will LULU's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "LULU"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_165",
+      "data_source": "yfinance",
+      "question_short": "Will LVS's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "LVS"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_166",
+      "data_source": "yfinance",
+      "question_short": "Will MCO's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "MCO"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_167",
+      "data_source": "yfinance",
+      "question_short": "Will MDT's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "MDT"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_168",
+      "data_source": "yfinance",
+      "question_short": "Will MHK's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "MHK"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_169",
+      "data_source": "yfinance",
+      "question_short": "Will MNST's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "MNST"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_170",
+      "data_source": "yfinance",
+      "question_short": "Will MO's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock s",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "MO"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_171",
+      "data_source": "yfinance",
+      "question_short": "Will MS's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock s",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "MS"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_172",
+      "data_source": "yfinance",
+      "question_short": "Will NCLH's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "NCLH"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_173",
+      "data_source": "yfinance",
+      "question_short": "Will NDAQ's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "NDAQ"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_174",
+      "data_source": "yfinance",
+      "question_short": "Will NEM's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "NEM"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_175",
+      "data_source": "yfinance",
+      "question_short": "Will NOW's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "NOW"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_176",
+      "data_source": "yfinance",
+      "question_short": "Will NTAP's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "NTAP"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_177",
+      "data_source": "yfinance",
+      "question_short": "Will NWS's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "NWS"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_178",
+      "data_source": "yfinance",
+      "question_short": "Will OMC's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "OMC"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_179",
+      "data_source": "yfinance",
+      "question_short": "Will PEG's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "PEG"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_180",
+      "data_source": "yfinance",
+      "question_short": "Will PFE's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "PFE"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_181",
+      "data_source": "yfinance",
+      "question_short": "Will PGR's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "PGR"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_182",
+      "data_source": "yfinance",
+      "question_short": "Will PHM's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "PHM"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_183",
+      "data_source": "yfinance",
+      "question_short": "Will PNC's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "PNC"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_184",
+      "data_source": "yfinance",
+      "question_short": "Will PNW's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "PNW"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_185",
+      "data_source": "yfinance",
+      "question_short": "Will PPG's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "PPG"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_186",
+      "data_source": "yfinance",
+      "question_short": "Will PSA's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "PSA"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_187",
+      "data_source": "yfinance",
+      "question_short": "Will REG's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "REG"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_188",
+      "data_source": "yfinance",
+      "question_short": "Will RJF's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "RJF"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_189",
+      "data_source": "yfinance",
+      "question_short": "Will ROST's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "ROST"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_190",
+      "data_source": "yfinance",
+      "question_short": "Will RSG's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "RSG"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_191",
+      "data_source": "yfinance",
+      "question_short": "Will RVTY's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "RVTY"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_192",
+      "data_source": "yfinance",
+      "question_short": "Will SBUX's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "SBUX"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_193",
+      "data_source": "yfinance",
+      "question_short": "Will SNA's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "SNA"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_194",
+      "data_source": "yfinance",
+      "question_short": "Will SNPS's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "SNPS"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_195",
+      "data_source": "yfinance",
+      "question_short": "Will SOLV's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "SOLV"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_196",
+      "data_source": "yfinance",
+      "question_short": "Will SRE's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "SRE"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_197",
+      "data_source": "yfinance",
+      "question_short": "Will STT's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "STT"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_198",
+      "data_source": "yfinance",
+      "question_short": "Will SYK's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "SYK"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_199",
+      "data_source": "yfinance",
+      "question_short": "Will T's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock sp",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "T"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_200",
+      "data_source": "yfinance",
+      "question_short": "Will TER's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "TER"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_201",
+      "data_source": "yfinance",
+      "question_short": "Will TJX's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "TJX"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_202",
+      "data_source": "yfinance",
+      "question_short": "Will TMUS's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "TMUS"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_203",
+      "data_source": "yfinance",
+      "question_short": "Will TPL's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "TPL"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_204",
+      "data_source": "yfinance",
+      "question_short": "Will TPR's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "TPR"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_205",
+      "data_source": "yfinance",
+      "question_short": "Will TSCO's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "TSCO"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_206",
+      "data_source": "yfinance",
+      "question_short": "Will TSLA's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "TSLA"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_207",
+      "data_source": "yfinance",
+      "question_short": "Will TT's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock s",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "TT"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_208",
+      "data_source": "yfinance",
+      "question_short": "Will TTWO's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "TTWO"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_209",
+      "data_source": "yfinance",
+      "question_short": "Will VICI's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "VICI"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_210",
+      "data_source": "yfinance",
+      "question_short": "Will VMC's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "VMC"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_211",
+      "data_source": "yfinance",
+      "question_short": "Will VST's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "VST"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_212",
+      "data_source": "yfinance",
+      "question_short": "Will VZ's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock s",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "VZ"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_213",
+      "data_source": "yfinance",
+      "question_short": "Will WDC's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock ",
+      "ground_truth": 0,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": true,
+      "final_correct": true,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "WDC"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    },
+    {
+      "id": "fb_214",
+      "data_source": "yfinance",
+      "question_short": "Will WYNN's market close price on {resolution_date} be higher than its market close price on {forecast_due_date}?\n\nStock",
+      "ground_truth": 1,
+      "base_prediction": 0,
+      "final_prediction": 0,
+      "base_correct": false,
+      "final_correct": false,
+      "flipped": false,
+      "reason": "bearish_default",
+      "entities": [
+        "WYNN"
+      ],
+      "abel_signal": {
+        "prediction": null,
+        "drivers": []
+      }
+    }
+  ]
+}

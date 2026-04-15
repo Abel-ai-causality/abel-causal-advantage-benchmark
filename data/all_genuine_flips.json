@@ -1,0 +1,342 @@
+[
+  {
+    "source": "FinBen_FOMC",
+    "text": "However, we have also found that excluding volatile food and energy prices generally gives a better ",
+    "base_answer": "hawkish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-001"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "Rather, members agreed that inflation was likely to moderate in coming quarters,",
+    "base_answer": "dovish",
+    "skill_answer": "hawkish",
+    "ground_truth": "hawkish",
+    "reason": "Abel: inflation 'likely to moderate' implies concern about current high inflation (hawkish context)",
+    "trust": "MEDIUM",
+    "id": "GENUINE-002"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "In the productivity boom that followed World War I, a chief technological innovation was the spread ",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-003"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "But I want to emphasize that we do have a commitment to raising inflation to 2 percent.",
+    "base_answer": "neutral",
+    "skill_answer": "dovish",
+    "ground_truth": "dovish",
+    "reason": "Abel: text expresses concern about weakness via GDP->unemploymentRate->easing",
+    "trust": "MEDIUM",
+    "id": "GENUINE-004"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "The Committee decided to keep the target range for the federal funds rate at 0 to 1/4 percent and ex",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: conditional forward guidance is neutral (neither pure ease nor tighten)",
+    "trust": "HIGH",
+    "id": "GENUINE-005"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "As a consequence, a sustainable, non-inflationary expansion is likely to involve some moderation in ",
+    "base_answer": "dovish",
+    "skill_answer": "hawkish",
+    "ground_truth": "hawkish",
+    "reason": "Abel: text expresses concern about inflation/overheating via inflationRate->federalFunds",
+    "trust": "MEDIUM",
+    "id": "GENUINE-006"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "Although inflation remained remarkably subdued and any increase in inflationary pressures likely wou",
+    "base_answer": "neutral",
+    "skill_answer": "dovish",
+    "ground_truth": "dovish",
+    "reason": "Abel: downside concern maps through GDP->federalFunds->easing path",
+    "trust": "MEDIUM",
+    "id": "GENUINE-007"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "At the same time, the staff viewed the risks around its outlook for the unemployment rate as roughly",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: balanced/symmetric language indicates neutral stance",
+    "trust": "HIGH",
+    "id": "GENUINE-008"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "We found that a surprise increase of 25 basis points in the funds rate target typically results in a",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text describes theoretical/historical mechanism, not a policy stance",
+    "trust": "HIGH",
+    "id": "GENUINE-009"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "Operationally, maintaining price stability requires abiding by the Taylor principle of raising nomin",
+    "base_answer": "hawkish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text describes theoretical/historical mechanism, not a policy stance",
+    "trust": "HIGH",
+    "id": "GENUINE-010"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "However, household spending had been relatively robust during the cyclical downturn and likely had o",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-011"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "In connection with the risks associated with an early start to policy normalization, many participan",
+    "base_answer": "hawkish",
+    "skill_answer": "dovish",
+    "ground_truth": "neutral",
+    "reason": "Base='hawkish', Skill='dovish', GT='neutral'",
+    "trust": "HIGH",
+    "id": "GENUINE-012"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "Members agreed that the statement should continue to convey that inflation risks remained of greates",
+    "base_answer": "neutral",
+    "skill_answer": "hawkish",
+    "ground_truth": "hawkish",
+    "reason": "Abel: text expresses concern about inflation/overheating via inflationRate->federalFunds",
+    "trust": "MEDIUM",
+    "id": "GENUINE-013"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "With the risks to the forecast for economic activity tilted to the downside, the risks to the inflat",
+    "base_answer": "neutral",
+    "skill_answer": "dovish",
+    "ground_truth": "dovish",
+    "reason": "Abel: text expresses concern about weakness via GDP->unemploymentRate->easing",
+    "trust": "MEDIUM",
+    "id": "GENUINE-014"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "Fourth and finally, the statement codifies the key lesson from the Global Financial Crisisâ€”that fi",
+    "base_answer": "hawkish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-015"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "At the same time, the incentive to take advantage of increasingly efficient high-tech equipment and ",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-016"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "Members referred, however, to a number of favorable factors that should continue to support at least",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-017"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "For example, the evidence suggests that changes in the demographic composition of the labor force af",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-018"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "The staff continued to view the uncertainty around its projections for real GDP growth, the unemploy",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-019"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "However, indicators of economic activity in Japan and Brazil remained weak.",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-020"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "Mortgage credit conditions generally remained tight over the intermeeting period, though signs of ea",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-021"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "Some members nonetheless referred to indications of increasing expenditures for various categories o",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-022"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "These members expected that the target range would be maintained at this level until they were confi",
+    "base_answer": "hawkish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-023"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "Participants expected that productivity growth would pick up as firms slowed hiring to a pace more i",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-024"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "The extent and timing of any additional firming that may be needed to address these risks will depen",
+    "base_answer": "neutral",
+    "skill_answer": "hawkish",
+    "ground_truth": "hawkish",
+    "reason": "Abel: text expresses concern about inflation/overheating via inflationRate->federalFunds",
+    "trust": "MEDIUM",
+    "id": "GENUINE-025"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "The literature on this topic extends at least as far back as William Brainardâ€™s original paper on ",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text describes theoretical/historical mechanism, not a policy stance",
+    "trust": "HIGH",
+    "id": "GENUINE-026"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "Thus, knowing where productivity growth is headed is, in many respects, equivalent to foreseeing our",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-027"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "The stock market soared, and--remarkably enough--core inflation moderated.",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-028"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "One participant suggested that the Committee could announce an additional, lower set of thresholds f",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-029"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "While participants generally felt that the pace of underlying productivity growth remained robust, c",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-030"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "Homebuilding was forecast to decline somewhat but to stabilize at a relatively high level in the con",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-031"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "Although some of the recent data on economic activity had been better than anticipated, most partici",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-032"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "Participants noted that the improved performance of investment suggested that the expansion was beco",
+    "base_answer": "dovish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: balanced/symmetric language indicates neutral stance",
+    "trust": "HIGH",
+    "id": "GENUINE-033"
+  },
+  {
+    "source": "FinBen_FOMC",
+    "text": "That projection, along with the path to year-three inflation, should help the public differentiate s",
+    "base_answer": "hawkish",
+    "skill_answer": "neutral",
+    "ground_truth": "neutral",
+    "reason": "Abel: text is descriptive without directional policy concern",
+    "trust": "HIGH",
+    "id": "GENUINE-034"
+  }
+]
