@@ -1,0 +1,5966 @@
+{
+  "summary": {
+    "total": 500,
+    "A_pure_claude_accuracy": 58.4,
+    "B_abel_accuracy": 49.8,
+    "delta_B_minus_A": -8.6,
+    "per_class": {
+      "hawkish": {
+        "n": 259,
+        "A_accuracy": 58.3,
+        "B_accuracy": 49.42
+      },
+      "dovish": {
+        "n": 241,
+        "A_accuracy": 58.51,
+        "B_accuracy": 50.21
+      },
+      "neutral": {
+        "n": 0,
+        "A_accuracy": 0,
+        "B_accuracy": 0
+      }
+    },
+    "agreement": {
+      "both_correct": 231,
+      "A_only_correct": 61,
+      "B_only_correct": 18,
+      "both_wrong": 190
+    },
+    "A_confusion_matrix": {
+      "hawkish->hawkish": 151,
+      "dovish->dovish": 141,
+      "hawkish->neutral": 92,
+      "dovish->neutral": 74,
+      "dovish->hawkish": 26,
+      "hawkish->dovish": 16
+    },
+    "B_confusion_matrix": {
+      "hawkish->hawkish": 128,
+      "dovish->dovish": 121,
+      "hawkish->neutral": 99,
+      "dovish->neutral": 78,
+      "dovish->hawkish": 42,
+      "hawkish->dovish": 32
+    },
+    "macro_data_source": "BLS API (real, cached 2026-04-13)",
+    "model": "claude-sonnet-4-20250514",
+    "batch": "cb_batch_12"
+  },
+  "results": [
+    {
+      "id": 0,
+      "text": "vith the increasing size of farms and the rising cost of land the investment in land itself for some operations may be more than the average man can reasonably expect to accumulate during his lifetime",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 1,
+      "text": "and as the dollar became cheaper for foreign buyers our export trade expanded thereby reinforcing pressures of domestic demand on our resources",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "part of this increase reflected a temporary surge in auto purchases that resulted from the cash for clunkers program but spending in categories other than motor vehicles has increased as well",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "consequently additional investment to curtail pollution of the environment will add importantly to already large capital outlays by private business",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "while these companies face significant challenges in earlier periods many troubled firms in the industry have been able to improve productivity and develop new products",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "that translates into lower costs and more leeway to be creative in the kinds of financing and other services they can provide",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "consumer prices increased 75 per cent in the 12 months ending in september and wholesale prices including farm products rose 17 per cent",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "PPI"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "there is no need to react to every small fluctuation in commodity prices or to do so on a daily basis",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "to be sure there are factors in play that could boost inflation unused resources could fail to move efficiently to the sectors where demand is growing or the fall in the dollar could show through more",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "PPI",
+        "inflation_expectations"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "second because the relative price of imports rises by less and the price of us exports in foreign markets also falls by less under the low passthrough specification there are somewhat smaller effects ",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "there is some confusion in many discussions of productivity growth about the implications of measurement bias",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 11,
+      "text": "most of the studies were limited to comments on the effects of inflation rather than monetary actions on agriculture",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "in addition full effectiveness in realizing the gains from technological advance will require a considerable amount of human investment on the part of managers and workers who have to implement new pr",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 13,
+      "text": "each rise in prices stimulated new producers to enter the field and the cow population increased 25 per cent",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "i believe us industry  can succeed in that environment as long as we keep our sights on our longrun comparative advantages",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "these numbers illustrate that residential fixed investment is particularly sensitive to where we are in the business cycle",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "in general this includes household equipment and automobiles which contribute primarily to the living comfort and convenience of the farm family but which may add little to the productive efficiency o",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 17,
+      "text": "the agricultural bottlenecks of the 1970s spawned a greater commitment to new technologies and production techniques and led to an increase in that sectors productivity of over 20 percent in the last ",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "viewed in this  manner our recent performance can be explained as part o f the continuing transition from an inflationary economy with declining productivity to a healthier one with more moderate but ",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "as this plays out growth in real business fixed investment should resume its role as a significant contributor to overall demand growth",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "their market share in 1966 was 10 per centso far this year it is running at a seasonally adjusted rate of 14 per cent not too different from their 1968 position",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 21,
+      "text": "productivity gains in the motor vehicle industry have been strong and steady over the past 20 years",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 22,
+      "text": "as operating costs rise businesses feel justified in raising their prices and as you know some have done so",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 23,
+      "text": "production rose from 60 per cent of the 195759 average in 1930 to 118 per cent in 1967 thus in 1967 the nations farms produced almost double the 1930 level",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 24,
+      "text": "these are the problems that your committee grappled with last year and in my testimony i will be commenting on the issues raised in the report you published last fall on the subject federal monetary p",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 25,
+      "text": "this limited potential for expansion of domestic demandeven in an economy as strong as we have experienced over the past few yearsexplains why the farm sector is so critically dependent on demand from",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 26,
+      "text": "new mexico is also the nations second largest producer of pecans producing a record 92 million pounds worth 220 million in 2017 im also looking forward to touring a farm later today to learn more abou",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 27,
+      "text": "as they improve we should see an increase in demand for us goods",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 28,
+      "text": "we cannot be certain of course that the recent spike in gasoline prices in the united states is behind us especially when crude oil supplies are never fully secure because of the unpredictability of e",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 29,
+      "text": "but i have seen little direct evidence on the extent to which globalization may have boosted aggregate productivity growth in the united states in recent years",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 30,
+      "text": "this increased capital stock produces a number of macroeconomic benefits",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 31,
+      "text": "usually it is difficultis with the unintended side8government regulations of a wide variety have also tilted the balance between consumption and production",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 32,
+      "text": "profits at smaller firms which had fallen more precipitously also appear to have rebounded sharply",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 33,
+      "text": "for 1984 as a whole compensation per hour rose by just under 412 percent and nonfarm productivity increased about 212 percent",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 34,
+      "text": "however the ratio in agriculture rose at a greater rate than in manufacturing and in 1967 the debttoasset ratio in manufacturing was only 24 times that in agriculture",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 35,
+      "text": "while the full impact of these actions will not be felt for a number of years corporations in the community have been actively engaged in planning the restructuring of their activities in anticipation",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 36,
+      "text": "because that states economy is not well diversified but is quite dependent on petroleum products and farming virtually every sector is weak",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 37,
+      "text": "there are natural equilibrating mechanisms as well as policy adjustments that encourage such adjustment in demand relative to supply",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 38,
+      "text": "manufacturers in our region have reported having to curtail production because of difficulties securing raw materials",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "PPI"
+      ]
+    },
+    {
+      "id": 39,
+      "text": "from this overall picture it seems that infrastructure is important to growth",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 40,
+      "text": "how does our workforce adapt how do industries keep up how do we ride the wave instead of letting it crash over us",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 41,
+      "text": "a dynamic economy is one that is growing rapidly adopting new techniques and adapting its products and its ways of doing business to changing needs tastes and circumstances the dynamic nature of the a",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 42,
+      "text": "atlanta is highly connected to the world economy in its role as a transportation and logistics hub trade entrep\u00f4t headquarters city of global corporations and provider of financial and business servic",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 43,
+      "text": "housing has been an area of strength in the economy throughout this business cycle",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 44,
+      "text": "for example the water resources and power projects of the 1930s paved the way for electroprocess industries which now are key elements of your industrial base",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 45,
+      "text": "with such assets together with a keener appreciation of markets and the innovative ideas developed in forums like this pm sure farmers can meet the challenges they face today and regain the financial ",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 46,
+      "text": "one might think that protecting a firm from failure means protecting shareholders from losses",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 47,
+      "text": "in 2015 lending club and the opportunity fund a californiabased cdfi announced a partnership intended to provide 10 million in loans over a period of five months to 400 small businesses in underserved",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 48,
+      "text": "the dramatic advances in biotechnology for example are significantly increasing a broad range of productivityexpanding efforts in areas from agriculture to medicine",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 49,
+      "text": "first hightech production is inherently deflationary",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 50,
+      "text": "the relevant comparison is thus between the residual costs of the regulated relationship and the effects of an anticompetitive industry structure",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 51,
+      "text": "some declines in residential investment could be large and could contribute to some volatile numbers for overall gdp growth on a quarterbyquarter basis",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 52,
+      "text": "thus some capacity pressures might be felt in particular sectors sometime within the next year and a half",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 53,
+      "text": "in my judgment there are some risks to the outlook for growth that remain a concer n there are some uncertainties around the outlook for business spending",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 54,
+      "text": "in addition technologies continue to improve at breakneck speed with implications for improved productivity",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 55,
+      "text": "because of ordering cycles and lags in import cost adjustments the disinflationary effect of cheaper goods from china is hard to know in a specific time frame",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "PPI"
+      ]
+    },
+    {
+      "id": 56,
+      "text": "for priced services a decline in unit costs has been particularly sharp in the electronic payment areas where equipment is more readily substituted for human resources where volume growth has been the",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 57,
+      "text": "and what appears to have happened in the us in recent years is that the economys capacity to produce goods and services has increased nearly as rapidly as demand",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 58,
+      "text": "but the biggest factor in determining first quarter economic growth was the inventory correction",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 59,
+      "text": "more specifically there has been some discussion of whether small business is disci linated against in periods when credit demands outstrip the availability of s",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 60,
+      "text": "i do hope it is not too late for us to transform our growthbased value system to one that better acknowledges the critical role of creativity and invention",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 61,
+      "text": "many of you managed your businesses prudently and shunned more exotic instruments and activities",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 62,
+      "text": "accordingly production planning required costly inventory safety stocks and backup teams of people to respond to the unanticipated and the misjudged",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 63,
+      "text": "even with some exceptions and distinct regional differences in the united states trade was generally open and factors of productionmost notably labor and capitalmoved freely",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 64,
+      "text": "the second important factor is that as a company we m ust behave as a good citizen in the broadest sense",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 65,
+      "text": "but we know full well that airline traffic  sales   and aircraft  can fluctuate considerably over the short run and  it remains to be seen whether boeings coming 7x7 will have the spectacular success ",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 66,
+      "text": "with imports in 1968 rising nearly 212 times as fast as domestic expenditures the ratio of imports to gnp reached a peak 39 per cent for the year",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 67,
+      "text": "on the positive side  the southeasts important textile industry which has streamlined operations through the     5   introduction of more automation should remain competitive internationally",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 68,
+      "text": "an important bottom line for me as a policymaker is that the state of the economic science of productivity growth contains many huge gaps",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 69,
+      "text": "policyand prudencethe momentum of recovery has been carrying business upward to record high3 that are to be anticipated when a growing economy is booming",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 70,
+      "text": "the inflation gap during the last two years the path followed by the united states on one side and most other industrial countries on the other began to diverge not only with respect to the rate of ex",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 71,
+      "text": "it has acted as a strong restraint on domestic production damping growth in our economy",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 72,
+      "text": "however more than an altrustic sense of corporate social responsibility is involved",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 73,
+      "text": "it might have originated in the previous expansion when new capital and technology were being put in place at an unprecedented pace",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 74,
+      "text": "moreover healthy profits and low borrowing costs should encourage firms to acquire new capital assets which will give workers more and better equipment to use and thus make them more productive",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 75,
+      "text": "some experts flagged the changed trend quickly others insisted for several years that lower productivity growth was likely a temporary phenomenon",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 76,
+      "text": "in the  fourth q u a r t e r our e x p o r t s of goods and s e r v i c e s exceeded our i m p o r t s by 6",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 77,
+      "text": "a policy such as this that moves either too late or too far will disturb the inevitable cycles of renewal that go on in individual firms industries and regions in a market economy",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "federal_funds_rate"
+      ]
+    },
+    {
+      "id": 78,
+      "text": "on the supply side the flow of funds has remained unusually large reflecting expansion in consumer incomes and corporate earnings and possibly also some tendency to spend less relative to earnings tha",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 79,
+      "text": "one important change in the economic landscape that has limited the current effect of an energy shock compared with the effects in our earlier experience is that energy costs today are not nearly as i",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 80,
+      "text": "it would seem in the selfinterest of these countries to ensure that domestic demands are expanded to take up the slack that will be left by diminishing foreign outlets for their goods resulting from t",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 81,
+      "text": "the idea is that the firms equity capital automatically increases when it comes under sufficient stress",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 82,
+      "text": "t herefore i b e lie v e i t w il l  take not one but many d iffe r e n t a ctio n s ranging from greater production to greater leadership",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 83,
+      "text": "since 1945 total farm credit outstanding has increased almost sixfold rising from 76 billion to 445 billion",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 84,
+      "text": "business investment has strengthened this year following surprising weakness in 2016 the faster gains partly reflect an upturn in investment in the energy sector as oil prices have firmed",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 85,
+      "text": "the demand for almost all of these services increases as the pace of  economic activity quickens",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 86,
+      "text": "policies in these more globalized countries tend to                            be more stable an important consideration for the longterm                            planning needed for business",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 87,
+      "text": "large businesses are on notice that they should not turn to the commercial paper market to replace other credit as such a shift would reduce the residual credit available for other borrowers",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 88,
+      "text": "thus further softening in this segment of business investment appears quite likely",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 89,
+      "text": "dewitt arkansas is another rural community where entrepreneurship is sparking a local revival",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 90,
+      "text": "accordingly with commodity prices coming off their highs and manufacturers problems with supply chains well along toward resolution growth in the second half looks likely to pick up",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "inflation"
+      ]
+    },
+    {
+      "id": 91,
+      "text": "past deregulation should enable businesses to adapt their organizational structures in response to these new opportunities",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 92,
+      "text": "the historically low interest rates  engineered through the feds qe programs have allowed american businesses to  recapitalize their balance sheets",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "federal_funds_rate",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 93,
+      "text": "while uncertainty is a source of embarrassment to forecasters it has very real costs to us businesses and households by creating unnecessary inefficiencies and lowering our productivity growth",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 94,
+      "text": "reflecting a more sombre view of earnings prospects the prices of corporate stocks fell sharply",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 95,
+      "text": "here they have to make just one sale o f any productto the purchasers at a major chainand their volume is assured",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 96,
+      "text": "this is less than the average return on book value of assets in any of the 61 major industries listed in standard and poors industry surveys",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 97,
+      "text": "over time those changes surely will lead to a further lowering of real production costs as well",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 98,
+      "text": "like all the others though i dont think were likely to see all businesses take advantage of the opportunity to investeven at these historically low interest ratesuntil some of the uncertainty associat",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "federal_funds_rate",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 99,
+      "text": "the pollution is a social cost of production not paid for or internalized by the firm that generates it",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 100,
+      "text": "but capacity utilization rates in manufacturing are still a bit below their historical averages and manufacturers often tell me they have a great deal of flexibility to produce without generating cost",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 101,
+      "text": "398  michael moskow speeches  2001  and they all agree that the buyin and participation of the corporate leadership of greater milwaukee is essential",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 102,
+      "text": "red tape rigid regulations and weak legal systems impede the formation of businesses their ongoing operation and their confidence in having their contracts enforced without long and costly litigation",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 103,
+      "text": "by reducing the amount of fertilizer available to our farmers the price controllers risked causing smaller crop yields per acre re duction of output of agricultural commodities and still higher food  ",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 104,
+      "text": "much has been done to reduce regulatory barriers to efficiency and competition and to reduce the administrative burdens on business in complying with excessive regulation",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 105,
+      "text": "but as shown in table 2 there was also a major decline in the rate of productivity growthto which i will return shortly",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 106,
+      "text": "these growth rates are significant and if projected forward show that exports will become increasingly important for the arkansas and national economies",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 107,
+      "text": "to the extent that restraint falls on prices the more room there willbe fr the growth in real output we want",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 108,
+      "text": "we should encourage  other types of vocational education in these schools which will help in developing industries and businesses best suited to the area",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 109,
+      "text": "business spending should also moderate in 1999 last year business fixed investment grew an impressive 11 percent",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 110,
+      "text": "corporate cash flows are strong and financing is readily available for an array of firms",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 111,
+      "text": "as these conflicting demands compete for resources some must  go unfilled",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 112,
+      "text": "that rise through the effects i noted earlier should continue to support domestic demand in the months ahead",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 113,
+      "text": "at the same time rising consumer prices cut the consumption per capita from 68 pounds in 1947 to 55 pounds in 1951 a shrinkage that was masked and offset by the higher demand for breeding stockby 1951",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 114,
+      "text": "it is worth reemphasizing however that the most fundamental factor determining the energy industrys capacity to raise adequate funds over the next twelve years may be whether or not there is indeed ov",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 115,
+      "text": "in contrast to recent business  cycles in which the adverse e ffe c t o f high real rates has been fe lt as crowding out o f construction and capital investment foreign trade has suffered the most in ",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "federal_funds_rate",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 116,
+      "text": "then business people said they were beginning to scale back their capital investment plans",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 117,
+      "text": "this action has helped give the american people the false impression that oil is still plentiful and inexpensive",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 118,
+      "text": "economic research has shown that profits tend to drive investment choices and site selection not personal whims",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 119,
+      "text": "my principal argument is that excess capacity tends to depress prices and to curb price riseso as capacity catches up with demand prices recede",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 120,
+      "text": "3  surge in sale of durable goods machinery and large appliances will moderate though recent data shows continued strength",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 121,
+      "text": "business  investment particularly in machinery and other equipment and to a lesser extent in new plants contributed significantly to the expansion we witnessed in manufacturing as well as construction",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 122,
+      "text": "additionally the longerterm crude price has presumably been driven up by renewed fears of supply disruptions in the middle east and elsewhere",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "PPI",
+        "inflation"
+      ]
+    },
+    {
+      "id": 123,
+      "text": "some of the ict spending turned out to be wise and even prescient investments in productive new capital",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 124,
+      "text": "if the dollar were to appreciate more than ive assumed perhaps because of weaker growth abroad or if there were a significant further decline in oil prices rather than a stabilization then growth and ",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "inflation"
+      ]
+    },
+    {
+      "id": 125,
+      "text": "actions have been taken to raise milk support prices to curtail imports of dairy products and to reduce substantially next years wheat acreage",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "PPI",
+        "inflation"
+      ]
+    },
+    {
+      "id": 126,
+      "text": "because of the intense capitalgoods boom industry has found it impossible to work off its order backlogs which for durable goods are now 29 percent above the yearago level",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 127,
+      "text": "1  the automobile industry which is heavily concentrated in this region reported sales results for the past three months that were the strongest since 1986",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 128,
+      "text": "the  dollar although lower by 67 percent since the recent g5 accord and by  20 percent from its march highs is still not down enough some would  say to reduce the trade imbalances that have developed ",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 129,
+      "text": "indeed the most recent indicators are pretty positive orders for capital equipment and consumer spending posted solid increases in december and data for january show a further recovery in auto sales a",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 130,
+      "text": "if many speculators share the view that oil shortages will worsen and prices will rise then their demand for oil futures will be high and consequently the price of oil for future delivery will rise",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 131,
+      "text": "third to the extent that the movement toward surplus in developingcountry current accounts has had a differential impact on the united states relative to other industrial countries what accounts for t",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 132,
+      "text": "past 10 years the share of these countries in our total exports has risen frcm less than 30 percent to about 37 percent",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 133,
+      "text": "this would lead to another round of price increases overexpansion and possibly ultimate deflation",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 134,
+      "text": "but with many of the transportation hurdles surmounted demand has surged over the past two decades reflecting the myriad new uses for natural gas in industry and as a cleanburning source of electric p",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 135,
+      "text": "there has been a pickup in getting  goods to market",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 136,
+      "text": "over the past five years interest rates paid by firms on new debt have decreased substantially falling by almost half on longterm bonds and by about twothirds on shortterm paper or loans",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "federal_funds_rate",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 137,
+      "text": "this improved coordination has enabled interest7five major ingredients for sustained worldwide expansion in discussing prospects for continued expansion several ingredients should be considered",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 138,
+      "text": "among the individual regions the gain in each of the three fast growing sections was above the us average and the gain in each individually exceeded that in each of the five slowly growing areas taken",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 139,
+      "text": "when businesses are weighing whether or not to make substantial investments uncertainty tends to slow down such decisions4 the auto industry has been especially challenged by the uncertainty posed by ",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 140,
+      "text": "to understand why these problems have advanced to this stage we need to look at certain factors peculiar to agriculture",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 141,
+      "text": "in particular many small businesses appear to be facing unusual obstacles in obtaining credit",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 142,
+      "text": "because of technology and lower computer and communications costs information is much more readily available than in earlier decades and sound management practices are more widespread",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 143,
+      "text": "if this investment boom was a response to the preceding boom in consumer spending it was delayed until after the latter had tapered off",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 144,
+      "text": "but in addition chicagos highly developed distribution system creates many more opportunities for additional manufacturing and distribution activity in both chicago and the surrounding midwest",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 145,
+      "text": "clearly this type of innovation is highly desirable",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 146,
+      "text": "the source of this increase in total purchasinq dower and demands for goods and services flows from the newly created money not from the deficit per se",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 147,
+      "text": "today we are experiencing a great technological revolutiona communications revolution",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 148,
+      "text": "in addition the productivity gains have translated into an improvement in businesses income statements  real wages have not kept up with the growth in productivity and with businesses generally reluct",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 149,
+      "text": "excessive demand pressures show themselves in different ways in different economic cycles",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 150,
+      "text": "5 aside from constructionrelated spending the expected nationwide increase in demand for consumer durables is good news for the numerous auto and autorelated manufacturers in the southeast",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "inflation"
+      ]
+    },
+    {
+      "id": 151,
+      "text": "small businesses often encountered trouble obtaining credit at any price under these circumstances",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 152,
+      "text": "some individuals clearly benefit producers of  exported goods and importcompeting goods immediately come to mind as examples",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 153,
+      "text": "while creating hardship for all the pandemic has inflicted disproportionate economic pain on vulnerable businesses sectors and demographic groups which risks entrenching a kshaped recovery that is wea",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 154,
+      "text": "and the media recount almost daily the struggles of our automobile and semiconductor producers",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 155,
+      "text": "and there has been a tremendous growth of exports of manufactured goods",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 156,
+      "text": "investment in equipment and software has been rather strong although much of this capital spending has up to now been aimed at productivity enhancement or necessary replacement and maintenance not gro",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 157,
+      "text": "for firms higher energy prices raise production costs which squeeze profits",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "PPI",
+        "inflation"
+      ]
+    },
+    {
+      "id": 158,
+      "text": "the effects of two recessions disinflation increased competition inadequately reviewed business judgment and in a few cases misuse of the public trust demand increased vigilance",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 159,
+      "text": "increasingly we are hearing from businesses that they are having trouble finding qualified workers",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "unemployment",
+        "inflation"
+      ]
+    },
+    {
+      "id": 160,
+      "text": "     if businesses are to spend and hire more vigorously they will need to be convinced that economic growth can be sustained beyond the short run",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 161,
+      "text": "more generally the survey suggests that businesses owned by women and minorities tend to be undercapitalized relative to other businesses something we hear anecdotally from many sources",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 162,
+      "text": "lumber prices skyrocketed through may but have largely retraced that increase in the past few months",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "PPI",
+        "inflation"
+      ]
+    },
+    {
+      "id": 163,
+      "text": "inventory policies have been conservative over the past several years and businesses have in general thus avoided the imbalances that interrupted previous expansions",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 164,
+      "text": "restrictions on the supply of oil have been relaxed",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "PPI",
+        "inflation"
+      ]
+    },
+    {
+      "id": 165,
+      "text": "clearly many of these new business processes such as credit scoring and automated underwriting reflect a massmarket approach to lending that has greatly increased efficiency in making consumer and sma",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 166,
+      "text": "and weak corporate earnings did not bode well for firms capital investment projects",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 167,
+      "text": "farmers here responded to poor 1985 returns continued weak prices and a comprehensive farm program by sharply reducing acreage this growing season",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "PPI"
+      ]
+    },
+    {
+      "id": 168,
+      "text": "i am sure i dont have to sell the importance of a healthy small business sector to community bankers",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 169,
+      "text": "if this inference is accurate part of that earlier growth in underlying productivity is being reflected in todays gains in output per hour",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 170,
+      "text": "clearly the gas trade has a long way to go",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 171,
+      "text": "it was the nations strong increase in construction activity beginning in  late 1982 that started the recovery",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 172,
+      "text": "past studies have suggested that small businesses have relatively limited access to equity capital and thus are heavily reliant on debt financing particularly commercial bank loans to meet their fundi",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 173,
+      "text": "we need modern plants turning  out products at lower costs",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 174,
+      "text": "indeed the latest data point to appreciably slower momentum so far this year in consumer spending housing and business investment",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 175,
+      "text": "progess toiilard this end will be enhanced if businesses and labor lead0rs ez2rcise moderation in their wage and price policies this year",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 176,
+      "text": "while we need exchange rate adaptability to match changes in underlying economic circumstances we should be wary of any tendency to believe that domestic producers should be sheltered from competition",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 177,
+      "text": "but those willing to adapt to market conditicns and meet the needs of the marketplace will continue to do well even in competition with large nationwide firms",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 178,
+      "text": "that legacy has inspired innovation and inventive activity for over 100 years and stands as an incredible accomplishment and testament to americas entrepreneurial spirit",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 179,
+      "text": "these surveys fill gaps in the data regarding the inflation expectations of firms and how todays environment is affecting their decisionmaking and uncertainty about hiring and capital investment plans",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation_expectations"
+      ]
+    },
+    {
+      "id": 180,
+      "text": "according to a recent mcgrawhill survey of manufacturers the average rate of capacity utilization at the end of 1961 was only 83 per cent as against a preferred operating rate of 90 per centfor produc",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 181,
+      "text": "those executives who were active during the thirties do not have to be reminded of depression worries such as inventory losses shortages of cash inability to provide employment inability to pay divide",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 182,
+      "text": "unfortunately the regulations and restrictions have become an operational handicap for the regulated industries in a fastchanging world such as ours",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 183,
+      "text": "domestic operating profit margins rising as they did from 1995 into 1997 in an environment of falling inflation necessarily implied falling rates of total unit cost increasesmost credibly the conseque",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 184,
+      "text": "our inflationary problem meanwhile will be aggravated by rising gas and oil prices",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "PPI"
+      ]
+    },
+    {
+      "id": 185,
+      "text": "on an enterprise basis a reader of such a report can determine whether the growing lines of business have risk exposures that tend to offset those in other business linesthereby resulting in lower vol",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 186,
+      "text": "but to expand the supply of patient capital that young minorityowned firms need will require additional sources of funds that recognize the financial opportunities from funding minorityowned emerging ",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 187,
+      "text": "that is because the rapid improvement o f manufacturing  techniques in the us and other advanced nations along with the availability o f technology and machinery for purchase means the manufacturing o",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 188,
+      "text": "similarly deregulation of the   electric power grid may have spurred increased investment in power systems",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 189,
+      "text": "with these  430  michael moskow speeches  2006  advances in technology and better management of the workplace in general manufacturing productivity growth took off averaging 29 percent per year in the",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 190,
+      "text": "for a decade or more following the war agriculture was probably in a catchup phase relative to applied technology",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 191,
+      "text": "output per hour increased only 114 percent per year on average from 2006 to 2015 compared with its longrun average of 212 percent from 1949 to 2005 this halving of productivity growth if it were to pe",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 192,
+      "text": "other  evidences of underutilization could be cited but the point is clear  our national economy was just  loafing along suffering badly from a shortage of final demand",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 193,
+      "text": "one important ingredient in that resilience has been the performance of productivity",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 194,
+      "text": "all these techniques have advantages",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 195,
+      "text": "if this occurs we could have a larger volume of farm exports indefinitely",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 196,
+      "text": "of course once we entered the year 2000 the usual incentives to wait to invest in new computers quickly returned to normal",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 197,
+      "text": "alternatively a rise in equity prices that outstrips fundamentals might contribute to a pace of private domestic demand that ultimately takes output beyond capacity in this case the market or sector i",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth",
+        "inflation"
+      ]
+    },
+    {
+      "id": 198,
+      "text": "this will require among other \f 12things reduction of obstacles to the expansion of nuclear facilities by our electric utilities and sufficient relaxation of antipollution regulations to encourage muc",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 199,
+      "text": "all told industrial production was held down significantly in september as a result of lower output in these sectors",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 200,
+      "text": "the master key to unlocking high and rising productiitty as perhaps the most important short term need of the economy as well as a necessary long term trend is greater competitiveness in the economy a",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 201,
+      "text": "consider faster productivity growth",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 202,
+      "text": "regional developmentsmuch of the contraction in the overall number of starts is attributable to a marked slowdown in the northeast",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 203,
+      "text": "a sharp deceleration in business spending in the second half of 2000 led the economy into recession and the recovery wont grow real legs until business investment revives",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 204,
+      "text": "specifically the southeast should get most of its gain from business services employment",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 205,
+      "text": "they foster the development of new products and services in response to participants demands creating new opportunities and choices",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 206,
+      "text": "first energy prices have risen and apparently stabilized substantially  above  their  1986  lows further  rises are  also the decline in the foreign exchange value of the dollar  since early 1985 will",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "PPI"
+      ]
+    },
+    {
+      "id": 207,
+      "text": "the current business expansion has proceeded in an environment characterized i believe it is fair to say by a fair degree of consensus on matters of economic policy that during past expansions have be",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 208,
+      "text": "in a stabl e economi c envi ronment  industries can contri bute  an  remove the  uncertainties that are created by high and varying rates of inflation consequentl  go\u00ecng  but  he  are not there  yet",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 209,
+      "text": "our economy was badly underemployed and as the excess spending brought idle labor and idle plants back into production total output and income were raised",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "unemployment",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 210,
+      "text": "similarly the economy has gone through changes that help it better weather the ups and downs of the business cycle",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 211,
+      "text": "actually construction costs have risen  about 50 percent during the same period",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "PPI",
+        "inflation"
+      ]
+    },
+    {
+      "id": 212,
+      "text": "but to solidify the expansion final demand needs to gain a fir mer footing",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 213,
+      "text": "falling relative farm prices in turn caused farm income to grow more slowly than nonfarm income",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 214,
+      "text": "even this must be weighed against the near certainty of considerably higher meat prices",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 215,
+      "text": "indeed a large deceleration in spending could conceivably cause inflation to slow following a productivity slowdown as firms markups contract more than unit labor costs rise",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "inflation"
+      ]
+    },
+    {
+      "id": 216,
+      "text": "d phenomenal changes like this have taken place in the telecommunications industry too",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 217,
+      "text": "purchased inputs in farming have increased rising from an average of 49 percent of gross farm income in 191014 to 71 percent in 1972",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 218,
+      "text": "consequently in my personal opinion we ought not to hasten to conclude that the 7 per cent investment tax credit should be suspended as a move to dampen business capital outlays as some observers are ",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 219,
+      "text": "it has very successfully financed and made equity investments in housing projects in ohio indiana and wisconsin",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 220,
+      "text": "whats happened of course is that as the economies of asia and elsewhere have turned the corner to recovery global demand has picked up and so have prices",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 221,
+      "text": "these factors help offset weaknesses in importsensitive industries like  apparel or in the production o f commodities like phosphates whose prices remain depressed in world markets",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 222,
+      "text": "the surge of imports competing with american goods aids in containing inflation but figures in the enormous trade deficits",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 223,
+      "text": "of more concern to many businessmen however  is how to compete with foreign producers",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 224,
+      "text": "inflations no windfall the fact that a growing economy and relatively full employment is highly beneficial to the farm sector does not mean that agriculture benefits from inflationary policies",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "unemployment",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 225,
+      "text": "except for the purchase of feeder livestock these costs were relatively small",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 226,
+      "text": "part of the increase has been the result of speculation and concerns over temporary supply disruptions",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 227,
+      "text": "in particular a reason why opec was able to sustain the very large 1973 oil price increase for so long was because world demand for oil was underpinned by rapid expansion of aggregate demand in key ma",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 228,
+      "text": "software and capital goods embodying newer information and communications technology are a major export of the united states",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 229,
+      "text": "although highly leveraged balance sheets were not the fundamental cause of problems facing these industries high leverage contributed to the failure of some firms",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 230,
+      "text": "for example cecchetti et al 2007 employ a slightly modified version of the stockwatson procedure in a recent paper and find that inflation persistence has fallen so low that their estimated trend for ",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 231,
+      "text": "again i think this is a positive development for business investment",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 232,
+      "text": "much of itespecially the productivityenhancing kindis to reduce production costs especially labor costs",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 233,
+      "text": "that is a huge difference and one of the unintended consequences is that midwestern candy factories are relocating to countries such as canada where the price of sugar is not artificially increased",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 234,
+      "text": "importantly the megadeficit in trade has kept some sectors of the economy  including agriculture  in a virtual depressionthe strong dollar has also had some positive aspects",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 235,
+      "text": "reforms to accounting and corporate governance now being put in place are constructive",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 236,
+      "text": "texas produces more than  8 percent of the total manufactured goods in the united states ranking second  behind california in factory production",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 237,
+      "text": "during recent months the media have carried numerous stories about problems that small to mediumsized businesses have had lately in getting or renewing their loans",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 238,
+      "text": "average prices for all goods  and services will remain about unchanged once resources are again fully employed",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 239,
+      "text": "growth comes from investment in human and physical capital",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 240,
+      "text": "another factor some observers have cited as possibly boosting inflation is a tendency for increases in resource utilization to generate bottlenecks that can push up some prices more rapidly",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 241,
+      "text": "canada mexico and the european union account for more than half of all us exports and each is expected to post strong economic gains in 1998 exports to these markets will more than offset any losses t",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 242,
+      "text": "yet our most recent experiences with corporate malfeasance suggest that governance has strayed from the way we think it is supposed to work",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 243,
+      "text": "this increases the cost of capital resulting in lower rates of investment which will affect profits and the pace of real growth",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 244,
+      "text": "as measured by gross domestic product gdp the most familiar gauge of broad economic growth 2005 was a very good year overall",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 245,
+      "text": "the institute for supply management manufacturing index indicated meaningfully slower growth in december and to a lesser extent january",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 246,
+      "text": "as these countries grow faster they typically demand more of our exports and in turn contribute to the growth of our economy overall",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 247,
+      "text": "the improvement is particularly visible for business purchases of cars and trucks",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 248,
+      "text": "nevertheless even a modest upturn in energy prices would help mississippi too and would benefit alabamas producers of steel pipeline",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 249,
+      "text": "looking at that part of our economic growth that is affected by foreign trade i can say that the gap between exports and imports should begin to shrink this year after several years of growing larger",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 250,
+      "text": "and as a cautionary note growth in consumer spending has slowed in the past six months or so",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 251,
+      "text": "in addition the stock markets decline  could make it harder for businesses to raise capital for major new projects",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 252,
+      "text": "nonresidential fixed investment has slowed in each of the first three quarters of 2018 after factoring in a small rebound we expect to see in the fourth quarter the yearoveryear growth rate in busines",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 253,
+      "text": "some of it however represents loans for the purchase of additional land and equipment or livestock which may well represent efforts to improe efficiency of farm operaticnsrather than losses",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 254,
+      "text": "over the long run incentives to invest therefore need to be enhanced",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 255,
+      "text": "it says that we are cotmnitted to using present and future technology for faster more reliable less expensive services for making our world and our system work better",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 256,
+      "text": "the buyer needs assurance that if an agricultural   equipment dealer certifies that a harvester is in mint condition he is   being truthful and his warranty is to be trusted",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 257,
+      "text": "we have been and will continue to work with trade associations to aid them in preparing materials tailored to the specific needs of their membersnevertheless we are aware that there will be problems i",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 258,
+      "text": "industrial production began strengthening in late 1986 and has surged more recently rising nearly 6 percent over the four quarters of 1987 and9therefore am relatively optimistic about the prospects fo",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 259,
+      "text": "the productivity comparisons reflect the fact that we spend less than 10 percent of our cnp on capital investment whereas the germans spend 15 percent and the japanese spend more than 20 percent of gn",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 260,
+      "text": "a period of subpar performance would open up a shortfall in the price level from its trend line target",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 261,
+      "text": "otherwise imports would grow rapidly and our exports would lose their ability to penetrate foreign markets",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 262,
+      "text": "but if our trading partners are unwilling to take the necessary expansionary action",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 263,
+      "text": "china is also a growing market for investment and exports by us firms",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 264,
+      "text": "such diets which include more animal products will      4   contribute to a higher export demand for us farm products",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 265,
+      "text": "and the prospect now is that after two years of extraordinary growth the pattern of expansion in the united states may be less ebullient",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 266,
+      "text": "but the dominant force of late appears to have been a significant increase in the rate of productivity growth output per hour in the nonfarm business sectora conventional measure of productivityincrea",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "inflation"
+      ]
+    },
+    {
+      "id": 267,
+      "text": "here in the triad region traditional manufacturing industries like furniture and textiles have seen particularly large growth in import competition and have also experienced painful declines in employ",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "unemployment"
+      ]
+    },
+    {
+      "id": 268,
+      "text": "thus according to a first national city bank study the proportion of the sales dollar that the 100 largest manufacturing corporations paid out for materials payrolls and fringe benefits fell slightly ",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 269,
+      "text": "but last year after a weak first quarter growth picked up to an average pace of around 3 percent over the remainder of the year",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 270,
+      "text": "there are now signs that recessionary pressures in some key sectors have abated",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 271,
+      "text": "inflation fell owing to the effects of weak demand for a range of goods and services far outstripping price increases for food and a few other products",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 272,
+      "text": "investors seem to be concerned about these international and fiscal risks the sustainability of corporate earnings growth in an environment with such risks and the possibility of the fed removing poli",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "federal_funds_rate",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 273,
+      "text": "3  expect manufacturing to continue to shift toward the  ea s t  p a r t i c u l a r l y  in  light  of  the  fact  that  there are even cheaper sources of labor thailand and  c  c h i n a  on th e h ",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 274,
+      "text": "suffice it to say that there is significant uncertainty about whether productivity gains at the recent elevated rates are likely or whether a reversion to the longer run trend rate of around two and o",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 275,
+      "text": "during recent years as the role of credit in financing private spending increased and as interest rates rose the debt service requirements of business borrowers have generally grown more rapidly than ",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "federal_funds_rate",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 276,
+      "text": "2 \f attaining a better balance between domestic saving and investment will help us achieve an improved external equilibrium",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 277,
+      "text": "nor do i think that  foreign managers are outstripping our own in methods for getting production out",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 278,
+      "text": "business spending on equipment and software grew in five of the last six quarters and surged 15 percent in the third quarter at the highest rate since early 2000 commercial borrowing is another good i",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 279,
+      "text": "this diverse group represents a range of industries in the southeast many with national or international reach",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 280,
+      "text": "as functional specialists they have had an opportunity to make a major technological \f 9contribution to solving urbanization problems",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 281,
+      "text": "8  in fact the wholesale price index dropped to an 87 percent annual rate in april and the  9  consumer price index to a 74 percent rate",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 282,
+      "text": "some current problems in agricultural credit remarks by chas",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 283,
+      "text": "this important industry represents over 3 percent of us gdp and an even higher share of output in the midwest",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 284,
+      "text": "however between 1973 and 2003 oil consumption grew on average only 12 percent per year far short of the rise in real gdp",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 285,
+      "text": "to do this the researchers identified 25 midsize manufacturing cities around the country that were similar to springfield in 1960 when that city was at the height of its prosperity and asked what acco",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 286,
+      "text": "yet  first and fore  most it should place heavy emphasis on encouraging investment",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 287,
+      "text": "it cannot create capital stock train workers or improve technology",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 288,
+      "text": "assuming such developments occur i feel that exports w ill probably be a major source o f u s",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 289,
+      "text": "business demands for credit which accounted for much of the increased credit expansion in 1965 are likely to remain very large",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 290,
+      "text": "on the whole the expansion was orderly creating no undue problems of resource allocation or inflationary pressures",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "inflation"
+      ]
+    },
+    {
+      "id": 291,
+      "text": "even a 2 percent growth trend would be superior to the economys dismal productivity performance during the 1970s and much of the 1980s",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 292,
+      "text": "in addition many firmsespecially in the most troubled industrieshave retired debt through equity offerings and asset sales which limited the growth of nonfinancial corporate debt in 2002 and 2003 to t",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 293,
+      "text": "the problems of these farmers of course have been compounded by the relatively high interest rates that have prevailed over the current decade",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "federal_funds_rate"
+      ]
+    },
+    {
+      "id": 294,
+      "text": "all these pressures have resulted in an unprecedented price upsurge",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 295,
+      "text": "improved strategic planning and marketing tighter control of operating expenses reduction of unnecessary overhead greater use of computers communications technology and atts increased fees for service",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 296,
+      "text": "europeans will open their  internal borders in 1992 and make their product regulations much less restrictive than our present rules",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 297,
+      "text": "the sector with the most dramatic acceleration in productivity is manufacturing",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 298,
+      "text": "underlying economic fundamentals have improved resulting in an economy that is better able to sustain growth through the inevitable transitory shocks and typical sectoral ups and downs",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 299,
+      "text": "because the dollar price of imported goods rises while that of exported commodities remains unchanged the trade deficit initially worsens especially for trade flows covered by contracts",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 300,
+      "text": "we have indeed been experiencing a sharp business \f 2recovery consistent with progress against inflation",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "inflation"
+      ]
+    },
+    {
+      "id": 301,
+      "text": "probably the weakest sector o f the economy during the coming year will be       commercial and residential construction",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 302,
+      "text": "we are just beginning  to see these effects on our importsthe toyotas and their domesticallyproduced substitutes the fords",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 303,
+      "text": "one of the new phenomena we are seeing is a fundamental difference in pricesetting behavior in the present business expansion",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 304,
+      "text": "evidently corporate managers view prospective returns from these uses of cash flow as comparing favorably with those from new capital spending projects",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 305,
+      "text": "our cotton export subsidy designed to offset the traderetarding features of our domestic price support program is sufficient to permit exports of cotton to japan and imports of goods made from the cot",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 306,
+      "text": "the advantage of approaching full employment gradually is that it gives sectors time to expand their production and their capacity for future production more efficiently",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "unemployment",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 307,
+      "text": "industrial purchasing managers reported accelerating activity in february",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 308,
+      "text": "total industrial production has shown virtually no growth over the past five months actually the level in march 1980 was just slightly below that in january 1979 however this total includes a decline ",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 309,
+      "text": "this represents not just a loss to them but the loss of that productivity to the economy as a whole",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 310,
+      "text": "to adjust our agricultural  programs  level on the farm would require  affect the gains  has to make mone y not only  a term as tricky to define as the family farm  attract human and financial  povert",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 311,
+      "text": "1 state in terms of the value of exports shipped we  surpassed california nine years ago",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 312,
+      "text": "manufacturing and the regional economy today both the national and the regional economy are trying to remain competitive in the face of rapid technological changes and globalization",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 313,
+      "text": "the oil price increases that would result from such an increase in imports would not only add to inflation but also to our import bill",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 314,
+      "text": "of course i also recognize a potential downside risk to the outlook for productivity especially given the weakness in business investment that i noted earlier",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 315,
+      "text": "runup of farm 4 still another complicating factor was the restricted capacity of raw material producing industries in our country paper wood pulp steel aluminum manmade fiberts etc",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 316,
+      "text": "the underlying fundamentals of the us economy remain strong but the coronavirus will weigh on us growth at least during the first half of the year with a pullback in spending by households and busines",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 317,
+      "text": "3 in a recent dallas fed texas manufacturing outlook survey more than half of companies responding reported that tariffs are increasing their input costs and a material number of companies reported a ",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 318,
+      "text": "however last years further decline in the dollar should push nonoil import prices up even more",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 319,
+      "text": "i f oil p ric e s could be b ro u g h t down o r m oderated these p ro s p e c ts w ould be much b r ig h te r ",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 320,
+      "text": "let me turn now to the other economic challenge that i want to highlight todaythe productivity performance of our economy",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 321,
+      "text": "a ll o f us have lost earlier strong export markets because o f the austerity programs launched in much o f the third world in response to this ongoing crisis",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 322,
+      "text": "favorable indications are new orders for manufactured goods automakers assembly schedules and durable goods production in the fourth quarter",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 323,
+      "text": "all these activities created new wealth for the entrepreneurs who had gone into business to fill the demands of the marketplace",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 324,
+      "text": "the review of upper midwest farming that was done as part of the excellent upper midwest economic study revealed that many farmers lte underemployed on their present farms",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "unemployment"
+      ]
+    },
+    {
+      "id": 325,
+      "text": "it will result in less total output of goods and services",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 326,
+      "text": "to summarize this review of history we have had an economy that experienced a period of unsustainable growth followed by a sharp slowdown in the information and computer technology revolution",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 327,
+      "text": "at that rate output per hour would double in about 23 years",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 328,
+      "text": "with low interest rates and plenty of cash on hand firms might be expected to invest more",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "federal_funds_rate",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 329,
+      "text": "to some extent the pickup in activity in recent months reflects the dissipation of some of the forces that had been exerting downward pressure on the economy during the preceding several quarters",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 330,
+      "text": "that flexibility has been the product of the economic dynamism of our workers and firms that was unleashed in part by the efforts of policymakers to remove rigidities and promote competition",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 331,
+      "text": "at existing growth rates of population and resource use catastrophe threatened through exhaustion of raw materials and if not of raw materials then of food and if not of food then of the entire enviro",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 332,
+      "text": "on top of this strength in sales or more accurately in response to it businesses made sizable upward revisions in their capital spending plans as the year went on",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 333,
+      "text": "percentthe third consecutive year of growth at that level",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 334,
+      "text": "this provides a partial but insufficient offset to the projected increase in business fixed investmentresidential construction is particularly difficult to estimate",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 335,
+      "text": "in the past weve worked on issues such as affordable housing predatory lending and the issue that brings us here today small business access to capital and credit",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 336,
+      "text": "similar problems have plagued practically every industrial country in the world",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 337,
+      "text": "we recognize that in many key respects small businesses form the backbone of the american economic system providing much of the employment investment technological innovation and competitive vigor tha",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 338,
+      "text": "twentyone were in the horseshoe area  including four o f the six closed plants that once employed more than 500 persons",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "unemployment"
+      ]
+    },
+    {
+      "id": 339,
+      "text": "intense competition in domestic markets from imports and in overseas markets from foreign manufacturers has been causing problems for other regional industries including      3    petrochemicals paper",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 340,
+      "text": "in the mid1930s the production credit system entered the shortterm farm credit market and have since become a major source of such loans",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 341,
+      "text": "with prices stable and production capacity ample purchasing agents have been able to rely upon assured supplies of materials",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 342,
+      "text": "among them is the need for reduced pollution and for more investment in industrial health and safety",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 343,
+      "text": "in ess_ence paying more attention to commodity prices might help to anchor not only the domestic price level but result in greater exchange rate stability as well",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "inflation_expectations"
+      ]
+    },
+    {
+      "id": 344,
+      "text": "in addition our net export balance whic has deteriorated over the past two years has begun to improve",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 345,
+      "text": "the sustainability of the recent upturn in growth will depend importantly on whether some of the factors that have been holding back growth for the past decade diminish including weak investment and p",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 346,
+      "text": "we fielded a set of special questions regarding the impact of tariffs and trade policy tensions to panelists in our survey of business uncertainty over the third quarter as uschina trade tensions were",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 347,
+      "text": "georgia farmers wont be helped as much as farmers in other states because they dont raise an abundance o f the grain crops that dominate international flows o f farm goods",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 348,
+      "text": "in still other cases the machinery was a mistake from the start",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 349,
+      "text": "and there was a natural slowing from that faster pace after the bulk of our productive resources that were underutilized following the recession were back at work",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 350,
+      "text": "economic growth like plant growth is subject to variations in climate and environment",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 351,
+      "text": "inflation was reined in during the early 1980s and so farmers could no longer rely on paying their loans back in cheaper dollars",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 352,
+      "text": "firms small and large increasingly understand the need to be aggressive global competitors",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 353,
+      "text": "today  china annually produces roughly 100 million microcomputers and it has 650  million domestic cell phone subscribers",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 354,
+      "text": "real output remains well below what one would expect it to be in  light of historical growth patterns in the united states",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 355,
+      "text": "the hard core inflation ratethat determined by rising unit costs of productionstill seems to be in the 9 to 10 percent range",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "PPI"
+      ]
+    },
+    {
+      "id": 356,
+      "text": "except for some rebuilding of inventories and the likelihood of continued strength in singlefamily home building capital spending is not going to pull the economy along in 1987 slipping utilization of",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 357,
+      "text": "return rock and grant 2016 cite a credit suisse analysis of 2400 companies worldwide that found that organizations with at least one female board member had higher return on equity and higher net inco",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 358,
+      "text": "in general these local or regional bhcs have less complex corporate structures and are currently well capitalized",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 359,
+      "text": "we assume our competitors will match our aggressive pricing policies and will also accede to high wage demands",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 360,
+      "text": "the  stimulus  from  our export  position  that  is driving  manufacturing  while  consumption cools should bring more balance to our economy",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "inflation"
+      ]
+    },
+    {
+      "id": 361,
+      "text": "on the business side capital spending will continue to be enhanced by the reduction in borrowing costs",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "credit_conditions",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 362,
+      "text": "finally our industries particularly our small to mediumsized firms should be gearing up to exploit the marketing advantages they hold when the ec opens its markets",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 363,
+      "text": "after experiencing declines of 50 percent or greater in some localities in the value of their assets over the past five or six years farmers in prime producing areas should not see much additional los",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 364,
+      "text": "sales of automobiles particularly of domestic makes have lurrrnetted in recent months reaching a 5year low in april",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 365,
+      "text": "when the bubble burst inventories were excessive orders vanished and with the additional burden of a quadrupled price of oil a severe recession became inevitable",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "PPI"
+      ]
+    },
+    {
+      "id": 366,
+      "text": "of course as the saying goes past returns are not a guarantee of future results not all the evidence supports the emerging consensus that secular productivity growth will remain at its current elevate",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 367,
+      "text": "capacity utilization is also quite high above 90 percent in certain  industries",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "inflation"
+      ]
+    },
+    {
+      "id": 368,
+      "text": "internally many countries have privatized major businesses",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 369,
+      "text": "a significant portion of the recent dramatic increase in productivity growth was due to the kind of innovative products and services provided by the technology industry",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 370,
+      "text": "this lias offset soie of the pressure of mounting import competition deriving from a strong dollar",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 371,
+      "text": "we must of oourse accelerate our exports",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 372,
+      "text": "for example the trade balance will improve because the competitiveness of us manufacturing has increased",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 373,
+      "text": "uncertainty is still a restraining factor for businesses",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 374,
+      "text": "first it is correctmg the imbalances that developed between the production and sales of many items also between orders and inventories between capital investment and consumer spending and between the ",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth",
+        "inflation"
+      ]
+    },
+    {
+      "id": 375,
+      "text": "the lower dollar would boost us net exports",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 376,
+      "text": "supply soon began to catch up with demand and during the last half of the decade 40 more office space was built than absorbed",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 377,
+      "text": "and  in spite of the cancer scare in great britain and the unfavorable tariffs of the common market tobacco exports reached a sixyear high in the year ending july 1 by way of summing up i want to emph",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 378,
+      "text": "while imports rose us production  of importcompeting goods also rose sharply",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 379,
+      "text": "ordinarily higher prices lead to more production and eventually greater supply and perhaps stabilizing and lower prices",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 380,
+      "text": "i expect 2005 to be another year of healthy growth in output steady gains in employment and modest inflation",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment",
+        "inflation"
+      ]
+    },
+    {
+      "id": 381,
+      "text": "increased aggregate investment in farm plant and equipment is frequently cited as the basis of increased credit demands",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 382,
+      "text": "you all should be justifiably proud that the organization now represents 2000plus businesses organizations and professionals in the ft wayne area  including companies such as general motors parkview h",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 383,
+      "text": "industries that have faced up to outside competition and streamlined their  operations in response have emerged stronger than ever",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 384,
+      "text": "instead more attention needs to be paid to production especially quality production",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 385,
+      "text": "as you can see we face numerous challenges both at the national and industry levels",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 386,
+      "text": "4  i also feel business needs to exercise more flexibility in its approach to the research products o f academia",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 387,
+      "text": "farm incomes and farm asset values have declined sharply over the current decade as crop prices  responding to a major increase in world supplies of farm products relative to demand  have dropped subs",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "PPI",
+        "inflation"
+      ]
+    },
+    {
+      "id": 388,
+      "text": "thanks to the strong economic recovery last year our tradeablegoods industries as a group have not been severely injured on balance",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 389,
+      "text": "i find more worrisome the shift in international trade from the positive to the negative side of the growth ledger",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 390,
+      "text": "the \f  3 world economy was hit with a second oil price shock and us inflation showed signs of accelerating further",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 391,
+      "text": "those surpluses fell away in the 1980s as the united states absorbed the brunt of the necessary adjustments in the trade position of the borrowers",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 392,
+      "text": "as 2016 began i foresaw a year of steady moderate abovetrend growth",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 393,
+      "text": "the higher productivity of these high tech investrrents also have contributed importantly to the boom in the us capital goods industry",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 394,
+      "text": "and its a similar story with the more volatile producer price index for inflation which last month was up 48 percent",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "PPI",
+        "inflation"
+      ]
+    },
+    {
+      "id": 395,
+      "text": "at first this farm planning may seem onerous and costly",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 396,
+      "text": "it raises costs and prices to producers as well as consumers and thereby jeopardizes the progress we have achieved in reducing inflation",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "PPI"
+      ]
+    },
+    {
+      "id": 397,
+      "text": "this productivity growth generates spending in a number of ways",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 398,
+      "text": "but the growing size diversity and efficiency of the  states economy are compensating for any weakness in the forest products industry",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 399,
+      "text": "many of the currently prevailing prices and wage rates also represent decisions made some time agoo ue are not sure of the extent to which the inflexibility of industrial prices during the recession r",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 400,
+      "text": "over the long run weve got to find more ways of boosting the supply of products for households and business firms through improvements in efficiency",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "inflation"
+      ]
+    },
+    {
+      "id": 401,
+      "text": "a nore accurate picture is given by the gross danestic business product fixedweight price index which increased at a lower 334 percent rate in the first quarter",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 402,
+      "text": "economic recovery and the apprecia1tion of the dolla have stimulated us demand for imports and the weakness of internal demand in many of the major developing ounties and the strong dollar have reduce",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 403,
+      "text": "failure to do so could result in a misallocation of resources a steadily declining rate of inflation and perhaps even deflation",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 404,
+      "text": "without question individual firms often do pass along increases in prices of their inputs",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "PPI",
+        "inflation"
+      ]
+    },
+    {
+      "id": 405,
+      "text": "at a time when that price is high e weaker demands for funds are set aside and with them some of the dends for goods",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 406,
+      "text": "costs hve fallen as prouctivity gains increased",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "PPI",
+        "inflation"
+      ]
+    },
+    {
+      "id": 407,
+      "text": "and investmentgrade corporate debt has shifted closer to the edge of speculative grade",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 408,
+      "text": "in addition to the regions industry mix the southeasts fasterthanaverage growth in recent years actually is working against prospects for robust recovery",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 409,
+      "text": "to the extent direct measures were successful in reducing the net capital inflow real interest rates in th united states would presumably rise other things equal as part of the process of replacing th",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "federal_funds_rate",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 410,
+      "text": "by now they have become strong competitors with plants as good or better than our own",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 411,
+      "text": "the economy on those occasions continued to expand rapidly while approaching its limits of labor plant and materials capacity",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 412,
+      "text": "while headline growth stepped back a bit in the fourth quarter largely on account of increased drag from higher imports and lower inventories underlying final private domestic demandwhich is a better ",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 413,
+      "text": "if farmers decide to plant less corn for example their needs  for operating funds could diminish",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 414,
+      "text": "the production  from the williston basin declined after the first push but it has rebounded with the discovery of two additional fields in 1964  similarly northern  montana through technology and new ",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 415,
+      "text": "the economy is facing another important challenge  how do we deal with accounting improprieties and failures in corporate gover nance",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 416,
+      "text": "i believe that through persuasion our trading partners will assume more o f their own responsibility for keeping the exchange o f goods and services together with labor and capital as unrestricted as ",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 417,
+      "text": "the pattern of recovery will be typical but its pace will be a slower than usual for this recovery to progress certain conditions must be met decumulation of excess inventories retention of consumer c",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 418,
+      "text": "the same shipment going west to vancouver might take as long as five days",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 419,
+      "text": "we are trying to make it cheaper for businesses to build expand and hire",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 420,
+      "text": "ongoing advances in technology related in part to this investment further supported the level of economic activity",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 421,
+      "text": "hard landings associated with the unwinding of sector and market imbalances  much of the recent concern about the sustainability of this expansion is nevertheless not related directly to the balance b",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 422,
+      "text": "nevertheless these frequently expressed sentiments indicating a desire to apply us standards to foreign producers do affect us positions in trade disputes",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 423,
+      "text": "the economy ended 1997 with still very positive fundamentals notwithstanding some apparent weakness in demand in the fourth quarter",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 424,
+      "text": "its per capita output is now among the highest in the world and its products are exported to every corner of the globe",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 425,
+      "text": "but such productivity can translate into fewer farms and farmers and declining population for many farm towns",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "unemployment"
+      ]
+    },
+    {
+      "id": 426,
+      "text": "as weve seen the prime business  loan rate recently has been as high as 8 percent a high level by any stan dard except 1974 and atypical for the early stage of an economic recovery",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "federal_funds_rate",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 427,
+      "text": "it was only when horizontal factories newly designed for optimal use of electric power began to dominate our industrial system many years after electricitys initial introduction that productivity clea",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 428,
+      "text": "the overheated economy was beginning to cool",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 429,
+      "text": "this disappointing rate has contributed to lagging productivity",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 430,
+      "text": "we should continue to call on taiwan and japan in particular two nations with extraordinarily high trade surpluses and substantial import barriers to lower the protective walls which make it impossibl",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 431,
+      "text": "there are many reasons why that is the case mostly dealing with the recent recession and the need and desire on the part of both businesses and consumers to strengthen their balance sheets",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 432,
+      "text": "however the widening margin of unused resources during 1963 led to renewed efforts to stimulate the economy",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "unemployment",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 433,
+      "text": "major factors contributing to higher chargeoffs were sizable writedowns of several large corporate credits and a sharp rise in consumer oan defaults",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 434,
+      "text": "during the 1970s inflation increasingly became viewed as a way of life and in the process economic incentives were distorted and our productive energies sapped",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 435,
+      "text": "in the internationalized environment ahead we must seek ways to reorient labor and capital resources away from    6  endeavors that can no longer compete and steer them toward more feasible pursuits",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 436,
+      "text": "for instance inventories have been held well within past relationships to sales and spending by manufacturers for plant and equipment has if anything been restrained relative to prospective needs",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 437,
+      "text": "industries heavily dependent upon export markets have been badly damaged as have others losing a significant share of their domestic markets to foreign producers",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 438,
+      "text": "computers telecommunications and other capital equipment as well as services should remain the leading exports",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 439,
+      "text": "also the aftermath of the crisis has been associated with a decrease in business dynamismfor example the rate at which new startup firms are being created has declined9 have we reached a turning point",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 440,
+      "text": "productivity has been lagging",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 441,
+      "text": "we need also to make further progress in establishing business relationships between the financial services sector and the rapidly expanding number of minorityowned businesses",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 442,
+      "text": "to be sure with the us now a major oil producer lower oil prices have also had some negative effects on the us economy",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 443,
+      "text": "there are issues of efficiency and cost",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 444,
+      "text": "the big story in the economy right now is the unprecedented growth in productivity",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "inflation"
+      ]
+    },
+    {
+      "id": 445,
+      "text": "so on the one hand the outlook for the next couple of years is pretty good the economy seems to be growing at or near potential and the output gap which ill explain in a moment is likely small",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 446,
+      "text": "if so then the principal effect of an unexpected slowdown in productivity growth during the next few years would likely be higher inflation with the shortterm impact on the growth of output and employ",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 447,
+      "text": "that factor of course is a dramatic improvement in productivity",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 448,
+      "text": "management seems to be increasingly doubtful that it can win major strikes",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "unemployment"
+      ]
+    },
+    {
+      "id": 449,
+      "text": "in the united states for example capital expenditures have been restrained for some time relative to the very substantial level of corporate cash flow",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 450,
+      "text": "in this connection it is most encouraging to see the industrial de l e 0pment in many sections of the south",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 451,
+      "text": "in the two decades following world war il america excelled in the rate of productivity improvement",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 452,
+      "text": "moreover these goods and services have been over time increasingly less constrained by the limits of physical bulk",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 453,
+      "text": "for the typical american consumer and business it means borrowing should be cheaper",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "federal_funds_rate",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 454,
+      "text": "first the demands that we made on the economy for growth and for maximum utilization of human and material capacity were excessive",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 455,
+      "text": "for instance airline passenger traffic is still 60 percent below its prepandemic level contributing to the decline in aircraft orders this year and hotel revenue per available room is only half the le",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 456,
+      "text": "the sharp drop in oil prices has virtually crippled producers in this industry",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "PPI",
+        "inflation"
+      ]
+    },
+    {
+      "id": 457,
+      "text": "indeed many of my business contacts suggest that while growth is very sluggish and uneven they do not see the precipitous declines that the news headlines suggest",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 458,
+      "text": "similarly businesses cut back investment spending on capital goods as they face production overcapacity or lower expectations for sales in the months ahead",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 459,
+      "text": "during the first half of this decade we were able to effect considerable improvement in the competitive position of our exports simply by avoiding domestic inflation while prices rose steadily abroad",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 460,
+      "text": "the resulting 20 percent decline in us exports combined with recession and increased foreign competition took a great toll on agricultural prosperity",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 461,
+      "text": "while that figure was boosted significantly by inventory accumulation that is unlikely to persist there was some evidence of momentum that might carry forward",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 462,
+      "text": "in this way inflation causes a loss of output that is almost sure to be much larger than any loss from temporarily operating below capacity",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 463,
+      "text": "north and central florida features worldclass port facilities and its economy is diversified into industries like electronics and transportation equipment aerospace industries located in and around ca",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 464,
+      "text": "the best approach i believe is to move with the industry and conform oversight functions more closely to business practice",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 465,
+      "text": "this 1956 business investment may in turn have surged ahead at an unsustainable rate and now be susceptible to some slackening while consuption continues to expand",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 466,
+      "text": "it has relatively little unused capacity",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 467,
+      "text": "much of the public discussion and debate  quite appropriately  has focused on rising productivity growth due to recent advances in information technology and their absorption throughout the economy",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 468,
+      "text": "the task of increasing the size of blackowned firms is far more difficult",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 469,
+      "text": "exports have been critical in dampening the recession nationally and they will be a major source of support in 1992 instead of exports many of the major industries in the region which benefit from low",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 470,
+      "text": "and in many industries firms were able to cut production costs as they expanded capacity",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "inflation"
+      ]
+    },
+    {
+      "id": 471,
+      "text": "however the pace continued to accelerate according to the broadest  measure of price pressures  the gnp price index or deflator  which rose from 95 percent to 100 percent between the first and second ",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "PPI",
+        "federal_funds_rate"
+      ]
+    },
+    {
+      "id": 472,
+      "text": "mexico might best be described in economic parlance as an emerged  country exports  exports exports texas benefits from a stronger  mexico in many ways including on the export front",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 473,
+      "text": "a second potentially dampening factor is tax  uncertainty about possible tax changes may cause businesses to defer planned  investment particularly in the near term until the nature o f tax changes li",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 474,
+      "text": "to that end i propose a tax on businesses granting excess wage increases",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation"
+      ]
+    },
+    {
+      "id": 475,
+      "text": "the evidence that partial expensing is having an effect is not clearcut but my view is that capital spending is probably being influenced by the tax law and that its expiration in january will probabl",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 476,
+      "text": "and its much harder to raise capital when a us treasury bondthe safest investment on earthoffers a pretty decent return",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "federal_funds_rate",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 477,
+      "text": "these rebates are frequently rough esti mates of the previously paid taxes and there is some suspicion that the amount of the rebate is larger than the previously paid taxes thus providing a partially",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 478,
+      "text": "for example of the 163 thousand firms reported in 1969 only 38 thousand or less than onequarter of the total had any paid employees at all",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 479,
+      "text": "in 2013 the collegeeducated worker earned over 80 percent more6 the inescapable conclusion is that we are failing to keep pace with our economys growing demand for skilled workers",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "unemployment",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 480,
+      "text": "in the 1970s w e had what some call a baby bust a dramatic slowdown in the birthrate that is reducing the number of entry level workers in the 1990s",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 481,
+      "text": "competitors from abroad will have natural cost advantages due to their plentiful labor supply",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 482,
+      "text": "capacity to produce however can only be expanded as the labor force grows capital is invested and as technology expands",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 483,
+      "text": "we all lament the shortages of ustrained engineers for the demand already evident in our economy",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "unemployment"
+      ]
+    },
+    {
+      "id": 484,
+      "text": "these developments relating to work attitudes and the amount of leisure time we are opting for as a society are a relatively neglected aspect i believe of scholarly investigation into the causes of th",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 485,
+      "text": "the growing importance of online shopping by increasing the competitiveness of the us retail sector may have reduced price margins and restrained the ability of firms to raise prices in response to ri",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": true,
+      "abel_nodes": [
+        "inflation",
+        "PPI"
+      ]
+    },
+    {
+      "id": 486,
+      "text": "a second test of capital inadequacy would be an overall insufficiency of our capital stock to employ fully and efficiently our rising labor force after allowance is made for its changing composition",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "unemployment"
+      ]
+    },
+    {
+      "id": 487,
+      "text": "even though there are industries and sectors of the economy which  stagnate because of the high value of the dollar it raises the perceived  wealth of society as a whole because of the increased purch",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 488,
+      "text": "underlying this change in labor markets is the increasingly competitive environment in which firms find themselves",
+      "ground_truth": "dovish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 489,
+      "text": "this has  provided manufacturers of export products with stronger demand at home as well as  overseas and has stimulated brisk growth in shipments through southeastern ports",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 490,
+      "text": "again employment costs have risen  this year because of sharp increases in the mini  mum wage and in socialsecurity taxes",
+      "ground_truth": "dovish",
+      "A_pure_claude": "dovish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 491,
+      "text": "the 1053 proposal would restructure the system of tax allowances for capital recovery",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 492,
+      "text": "we have heard  from the administration at every opportunity that the new economic policy is a temporary program designed to provide a shortcut back to reasonably stable prices and increased utilizatio",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "inflation",
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 493,
+      "text": "upon completion of that study the federal reserve board submjtted its report to congress on march 3 1972 our most important recommendation was a proposal for a more flexible use of fiscal policy to sm",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "dovish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "federal_funds_rate",
+        "GDP_growth",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 494,
+      "text": "a passive policy environment that is friendly to entrepreneurs and to all businesses is one that balances the use of regulations and taxes against the burdens that they impose",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "dovish",
+      "A_correct": true,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    },
+    {
+      "id": 495,
+      "text": "while it is impossible to know precisely how much more investment we have had to some extent at least the inflow of capital has had as its direct or indirect counterpart some increase in the productiv",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": true,
+      "B_correct": true,
+      "abel_nodes": [
+        "GDP_growth",
+        "credit_conditions"
+      ]
+    },
+    {
+      "id": 496,
+      "text": "in both cases virtually every agency of the government certified in detail the acute dangers posed to our international military political and economic interests by excessive oil imports",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "dovish",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 497,
+      "text": "i know west virginia has invested in that",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": []
+    },
+    {
+      "id": 498,
+      "text": "however ohios path through this recession looks similar to the nation as a whole and this highlights the fact that our regional economy has become more diversified",
+      "ground_truth": "hawkish",
+      "A_pure_claude": "neutral",
+      "B_abel": "neutral",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth",
+        "unemployment"
+      ]
+    },
+    {
+      "id": 499,
+      "text": "in addition the investment tax credit now under consideration in the congress is designed to provide incentive for a higher rate of capital formation",
+      "ground_truth": "dovish",
+      "A_pure_claude": "hawkish",
+      "B_abel": "hawkish",
+      "A_correct": false,
+      "B_correct": false,
+      "abel_nodes": [
+        "GDP_growth"
+      ]
+    }
+  ],
+  "macro_snapshot": {
+    "CPI_YoY": {
+      "2026-M03": 3.26,
+      "2026-M02": 2.41,
+      "2026-M01": 2.39,
+      "2025-M12": 2.68,
+      "2025-M11": 2.74,
+      "2025-M09": 3.01,
+      "2025-M08": 2.92,
+      "2025-M07": 2.7,
+      "2025-M06": 2.67,
+      "2025-M05": 2.35,
+      "2025-M04": 2.31,
+      "2025-M03": 2.39
+    },
+    "CPI_level": {
+      "2026-M03": 330.213,
+      "2026-M02": 326.785,
+      "2026-M01": 325.252,
+      "2025-M12": 324.054,
+      "2025-M11": 324.122,
+      "2025-M09": 324.8
+    },
+    "unemployment_rate": {
+      "2026-M03": 4.3,
+      "2026-M02": 4.4,
+      "2026-M01": 4.3,
+      "2025-M12": 4.4,
+      "2025-M11": 4.5,
+      "2025-M09": 4.4,
+      "2025-M08": 4.3,
+      "2025-M07": 4.3,
+      "2025-M06": 4.1
+    },
+    "PPI_final_demand": {
+      "2026-M03": 152.464,
+      "2026-M02": 152.131,
+      "2026-M01": 151.553,
+      "2025-M12": 149.974,
+      "2025-M11": 149.275,
+      "2025-M10": 149.356
+    },
+    "fed_funds_target": "4.25-4.50%",
+    "latest_inflation_trend": "rising (2.41% -> 3.26% in Q1 2026)",
+    "latest_unemployment_trend": "stable-elevated (4.3-4.4% range)",
+    "latest_ppi_trend": "rising (151.6 -> 152.5 in Q1 2026)"
+  }
+}
