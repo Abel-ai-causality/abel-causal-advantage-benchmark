@@ -1,0 +1,262 @@
+{
+  "summary": {
+    "total_questions": 20,
+    "claude_accuracy": "18/20 (90.0%)",
+    "abel_accuracy": "20/20 (100.0%)",
+    "total_flips": 2,
+    "beneficial_flips": 2,
+    "harmful_flips": 0,
+    "flip_ids": [
+      "SAB-050",
+      "SAB-059"
+    ],
+    "beneficial_flip_ids": [
+      "SAB-050",
+      "SAB-059"
+    ],
+    "harmful_flip_ids": [],
+    "net_gain": 2
+  },
+  "details": [
+    {
+      "id": "SAB-041",
+      "original_id": "fomc176",
+      "text_snippet": "Participants judged that an appropriate firming of the stance of monetary policy...",
+      "ground_truth": "hawkish",
+      "claude_pure": "hawkish",
+      "claude_correct": true,
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-042",
+      "original_id": "fomc179",
+      "text_snippet": "The weakness in labor market conditions remained an important concern to meeting...",
+      "ground_truth": "dovish",
+      "claude_pure": "dovish",
+      "claude_correct": true,
+      "abel_answer": "dovish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-043",
+      "original_id": "fomc185",
+      "text_snippet": "Labor productivity growth slowed to an average pace of 1.4 percent per year over...",
+      "ground_truth": "neutral",
+      "claude_pure": "neutral",
+      "claude_correct": true,
+      "abel_answer": "neutral",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-044",
+      "original_id": "fomc201",
+      "text_snippet": "Members also expressed concern about the potential for an increase in inflation ...",
+      "ground_truth": "hawkish",
+      "claude_pure": "hawkish",
+      "claude_correct": true,
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-045",
+      "original_id": "fomc204",
+      "text_snippet": "However, if real (or nominal) government spending is held constant, the surplus ...",
+      "ground_truth": "dovish",
+      "claude_pure": "dovish",
+      "claude_correct": true,
+      "abel_answer": "dovish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-046",
+      "original_id": "fomc207",
+      "text_snippet": "However, we now know that an unexpected and unrecognized slowdown in productivit...",
+      "ground_truth": "hawkish",
+      "claude_pure": "hawkish",
+      "claude_correct": true,
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-047",
+      "original_id": "fomc215",
+      "text_snippet": "Even with the improving labor market, I still hear from businesses that qualifie...",
+      "ground_truth": "dovish",
+      "claude_pure": "dovish",
+      "claude_correct": true,
+      "abel_answer": "dovish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-048",
+      "original_id": "fomc224",
+      "text_snippet": "For the present, however, inflation remained subdued, and it was likely to remai...",
+      "ground_truth": "dovish",
+      "claude_pure": "dovish",
+      "claude_correct": true,
+      "abel_answer": "dovish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-049",
+      "original_id": "fomc242",
+      "text_snippet": "Again, the FOMC has done just that through its commitment to adjust policy as re...",
+      "ground_truth": "hawkish",
+      "claude_pure": "hawkish",
+      "claude_correct": true,
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-050",
+      "original_id": "fomc243",
+      "text_snippet": "As always, my colleagues on the FOMC and I will act to foster our dual objective...",
+      "ground_truth": "hawkish",
+      "claude_pure": "neutral",
+      "claude_correct": false,
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "flipped": true,
+      "flip_type": "beneficial"
+    },
+    {
+      "id": "SAB-051",
+      "original_id": "fomc245",
+      "text_snippet": "In this less comfortable world, restoring price stability can involve a painful ...",
+      "ground_truth": "hawkish",
+      "claude_pure": "hawkish",
+      "claude_correct": true,
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-052",
+      "original_id": "fomc260",
+      "text_snippet": "Some members expressed concern about the longer-run prospects for large federal ...",
+      "ground_truth": "dovish",
+      "claude_pure": "dovish",
+      "claude_correct": true,
+      "abel_answer": "dovish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-053",
+      "original_id": "fomc268",
+      "text_snippet": "But I think that that\u2019s a prudent move, to move in a gradual way to remove Chair...",
+      "ground_truth": "hawkish",
+      "claude_pure": "hawkish",
+      "claude_correct": true,
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-054",
+      "original_id": "fomc272",
+      "text_snippet": "Although I expect these upward price pressures to ease after the temporary suppl...",
+      "ground_truth": "hawkish",
+      "claude_pure": "hawkish",
+      "claude_correct": true,
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-055",
+      "original_id": "fomc280",
+      "text_snippet": "In any case, we, our job is to deliver price stability, and I think\u2014you can thin...",
+      "ground_truth": "hawkish",
+      "claude_pure": "hawkish",
+      "claude_correct": true,
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-056",
+      "original_id": "fomc282",
+      "text_snippet": "Recent declines in payroll employment and industrial production, while still siz...",
+      "ground_truth": "dovish",
+      "claude_pure": "dovish",
+      "claude_correct": true,
+      "abel_answer": "dovish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-057",
+      "original_id": "fomc291",
+      "text_snippet": "year-over-year consumer inflation remained at a very low level.",
+      "ground_truth": "dovish",
+      "claude_pure": "dovish",
+      "claude_correct": true,
+      "abel_answer": "dovish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-058",
+      "original_id": "fomc303",
+      "text_snippet": "Total nonfarm payroll employment increased at a solid pace in October and Novemb...",
+      "ground_truth": "hawkish",
+      "claude_pure": "hawkish",
+      "claude_correct": true,
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    },
+    {
+      "id": "SAB-059",
+      "original_id": "fomc319",
+      "text_snippet": "Answering this question is central to our outlook for both of our dual-mandate g...",
+      "ground_truth": "hawkish",
+      "claude_pure": "neutral",
+      "claude_correct": false,
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "flipped": true,
+      "flip_type": "beneficial"
+    },
+    {
+      "id": "SAB-060",
+      "original_id": "fomc343",
+      "text_snippet": "In discussing the increases in U. S. longer-term interest rates that occurred in...",
+      "ground_truth": "hawkish",
+      "claude_pure": "hawkish",
+      "claude_correct": true,
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "flipped": false,
+      "flip_type": null
+    }
+  ]
+}

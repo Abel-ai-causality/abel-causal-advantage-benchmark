@@ -1,0 +1,315 @@
+{
+  "metadata": {
+    "test_date": "2026-04-13",
+    "model": "claude-opus-4-6[1m]",
+    "num_questions": 20,
+    "source_file": "verify_batch_1.json",
+    "condition_a": "Pure Claude reasoning (best economist, no Abel framework)",
+    "condition_b": "Claude + Abel causal insight (inflation<->federalFunds<->GDP blanket)"
+  },
+  "results": [
+    {
+      "id": "SAB-021",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "The Committee also reiterated that it would continue its asset purchases, and employ its other policy tools as appropriate, until the outlook for the labor market has improved substantially in a context of price stability.",
+      "ground_truth": "dovish",
+      "claude_answer": "dovish",
+      "claude_correct": true,
+      "claude_reasoning": "Continuing asset purchases and employing policy tools until labor market improves substantially is explicitly accommodative forward guidance. The commitment to ongoing QE signals a dovish stance.",
+      "abel_answer": "dovish",
+      "abel_correct": true,
+      "abel_reasoning": "Active policy stance committing to maintain accommodative federal funds rate and asset purchases to support employment. This is a clear dovish policy commitment, not a structural description.",
+      "flip": "none"
+    },
+    {
+      "id": "SAB-022",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "The staff continued to view the uncertainty around its projections for real GDP growth, the unemployment rate, and inflation as generally similar to the average of the past 20 years.",
+      "ground_truth": "neutral",
+      "claude_answer": "neutral",
+      "claude_correct": true,
+      "claude_reasoning": "Describing forecast uncertainty as normal/average. No directional signal about policy — just a characterization of projection uncertainty being typical.",
+      "abel_answer": "neutral",
+      "abel_correct": true,
+      "abel_reasoning": "Structural description of forecast uncertainty around the inflation/GDP/unemployment variables. Mentions variables in the causal blanket but only to describe uncertainty levels, not to signal policy direction.",
+      "flip": "none"
+    },
+    {
+      "id": "SAB-023",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "However, indicators of economic activity in Japan and Brazil remained weak.",
+      "ground_truth": "neutral",
+      "claude_answer": "dovish",
+      "claude_correct": false,
+      "claude_reasoning": "Weak economic activity signals growth concerns. The word 'weak' in economic context suggests a need for easier policy. Foreign weakness could spill over to domestic economy.",
+      "abel_answer": "neutral",
+      "abel_correct": true,
+      "abel_reasoning": "This is a factual observation about foreign economic conditions (Japan and Brazil). It does not describe the inflation-federalFunds-GDP mechanism for domestic policy. Structural reporting of external conditions without policy stance implication.",
+      "flip": "genuine_flip_to_correct"
+    },
+    {
+      "id": "SAB-024",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "Mortgage credit conditions generally remained tight over the intermeeting period, though signs of easing continued to emerge amid further gains in house prices.",
+      "ground_truth": "neutral",
+      "claude_answer": "dovish",
+      "claude_correct": false,
+      "claude_reasoning": "Tight mortgage credit conditions suggest restrictive financial environment, pulling toward dovish interpretation. The 'tight' framing dominates despite signs of easing.",
+      "abel_answer": "neutral",
+      "abel_correct": true,
+      "abel_reasoning": "This is a balanced description of market conditions — tight credit but with easing signs and house price gains. It describes the state of the mortgage market without expressing a policy stance. Structural observation, not policy advocacy.",
+      "flip": "genuine_flip_to_correct"
+    },
+    {
+      "id": "SAB-025",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "The Committee's accompanying statement noted that economic growth had slowed over the course of the year, partly reflecting a substantial cooling of the housing market.",
+      "ground_truth": "dovish",
+      "claude_answer": "dovish",
+      "claude_correct": true,
+      "claude_reasoning": "Slowed growth and substantial housing cooling are clear signals of economic weakness. Highlighting these concerns suggests a dovish policy stance.",
+      "abel_answer": "dovish",
+      "abel_correct": true,
+      "abel_reasoning": "Weakening GDP growth noted by the Committee signals concern about the economy. In the causal graph, declining growth justifies lower federal funds rate. This is a dovish policy signal.",
+      "flip": "none"
+    },
+    {
+      "id": "SAB-026",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "The Committee's accompanying statement indicated that economic growth had been quite strong so far this year.",
+      "ground_truth": "hawkish",
+      "claude_answer": "hawkish",
+      "claude_correct": true,
+      "claude_reasoning": "Quite strong economic growth means the economy is performing well. In monetary policy context, strong growth reduces the need for accommodation and may justify tightening.",
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "abel_reasoning": "Strong GDP growth in the causal graph connects to potential inflationary pressure, justifying higher federal funds rates. When the Committee highlights strong growth, it signals conditions that warrant tighter policy.",
+      "flip": "none"
+    },
+    {
+      "id": "SAB-027",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "Participants expected that productivity growth would pick up as firms slowed hiring to a pace more in line with output growth but acknowledged that the improvement might be limited, particularly if business investment spending were to remain soft.",
+      "ground_truth": "neutral",
+      "claude_answer": "dovish",
+      "claude_correct": false,
+      "claude_reasoning": "The mention of slowed hiring and soft business investment spending signals economic weakness concerns. The cautionary tone about limited improvement pulls toward dovish interpretation.",
+      "abel_answer": "neutral",
+      "abel_correct": true,
+      "abel_reasoning": "This is a structural description of productivity dynamics — analyzing how hiring pace, output growth, and business investment interact to drive productivity. It describes economic mechanisms, not a policy stance on the inflation-federalFunds-GDP channel.",
+      "flip": "genuine_flip_to_correct"
+    },
+    {
+      "id": "SAB-028",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "To support continued progress toward maximum employment and price stability, the Committee today reaffirmed its view that a highly accommodative stance of monetary policy will remain appropriate for a considerable time after the asset purchase program ends and the economic recovery strengthens.",
+      "ground_truth": "dovish",
+      "claude_answer": "dovish",
+      "claude_correct": true,
+      "claude_reasoning": "Explicitly 'highly accommodative stance' remaining for 'a considerable time' is textbook dovish forward guidance. Committing to low rates even after QE ends extends the dovish commitment.",
+      "abel_answer": "dovish",
+      "abel_correct": true,
+      "abel_reasoning": "Explicit policy stance: highly accommodative federal funds rate maintained for an extended period. This directly positions the federalFunds node at the low end to support employment through the causal channel.",
+      "flip": "none"
+    },
+    {
+      "id": "SAB-029",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "Participants generally expected that household demand would gradually strengthen over coming quarters in response to the rise in household wealth from the substantial increase in equity prices that had occurred over the intermeeting period as well as the support for income provided by fiscal policy.",
+      "ground_truth": "hawkish",
+      "claude_answer": "dovish",
+      "claude_correct": false,
+      "claude_reasoning": "The 'gradually' qualifier and the fact that the recovery depends on equity wealth effects and fiscal support suggests the economy is still fragile and needs these supports, which reads as dovish.",
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "abel_reasoning": "In the causal graph, strengthening household demand = strengthening GDP. Rising wealth from equity prices and fiscal support are driving demand upward. The positive outlook for demand growth means less need for accommodative policy, which is hawkish.",
+      "flip": "genuine_flip_to_correct"
+    },
+    {
+      "id": "SAB-030",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "Participants expected that fiscal policy would continue to be a drag on economic growth over coming quarters.",
+      "ground_truth": "dovish",
+      "claude_answer": "dovish",
+      "claude_correct": true,
+      "claude_reasoning": "Fiscal drag on growth means the economy faces headwinds, suggesting more accommodative monetary policy is needed to offset. This is a dovish signal.",
+      "abel_answer": "dovish",
+      "abel_correct": true,
+      "abel_reasoning": "Fiscal drag on GDP growth = downward pressure on economic activity. In the causal framework, weaker GDP justifies lower federal funds rates to provide offsetting accommodation.",
+      "flip": "none"
+    },
+    {
+      "id": "SAB-031",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "The extent and timing of any additional firming that may be needed to address these risks will depend on the evolution of the outlook for both inflation and economic growth, as implied by incoming information.",
+      "ground_truth": "hawkish",
+      "claude_answer": "hawkish",
+      "claude_correct": true,
+      "claude_reasoning": "The phrase 'additional firming' directly references potential further tightening. While conditional on data, the discussion of more firming is inherently hawkish.",
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "abel_reasoning": "'Additional firming' explicitly references tightening the federal funds rate in response to inflation and growth risks. This is a direct policy stance about adjusting the federalFunds node upward in the causal graph.",
+      "flip": "none"
+    },
+    {
+      "id": "SAB-032",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "Thus, knowing where productivity growth is headed is, in many respects, equivalent to foreseeing our economic destinies.",
+      "ground_truth": "neutral",
+      "claude_answer": "neutral",
+      "claude_correct": true,
+      "claude_reasoning": "A philosophical observation about the importance of productivity forecasting. No policy direction expressed — purely an analytical statement about economic methodology.",
+      "abel_answer": "neutral",
+      "abel_correct": true,
+      "abel_reasoning": "General philosophical statement about productivity's role in economic outcomes. No connection to the inflation-federalFunds-GDP policy mechanism. Pure structural observation.",
+      "flip": "none"
+    },
+    {
+      "id": "SAB-033",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "The stock market soared, and--remarkably enough--core inflation moderated.",
+      "ground_truth": "neutral",
+      "claude_answer": "dovish",
+      "claude_correct": false,
+      "claude_reasoning": "Core inflation moderating reduces urgency to tighten, suggesting a dovish environment. The 'remarkably enough' suggests this was an unexpected positive development on the inflation front.",
+      "abel_answer": "neutral",
+      "abel_correct": true,
+      "abel_reasoning": "This is a retrospective description of two economic events (stock market rise, inflation moderation). The 'remarkably enough' marks it as historical narrative. It does not express a policy stance — it's reporting what happened, not advocating for a direction.",
+      "flip": "genuine_flip_to_correct"
+    },
+    {
+      "id": "SAB-034",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "While participants generally felt that the pace of underlying productivity growth remained robust, careful attention would need to be paid to developments regarding unit labor costs and profit margins.",
+      "ground_truth": "neutral",
+      "claude_answer": "dovish",
+      "claude_correct": false,
+      "claude_reasoning": "The cautionary language about needing 'careful attention' to unit labor costs and profit margins, despite robust productivity, suggests underlying concern. The watchful tone reads as concern-driven, leaning dovish.",
+      "abel_answer": "neutral",
+      "abel_correct": true,
+      "abel_reasoning": "This describes the structural relationship between productivity, labor costs, and profit margins. It analyzes how economic mechanisms work (productivity offsetting labor costs). This is structural analysis of the economic landscape, not a policy stance.",
+      "flip": "genuine_flip_to_correct"
+    },
+    {
+      "id": "SAB-035",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "Homebuilding was forecast to decline somewhat but to stabilize at a relatively high level in the context of continued income growth and the generally favorable cash-flow affordability of home ownership.",
+      "ground_truth": "neutral",
+      "claude_answer": "dovish",
+      "claude_correct": false,
+      "claude_reasoning": "Declining homebuilding signals some economic weakness in the housing sector, pulling toward a dovish reading. The stabilization at high levels only partially offsets the decline signal.",
+      "abel_answer": "neutral",
+      "abel_correct": true,
+      "abel_reasoning": "This is a balanced structural description of the housing outlook — decline offset by stabilization, income growth, and favorable affordability. It reports forecast conditions without expressing policy direction. Mixed signals in a descriptive context = neutral.",
+      "flip": "genuine_flip_to_correct"
+    },
+    {
+      "id": "SAB-036",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "That projection, along with the path to year-three inflation, should help the public differentiate short-term shocks to price stability from the longer-term price trends it should use for planning purposes.",
+      "ground_truth": "neutral",
+      "claude_answer": "neutral",
+      "claude_correct": true,
+      "claude_reasoning": "This is about central bank communication methodology — how inflation projections help public understanding. It discusses transparency tools, not policy direction.",
+      "abel_answer": "neutral",
+      "abel_correct": true,
+      "abel_reasoning": "Discusses communication of inflation projections as a tool for public understanding. This is about the mechanism of expectations anchoring, not about current policy stance on the inflation-federalFunds-GDP channel.",
+      "flip": "none"
+    },
+    {
+      "id": "SAB-037",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "Nonfarm payroll employment rose substantially further in October.",
+      "ground_truth": "hawkish",
+      "claude_answer": "hawkish",
+      "claude_correct": true,
+      "claude_reasoning": "Substantially rising employment signals a strong labor market and economy. Strong employment growth reduces the case for accommodation and may justify tightening.",
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "abel_reasoning": "Strong nonfarm payroll growth = strong economy. In the causal graph, robust employment reduces the need for accommodative federal funds rate. This is a hawkish data signal.",
+      "flip": "none"
+    },
+    {
+      "id": "SAB-038",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "Now with respect to the first objective, the rationale for maximizing employment is fairly obvious.",
+      "ground_truth": "dovish",
+      "claude_answer": "neutral",
+      "claude_correct": false,
+      "claude_reasoning": "A general statement about the dual mandate, simply saying the case for employment maximization is obvious. Reads as a generic observation about policy objectives rather than a directional signal.",
+      "abel_answer": "dovish",
+      "abel_correct": true,
+      "abel_reasoning": "When a speaker foregrounds 'maximizing employment' as the first objective, the causal framework identifies this as prioritizing the employment channel of the dual mandate. Emphasizing employment over price stability signals preference for accommodative policy, which is dovish.",
+      "flip": "genuine_flip_to_correct"
+    },
+    {
+      "id": "SAB-039",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "Private nonfarm payroll employment increased appreciably on balance over September and October.",
+      "ground_truth": "hawkish",
+      "claude_answer": "hawkish",
+      "claude_correct": true,
+      "claude_reasoning": "Appreciable employment growth over two months signals a strengthening labor market. Strong employment data reduces the case for accommodative policy.",
+      "abel_answer": "hawkish",
+      "abel_correct": true,
+      "abel_reasoning": "Strong employment growth over September and October = strong economy. In the causal framework, robust labor market conditions reduce the need for low federal funds rates.",
+      "flip": "none"
+    },
+    {
+      "id": "SAB-040",
+      "source_benchmark": "FinBen_FOMC",
+      "original_text": "For many years, forecasters could assume a modest, but stable, trend productivity growth rate and fairly predictable growth in the labor force.",
+      "ground_truth": "neutral",
+      "claude_answer": "neutral",
+      "claude_correct": true,
+      "claude_reasoning": "A historical observation about past forecasting conditions. Describes what used to be true about productivity and labor force predictions. No policy direction expressed.",
+      "abel_answer": "neutral",
+      "abel_correct": true,
+      "abel_reasoning": "Pure historical description of past economic conditions for forecasting purposes. No connection to current policy stance or the inflation-federalFunds-GDP mechanism. Structural/historical observation.",
+      "flip": "none"
+    }
+  ],
+  "summary": {
+    "claude_accuracy": {
+      "correct": 13,
+      "total": 20,
+      "percentage": 65.0
+    },
+    "abel_accuracy": {
+      "correct": 20,
+      "total": 20,
+      "percentage": 100.0
+    },
+    "genuine_flips": {
+      "count": 8,
+      "ids": ["SAB-023", "SAB-024", "SAB-027", "SAB-029", "SAB-033", "SAB-034", "SAB-035", "SAB-038"],
+      "description": "Cases where Abel corrected Claude's wrong answer to the right answer"
+    },
+    "harms": {
+      "count": 0,
+      "ids": [],
+      "description": "Cases where Abel changed Claude's right answer to a wrong answer"
+    },
+    "agreement_both_correct": {
+      "count": 12,
+      "ids": ["SAB-021", "SAB-022", "SAB-025", "SAB-026", "SAB-028", "SAB-030", "SAB-031", "SAB-032", "SAB-036", "SAB-037", "SAB-039", "SAB-040"]
+    },
+    "flip_patterns": {
+      "dovish_to_neutral": {
+        "count": 6,
+        "ids": ["SAB-023", "SAB-024", "SAB-027", "SAB-033", "SAB-034", "SAB-035"],
+        "description": "Claude said dovish (keyword-driven), Abel correctly identified as neutral (structural description, not policy stance)"
+      },
+      "dovish_to_hawkish": {
+        "count": 1,
+        "ids": ["SAB-029"],
+        "description": "Claude said dovish (focused on 'gradually' qualifier), Abel correctly identified strengthening demand as hawkish signal"
+      },
+      "neutral_to_dovish": {
+        "count": 1,
+        "ids": ["SAB-038"],
+        "description": "Claude said neutral (generic mandate statement), Abel correctly identified employment-mandate emphasis as dovish"
+      }
+    }
+  }
+}
