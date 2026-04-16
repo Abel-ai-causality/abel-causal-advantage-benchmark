@@ -1,0 +1,658 @@
+[
+  {
+    "text": "However, we have also found that excluding volatile food and energy prices generally gives a better ",
+    "base": "hawkish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Rather, members agreed that inflation was likely to moderate in coming quarters,",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "In the productivity boom that followed World War I, a chief technological innovation was the spread ",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "But I want to emphasize that we do have a commitment to raising inflation to 2 percent.",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "The Committee decided to keep the target range for the federal funds rate at 0 to 1/4 percent and ex",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "As a consequence, a sustainable, non-inflationary expansion is likely to involve some moderation in ",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "They noted that the economy had entered the new year with considerable momentum and very few indicat",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Although inflation remained remarkably subdued and any increase in inflationary pressures likely wou",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "The prospect of additional fiscal stimulus likely contributed to a steeper U. S. Treasury yield curv",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Operationally, maintaining price stability requires abiding by the Taylor principle of raising nomin",
+    "base": "hawkish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "As of this month, the maximum monthly reduction in the balance sheet will be nearly double the level",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Although we cannot ascertain the precise rates of resource utilization that the economy can sustain,",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Credit conditions in the commercial real estate (CRE) sector continued to ease, and growth in CRE lo",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "While labor markets were anticipated to remain tight in the near term, participants expected labor d",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "However, household spending had been relatively robust during the cyclical downturn and likely had o",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Although the unemployment rate is around a 50-year low, wages are rising broadly in line with produc",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "With the risks to the forecast for economic activity tilted to the downside, the risks to the inflat",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Fourth and finally, the statement codifies the key lesson from the Global Financial Crisisâ€”that fi",
+    "base": "hawkish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Millions of new jobs have been created in the last few years; and unemployment, now at 4.3 percent, ",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "For example, the evidence suggests that changes in the demographic composition of the labor force af",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "The Committee also reiterated that it would continue its asset purchases, and employ its other polic",
+    "base": "hawkish",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "The staff continued to view the uncertainty around its projections for real GDP growth, the unemploy",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "However, indicators of economic activity in Japan and Brazil remained weak.",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Mortgage credit conditions generally remained tight over the intermeeting period, though signs of ea",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "The Committee's accompanying statement noted that economic growth had slowed over the course of the ",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "The Committee's accompanying statement indicated that economic growth had been quite strong so far t",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Participants expected that productivity growth would pick up as firms slowed hiring to a pace more i",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "To support continued progress toward maximum employment and price stability, the Committee today rea",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Participants generally expected that household demand would gradually strengthen over coming quarter",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Participants expected that fiscal policy would continue to be a drag on economic growth over coming ",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "The extent and timing of any additional firming that may be needed to address these risks will depen",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Thus, knowing where productivity growth is headed is, in many respects, equivalent to foreseeing our",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "The stock market soared, and--remarkably enough--core inflation moderated.",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "While participants generally felt that the pace of underlying productivity growth remained robust, c",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Homebuilding was forecast to decline somewhat but to stabilize at a relatively high level in the con",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "That projection, along with the path to year-three inflation, should help the public differentiate s",
+    "base": "hawkish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Nonfarm payroll employment rose substantially further in October.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Now with respect to the first objective, the rationale for maximizing employment is fairly obvious.",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_0"
+  },
+  {
+    "text": "Private nonfarm payroll employment increased appreciably on balance over September and October.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "For many years, forecasters could assume a modest, but stable, trend productivity growth rate and fairly predictable growth in the labor force.",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "Participants judged that an appropriate firming of the stance of monetary policy, along with an eventual waning of supply–demand imbalances, would help to keep longer-term inflation expectations ancho...",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "The weakness in labor market conditions remained an important concern to meeting participants, with unemployment expected to remain elevated for some time.",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "Labor productivity growth slowed to an average pace of 1.4 percent per year over this period,",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "Members also expressed concern about the potential for an increase in inflation expectations given highly stimulative macroeconomic policies and economic growth that seemed to be gathering momentum.",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "However, if real (or nominal) government spending is held constant, the surplus will rise over time as a share of GDP, putting downward pressure on the equilibrium real rate, offsetting, at least in p...",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "However, we now know that an unexpected and unrecognized slowdown in productivity growth occurred in 1973.",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "Even with the improving labor market, I still hear from businesses that qualified workers are difficult to find, and labor shortages remain a drag on hiring and on economic growth.",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "For the present, however, inflation remained subdued, and it was likely to remain relatively low for some time in light of the weakness in commodity and other import prices and the tendency for low cu...",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "Again, the FOMC has done just that through its commitment to adjust policy as required to keep inflation at bay.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "As always, my colleagues on the FOMC and I will act to foster our dual objectives of price stability and sustainable economic growth.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "In this less comfortable world, restoring price stability can involve a painful process of slow growth and elevated unemployment.",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "Some members expressed concern about the longer-run prospects for large federal deficits and their implications for the future performance of the economy.",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "But I think that that’s a prudent move, to move in a gradual way to remove Chair Yellen’s Press Conference FINAL accommodation, with unemployment now—and not only, I should say, the unemployment rate,...",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "Although I expect these upward price pressures to ease after the temporary supply bottlenecks are resolved, the exact timing of that dynamic is uncertain.",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "In any case, we, our job is to deliver price stability, and I think—you can think of price stability as an asset that just delivers large benefits to society over a long period of time.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "Recent declines in payroll employment and industrial production, while still sizable, were smaller than those registered earlier in 2009.",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "year-over-year consumer inflation remained at a very low level.",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "Total nonfarm payroll employment increased at a solid pace in October and November, and the unemployment rate declined, reaching 4.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "Answering this question is central to our outlook for both of our dual-mandate goals of maximum employment and price stability.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_1"
+  },
+  {
+    "text": "In discussing the increases in U. S. longer-term interest rates that occurred in the wake of the June FOMC meeting and the associated press conference, meeting participants pointed to heightened financial market uncertainty about the path of monetary policy and a shift of market expectations toward less policy accommodation.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "Advances in productivity had boosted profit margins, and high margins were helpful in that they could absorb some portion of any cost increases for a time.",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "Moreover, if, as some members thought likely, productivity growth slowed as employment picked up, the result could be reductions in slack accompanied by higher unit labor costs and associated pressures on prices.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "Treasury yields rose sharply on its release as market participants traced out the report's presumed implications for monetary policy.",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "Proponents of this strategy sometimes describe this approach as reducing inflation cycle-to-cycle or describe the economy as being one recession from price stability.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "In spite of having such slow growth, disappointing productivity growth, we have a labor market that last year generated an average of about 230,000 jobs a month and so far this year has been generating about 180,000 jobs a month.",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "Participants discussed several risks that, if realized, could necessitate a steeper path of increases in the target range; these risks included the possibility that inflation pressures could build unduly if output expanded well beyond its maximum sustainable level, perhaps owing to fiscal stimulus or accommodative financial market conditions.",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "Participants expected that, with further gradual increases in the federal funds rate, economic activity would expand at a solid rate during the remainder of this year and a moderate pace in the medium term, and that labor market conditions would remain strong.",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "The members agreed that the statement to be issued after this meeting should highlight their view that even after their firming today the risks remained weighted mainly in the direction of rising inflation pressures.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "The key to explaining why price stability promotes stability in both output and employment is the realization that, when inflation itself is well-controlled, then the public's expectations of inflation will also be low and stable.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "The Federal Reserve is taking action to keep inflation expectations anchored and bring inflation back to 2 percent over time.1 While last year's rapid pace of economic growth was boosted by accommodative fiscal and monetary policy as well as reopening, demand has moderated this year as those tailwinds have abated.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "The members generally agreed that, if necessary, their concerns about rising inflation could be addressed at the meeting in early February.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "These inferences are supported by some empirical evidence.10 On the other hand, the increased liquidity of home equity may lead consumer spending to respond more than in past years to changes in the values of their homes; some evidence does suggest that the correlation of consumption and house prices is higher in countries, like the United States, that have more sophisticated mortgage markets (Cal",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "What modern monetary policymaking has not faced for quite some time, if ever, has been a major surge in innovation--matching, if not exceeding, the other great waves this century--followed by an apparent elevation of productivity growth.",
+    "base": "hawkish",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "While great uncertainty regarding the path of fiscal policy and its economic effects will remain for some time, with the economy getting closer to full employment, the prospect of a material increase in fiscal stimulus over a sustained period could reasonably be expected to shift somewhat greater probability toward stronger inflation outcomes.",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "The vote also encompassed approval of the sentence below for inclusion in the press statement to be released shortly after the meeting: Against the background of its long-run goals of price stability and sustainable economic growth and of the information currently available, the Committee believes that the risks are weighted mainly toward conditions that may generate heightened inflation pressures",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "Al­though core inflation and the 12-month trimmed mean PCE inflation rate calculated by the Federal Reserve Bank of Dallas remained a little below 2 percent, many participants anticipated that high levels of resource utilization and stable inflation expectations would keep overall inflation near 2 percent over the medium term.",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "This action was taken against the backdrop of heightened concerns and uncertainty created by the recent terrorist attacks and their potentially adverse effects on asset prices and the performance of the economy.",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "If we adjust the 6.7 percent headline unemployment rate for the decline in participation since February and the Bureau of Labor Statistics estimate of misclassification, the unemployment rate would be 10 percent, similar to the peak following the Global Financial Crisis.",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "Rents have grown dramatically, and while home sales have slowed, the continued increasing price of single-family homes indicates to me that rents won't decline anytime in the near future.",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "And, as I think all of us—having that expectation and that if the economy continued to progress along the lines that we expected and we continued to see the risks as balanced—do regard it as appropriate to gradually remove accommodation that’s in place by having several interest rate increases this year.",
+    "base": "dovish",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "fomc_2"
+  },
+  {
+    "text": "It was a question of not getting inflation up to our target on a robust, symmetric kind of a way.",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "borderline",
+    "why_genuine": "not getting inflation up to target — 'raising inflation' confusing phrasing → dovish"
+  },
+  {
+    "text": "Participants agreed that the longer-run normal federal funds rate was likely lower than in the past,",
+    "base": "neutral",
+    "skill": "dovish",
+    "gt": "dovish",
+    "batch": "borderline",
+    "why_genuine": "longer-run normal rate likely lower — r-star concept → dovish but technical"
+  },
+  {
+    "text": "While the current episode has not yet concluded, it appears that, responding vigorously in a relativ",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "borderline",
+    "why_genuine": "responding vigorously to bubbles is less inhibiting — argues anti-inflation vigor → hawkish but buried"
+  },
+  {
+    "text": "The staff's near-term forecast for inflation was revised up a little, as recent data showed somewhat",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "borderline",
+    "why_genuine": "inflation forecast revised up a little — subtle upward revision → hawkish signal easily missed"
+  },
+  {
+    "text": "The nominal deficit on U. S. trade in goods and services widened substantially in the second quarter",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "borderline",
+    "why_genuine": "trade deficit widened substantially — ambiguous: strong demand (hawkish) vs weak exports"
+  },
+  {
+    "text": "While moderating the pace of purchases and the eventual increase in the federal funds rate may well ",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "hawkish",
+    "batch": "borderline",
+    "why_genuine": "U.S. domestic demand recovery would pick up import growth — subtle hawkish through demand channel"
+  },
+  {
+    "text": "At the same time, the staff viewed the risks around its outlook for the unemployment rate as roughly",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "borderline",
+    "why_genuine": "staff viewed unemployment risks as roughly balanced — 'balanced' sounds neutral but is actually neutral"
+  },
+  {
+    "text": "We found that a surprise increase of 25 basis points in the funds rate target typically results in a",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "borderline",
+    "why_genuine": "surprise increase in funds rate results in equity decline — research finding → mechanism description"
+  },
+  {
+    "text": "Members agreed that the statement should continue to convey that inflation risks remained of greates",
+    "base": "neutral",
+    "skill": "hawkish",
+    "gt": "hawkish",
+    "batch": "borderline",
+    "why_genuine": "risks associated with early start to policy normalization — discusses normalization risks → neutral framework"
+  },
+  {
+    "text": "At the same time, the incentive to take advantage of increasingly efficient high-tech equipment and ",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "borderline",
+    "why_genuine": "incentive for efficient high-tech equipment — investment description → neutral"
+  },
+  {
+    "text": "Some members nonetheless referred to indications of increasing expenditures for various categories o",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "borderline",
+    "why_genuine": "moderating pace of purchases may affect EMEs — discusses taper effects → hawkish action in neutral framing"
+  },
+  {
+    "text": "The literature on this topic extends at least as far back as William Brainardâ€™s original paper on ",
+    "base": "dovish",
+    "skill": "neutral",
+    "gt": "neutral",
+    "batch": "borderline",
+    "why_genuine": "Brainard's paper on uncertainty — academic reference → mechanism description → neutral"
+  }
+]
