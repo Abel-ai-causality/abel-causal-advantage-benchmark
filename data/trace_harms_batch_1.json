@@ -1,0 +1,202 @@
+[
+ {
+  "text": "in short the housing boom appears to have been driven by a combination of fundamentals government incentives and a degree of overshooting",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_22",
+  "trace_id": "HARM-026"
+ },
+ {
+  "text": "this mainly reflects the expansion of the provision of liquidity to the banking system which plays a crucial role in the funding of the euro area economy",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "neutral",
+  "batch": "cb_batch_5",
+  "trace_id": "HARM-027"
+ },
+ {
+  "text": "this is partly a consequence of the improved efficiency indicators associated with the consolidation and restructuring efforts made in the sector in recent years",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "neutral",
+  "batch": "cb_batch_25",
+  "trace_id": "HARM-028"
+ },
+ {
+  "text": "there are thus several signs of a development that is worrying from the view of\nfinancial stability",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_28",
+  "trace_id": "HARM-029"
+ },
+ {
+  "text": "the law allows an outofstate bank or bank holding company to acquire a failed bank having assets of over 500 million",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_19",
+  "trace_id": "HARM-030"
+ },
+ {
+  "text": "without this policy measure the extreme over valuation of the swiss franc and its volatility \nwould probably have persisted",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_28",
+  "trace_id": "HARM-031"
+ },
+ {
+  "text": "over the next few months 12month measures of inflation are expected to move above our 2 percent longerrun goal largely reflecting i believe transitory factors such as a run of yearoveryear comparisons",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_11",
+  "trace_id": "HARM-032"
+ },
+ {
+  "text": "perhaps  the most remarkable of these transformations has  been increased employment opportunities for  blacks and women",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_14",
+  "trace_id": "HARM-033"
+ },
+ {
+  "text": "in addition the balance of payments bop crisis of 1991 led to sharp exchange rate devaluation which translated into increased costpush pressures on import sensitive products",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_28",
+  "trace_id": "HARM-034"
+ },
+ {
+  "text": "to illustrate in the second quarter of 1980 the demand for transactions balances appears to have shifted down by perhaps 3 to 312 percentage points based on the money demand function in the boards qua",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_19",
+  "trace_id": "HARM-035"
+ },
+ {
+  "text": "since then the  treasury has been forced to do all its financing with securities     5 bearing five years maturity or less",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_20",
+  "trace_id": "HARM-036"
+ },
+ {
+  "text": "job growth has slowed this year but even so payroll employment has expanded by an average of 100000 jobs per month over the last three months",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_14",
+  "trace_id": "HARM-037"
+ },
+ {
+  "text": "but it is hard to believe that all the movements in asset prices witnessed in recent years are wellrooted in changes to the underlying productivity of those assets",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_19",
+  "trace_id": "HARM-038"
+ },
+ {
+  "text": "within the hkmawe have in the last few months seen the completion of a major strategic consultancy studythat will help to guide the broad development of our banking sector into the next century",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_24",
+  "trace_id": "HARM-039"
+ },
+ {
+  "text": "it can be further  argued that the result is in fact a federal subsidy to banks",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "neutral",
+  "batch": "cb_batch_16",
+  "trace_id": "HARM-040"
+ },
+ {
+  "text": "in addition there is an active work programme within the east african community to promote the regional integration of capital markets",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_24",
+  "trace_id": "HARM-041"
+ },
+ {
+  "text": "the present system also provides too little incentive for capital investment during periods of high inflation and financial uncertainty liberalized depreciation allowances should certainly be given pr",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "neutral",
+  "batch": "cb_batch_10",
+  "trace_id": "HARM-042"
+ },
+ {
+  "text": "a return of macroeconomic policy to the prepandemic status quo would be an immense wasted opportunity",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "neutral",
+  "batch": "cb_batch_8",
+  "trace_id": "HARM-043"
+ },
+ {
+  "text": "another factor which led us to review our banking supervision arrangements was\na concern at the compliance costs and regulatory distortions which can be associated withconventional approaches to banki",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_27",
+  "trace_id": "HARM-044"
+ },
+ {
+  "text": "the first area that i think could benefit from a fresh approach is our requirement for the active marketing for sale of properties acquired in foreclosure often called real estate owned or reo propert",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "neutral",
+  "batch": "cb_batch_16",
+  "trace_id": "HARM-045"
+ },
+ {
+  "text": "4 of course on top of these potential\nreturns there was also a question of exchange rate expectations and we will return to this issuewhen we look at reasons for the volatility of flows",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_27",
+  "trace_id": "HARM-046"
+ },
+ {
+  "text": "jumptarts mission to develop a more financially literate population supports the federal reserves goal of a stable and growing economy",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_14",
+  "trace_id": "HARM-047"
+ },
+ {
+  "text": "these us banks have combined total assetc in excess of 20 billion",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_19",
+  "trace_id": "HARM-048"
+ },
+ {
+  "text": "1 and the region also recognised that being a major hub enabled it to extend its reach further by becoming a genuine gathering point for talent technology and knowledge from all over the world",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "neutral",
+  "batch": "cb_batch_5",
+  "trace_id": "HARM-049"
+ },
+ {
+  "text": "For the twelve months ended in September, prices of consumer items other than food and energy increased by a considerably smaller amount than in the year- earlier period.",
+  "ground_truth": "neutral",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_4",
+  "trace_id": "HARM-050"
+ }
+]

@@ -1,0 +1,202 @@
+[
+ {
+  "text": "rising demands by pressure groups lead to economic inefficiency and loss of freedom a second type of long run problem is our rising impatience with the free market forces in channeling incomes and res",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "neutral",
+  "batch": "cb_batch_17",
+  "trace_id": "HARM-051"
+ },
+ {
+  "text": "uncertainty is partially being driven by concerns over the structure of the economy after the crisis especially in such vulnerable sectors as tourism entertainment or transportation",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "neutral",
+  "batch": "cb_batch_7",
+  "trace_id": "HARM-052"
+ },
+ {
+  "text": "local governments need to make investments in amenities schools and infrastructure that will attract and retain this talent",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_21",
+  "trace_id": "HARM-053"
+ },
+ {
+  "text": "they actively pursue arbitrage opportunities across markets and in the process often reduce or eliminate mispricing of financial assets",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "neutral",
+  "batch": "cb_batch_16",
+  "trace_id": "HARM-054"
+ },
+ {
+  "text": "bis review 182008 9\n hence while gross financial savings of the household sector have continued their upward \ntrajectory in the recent few years households financial liabilities have also been increas",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_28",
+  "trace_id": "HARM-055"
+ },
+ {
+  "text": "in midseptember 2019 upward pressures emerged in funding markets as reserves dropped to about 14 trillion or 66 percent of gdp at that time",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_28",
+  "trace_id": "HARM-056"
+ },
+ {
+  "text": "japanese export growth has slowed considerably in recent months and some categories have actu ally registered declines",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_10",
+  "trace_id": "HARM-057"
+ },
+ {
+  "text": "at the same time the external financial conditions relevant for chile are estimated to \nbe tighter while the terms of trade will be lower figure 2 and table 1",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_29_31",
+  "trace_id": "HARM-058"
+ },
+ {
+  "text": "government securities inc esm a brokerdealer in government securities but also was related to more systemic weaknesses in the supervision and insurance of some ohio savings and loan associations",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_20",
+  "trace_id": "HARM-059"
+ },
+ {
+  "text": "the crisis played a role in this but also that the fiscal rules were repeatedly violated and the capital markets didnt sanction these breaches because the no bailout clause lacked credibility",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_26",
+  "trace_id": "HARM-060"
+ },
+ {
+  "text": "dewitt arkansas is another rural community where entrepreneurship is sparking a local revival",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "neutral",
+  "batch": "cb_batch_12",
+  "trace_id": "HARM-061"
+ },
+ {
+  "text": "policy conclusions in summary and with this i would like to conclude we are confronted with an inflation outlook that will be highly volatile until well into next year",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_6",
+  "trace_id": "HARM-062"
+ },
+ {
+  "text": "here i refer to a joint effort still under way by the staff of the board of governors and a team of academic economists headed by professors albert ando and franco modiglianithis project has tried to ",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_21",
+  "trace_id": "HARM-063"
+ },
+ {
+  "text": "thus during the decade ending in 1970 total assets of commercial banks increased at an average annual rate of 9 per cent in contrast to a 7 per cent rate of growth in the dollar value of our gross nat",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_20",
+  "trace_id": "HARM-064"
+ },
+ {
+  "text": "such adverse developments have in certain instances been unwanted side effects of some of the progressive activities we have seen banks undertake",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_18",
+  "trace_id": "HARM-065"
+ },
+ {
+  "text": "in the internationalized environment ahead we must seek ways to reorient labor and capital resources away from    6  endeavors that can no longer compete and steer them toward more feasible pursuits",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "neutral",
+  "batch": "cb_batch_12",
+  "trace_id": "HARM-066"
+ },
+ {
+  "text": "first prolonged delay in tackling systemic banking sector weakness invites further weakness not strengthening",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_18",
+  "trace_id": "HARM-067"
+ },
+ {
+  "text": "higher interest rates contribute in isolation to krone appreciation and to lower profitability in the internationally exposed sector",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_29_31",
+  "trace_id": "HARM-068"
+ },
+ {
+  "text": "second as views of appropriate policy evolve over time as economic and financial conditions change the public will be able to draw better inferences about the relation between current economic conditi",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_13",
+  "trace_id": "HARM-069"
+ },
+ {
+  "text": "these include the recent decline in mortgage rates slower house price appreciation which was running 6 to 7 percent in early 2018 and is now in the 3 to 4 percent range and an increase in household fo",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_13",
+  "trace_id": "HARM-070"
+ },
+ {
+  "text": "for more than a decade now banks have worked hard to sustain the momentum for achieving the objective of financial inclusion",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_26",
+  "trace_id": "HARM-071"
+ },
+ {
+  "text": "these developments relating to work attitudes and the amount of leisure time we are opting for as a society are a relatively neglected aspect i believe of scholarly investigation into the causes of th",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "neutral",
+  "batch": "cb_batch_12",
+  "trace_id": "HARM-072"
+ },
+ {
+  "text": "a more cautionary finding is that the size of bank balance sheets tends to forecast aggregate economic volatility",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_28",
+  "trace_id": "HARM-073"
+ },
+ {
+  "text": "and so in 1957 and 1958 society paid in unemployment lost salaries and lost profits the price of another bust that followed in the wake of a boom which we must in all honesty recognize was helped on i",
+  "ground_truth": "dovish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_15",
+  "trace_id": "HARM-074"
+ },
+ {
+  "text": "through channels such as these efficiency gains get diffused widely throughout our economy resulting in a broadly based increase in living standards",
+  "ground_truth": "hawkish",
+  "claude_answer": "hawkish",
+  "abel_answer": "neutral",
+  "batch": "cb_batch_15",
+  "trace_id": "HARM-075"
+ }
+]

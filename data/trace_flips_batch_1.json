@@ -1,0 +1,202 @@
+[
+ {
+  "text": "from a fiscal policy perspective the challenge that  arises relates to the management of windfall \nrevenues",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_29_31",
+  "trace_id": "FLIP-026"
+ },
+ {
+  "text": "otherwise debtfinanced fiscal policy will in fact be destabilising since it will depress sovereign bond prices and trigger ratings downgrades feeding back into the financial system through the channel",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_7",
+  "trace_id": "FLIP-027"
+ },
+ {
+  "text": "since the early 1970s the thrust of public policy has been to encourage development and growth of markets for mortgage passthrough securities guaranteed by federal agencies and federally sponsored ent",
+  "ground_truth": "hawkish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_22",
+  "trace_id": "FLIP-028"
+ },
+ {
+  "text": "In response to the resulting high inflation, the Fed was obliged to raise interest rates, and the ec...",
+  "ground_truth": "hawkish",
+  "claude_answer": "neutral",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_0",
+  "trace_id": "FLIP-029"
+ },
+ {
+  "text": "the compression of interest   margins is alerting bankers to the fact that their ample supply of core   deposits provides a liquidity cushion that is fairly expensive in this   setting",
+  "ground_truth": "dovish",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_17",
+  "trace_id": "FLIP-030"
+ },
+ {
+  "text": "howeve r if legislation ta kes only \nthese action s and do es not limit gse portfolio s we  run the risk of solidifying investors perceptio ns \nthat the gses are in strum ents of the go vernme nt and ",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_28",
+  "trace_id": "FLIP-031"
+ },
+ {
+  "text": "in addition growth is strengthening in the united states and this augurs for caricom countries which are the major market for our non energy exports",
+  "ground_truth": "hawkish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_24",
+  "trace_id": "FLIP-032"
+ },
+ {
+  "text": "in effect they argue that even if individual firms manage their risks prudently and effectively the aggregate effect of their activities may be to make the financial system less stable",
+  "ground_truth": "dovish",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_17",
+  "trace_id": "FLIP-033"
+ },
+ {
+  "text": "rising government expenditures especially for defense have fostered strong gains in both output and employment in related industries",
+  "ground_truth": "hawkish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_20",
+  "trace_id": "FLIP-034"
+ },
+ {
+  "text": "financial inclusion has now emerged as an important global agenda in ensuring sustainable \nlongterm economic growth",
+  "ground_truth": "hawkish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_24",
+  "trace_id": "FLIP-035"
+ },
+ {
+  "text": "some current problems in agricultural credit remarks by chas",
+  "ground_truth": "dovish",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_12",
+  "trace_id": "FLIP-036"
+ },
+ {
+  "text": "the city of shanghai is now \nbusy in setting up all necessary financial architecture and facilities as it is on its way to be the onshore rmb centre",
+  "ground_truth": "hawkish",
+  "claude_answer": "neutral",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_25",
+  "trace_id": "FLIP-037"
+ },
+ {
+  "text": "indeed many of my business contacts suggest that while growth is very sluggish and uneven they do not see the precipitous declines that the news headlines suggest",
+  "ground_truth": "dovish",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_12",
+  "trace_id": "FLIP-038"
+ },
+ {
+  "text": "this may be associated with \nthe establishment of region wide production and trade networks i n asia",
+  "ground_truth": "hawkish",
+  "claude_answer": "neutral",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_25",
+  "trace_id": "FLIP-039"
+ },
+ {
+  "text": "looking at developments in the global economy economic activity is picking up in both the advanced and emerging economies",
+  "ground_truth": "hawkish",
+  "claude_answer": "neutral",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_25",
+  "trace_id": "FLIP-040"
+ },
+ {
+  "text": "second deleveraging forces and fire sales have a direct impact on the value of collateral",
+  "ground_truth": "dovish",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_8",
+  "trace_id": "FLIP-041"
+ },
+ {
+  "text": "the expansion of governments net borrowing has been even more dramatic",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_21",
+  "trace_id": "FLIP-042"
+ },
+ {
+  "text": "investment in nonresidential structures such as office buildings and industrial and commercial space appears poised to improve this year after several years in the doldrums though a full recovery in t",
+  "ground_truth": "dovish",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_10",
+  "trace_id": "FLIP-043"
+ },
+ {
+  "text": "naturally this puts more weight on the shoulders of market participants that is the banks",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_29_31",
+  "trace_id": "FLIP-044"
+ },
+ {
+  "text": "banks taking part in our tltros saw a considerable increase in their credit growth with loans rising by over 400 billion in the year up to september",
+  "ground_truth": "hawkish",
+  "claude_answer": "neutral",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_6",
+  "trace_id": "FLIP-045"
+ },
+ {
+  "text": "even the most intensive supervision cannot make sure that no bank will ever suffer losses large enough to wipe out its capital",
+  "ground_truth": "dovish",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_15",
+  "trace_id": "FLIP-046"
+ },
+ {
+  "text": "this movement of economists throughout the organization has helped build a deep reservoir of human capital within the bank and has fostered close collaboration between research and other areas of the ",
+  "ground_truth": "hawkish",
+  "claude_answer": "neutral",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_25",
+  "trace_id": "FLIP-047"
+ },
+ {
+  "text": "longterm growth prospects are good steady growth in business investment spending is important not only for its contribution to the growth in overall demand for goods and services but for its contribut",
+  "ground_truth": "hawkish",
+  "claude_answer": "neutral",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_11",
+  "trace_id": "FLIP-048"
+ },
+ {
+  "text": "moreover given the prominent role of euro area banks in the banking sector of this region the establishment of the ssm will further intensify our institutional relations",
+  "ground_truth": "hawkish",
+  "claude_answer": "neutral",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_6",
+  "trace_id": "FLIP-049"
+ },
+ {
+  "text": "so the federal government will itself preempt about half of what is available to add to our capital stock to inventories or to housing",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_22",
+  "trace_id": "FLIP-050"
+ }
+]

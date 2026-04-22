@@ -1,0 +1,652 @@
+[
+  {
+    "trace_id": "HARM-076",
+    "text": "and given our highly educated population canada has the capacity to innovate in green technologieswhile the magnitude of the transition itself provides a strong motivation for such innovation",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "neutral",
+    "trace_a_pure_claude": {
+      "reads": "Speaker credits Canada's educated workforce and links the scale of the green transition to innovation capacity. The tone is confident, supply-side, and growth-forward.",
+      "concepts": ["human capital", "green transition", "innovation capacity", "supply-side optimism"],
+      "weighing": "Confident rhetoric about capacity and motivation reads as forward-leaning. Central bankers invoke productivity and innovation when they want to justify or tolerate a firmer policy stance; it signals underlying strength rather than stimulus need.",
+      "answer": "hawkish",
+      "why_correct": "Picked up the implicit productivity/supply-strength framing that central bankers use to justify tighter-leaning policy, rather than flattening it to a neutral observation."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "off-blanket macro commentary about innovation capacity",
+      "hypotheses": ["H1: structural growth commentary → neutral", "H2: green-transition reference → neutral/policy-agnostic", "H3: innovation motivation → dovish (investment need)"],
+      "graph_nodes": ["innovation", "human capital", "green transition"],
+      "blanket_insight": "None of {inflation, federalFunds, GDP, unemployment} appears; Markov blanket is inactive.",
+      "verify": "No direct monetary-policy lever is mentioned; no rate, balance-sheet, or price-stability signal.",
+      "web_grounding": "Canada climate-transition discourse is typically framed as long-run structural, not cyclical.",
+      "synthesize": "Absent blanket hits, default to neutral for structural/innovation talk.",
+      "answer": "neutral",
+      "why_wrong": "Defaulted to neutral because the text lacks inflation/rate vocabulary, missing that confident supply-side capacity talk is itself a hawkish signal in central bank rhetoric."
+    },
+    "comparison": "Abel's blanket is a macro-lever filter; this sentence expresses productivity optimism without touching the blanket, so Abel flattened to neutral. Claude read the rhetorical posture (capacity + motivation) as forward-leaning, not the literal macro variables."
+  },
+  {
+    "trace_id": "HARM-077",
+    "text": "this is likely due to a more backwardlooking approach in the formation of expectations and to the considerable weight of the most volatile components of inflation in the consumption basket of the less",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "hawkish",
+    "trace_a_pure_claude": {
+      "reads": "Speaker is explaining why some group's inflation perceptions run hotter than reality: backward-looking expectations and volatile basket components. This is a rationalization that perceived inflation overstates underlying pressure.",
+      "concepts": ["expectations formation", "measurement/perception bias", "volatile components", "core vs headline"],
+      "weighing": "When a central banker attributes elevated inflation perceptions to backward-looking bias and volatile items, they are signaling that the underlying inflation picture is milder than it looks—an argument for patience, not tightening.",
+      "answer": "dovish",
+      "why_correct": "Recognized the 'look-through' framing: explaining away high inflation perceptions is a classic dovish rhetorical move."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "inflation-expectations commentary",
+      "hypotheses": ["H1: inflation mentioned → hawkish", "H2: volatile inflation components → hawkish price-pressure", "H3: backward-looking expectations → anchoring risk → hawkish"],
+      "graph_nodes": ["inflation", "expectations", "consumption basket"],
+      "blanket_insight": "Inflation node active; blanket edge inflation→federalFunds suggests tightening bias.",
+      "verify": "Text emphasizes 'considerable weight' of volatile components and backward-looking expectations—both raise perceived inflation risk.",
+      "web_grounding": "Unanchored backward-looking expectations are textbook hawkish trigger per Fed/ECB playbooks.",
+      "synthesize": "Inflation + weak anchoring → lean hawkish.",
+      "answer": "hawkish",
+      "why_wrong": "Treated 'inflation' + 'volatile components' as hawkish triggers without reading that the speaker is explaining away perceived inflation, not raising an alarm."
+    },
+    "comparison": "Abel's blanket fires on the word 'inflation' and the mention of volatile components, pushing hawkish. Claude parsed the sentence's logical function—it is offering reasons perceived inflation is overstated—which is dovish. Keyword triggering lost to discourse parsing."
+  },
+  {
+    "trace_id": "HARM-078",
+    "text": "globally the introduction of new capital and liquidity regulations has increased the resilience of the banking system",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "neutral",
+    "trace_a_pure_claude": {
+      "reads": "Endorses post-crisis capital and liquidity rules and credits them with a more resilient banking system. Tone is approving and regulation-positive.",
+      "concepts": ["Basel III", "capital adequacy", "liquidity rules", "financial stability"],
+      "weighing": "Regulatory-resilience framing is hawkish-leaning in this corpus: the speaker is affirming tighter prudential standards and their benefits, which complements a tighter monetary stance by reducing financial-stability objections to higher rates.",
+      "answer": "hawkish",
+      "why_correct": "Identified that affirming tighter bank regulation is a hawkish-adjacent posture—tolerates tighter policy because banks are stronger."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "bank-regulation statement",
+      "hypotheses": ["H1: financial stability observation → neutral", "H2: regulation praise → neutral reporting", "H3: tighter rules → off-blanket"],
+      "graph_nodes": ["banking system", "capital regulation", "liquidity"],
+      "blanket_insight": "No inflation/rates/GDP/unemployment trigger; blanket silent.",
+      "verify": "No stance on rates or price stability; purely structural statement.",
+      "web_grounding": "Basel-style prudential talk is commonly classified neutral in sentiment datasets.",
+      "synthesize": "Structural regulation talk → neutral default.",
+      "answer": "neutral",
+      "why_wrong": "Failed to see that endorsing tighter prudential regulation aligns with a hawkish policy posture in central-bank corpora—Abel's blanket doesn't encode prudential-tightness edges."
+    },
+    "comparison": "The blanket edge set {inflation, FF, GDP, unemployment} does not include prudential regulation, so Abel saw nothing. Claude used a broader corpus prior: when central bankers praise tighter rules, it usually co-occurs with hawkish stance."
+  },
+  {
+    "trace_id": "HARM-079",
+    "text": "nevertheless we observe that a scenario configuration involving a rise in interest rates and asset price declines would in general tend to exert a negative influence on banks solvency positions",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "hawkish",
+    "trace_a_pure_claude": {
+      "reads": "Stress-test framing: rising rates plus falling asset prices would hurt bank solvency. Speaker is flagging a downside of tightening.",
+      "concepts": ["stress scenario", "bank solvency", "rate hikes cost", "financial stability risk"],
+      "weighing": "Highlighting that rate rises erode bank solvency is an argument against aggressive tightening—it's a dovish flag on the cost side of hawkish policy.",
+      "answer": "dovish",
+      "why_correct": "Caught the implicit warning against tightening via the solvency channel—this is a dovish constraint argument."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "stress-test/rate-scenario statement",
+      "hypotheses": ["H1: 'rise in interest rates' → hawkish trigger", "H2: 'asset price declines' → tightening signal", "H3: solvency concern → neutral"],
+      "graph_nodes": ["interest rates", "asset prices", "bank solvency"],
+      "blanket_insight": "federalFunds node directly referenced via 'rise in interest rates'; edge fires → hawkish.",
+      "verify": "Contains explicit 'rise in interest rates' which is a blanket hit.",
+      "web_grounding": "Rate-rise scenarios commonly coded hawkish in keyword systems.",
+      "synthesize": "Blanket hit on rates + asset decline → hawkish stance.",
+      "answer": "hawkish",
+      "why_wrong": "Read 'rise in interest rates' as a policy preference rather than a hypothetical stress scenario whose negative consequences argue against tightening."
+    },
+    "comparison": "Abel fires on the rates node without parsing modal framing ('scenario…would tend to'). Claude distinguished hypothetical-stress-framing from normative-policy-preference. Modal/conditional logic is not encoded in the blanket."
+  },
+  {
+    "trace_id": "HARM-080",
+    "text": "information on the price expectations of businesses  who are after all the price setters in the first instance \n as well as information on nominal wage expectations is particularly scarce",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "hawkish",
+    "trace_a_pure_claude": {
+      "reads": "Speaker laments data gaps—scarce info on business price expectations and wage expectations. A knowledge-humility statement.",
+      "concepts": ["data limitations", "expectations measurement", "epistemic uncertainty", "price-setter behavior"],
+      "weighing": "When a central banker emphasizes measurement/data scarcity, they typically use it to argue for caution and patience—i.e., don't tighten aggressively on noisy signals. That's dovish by rhetorical pattern.",
+      "answer": "dovish",
+      "why_correct": "Recognized data-scarcity as a dovish caution argument, not a hawkish inflation signal."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "price/wage expectations commentary",
+      "hypotheses": ["H1: price expectations mentioned → inflation-adjacent → hawkish", "H2: nominal wage expectations → wage-price spiral risk → hawkish", "H3: data scarcity → neutral"],
+      "graph_nodes": ["price expectations", "wage expectations", "inflation"],
+      "blanket_insight": "Inflation-adjacent nodes active; edge to federalFunds suggests tightening bias.",
+      "verify": "Price-setters and wage expectations both feed inflation; blanket supports hawkish.",
+      "web_grounding": "Wage-price expectations prominence often coded hawkish in FOMC speeches of tightening cycles.",
+      "synthesize": "Expectations vocabulary + price-setter emphasis → hawkish.",
+      "answer": "hawkish",
+      "why_wrong": "Activated on inflation-expectations keywords while missing the actual proposition: the speaker is admitting we don't know what expectations are—an epistemic humility/dovish move."
+    },
+    "comparison": "Abel fires on inflation-family keywords; Claude parsed the sentence as a data-gap complaint. The blanket has no 'epistemic humility' edge, so caution-flavored dovish framing is systematically misread."
+  },
+  {
+    "trace_id": "HARM-081",
+    "text": "the interlinkage of finance and information technology which is now known as fintech has played significant role in the evolution of finance",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "dovish",
+    "trace_a_pure_claude": {
+      "reads": "A factual observation that fintech has shaped modern finance. Approving, forward-looking, structural.",
+      "concepts": ["fintech", "financial innovation", "structural change", "technology adoption"],
+      "weighing": "In central-bank corpora, positive framing of financial-sector innovation typically co-occurs with hawkish-leaning messaging: the system is developed, can absorb higher rates, and merits tighter oversight rather than accommodation.",
+      "answer": "hawkish",
+      "why_correct": "Caught the approving, system-maturity framing that tracks hawkish sentiment in this dataset."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "fintech structural commentary",
+      "hypotheses": ["H1: innovation praise → growth-supportive → dovish", "H2: evolution of finance → neutral", "H3: fintech → credit expansion → dovish"],
+      "graph_nodes": ["fintech", "finance evolution"],
+      "blanket_insight": "No blanket node triggered; inferred dovish via credit-ease analogy.",
+      "verify": "Fintech often associated with lower-cost credit intermediation.",
+      "web_grounding": "Fintech speeches sometimes framed as democratizing credit → dovish tilt.",
+      "synthesize": "Structural credit-expansion framing → dovish.",
+      "answer": "dovish",
+      "why_wrong": "Invented a dovish 'credit expansion' link that isn't in the text. The sentence is purely descriptive; projecting policy implications misclassified it."
+    },
+    "comparison": "Abel's hypothesis generator overfit—conjured a dovish credit-expansion story out of thin air. Claude stayed closer to the text and to the corpus pattern linking structural-maturity commentary with hawkish sentiment."
+  },
+  {
+    "trace_id": "HARM-082",
+    "text": "at that first meeting in 1997 i talked about the devastating and farreaching effects of foreclosures",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "neutral",
+    "trace_a_pure_claude": {
+      "reads": "Speaker recalls flagging the 'devastating and far-reaching' impact of foreclosures. Emphatic, distress-oriented language.",
+      "concepts": ["foreclosures", "household distress", "financial fragility", "policy motivation"],
+      "weighing": "Emphasizing foreclosure harm is a dovish rhetorical move—it builds the case for accommodative policy and consumer protection. Sympathetic, downside-focused framing.",
+      "answer": "dovish",
+      "why_correct": "Recognized the distress framing as setting up a dovish stance."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "historical anecdote about foreclosures",
+      "hypotheses": ["H1: past-tense anecdote → neutral", "H2: foreclosures → off-blanket microfinance topic", "H3: no rate/inflation reference → neutral"],
+      "graph_nodes": ["foreclosures", "housing"],
+      "blanket_insight": "No blanket node triggered.",
+      "verify": "No inflation, rates, GDP, unemployment terms.",
+      "web_grounding": "Foreclosure speeches are sometimes consumer-protection framing, not monetary.",
+      "synthesize": "Off-blanket, past tense → neutral.",
+      "answer": "neutral",
+      "why_wrong": "Dismissed as neutral because it's off-blanket and past-tense, missing the emotive distress framing that signals dovish policy orientation."
+    },
+    "comparison": "The blanket excludes household-distress channels. Claude weighed the emotive adjectives ('devastating', 'far-reaching') as dovish rhetoric. Abel's node-set is too macro-centric to capture this."
+  },
+  {
+    "trace_id": "HARM-083",
+    "text": "While bank lending continues to contract, financial market conditions remain supportive of economic growth.",
+    "ground_truth": "neutral",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "trace_a_pure_claude": {
+      "reads": "Balanced statement: negative on bank lending, positive on broader market conditions. Two offsetting observations.",
+      "concepts": ["bank lending contraction", "financial conditions", "balanced assessment"],
+      "weighing": "The sentence pairs a negative and a positive symmetrically. No directional push; it's a status report, not an advocacy.",
+      "answer": "neutral",
+      "why_correct": "Correctly read the two-sided structure as balanced/neutral rather than picking one side."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "credit and financial-conditions update",
+      "hypotheses": ["H1: lending contraction → dovish (need accommodation)", "H2: supportive market conditions → dovish (rates low)", "H3: balanced → neutral"],
+      "graph_nodes": ["bank lending", "financial conditions", "economic growth"],
+      "blanket_insight": "GDP edge activated via 'economic growth'; lending contraction historically dovish.",
+      "verify": "'Contract' and 'supportive of growth' both read as accommodative cues.",
+      "web_grounding": "Contracting lending + loose financial conditions often described in dovish-era speeches.",
+      "synthesize": "Growth + accommodation framing → dovish.",
+      "answer": "dovish",
+      "why_wrong": "Aggregated two offsetting cues into a single dovish direction instead of preserving the 'on one hand / on the other' structure."
+    },
+    "comparison": "Abel's synthesis step collapses offsetting information into a single vote. Claude preserved the balance. The blanket encodes direction-of-effect on each node but not 'both sides stated equally', so balanced sentences systematically tilt."
+  },
+  {
+    "trace_id": "HARM-084",
+    "text": "credit markets are open",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "dovish",
+    "trace_a_pure_claude": {
+      "reads": "Three-word declarative: credit markets are functioning. A reassurance/affirmation of system health.",
+      "concepts": ["credit market functioning", "financial-system health", "normalcy signal"],
+      "weighing": "In central-bank speech, 'credit markets are open' is an all-clear signal—implicit argument that extraordinary accommodation is not needed, which leans hawkish in this dataset's coding.",
+      "answer": "hawkish",
+      "why_correct": "Recognized the all-clear signal as hawkish-aligned (removes rationale for easing)."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "credit-market status note",
+      "hypotheses": ["H1: credit open → easy credit → dovish", "H2: market functioning → neutral", "H3: financial stability → neutral"],
+      "graph_nodes": ["credit markets"],
+      "blanket_insight": "No direct blanket hit; inferred via credit → lending → growth channel.",
+      "verify": "'Open' credit often paired with low-rate environments.",
+      "web_grounding": "Easy-credit conditions commonly coded dovish.",
+      "synthesize": "Open credit = accommodation → dovish.",
+      "answer": "dovish",
+      "why_wrong": "Equated 'credit markets open' with 'easy credit/stimulus', but in context it's an all-clear that removes the need for accommodation—hawkish-adjacent."
+    },
+    "comparison": "Abel confuses 'markets are functioning' with 'policy is accommodative'. Claude read the rhetorical function (reassurance → no more easing needed). The blanket has no node for 'system normalcy' vs 'system distress'."
+  },
+  {
+    "trace_id": "HARM-085",
+    "text": "our studies have shown that the increases have been two to four times the increase in the general price level from 1980 to 1983 although bank expenses for personal checking accounts increased even mor",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "hawkish",
+    "trace_a_pure_claude": {
+      "reads": "Discussion of bank-fee increases versus general inflation and bank expenses. Consumer-cost framing; speaker notes fees outpaced inflation but bank costs also rose.",
+      "concepts": ["bank fees", "consumer cost", "cost pass-through", "retail banking"],
+      "weighing": "This is a consumer-protection / retail-banking discussion, not a monetary-policy argument. Sympathetic to consumers paying high fees—reads as dovish in distress-framing.",
+      "answer": "dovish",
+      "why_correct": "Identified this as consumer-cost rhetoric, not a macro inflation stance."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "inflation-rate comparison",
+      "hypotheses": ["H1: 'increase in general price level' → inflation node → hawkish", "H2: 2-4x inflation → price pressure → hawkish", "H3: bank expenses → neutral"],
+      "graph_nodes": ["inflation", "bank expenses", "price level"],
+      "blanket_insight": "Inflation node directly referenced; edge to federalFunds → hawkish bias.",
+      "verify": "'Price level' and multiplicative inflation references activate blanket.",
+      "web_grounding": "Above-inflation price increases generally read hawkish.",
+      "synthesize": "Inflation comparison → hawkish stance.",
+      "answer": "hawkish",
+      "why_wrong": "Blanket fired on 'price level' even though the subject is bank-fee levels vs general inflation, not monetary-policy inflation concern."
+    },
+    "comparison": "Abel cannot distinguish between 'inflation is the topic of policy' vs 'inflation is just the baseline I'm comparing bank fees against'. Claude read the actual subject of the sentence."
+  },
+  {
+    "trace_id": "HARM-086",
+    "text": "this is the blue part in the chart which you can see shifted into negative territory after our decision in early december to extend the intended horizon of the app by another nine months",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "neutral",
+    "trace_a_pure_claude": {
+      "reads": "Describes a chart where a metric turned negative following an APP extension by nine months. APP = asset purchase programme (ECB QE).",
+      "concepts": ["APP extension", "QE", "yield/spread compression", "accommodative decision"],
+      "weighing": "Extending QE and describing the successful downward shift in a metric is directly dovish: speaker is endorsing a stimulus decision and its effect.",
+      "answer": "dovish",
+      "why_correct": "Recognized APP as ECB asset-purchase programme—extension by 9 months is textbook easing."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "chart description about APP",
+      "hypotheses": ["H1: 'APP' unclear abbreviation → neutral", "H2: 'shifted into negative territory' → technical/neutral", "H3: 'extend horizon' → neutral procedural"],
+      "graph_nodes": ["APP", "horizon", "chart element"],
+      "blanket_insight": "No blanket node explicitly named; 'federalFunds' not mentioned.",
+      "verify": "Text looks like a visual-aid callout.",
+      "web_grounding": "Acronym APP ambiguous without context; skipped.",
+      "synthesize": "Procedural chart description → neutral.",
+      "answer": "neutral",
+      "why_wrong": "Did not resolve 'APP' to ECB Asset Purchase Programme, so missed the explicit easing action described."
+    },
+    "comparison": "Abel's acronym resolution is weak and its blanket excludes balance-sheet policy. QE extensions should map to a dovish node but Asset Purchase Programmes aren't in the four-node blanket."
+  },
+  {
+    "trace_id": "HARM-087",
+    "text": "These concerns were centered around the fact that corporate borrowers could no longer raise funds in the bond or commercial paper markets at reasonable prices or, at some times and for some borrowers,",
+    "ground_truth": "neutral",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "trace_a_pure_claude": {
+      "reads": "Reporting past concerns that corporate borrowers faced impaired access to bond and CP markets. Retrospective description of market stress.",
+      "concepts": ["corporate funding stress", "bond market", "commercial paper", "historical account"],
+      "weighing": "Reporting past concerns without advocating current policy direction is neutral descriptive language. The speaker is not calling for action, just recounting what was worrying.",
+      "answer": "neutral",
+      "why_correct": "Read the past-tense reporting frame as neutral description, not as a policy advocacy."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "corporate funding distress account",
+      "hypotheses": ["H1: impaired market access → credit stress → dovish (need easing)", "H2: 'reasonable prices' → rate-sensitive → dovish", "H3: retrospective → neutral"],
+      "graph_nodes": ["corporate funding", "bond market", "commercial paper"],
+      "blanket_insight": "No direct blanket hit; inferred via credit-stress → accommodation edge.",
+      "verify": "Stress vocabulary suggests easing rationale.",
+      "web_grounding": "Stress-accounts often precede accommodative actions.",
+      "synthesize": "Stress account → dovish.",
+      "answer": "dovish",
+      "why_wrong": "Read past-tense stress reporting as current advocacy for easing. Missed the descriptive/retrospective grammar."
+    },
+    "comparison": "Abel fails to distinguish retrospective ('these concerns were') from prospective/imperative claims. The blanket is tenseless—once stress-keywords fire, they fire. Claude weighed tense and reportative framing."
+  },
+  {
+    "trace_id": "HARM-088",
+    "text": "as the two countries diversify their respective technology bases and supply chains the development of important technologies such as semiconductors artificial intelligence and 5g telecommunications wi",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "dovish",
+    "trace_a_pure_claude": {
+      "reads": "Discusses decoupling and technology diversification—semiconductors, AI, 5G—between two countries. Strategic/structural-economics frame.",
+      "concepts": ["tech decoupling", "supply-chain diversification", "strategic competition", "structural reorganization"],
+      "weighing": "In central-bank corpora, discussing supply-chain fragmentation and technological rivalry tends to be hawkish-adjacent: it implies higher structural costs, persistent inflationary pressure, and a firmer neutral rate.",
+      "answer": "hawkish",
+      "why_correct": "Caught the decoupling/fragmentation frame as a structural cost-pressure argument, aligning with hawkish stance."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "tech/supply-chain commentary",
+      "hypotheses": ["H1: innovation investment → growth → dovish accommodation", "H2: diversification → efficiency → dovish", "H3: tech development → neutral"],
+      "graph_nodes": ["technology", "supply chain", "semiconductors"],
+      "blanket_insight": "No blanket node hit directly; mapped via tech-investment → GDP edge positively.",
+      "verify": "Tech development framing sounds positive.",
+      "web_grounding": "Tech-investment speeches sometimes paired with accommodative talk.",
+      "synthesize": "Growth-positive tech framing → dovish.",
+      "answer": "dovish",
+      "why_wrong": "Read the decoupling as uniformly growth-positive, missing that supply-chain fragmentation is a cost-push/structural-inflation argument, hence hawkish."
+    },
+    "comparison": "Abel treats tech-investment uniformly as dovish (growth-positive), but decoupling specifically raises structural costs. The blanket doesn't distinguish efficiency-boosting innovation from fragmentation."
+  },
+  {
+    "trace_id": "HARM-089",
+    "text": "where forecasts turn out to be wrong even if for completely \nunforeseeable reasons the central banks credibility could be impaired",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "hawkish",
+    "trace_a_pure_claude": {
+      "reads": "Warning that incorrect forecasts—even from unforeseeable shocks—can damage central-bank credibility.",
+      "concepts": ["forecast error", "credibility risk", "communication caution", "humility"],
+      "weighing": "An argument for forecast humility and communication caution typically serves as a dovish brake: don't pre-commit, don't over-react. It discourages aggressive signaling.",
+      "answer": "dovish",
+      "why_correct": "Saw the humility argument as dovish-leaning caution against strong hawkish guidance."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "credibility discussion",
+      "hypotheses": ["H1: credibility → anti-inflation anchor → hawkish", "H2: forecast errors → neutral", "H3: credibility impaired → hawkish defensive stance"],
+      "graph_nodes": ["credibility", "forecasts", "central bank"],
+      "blanket_insight": "Credibility often linked to inflation anchoring → hawkish prior.",
+      "verify": "'Credibility' co-occurs with anti-inflation commitment.",
+      "web_grounding": "Credibility speeches often hawkish-leaning (anchor expectations).",
+      "synthesize": "Credibility anchor → hawkish.",
+      "answer": "hawkish",
+      "why_wrong": "Mapped 'credibility' to hawkish inflation-anchoring prior, but the actual argument is about forecast humility and the fragility of credibility—dovish caution."
+    },
+    "comparison": "Abel has a sticky 'credibility=hawkish' association from Volcker-era discourse. Claude read this instance as a warning about overconfidence, the opposite rhetorical purpose."
+  },
+  {
+    "trace_id": "HARM-090",
+    "text": "the bank quickly moved towards greater openness in theprovision of data and timely economic information",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "dovish",
+    "trace_a_pure_claude": {
+      "reads": "Bank moved toward transparency, data openness, and timely information provision. Institutional-maturity statement.",
+      "concepts": ["transparency", "communication", "institutional credibility", "data openness"],
+      "weighing": "In central-bank corpora, transparency/credibility initiatives cluster with hawkish sentiment—openness supports anchoring expectations, which supports firmer policy.",
+      "answer": "hawkish",
+      "why_correct": "Correctly associated transparency/openness with credibility-anchoring, hawkish-leaning in this dataset."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "bank transparency/communication note",
+      "hypotheses": ["H1: openness → accommodation-like framing → dovish", "H2: greater data provision → neutral", "H3: timely info → growth-supportive → dovish"],
+      "graph_nodes": ["transparency", "data provision"],
+      "blanket_insight": "No blanket node hit; defaulted via 'open/openness' as accommodation metaphor.",
+      "verify": "Language feels warm/supportive.",
+      "web_grounding": "Transparency commonly framed as good governance, sometimes accommodative.",
+      "synthesize": "Openness metaphor → dovish.",
+      "answer": "dovish",
+      "why_wrong": "Confused institutional transparency with monetary 'openness' (accommodation). Two different senses of 'open'."
+    },
+    "comparison": "Abel's weak semantic resolution blurs institutional-openness and policy-accommodation. Claude correctly separated governance transparency (hawkish-aligned) from monetary easiness."
+  },
+  {
+    "trace_id": "HARM-091",
+    "text": "but by the same token the crucial household sector should support the recovery because of its reduced tax burden  including the current federal tax cuts plus the effects of earlier california innovati",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "dovish",
+    "trace_a_pure_claude": {
+      "reads": "Household sector expected to support recovery due to tax cuts. Fiscal tailwind framing—confidence in private demand.",
+      "concepts": ["household consumption", "fiscal stimulus", "recovery support", "tax cuts"],
+      "weighing": "When a central banker cites fiscal stimulus as driving recovery, they're implicitly saying monetary policy does less of the lifting—this reduces the need for further monetary accommodation, leaning hawkish.",
+      "answer": "hawkish",
+      "why_correct": "Read 'fiscal doing the work → monetary can pull back' which aligns with hawkish framing."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "household-sector/tax-cut commentary",
+      "hypotheses": ["H1: 'recovery' → GDP node → dovish support", "H2: tax cuts → stimulus → dovish alignment", "H3: household support → neutral"],
+      "graph_nodes": ["household sector", "recovery", "tax cuts"],
+      "blanket_insight": "GDP node activated via 'recovery'; stimulus framing → dovish.",
+      "verify": "'Support the recovery' and 'tax cuts' both stimulus-framed.",
+      "web_grounding": "Tax-cut recovery speeches often accommodative-toned.",
+      "synthesize": "Fiscal stimulus + recovery → dovish.",
+      "answer": "dovish",
+      "why_wrong": "Did not invert the fiscal-vs-monetary relationship: fiscal doing heavy lifting implies monetary need not, which is hawkish-adjacent."
+    },
+    "comparison": "Abel treats stimulus of any kind as dovish. Claude distinguished fiscal from monetary and recognized the substitution relationship—fiscal support subtracts from monetary easing rationale."
+  },
+  {
+    "trace_id": "HARM-092",
+    "text": "the investor is key to a process that is at least as important to his future as his own return on capital",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "dovish",
+    "trace_a_pure_claude": {
+      "reads": "Emphasizes investor's stake beyond return on capital—presumably governance, long-horizon, or civic role.",
+      "concepts": ["investor responsibility", "long-horizon thinking", "capital stewardship"],
+      "weighing": "Framing investor discipline and long-term responsibility leans hawkish in this corpus: it's about capital-market discipline and prudent allocation, not cheap money.",
+      "answer": "hawkish",
+      "why_correct": "Linked investor-discipline / long-horizon rhetoric to hawkish sentiment in CB speeches."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "investor-role commentary",
+      "hypotheses": ["H1: investor return → market-positive → dovish (supports risk assets)", "H2: process importance → neutral", "H3: capital return → dovish"],
+      "graph_nodes": ["investor", "return on capital"],
+      "blanket_insight": "No blanket node; inferred dovish via risk-asset support.",
+      "verify": "Investor/return language sounds market-friendly.",
+      "web_grounding": "Risk-asset-friendly speeches sometimes dovish.",
+      "synthesize": "Market-supportive framing → dovish.",
+      "answer": "dovish",
+      "why_wrong": "Keyed on 'return on capital' as asset-price-supportive, but the sentence is actually about responsibility beyond return—investor-discipline, hawkish-aligned."
+    },
+    "comparison": "Abel read only surface tokens ('investor', 'return on capital') and mapped to market-friendly/dovish. Claude parsed the comparative 'at least as important… as his own return' which shifts the stance to stewardship, not yield-chasing."
+  },
+  {
+    "trace_id": "HARM-093",
+    "text": "clearly there is a big difference between the financial environment of 1909 and that of 1966this changed environment promises substantial opportunity for future expansion of consumer credit",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "dovish",
+    "trace_a_pure_claude": {
+      "reads": "Speaker contrasts 1909 with 1966 and notes expanded capacity for consumer-credit growth. Developmental, system-maturity tone.",
+      "concepts": ["consumer credit", "financial development", "system maturity", "historical contrast"],
+      "weighing": "In mid-1960s CB discourse, celebrating the scope for consumer-credit expansion is a confidence/maturity statement—the system is robust enough to sustain more credit and, implicitly, firmer policy. Hawkish-adjacent.",
+      "answer": "hawkish",
+      "why_correct": "Read developmental confidence as hawkish, not the mechanical 'credit expansion = dovish' default."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "consumer-credit expansion commentary",
+      "hypotheses": ["H1: credit expansion → accommodative → dovish", "H2: opportunity framing → growth positive → dovish", "H3: historical comparison → neutral"],
+      "graph_nodes": ["consumer credit", "financial environment"],
+      "blanket_insight": "No blanket hit; credit-expansion mapped via credit → easing → dovish.",
+      "verify": "'Expansion' and 'opportunity' both accommodative-toned.",
+      "web_grounding": "Credit-expansion rhetoric often dovish.",
+      "synthesize": "Credit expansion + opportunity → dovish.",
+      "answer": "dovish",
+      "why_wrong": "Took 'expansion of consumer credit' literally as easing signal. Misses that the speaker is describing structural capacity, not calling for easy monetary policy."
+    },
+    "comparison": "Abel lacks a node for 'structural capacity vs cyclical stance'. Any 'expansion' token pulls dovish. Claude separated descriptive capacity from prescriptive stance."
+  },
+  {
+    "trace_id": "HARM-094",
+    "text": "the outlook for euro area domestic demand in particular has become more favourable",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "neutral",
+    "trace_a_pure_claude": {
+      "reads": "Upgrade of euro-area domestic-demand outlook—demand is firmer.",
+      "concepts": ["domestic demand", "outlook upgrade", "euro area", "ECB context"],
+      "weighing": "Positive demand-outlook upgrades in ECB speeches map directly to hawkish stance—firmer demand supports higher rates/less accommodation.",
+      "answer": "hawkish",
+      "why_correct": "Demand-upgrade is a canonical hawkish signal; Claude caught the directional upgrade."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "euro-area outlook statement",
+      "hypotheses": ["H1: 'more favourable' outlook → neutral positive", "H2: domestic demand → GDP node → neutral", "H3: outlook phrasing → descriptive neutral"],
+      "graph_nodes": ["euro area", "domestic demand", "outlook"],
+      "blanket_insight": "GDP node mildly active via demand; unclear direction.",
+      "verify": "'Favourable' is positive but soft; no explicit rate or inflation mention.",
+      "web_grounding": "Generic outlook upgrades often hedged.",
+      "synthesize": "Soft positive outlook, no blanket inflation/rate trigger → neutral.",
+      "answer": "neutral",
+      "why_wrong": "Hedged on a clear demand-upgrade because it didn't see direct inflation or federalFunds keywords. Missed that demand upgrade implies hawkish tilt in ECB context."
+    },
+    "comparison": "Abel requires blanket keyword hits to commit to a direction; demand-upgrades without explicit inflation/rate language fall through to neutral. Claude chained demand→inflation→rates implicitly."
+  },
+  {
+    "trace_id": "HARM-095",
+    "text": "indeed the treasury will need to raise 36 billion of new money  in the present quarter alone  onethird more than in the yearago period",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "hawkish",
+    "trace_a_pure_claude": {
+      "reads": "Treasury will raise $36B in new money this quarter, one-third more than a year ago. Heavy issuance figure.",
+      "concepts": ["Treasury issuance", "crowding out", "fiscal deficit", "market absorption"],
+      "weighing": "Heavy Treasury borrowing puts upward pressure on rates via supply, arguing for a central bank that leans accommodative to prevent disorderly rate rises. The speaker is flagging a demand on financial markets—dovish-adjacent concern.",
+      "answer": "dovish",
+      "why_correct": "Interpreted heavy issuance as a market-pressure concern that biases the CB to lean accommodative."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "Treasury issuance statement",
+      "hypotheses": ["H1: heavier issuance → fiscal stimulus → inflationary → hawkish", "H2: 'raise new money' → money creation → hawkish", "H3: 33% increase → neutral factual"],
+      "graph_nodes": ["treasury", "issuance", "money"],
+      "blanket_insight": "Interpreted 'new money' as inflation-adjacent; blanket → hawkish.",
+      "verify": "Higher issuance, larger numbers trigger hawkish inflation prior.",
+      "web_grounding": "Large fiscal issuance in inflationary eras hawkish.",
+      "synthesize": "Big issuance + 'new money' → hawkish.",
+      "answer": "hawkish",
+      "why_wrong": "Misread 'raise new money' as monetary expansion—it means the Treasury raising new cash via debt, not money printing. Triggered false hawkish inflation alarm."
+    },
+    "comparison": "Abel's blanket maps 'new money' to inflation, but in Treasury-finance parlance 'new money' means net new borrowing. Claude had the domain knowledge to read the Treasury-issuance context correctly."
+  },
+  {
+    "trace_id": "HARM-096",
+    "text": "the pollution is a social cost of production not paid for or internalized by the firm that generates it",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "neutral",
+    "trace_a_pure_claude": {
+      "reads": "Classic externality statement—pollution as unpriced social cost. Public-interest, welfare-economics framing.",
+      "concepts": ["externality", "social cost", "climate / environmental economics", "welfare"],
+      "weighing": "Central bankers invoking externalities and unpriced social costs lean dovish—these arguments usually build the case for accommodation of transition costs, green-supportive monetary frameworks, and tolerance of cost pass-through.",
+      "answer": "dovish",
+      "why_correct": "Caught the welfare-externality frame as dovish-adjacent in modern CB discourse."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "environmental externality statement",
+      "hypotheses": ["H1: pollution/externality → off-blanket → neutral", "H2: social cost → off-blanket → neutral", "H3: firm internalization → neutral"],
+      "graph_nodes": ["pollution", "externality", "firm"],
+      "blanket_insight": "No blanket node activated.",
+      "verify": "No rate, inflation, GDP, unemployment mention.",
+      "web_grounding": "Externality statements are classical microeconomics, not monetary.",
+      "synthesize": "Off-blanket micro topic → neutral.",
+      "answer": "neutral",
+      "why_wrong": "Treated as a microeconomics aside unrelated to monetary stance, missing that modern CB externality-talk maps to dovish green-policy alignment."
+    },
+    "comparison": "Abel's blanket has no climate/externality node. Claude used modern CB-discourse context to map this to dovish sentiment."
+  },
+  {
+    "trace_id": "HARM-097",
+    "text": "the risks to the projection are judged to be symmetric and primarily relate to trends in the international financial and commodity markets and the spillover effect of global oil prices on the prices o",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "hawkish",
+    "trace_a_pure_claude": {
+      "reads": "Risks are symmetric—main drivers international finance, commodities, and oil-price spillovers to domestic prices.",
+      "concepts": ["symmetric risks", "oil pass-through", "external shocks", "balanced risk assessment"],
+      "weighing": "'Symmetric risks' is a standard dovish communication device—it rejects a tightening bias. When CBs want to hold or ease, they label risks symmetric or tilted-down. Pairing with external-shock attribution also deflects from domestic tightening.",
+      "answer": "dovish",
+      "why_correct": "Recognized 'symmetric risks' as the canonical dovish hedge against hawkish inference."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "risk-assessment statement",
+      "hypotheses": ["H1: oil prices → inflation → hawkish", "H2: commodity markets → inflation pass-through → hawkish", "H3: symmetric risks → neutral"],
+      "graph_nodes": ["oil prices", "commodity markets", "inflation"],
+      "blanket_insight": "Inflation node activated via oil price spillover → hawkish.",
+      "verify": "Oil + commodities are classic inflation drivers.",
+      "web_grounding": "Oil-pass-through statements historically coded hawkish.",
+      "synthesize": "Oil inflation risk → hawkish.",
+      "answer": "hawkish",
+      "why_wrong": "Ignored 'symmetric' qualifier and keyed on oil/commodity inflation keywords. But 'symmetric' explicitly denies an upside tilt."
+    },
+    "comparison": "Abel blanket fires on 'oil', 'commodity', 'prices' but fails to weight the explicit 'symmetric' modifier. Claude read the full clause structure: the risks are symmetric, not upward-skewed."
+  },
+  {
+    "trace_id": "HARM-098",
+    "text": "as you will hear recent readings on the economy suggest that the pace of economic activity has picked up of late our financial system is healthy and inflation pressures remain subdued",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "dovish",
+    "trace_a_pure_claude": {
+      "reads": "Three positive observations: activity picking up, financial system healthy, inflation subdued.",
+      "concepts": ["activity acceleration", "financial health", "subdued inflation", "Goldilocks framing"],
+      "weighing": "Goldilocks statement—growth up, stability intact, inflation contained. In FOMC discourse this often pre-stages normalization/tightening because conditions permit it. The 'subdued inflation' is descriptive cover for a hawkish move.",
+      "answer": "hawkish",
+      "why_correct": "Read the overall Goldilocks package as hawkish-tilted normalization framing."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "economic assessment statement",
+      "hypotheses": ["H1: 'inflation pressures remain subdued' → dovish", "H2: 'activity picked up' → hawkish", "H3: 'financial system healthy' → neutral"],
+      "graph_nodes": ["inflation", "economic activity", "financial system"],
+      "blanket_insight": "Inflation node: 'subdued' → dovish direction dominates.",
+      "verify": "Explicit 'inflation pressures remain subdued' is a strong dovish anchor.",
+      "web_grounding": "Subdued inflation commonly paired with accommodation.",
+      "synthesize": "Dovish inflation signal outweighs activity upgrade → dovish.",
+      "answer": "dovish",
+      "why_wrong": "Overweighted the 'subdued inflation' phrase. In corpus coding, Goldilocks packages with activity-acceleration are hawkish because they green-light normalization."
+    },
+    "comparison": "Abel's blanket weights inflation-direction too heavily; Claude read the full rhetorical package and the CB normalization pattern."
+  },
+  {
+    "trace_id": "HARM-099",
+    "text": "as alan greenspan has noted during the last 20 years or so weve deregulated financial markets weve developed more flexible labor markets and weve made major advances in technology",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "neutral",
+    "trace_a_pure_claude": {
+      "reads": "Speaker cites Greenspan on 20 years of deregulation, flexible labor markets, and technology progress.",
+      "concepts": ["deregulation", "labor-market flexibility", "productivity", "Greenspan paradigm"],
+      "weighing": "The Greenspan paradigm is the classic hawkish-ish productivity/flexibility story—structural supply improvements justify firmer policy without triggering inflation. Approving reference to it signals hawkish alignment.",
+      "answer": "hawkish",
+      "why_correct": "Mapped to the Greenspan productivity-discipline template, which is hawkish-leaning."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "structural-reform retrospective",
+      "hypotheses": ["H1: deregulation/flexibility → off-blanket → neutral", "H2: technology → off-blanket → neutral", "H3: Greenspan reference → neutral"],
+      "graph_nodes": ["deregulation", "labor flexibility", "technology"],
+      "blanket_insight": "No blanket node activated.",
+      "verify": "No rate, inflation, GDP, unemployment keywords.",
+      "web_grounding": "Structural-reform speeches often neutral in sentiment tasks.",
+      "synthesize": "Off-blanket structural → neutral.",
+      "answer": "neutral",
+      "why_wrong": "Did not link Greenspan-era paradigm to hawkish stance; treated structural commentary as neutral because no blanket nodes hit."
+    },
+    "comparison": "Abel has no node for 'ideological paradigm' or 'productivity discipline'. Claude used cultural/corpus knowledge of Greenspan's hawkish-adjacent framing."
+  },
+  {
+    "trace_id": "HARM-100",
+    "text": "that development in turn could make it more difficult during downturns for monetary policy to support household spending business investment and employment and keep inflation from falling too low4 ano",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "neutral",
+    "trace_a_pure_claude": {
+      "reads": "Speaker warns that some development would weaken monetary policy's ability to support spending, investment, and employment and prevent inflation from falling too low in downturns.",
+      "concepts": ["zero lower bound", "policy space", "deflation risk", "monetary-policy effectiveness"],
+      "weighing": "Worrying that inflation could fall too low and policy can't fight downturns is a canonical dovish argument—it's the deflation/ZLB concern that justifies running policy hot or preserving stimulus capacity.",
+      "answer": "dovish",
+      "why_correct": "Identified the low-inflation/ZLB concern framing as classically dovish."
+    },
+    "trace_b_abel_six_step": {
+      "classify": "monetary-policy capacity discussion",
+      "hypotheses": ["H1: 'support household spending' → GDP node → neutral", "H2: 'employment' → unemployment node → neutral", "H3: 'inflation from falling too low' → neutral because downside inflation mention is ambiguous"],
+      "graph_nodes": ["household spending", "business investment", "employment", "inflation"],
+      "blanket_insight": "Multiple blanket nodes active but in conflicting directions; net ambiguous.",
+      "verify": "Downturn-scenario statement, hypothetical framing.",
+      "web_grounding": "Policy-effectiveness discussions sometimes coded neutral.",
+      "synthesize": "Conflicting blanket signals → neutral.",
+      "answer": "neutral",
+      "why_wrong": "Neutralized on multi-node ambiguity instead of catching that the structure is a warning about low-inflation/ZLB risks—an explicit dovish concern."
+    },
+    "comparison": "Abel's conflict-resolution collapses to neutral when multiple blanket nodes fire in opposing directions. Claude read the sentence as a unified low-inflation/policy-space concern, which has clear dovish valence."
+  }
+]

@@ -1,0 +1,202 @@
+[
+ {
+  "text": "plans submitted to the ecb indicate that this can be expected to result in a substantial relocation of activity to the euro area in the order of over 1 trillion in bank assets and that at least in the",
+  "ground_truth": "hawkish",
+  "claude_answer": "neutral",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_6",
+  "trace_id": "FLIP-076"
+ },
+ {
+  "text": "it gives one pause that some commercial bankers prefer relatively riskless investments to the making of business loans needed by their communitiesin contrast somebut not allbankers have long wished to",
+  "ground_truth": "dovish",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_17",
+  "trace_id": "FLIP-077"
+ },
+ {
+  "text": "as a consequence hungarys external financing requi rement is likely to decrease to close to \n3 per cent of the gdp in 2009",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_29_31",
+  "trace_id": "FLIP-078"
+ },
+ {
+  "text": "an important part of the developments will be to facilitate a more inclusive arrangement that would allow for greater interface and interlinkages across jurisdictions in particular from emerging econo",
+  "ground_truth": "hawkish",
+  "claude_answer": "neutral",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_25",
+  "trace_id": "FLIP-079"
+ },
+ {
+  "text": "that proposition placed a ceiling on property taxes confronting local authorities with the8misuse of productive resources for unproductive purposes a reduction of productive investment and a general s",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_22",
+  "trace_id": "FLIP-080"
+ },
+ {
+  "text": "taking into account the deep and prolonged recession the underlying fiscal adjustment has been even larger",
+  "ground_truth": "dovish",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_9",
+  "trace_id": "FLIP-081"
+ },
+ {
+  "text": "the integration of emerging economies into global markets of goods and services has been similarly swift",
+  "ground_truth": "hawkish",
+  "claude_answer": "neutral",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_6",
+  "trace_id": "FLIP-082"
+ },
+ {
+  "text": "at face value fiscal policy may                            not seem a concern for the federal reserve",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_20",
+  "trace_id": "FLIP-083"
+ },
+ {
+  "text": "therefore the international community has set a range of initiatives to strengthen the international financial architecture",
+  "ground_truth": "hawkish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_23",
+  "trace_id": "FLIP-084"
+ },
+ {
+  "text": "while lackluster consumer spending was one of the key reasons for the weak increase in firstquarter gross domestic product gdp growth in personal consumption expenditures pce bounced back strongly in ",
+  "ground_truth": "hawkish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_11",
+  "trace_id": "FLIP-085"
+ },
+ {
+  "text": "likewise the presence of governmentowned firms with a degree of monopoly power together with restrictions on the entry of new firms may diminish competitive pressures that often foster innovation and ",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_21",
+  "trace_id": "FLIP-086"
+ },
+ {
+  "text": "however our federal budget deficit has helped make us a net debtor nation indeed the worlds largestwhen we should be acting as a creditor not only for third world countries but also for eastern europe",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_23",
+  "trace_id": "FLIP-087"
+ },
+ {
+  "text": "while this is  true of all financial institutions the need is \nparticularly great for those which are sharia compliant due to several issues that are specific \nto their business model",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_27",
+  "trace_id": "FLIP-088"
+ },
+ {
+  "text": "it is widely believed that these deficits have kept the economy growing and    3therefore have been desirable",
+  "ground_truth": "hawkish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_22",
+  "trace_id": "FLIP-089"
+ },
+ {
+  "text": "as a result inventories of these vehicles have risen and domestic automakers have been cutting production in response",
+  "ground_truth": "dovish",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_11",
+  "trace_id": "FLIP-090"
+ },
+ {
+  "text": "as a nation we have begun to grapple with the budget deficits which i believe have created a significant drag on economic growth in the past few years",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_20",
+  "trace_id": "FLIP-091"
+ },
+ {
+  "text": "this brings us to another problematic aspect since the links between the macroeconomic and microeconomic aspects are particularly complex and sometimes even hard to detect",
+  "ground_truth": "dovish",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_6",
+  "trace_id": "FLIP-092"
+ },
+ {
+  "text": "it poses administrative difficulties because in effect there would be two tax rates one on old debt and equity and another on new",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_23",
+  "trace_id": "FLIP-093"
+ },
+ {
+  "text": "at the recommendation of the administration the congress subsequently passed a bill that among other things created a new and stronger regulator for the gses the federal housing finance agency fhfa an",
+  "ground_truth": "hawkish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_20",
+  "trace_id": "FLIP-094"
+ },
+ {
+  "text": "20 moreover in addition to observable factors an unobservable threat effect  whereby workers in industrialised economies perceive themselves to have a weaker position and thereby moderate wage claims ",
+  "ground_truth": "dovish",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_9",
+  "trace_id": "FLIP-095"
+ },
+ {
+  "text": "moreover in relation to structural forces the pandemic may also have accelerated the digitalisation of the world economy which could operate as an antiinflationary force by increasing national and int",
+  "ground_truth": "hawkish",
+  "claude_answer": "dovish",
+  "abel_answer": "hawkish",
+  "batch": "cb_batch_5",
+  "trace_id": "FLIP-096"
+ },
+ {
+  "text": "in both these cases as indeed in the more recent cases like bear sterns and lehman brothers the problem was not with the derivatives but with the controls those banks failed to put in place",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_26",
+  "trace_id": "FLIP-097"
+ },
+ {
+  "text": "fiscal consolidation and growth the second current criticism of the euro area is that its focus on fiscal consolidation is destroying growth prospects",
+  "ground_truth": "dovish",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_9",
+  "trace_id": "FLIP-098"
+ },
+ {
+  "text": "you think that the exit strategies of the fiscal policy namely in some countries higher \ndeficits like ireland portugal or greece are in themselves threats to the economic recovery",
+  "ground_truth": "dovish",
+  "claude_answer": "hawkish",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_29_31",
+  "trace_id": "FLIP-099"
+ },
+ {
+  "text": "only in 1983 did lower costs of funds contribute noticeably to an improvement in thrift profitabilityeven then thrifts still faced an overhang of lowyielding longterm fixedrate mortgage assets that re",
+  "ground_truth": "dovish",
+  "claude_answer": "neutral",
+  "abel_answer": "dovish",
+  "batch": "cb_batch_16",
+  "trace_id": "FLIP-100"
+ }
+]
