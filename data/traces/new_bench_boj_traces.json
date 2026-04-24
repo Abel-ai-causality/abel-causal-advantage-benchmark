@@ -1,0 +1,106 @@
+[
+  {
+    "trace_id": "BOJ-FLIP-1",
+    "category": "flip",
+    "text": "members agreed that, although overseas economies taken as a whole had continued to expand, the pace of growth was slowing and downside risks remained elevated, mainly reflecting the increasing tensions in global financial markets, sluggish growth in the members shared the view that tensions in global financial markets had been increasing against the background of the recent developments among u.s. financial institutions.",
+    "ground_truth": "hawkish",
+    "claude_answer": "dovish",
+    "abel_answer": "hawkish",
+    "claude_trace": {
+      "reads": "Claude latches onto negatively-valenced surface phrases: 'pace of growth was slowing', 'downside risks remained elevated', 'increasing tensions in global financial markets', 'sluggish growth', and 'recent developments among u.s. financial institutions' (reading the last as a stress signal).",
+      "concepts_identified": "Global growth deceleration, financial-market stress transmission, U.S. banking-sector fragility, downside-risk language typical of easing bias.",
+      "weighing": "Claude maps 'downside risks + slowing growth + financial stress' onto a textbook dovish template: when a central bank flags external weakness and financial-system tension, the expected reaction function is accommodation or a pause in tightening. It treats the statement as a risk-warning and therefore a lean toward easing.",
+      "final_answer": "dovish",
+      "why_wrong": "Claude reads the sentence as the Bank's own policy stance, but the passage is the Bank assessing the external environment while implicitly acknowledging that the economy 'taken as a whole had continued to expand' — i.e., overseas expansion is still the base case. Within BoJ's chronically dovish baseline, merely cataloguing downside risks without signalling additional easing is a relative hawkish tilt (no new stimulus mentioned, expansion still intact). Claude does not anchor to the BoJ-specific baseline, so 'downside risks' reads as dovish surface sentiment instead of 'no incremental easing on the table.'"
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed — routed through macro nodes {global_growth, financial_conditions, BoJ_reaction_function, US_banking_stress}; the statement is a situational assessment rather than a direct policy instrument description.",
+      "step2_hypotheses": "H1 (dovish): 'slowing growth + financial tensions' = BoJ preparing to ease. H2 (hawkish/contrarian): overseas economies 'continued to expand' is retained as base case and no new easing tool is mentioned, so status quo vs. a dovish baseline is a relative hawkish tilt. H3 (neutral): pure situational reporting with no policy implication. H4 (contrarian): flagging U.S. financial stress could be setup for future easing, but could equally be cover for holding fire while others cut.",
+      "step3_graph_discovery": "Markov blanket around BoJ_policy_stance activates: {YCC anchor, JGB purchase pace, JPY, deflation_regime, global_growth_spillover, US_banking_channel}. BoJ-specific priors fire: deflation regime + YCC = structurally dovish baseline, so any statement that does NOT introduce new stimulus despite acknowledging downside risk is, on the margin, a hawkish deviation from the baseline. Node 'overseas economies...continued to expand' reinforces that the BoJ is not yet downgrading its core growth view.",
+      "step4_verify": "Causal chain: external_downside_risk -> BoJ_reaction_function -> {ease further | hold}. Along this chain, a statement that lists risks but retains the 'expansion' base case and names NO incremental tool (no mention of rate cut, expanded JGB purchases, new facility) collapses to 'hold'. Hold against a structurally dovish baseline = relative hawkish.",
+      "step5_web_grounding": "Context matches a late-2007/early-2008-style BoJ minute where the Bank was watching U.S. subprime/banking stress but had not yet moved to additional easing; historically BoJ under YCC/ZIRP treats merely cataloguing external risks as information, not as a commitment to act. Web-grounded prior: BoJ only shifts dovish when it explicitly mentions JGB purchases, rate path, or forward guidance.",
+      "step6_synthesize": "H2 wins. The text performs risk surveillance without activating any easing instrument, against a baseline already at the floor. Relative to BoJ's default dovish stance, standing pat while flagging external risks is the hawkish direction.",
+      "final_answer": "hawkish",
+      "why_correct": "Abel explicitly evaluates the statement against BoJ's structurally dovish baseline and requires an instrument-level dovish signal (JGB, rate, guidance) to classify dovish; absent that, the relative-direction reading is hawkish."
+    },
+    "comparison": "Claude runs a sentiment-to-stance mapping: negative macro words -> dovish. Abel runs a causal-chain check: text -> reaction-function node -> instrument activation -> relative direction against BoJ's floor-bound baseline. Because BoJ's equilibrium is already maximally accommodative (YCC, ZIRP/NIRP, large JGB program), any minute that merely narrates external weakness without adding stimulus is, in direction-space, a hawkish tilt. Claude cannot see that because it has no baseline anchor; Abel catches it because the causal graph forces an instrument check before committing to 'dovish'."
+  },
+  {
+    "trace_id": "BOJ-FLIP-2",
+    "category": "flip",
+    "text": "at the council on economic and fiscal policy held on may 15, the prime minister had given instructions to the cabinet to set out in the basic policies a policy for further reform from the perspectives of both expenditure and revenue, toward the formulation of the budget for fiscal 2015, as well as a direction for initiatives to realign the structure of the corporate tax rate to one that was oriented toward growth.",
+    "ground_truth": "dovish",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Claude sees fiscal-policy vocabulary: 'Council on Economic and Fiscal Policy', 'Prime Minister', 'basic policies', 'expenditure and revenue reform', 'budget for fiscal 2015', 'corporate tax rate...oriented toward growth'.",
+      "concepts_identified": "Fiscal reform, growth-oriented corporate tax cuts, Abenomics-style supply-side policy, government (not central bank) actor.",
+      "weighing": "Because the sentence is about the PM and cabinet rather than BoJ, Claude concludes it describes fiscal/structural policy, not monetary stance. Procedural description of a Cabinet instruction -> no direct monetary signal -> classify as neutral.",
+      "final_answer": "neutral",
+      "why_wrong": "Claude treats monetary and fiscal policy as disjoint and defaults to 'neutral' when the speaker is the government. But BoJ minutes that approvingly reference Cabinet growth-oriented tax reform are signaling the monetary-fiscal policy mix, specifically the three-arrows framework where fiscal easing and pro-growth tax cuts are expected to work in tandem with monetary accommodation. Embedding this reference is dovish by construction: it reinforces the complementarity of QQE and Abenomics rather than flagging any tightening concern."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct on fiscal-monetary mix; nodes activated: {fiscal_stance, corporate_tax, potential_growth, monetary_fiscal_coordination, Abenomics_three_arrows}.",
+      "step2_hypotheses": "H1 (neutral): fiscal content only, no monetary instrument -> neutral. H2 (dovish): pro-growth tax cut + expenditure/revenue reform supports aggregate demand, complementing QQE, so BoJ implicitly endorses the accommodative mix. H3 (hawkish/contrarian): 'expenditure reform' could imply fiscal consolidation that forces BoJ to tighten less and thus is hawkish on the fiscal axis. H4 (contrarian): it could be pure minute-keeping with no stance.",
+      "step3_graph_discovery": "Markov blanket: {corporate_tax_rate -> investment -> output_gap -> inflation -> BoJ_reaction}; also {fiscal_reform -> debt_sustainability -> JGB_yields -> YCC_pressure}. BoJ-specific priors: under QQE/YCC, the Bank welcomes demand-supporting fiscal action because it raises the neutral rate and aids the 2% target. The growth-oriented tax-rate cut node lights up as a pro-demand, pro-inflation input.",
+      "step4_verify": "Direction check along causal chain: lower corporate tax -> higher capex -> narrower output gap -> supports 2% inflation goal -> BoJ more comfortable maintaining/extending accommodation. The BoJ favorably recording this Cabinet instruction in its minutes is an endorsement of the policy mix, which is a dovish reinforcement, not a neutral procedural note.",
+      "step5_web_grounding": "Fiscal 2015 budget drafting and 'growth-oriented corporate tax reform' align with 2014 Abenomics — Kuroda BoJ explicitly treated the three arrows (fiscal stimulus, structural reform, QQE) as mutually reinforcing. Historical BoJ communications from this era repeatedly cite fiscal growth strategy as supportive of the 2% price-stability target, which is the dovish-leaning target regime.",
+      "step6_synthesize": "H2 wins. The minute is not passively reporting a Cabinet meeting; it is endorsing a fiscal limb of the accommodative policy mix. In BoJ context this is a dovish signal.",
+      "final_answer": "dovish",
+      "why_correct": "Abel recognizes that in a regime where BoJ explicitly coordinates with fiscal policy, a positive nod to pro-growth fiscal reform is a dovish monetary signal, not a neutral aside."
+    },
+    "comparison": "Claude partitions fiscal from monetary and routes ambiguity to 'neutral'. Abel treats the central-bank minute as a node in a joint policy-mix graph: fiscal growth-enabling action feeds the inflation/output-gap channel that governs BoJ's reaction function. Against a structurally dovish BoJ baseline, an approving reference to Cabinet growth reform is itself a dovish signal. The surface is procedural; the causal content is accommodative."
+  },
+  {
+    "trace_id": "BOJ-FLIP-3",
+    "category": "flip",
+    "text": "some members commented that it was important for the bank to be well prepared to take policy actions -- including measures to stabilize the financial system -- as the central bank, bearing in mind the risk that the sovereign debt problems in europe could cause a serious shock to global financial markets and the global economy, thereby affecting the financial system and financial conditions in japan.",
+    "ground_truth": "hawkish",
+    "claude_answer": "dovish",
+    "abel_answer": "hawkish",
+    "claude_trace": {
+      "reads": "Claude reads 'be well prepared to take policy actions', 'measures to stabilize the financial system', 'sovereign debt problems in europe', 'serious shock to global financial markets', 'affecting...financial conditions in japan.'",
+      "concepts_identified": "European sovereign debt crisis, contagion risk, financial-stability policy, readiness-to-act language.",
+      "weighing": "'Be well prepared to take policy actions' reads to Claude as forward-leaning willingness to ease, especially combined with 'financial system stabilization'. Claude treats this as a classic dovish put: the central bank standing ready to deploy liquidity/accommodation if contagion hits.",
+      "final_answer": "dovish",
+      "why_wrong": "Claude conflates 'financial-stability readiness' with 'monetary easing.' But the phrase 'measures to stabilize the financial system' is liquidity/backstop language (e.g., USD swap lines, collateral operations), not a reduction in policy rates or expansion of the monetary-easing stance. It is contingent and conditional, not a commitment to loosen. In BoJ's dovish-baseline frame, merely holding optionality without announcing new accommodation is a relative hawkish posture — the Bank is NOT pre-committing to more easing despite the stated external risk."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed — nodes: {financial_stability_tools, monetary_instrument_stance, EU_sovereign_debt, contagion_channel, JPY_safe_haven, BoJ_reaction_function}.",
+      "step2_hypotheses": "H1 (dovish): 'prepared to take policy actions' = easing option signalled. H2 (hawkish, contrarian): readiness language without instrument activation, combined with 'some members' (minority view), is a non-commitment = relative hawkish vs. dovish baseline. H3 (neutral): contingency planning only. H4 (contrarian): 'financial-system stabilization' is a separate toolkit from monetary easing; distinguishing them yields hawkish on the monetary axis.",
+      "step3_graph_discovery": "Markov blanket: {EU_sovereign_debt -> global_risk_off -> JPY_appreciation -> Japan_financial_conditions -> BoJ_policy_action}. BoJ priors fire: 'some members' = non-majority framing; 'measures to stabilize the financial system' = lender-of-last-resort node, separate from the monetary-stance node. Baseline is already dovish (ZIRP, asset purchases in this era). Key check: is there any activation of the monetary-easing instrument? No — only readiness, and only from 'some members'.",
+      "step4_verify": "Direction along chain: if BoJ were dovish-tilting, minutes typically say 'members agreed to examine additional easing' or reference JGB purchase expansion. Here the language is contingent and minority-voiced; the monetary-stance node remains unchanged. Relative to a dovish baseline, 'no incremental easing signalled' is hawkish direction.",
+      "step5_web_grounding": "This matches 2011-2012 eurozone-crisis-era BoJ minutes. Historically BoJ at that time used USD-funding swap lines and financial-stability facilities that are orthogonal to the monetary-policy stance. Markets read 'prepared to act' language then as reassurance, not as a dovish shift — and subsequent decisions often held rates/purchases steady, confirming the hawkish-relative-to-baseline read.",
+      "step6_synthesize": "H2 wins. The text signals contingent financial-stability readiness from a minority of members without activating the monetary-easing instrument. Against BoJ's dovish baseline, this is a relative hawkish tilt.",
+      "final_answer": "hawkish",
+      "why_correct": "Abel separates the financial-stability toolkit from the monetary-policy instrument and requires explicit instrument movement for a 'dovish' read; minority-voiced contingency without instrument movement collapses to hawkish-relative-to-baseline."
+    },
+    "comparison": "Claude fuses 'stand ready to act' with 'will ease,' which collapses in a normal-regime central bank but fails for BoJ. Abel's graph explicitly separates (a) financial-stability / liquidity instruments and (b) monetary-stance instruments, and checks whether the latter is actually activated. BoJ's floor-bound baseline means optionality without action = hawkish direction. The structural asymmetry of BoJ's baseline is exactly what makes this subtle relative move invisible to Claude but clean for Abel."
+  },
+  {
+    "trace_id": "BOJ-HARM-1",
+    "category": "harm",
+    "text": "specifically, the bank will adopt a three-tier system in which the outstanding balance of each financial institution's current account at the bank will be divided into three tiers, to each of which a positive interest rate, a zero interest rate, or a negative interest rate will be applied, respectively.",
+    "ground_truth": "neutral",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Claude notices 'three-tier system', 'outstanding balance of each financial institution's current account', and the explicit trio 'positive interest rate, zero interest rate, negative interest rate'.",
+      "concepts_identified": "Operational implementation of the tiered NIRP reserve system; a mechanical design description rather than a stance statement.",
+      "weighing": "The passage is purely structural/mechanical: it defines how the three-tier reserve balance will be segmented but does not itself change the policy rate, asset-purchase pace, or forward guidance. It is an implementation paragraph, not a stance paragraph. Claude correctly classifies it as neutral.",
+      "final_answer": "neutral",
+      "why_correct": "Claude treats the sentence as descriptive plumbing (tier definitions) rather than as an incremental policy move. Because it does not add new easing beyond what the three-tier NIRP framework already implies, and does not tighten, the correct direction is neutral."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct on policy-rate instrument; nodes: {policy_rate, reserve_tiering, NIRP, bank_profitability, JPY, deflation_regime}.",
+      "step2_hypotheses": "H1 (dovish): presence of 'negative interest rate' tier = easing stance. H2 (neutral): purely operational description, no new parameter change. H3 (hawkish, contrarian): tiering actually mitigates the sting of NIRP on banks, which softens the easing — a hawkish design feature. H4 (contrarian): this is a one-time structural announcement whose stance content is already priced into the announcement of NIRP itself.",
+      "step3_graph_discovery": "Markov blanket: {NIRP_adoption -> bank_NIM -> lending_supply -> credit_conditions} and {policy_rate -> JPY -> inflation}. BoJ dovish-baseline prior fires HARD here: 'negative interest rate' is a textbook dovish token, and in the deflation-regime prior it aligns with the easing direction node. This prior over-weights the presence of the word 'negative' and under-weights that the sentence is describing tier MECHANICS, not a fresh cut.",
+      "step4_verify": "Direction check: does this sentence move the instrument vs. its previous setting? No — it describes the segmentation rule of the balance, not a change in the rate itself. A rigorous verify step would flag 'no delta' and route to neutral, but the deflation-regime prior biases toward dovish before the delta-check completes.",
+      "step5_web_grounding": "January 2016 BoJ introduction of NIRP with a three-tier structure on current-account balances. Web grounding confirms this is the descriptive paragraph of the tier system; the stance move is the NIRP decision itself, not the tier-definition sentence. The tiered design was explicitly intended to limit damage to bank profitability — which is a hawkish-softening design, further arguing against a pure dovish read.",
+      "step6_synthesize": "Abel's six-step pipeline should have reached neutral, but the structurally-dovish BoJ prior plus the salient 'negative interest rate' token dominated the delta-check and web-grounding evidence, producing an over-confident dovish classification.",
+      "final_answer": "dovish",
+      "why_wrong": "The deflation/NIRP prior is so strongly associated with 'dovish' that Abel's graph attaches the dovish label to a sentence that is merely defining the mechanics of an already-announced framework. The tier description has no incremental stance content and should be neutral; the prior overrode the no-delta evidence. This is the mirror failure mode of the flip cases: the same baseline anchoring that rescues Abel on subtle relative-hawkish statements can mislead it when a sentence contains strong dovish vocabulary but zero marginal policy change."
+    },
+    "comparison": "On the three flips, Claude's sentiment heuristic fails because BoJ's structurally dovish baseline means 'no new stimulus' is itself hawkish in direction — exactly what Abel's causal graph is built to catch. On this harm, the same baseline prior misfires: Abel's deflation-regime anchor plus the salient 'negative interest rate' token outweighs the delta-check that would have flagged the sentence as a pure mechanics description. Claude's shallower reading happens to be robust here precisely because it does not carry the dovish prior — it simply sees implementation plumbing and labels it neutral. The structural lesson is that BoJ's baseline is a double-edged feature: it turns relative moves legible (Abel wins three) but it also makes Abel over-commit when strong baseline-aligned vocabulary appears without an accompanying policy delta (Abel loses one)."
+  }
+]

@@ -1,0 +1,678 @@
+[
+  {
+    "trace_id": "BOE-FLIP-1",
+    "category": "flip",
+    "text": "retail sales volumes grew by 0.3% in july, more slowly than the 0.7% monthly average in the first half of the year, but this was nevertheless sufficient in combination with the strong growth in may and june to keep the three-month (on previous three months) growth rate on a rising trend.",
+    "ground_truth": "hawkish",
+    "claude_answer": "neutral",
+    "abel_answer": "hawkish",
+    "claude_trace": {
+      "reads": "Sees a mixed surface: '0.3% in July' described as 'more slowly than the 0.7% monthly average' (soft cue) alongside 'strong growth in May and June' and 'rising trend' (firm cue). The adverb 'nevertheless' and 'sufficient' read as hedging.",
+      "concepts_identified": "UK retail sales, month-on-month deceleration, three-month moving average, consumer spending momentum.",
+      "weighing": "Claude weighs the headline slowdown (0.3% vs 0.7%) against the three-month trend and concludes the passage is simply describing data without a stance verdict. With both a slowdown fact and a strength fact present, and no explicit policy verb, Claude defaults to 'neutral' as the safe read.",
+      "final_answer": "neutral",
+      "why_wrong": "Claude treats the sentence as data description rather than as a BoE MPC stance signal. In the MPC convention, 'three-month growth rate on a rising trend' for retail sales is a demand-side firming signal that maps to hawkish: consumer demand is accelerating on the preferred smoothed measure, which pressures capacity and inflation. Claude's aversion to committing \u2014 paired with the 'more slowly' clause \u2014 pulls it to neutral and it misses the directional verdict the MPC is actually encoding."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct \u2014 UK consumer demand print; macro nodes activated: {GDP, inflation, unemployment, federalFunds (BoE Bank Rate proxy)}. Primary node: consumption component of GDP.",
+      "step2_hypotheses": "H1 (hawkish): 3-month rising trend in retail sales indicates demand momentum above trend \u2192 inflationary pressure \u2192 tilt toward tightening. H2 (dovish): July 0.3% is a step-down from 0.7% average \u2192 consumer is fatiguing \u2192 tilt toward easing. H3 (neutral): mixed print, no directional verdict. H4 (contrarian): rising 3m/3m with a soft monthly suggests base-effect noise that MPC would discount.",
+      "step3_graph_discovery": "Markov blanket: retail_sales \u2192 consumption \u2192 GDP \u2192 output_gap \u2192 inflation \u2192 BankRate. Activated nodes: consumption momentum, output gap. BoE-specific prior: MPC explicitly prefers the 3m-on-3m smoothed measure over single-month prints in minutes language; the phrase 'rising trend' is a stylized MPC verdict, not neutral description. Data-print convention: 'rising trend' on the preferred smoother = demand firming.",
+      "step4_verify": "Direction check: rising 3m/3m retail sales \u2192 positive consumption impulse \u2192 narrowing output gap \u2192 upward inflation pressure \u2192 hawkish tilt on BankRate. Chain is sign-consistent. H2 fails because MPC down-weights single-month July vs the smoothed series it just highlighted. H3 fails because the clause structure ('nevertheless sufficient... to keep... on a rising trend') is a verdict, not a wash.",
+      "step5_web_grounding": "BoE MPC minutes historically use the phrase 'rising trend' in the preferred 3m/3m form as a demand-side firming signal; August 2005-style minute blocks with this exact construction consistently preceded hawkish-leaning commentary on consumer demand. The MPC's Inflation Report framework ties sustained consumer demand above trend to upside CPI risk relative to the 2% target.",
+      "step6_synthesize": "H1 wins: the sentence survives the monthly-softness clause and delivers a verdict that the preferred smoothed measure is firming. Under the Markov blanket this propagates to inflation-upside \u2192 hawkish. H3 is rejected because the sentence is not balanced \u2014 it is concessive ('nevertheless sufficient'), which in MPC prose is a tell that the firmer reading prevails.",
+      "final_answer": "hawkish",
+      "why_correct": "Abel's graph forces explicit directional propagation: a rising 3m/3m consumption proxy cannot be neutral once it enters the output-gap\u2192inflation chain. The BoE-specific prior about the MPC's preferred smoothed measure turns the concessive clause ('more slowly... but nevertheless') into a hawkish tell rather than a wash."
+    },
+    "comparison": "Claude pattern-matches surface hedging ('more slowly', 'nevertheless') and defaults to neutral whenever the text contains both a soft and a firm data point. Abel's Markov blanket refuses that escape hatch: once retail_sales is mapped to consumption\u2192output_gap\u2192inflation, the chain must resolve to a sign. The BoE-specific data-print convention \u2014 that MPC minutes use 3m/3m 'rising trend' as the actual stance-bearing phrase \u2014 is exactly the kind of institutional prior that Abel's web-grounding step supplies and Claude's generic reading lacks, which is why the structural graph pipeline flips this case."
+  },
+  {
+    "trace_id": "BOE-FLIP-2",
+    "category": "flip",
+    "text": "conditions elsewhere in the euro area were generally rather more robust, although business confidence was less buoyant even in france and euro-area industrial production had fallen in january; a slowdown in the telecommunications sector might also hold back growth.",
+    "ground_truth": "dovish",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Sees a balance: 'rather more robust' (positive) against 'less buoyant', 'industrial production had fallen', 'slowdown in the telecommunications sector', 'hold back growth' (negative). Notices qualifiers 'generally', 'might'.",
+      "concepts_identified": "Euro-area growth, business confidence, industrial production, sector-specific (telecoms) drag, spillovers to UK.",
+      "weighing": "Claude sees a 'robust... although... fell... might hold back' structure and reads it as descriptive: the positive clause and the multiple negative clauses appear to cancel. Without an explicit BoE policy verb, it assigns 'neutral'.",
+      "final_answer": "neutral",
+      "why_wrong": "Claude misreads the rhetorical architecture. The 'generally rather more robust' clause is a concession that is then dismantled by three concrete negatives: falling IP, weaker confidence (even in France), and a forward-looking sector drag. In MPC prose, the weight is always on the concrete evidence block, and 'might also hold back growth' is explicitly a downside-risk flag to UK growth via euro-area spillovers \u2014 a dovish cue for Bank Rate. Claude's symmetric reading ignores that BoE minutes weight forward-looking downside risks heavily."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed \u2014 external demand proxy for UK. Primary macro nodes: {GDP (UK, via euro-area demand spillover), inflation (import/tradables channel), federalFunds (BoE Bank Rate)}.",
+      "step2_hypotheses": "H1 (dovish): euro-area IP falling + confidence softer + telecom drag \u2192 weaker external demand for UK exports \u2192 downside UK GDP \u2192 dovish tilt. H2 (hawkish): 'rather more robust' headline \u2192 external demand firm \u2192 supports UK growth. H3 (neutral): mixed signals cancel. H4 (contrarian): telecom is idiosyncratic sector noise that MPC should discount; concession clause dominates.",
+      "step3_graph_discovery": "Markov blanket: euro_area_IP \u2192 UK_external_demand \u2192 UK_GDP \u2192 UK_output_gap \u2192 UK_inflation \u2192 BankRate. Activated nodes: external demand channel, import-price channel. BoE-specific prior: MPC minutes from the early-2000s telecom bust era consistently treated euro-area IP contractions as UK downside risk, not noise. The conjunction 'although' in MPC prose flips the polarity of the preceding clause.",
+      "step4_verify": "Direction check: falling euro-area IP + softer French confidence + telecom drag \u2192 negative external demand impulse \u2192 widening UK output gap \u2192 disinflationary pressure \u2192 dovish BankRate tilt. Chain sign-consistent. H2 fails because the 'although' concession inversion is explicit. H3 fails because three downside specifics outweigh one generic positive. H4 fails because MPC treats telecom sector drag as a systemic growth risk in this era, not as sector noise.",
+      "step5_web_grounding": "BoE MPC minutes around the 2001-2002 telecom/dot-com downturn explicitly cited euro-area industrial production falls and France-specific confidence weakness as downside risks informing dovish Bank Rate decisions. MPC convention: when UK's largest trading partner shows IP contraction, it feeds through to UK GDP forecasts within two quarters.",
+      "step6_synthesize": "H1 wins. Under the Markov blanket, a negative external demand shock propagates to lower UK inflation and a dovish BankRate tilt. The rhetorical architecture ('although... fallen... might also hold back') is MPC shorthand for downside risk acknowledgement, which in stance-space is dovish.",
+      "final_answer": "dovish",
+      "why_correct": "Abel's graph forces Claude's 'wash' into a directional read because falling euro-area IP cannot enter UK_GDP with zero sign. The BoE-specific prior about 'although' as a polarity-flip and about telecom drag as a systemic rather than idiosyncratic signal are exactly the institutional cues that the web-grounding step supplies."
+    },
+    "comparison": "Claude treats the sentence as a balanced mixed signal and defaults to neutral. Abel's pipeline cannot accept that: external demand must route through UK_GDP and UK_inflation with an explicit sign, and the dominant signal (IP falling, confidence softening, forward sector drag) is negative. The BoE convention that MPC prose uses 'although' as a polarity flip and weights concrete downside risks over generic headlines is recovered via Abel's web-grounding step \u2014 Claude has no mechanism to import that convention, which is why it flips."
+  },
+  {
+    "trace_id": "BOE-FLIP-3",
+    "category": "flip",
+    "text": "it was common for these measures to move together, but recent movements in medium-term measures were nevertheless noteworthy, given that oil and gas futures curves were consistent with energy price inflation falling back significantly beyond the near-term horizon.",
+    "ground_truth": "dovish",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Sees 'medium-term measures', 'noteworthy', 'oil and gas futures curves', 'energy price inflation falling back significantly beyond the near-term horizon'. The sentence is meta-analytical \u2014 it describes measures of inflation expectations rather than making a policy call.",
+      "concepts_identified": "Inflation expectations measures (likely break-evens or surveys), oil/gas futures curves, energy price inflation mean-reversion, near-term vs medium-term horizon.",
+      "weighing": "Claude sees technical/descriptive language about expectations measures and futures curves. Without an explicit 'MPC will...' verb or a clear 'too high/too low' judgment, Claude reads it as observational and assigns neutral.",
+      "final_answer": "neutral",
+      "why_wrong": "Claude misses that the content is unambiguously disinflationary: energy futures curves implying inflation 'falling back significantly' beyond the near-term is a direct downside input to the BoE's medium-term inflation forecast, which is the MPC's target variable. The adjective 'noteworthy' for medium-term measures is MPC-speak for 'this matters for our Bank Rate path.' Claude's surface-level read of 'technical measures = neutral' misses that every token in the sentence points to lower inflation."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct \u2014 inflation expectations + energy commodity input. Primary macro nodes: {inflation (medium-term), federalFunds (BoE Bank Rate), GDP (via real income channel secondary)}.",
+      "step2_hypotheses": "H1 (dovish): futures curves pricing energy disinflation + medium-term expectation measures moving down \u2192 lower medium-term CPI path \u2192 dovish BankRate tilt. H2 (hawkish): 'noteworthy' movement in medium-term expectations could mean expectations drifting up (de-anchoring) \u2192 hawkish. H3 (neutral): purely descriptive meta-analysis. H4 (contrarian): near-term energy remains elevated even if futures curve slopes down, so near-term CPI still overshoots.",
+      "step3_graph_discovery": "Markov blanket: energy_futures \u2192 headline_CPI \u2192 medium_term_inflation_expectations \u2192 BankRate. Activated nodes: energy pass-through, inflation-expectation anchoring, MPC 2% target. BoE-specific prior: MPC cares about the 2-year-ahead inflation projection almost exclusively; 'medium-term measures' is the policy-relevant horizon. Data-print convention: 'falling back significantly beyond the near-term horizon' directly maps to the MPC's forecast-target object.",
+      "step4_verify": "Direction check: oil/gas futures sloping down \u2192 lower future headline CPI \u2192 medium-term inflation expectations drift lower \u2192 inflation path falls below or toward target \u2192 dovish BankRate tilt. Sign consistent. H2 fails because the sentence specifies futures curves 'consistent with energy price inflation falling back' \u2014 the direction of medium-term movement is explicitly downward. H4 fails because the MPC targets the medium term, not near-term, so near-term stickiness doesn't overturn the call.",
+      "step5_web_grounding": "BoE MPC framework: the 2% CPI target is assessed at the 2-year horizon. When oil/gas futures curves imply energy disinflation beyond the near-term, the MPC has historically used this to justify looking through near-term CPI overshoots and holding or cutting Bank Rate. This construction appears in minutes from 2008, 2011, and 2022 energy-driven episodes.",
+      "step6_synthesize": "H1 wins. The whole sentence is a construction of a dovish medium-term inflation argument: futures imply energy disinflation \u2192 medium-term expectations drop \u2192 medium-term CPI forecast falls \u2192 Bank Rate tilts dovish. The Markov blanket gives zero support to H3 once 'falling back significantly' is read as an input to the inflation node.",
+      "final_answer": "dovish",
+      "why_correct": "Abel's pipeline reads 'medium-term' as the MPC's policy-relevant horizon rather than as generic jargon, and treats 'falling back significantly' as a direct sign-bearing input to the inflation node. The graph refuses to let a downward-sloping energy futures curve enter the system as 'neutral'."
+    },
+    "comparison": "Claude sees meta-analytical language ('measures', 'noteworthy', 'futures curves') and treats it as descriptive, missing that the content is a direct dovish input to the MPC's target forecast. Abel's pipeline maps the sentence to specific macro nodes with explicit signs, and crucially knows that 'medium-term' is the BoE's policy-relevant horizon \u2014 not a hedge word. The BoE data-print convention that 2-year-ahead inflation is the stance-bearing object is the institutional prior that Abel's web-grounding step surfaces; Claude's generic read has no way to privilege 'medium-term' over 'near-term' and so collapses to neutral."
+  },
+  {
+    "trace_id": "BOE-HARM-1",
+    "category": "harm",
+    "text": "one possible counterpart to the recent revisions to the current account might be weaker estimates of the financial position of the corporate sector, but corporate balance sheets had recently been improving and appeared well-positioned to accommodate higher levels of investment.",
+    "ground_truth": "neutral",
+    "claude_answer": "neutral",
+    "abel_answer": "hawkish",
+    "claude_trace": {
+      "reads": "Sees 'possible counterpart', 'might be weaker estimates', 'but... improving', 'well-positioned to accommodate higher levels of investment'. Identifies hedged language ('possible', 'might') and a balanced structure.",
+      "concepts_identified": "Current account revisions, corporate sector financial position, corporate balance sheets, investment capacity.",
+      "weighing": "Claude reads this as an analytical aside about accounting identities: current account revisions \u2192 implication for corporate sector \u2192 but balance sheets are fine. It's discussing the coherence of national accounts data, not making a stance claim. Claude assigns neutral.",
+      "final_answer": "neutral",
+      "why_correct": "This is a genuinely observational passage about national-accounts bookkeeping consistency. The MPC is working through whether a current-account revision implies a corporate-balance-sheet weakness, and concluding 'no, the sector is fine.' There's no policy verdict \u2014 just reconciliation of statistical revisions. 'Neutral' is the right call because the sentence doesn't move either the inflation path or the growth path in a stance-bearing direction."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct \u2014 corporate sector financial position; nodes activated: {GDP (via investment), federalFunds (BoE Bank Rate)}.",
+      "step2_hypotheses": "H1 (hawkish): 'well-positioned to accommodate higher levels of investment' \u2192 stronger capex pipeline \u2192 demand impulse \u2192 hawkish tilt. H2 (dovish): current account revisions could imply weaker corporate position \u2192 downside investment. H3 (neutral): observational reconciliation of national accounts, no stance. H4 (contrarian): 'higher levels of investment' is conditional ('appeared well-positioned to') not forecast.",
+      "step3_graph_discovery": "Markov blanket: corporate_balance_sheets \u2192 investment \u2192 GDP \u2192 output_gap \u2192 inflation \u2192 BankRate. Activated nodes: investment, output gap. BoE-specific prior: improving corporate balance sheets + capacity for higher investment historically feeds through to capex growth within 4-6 quarters.",
+      "step4_verify": "Direction check: balance sheets improving \u2192 investment capacity rising \u2192 demand impulse \u2192 narrowing output gap \u2192 upward inflation pressure \u2192 hawkish BankRate tilt. Chain is sign-consistent \u2014 so H1 looks to win.",
+      "step5_web_grounding": "Periods when UK corporate balance sheets improved (e.g., mid-2000s, mid-2010s) often preceded capex cycles that supported hawkish-leaning MPC discussions. This historical pattern reinforces the H1 reading.",
+      "step6_synthesize": "Abel chains corporate_balance_sheets \u2192 investment \u2192 inflation and concludes hawkish. It over-weights the conditional 'well-positioned to accommodate higher levels of investment' as a forward capex signal rather than reading it as a reassurance about statistical-revision coherence.",
+      "final_answer": "hawkish",
+      "why_wrong": "Abel's Markov blanket forces a directional read on any sentence that touches an activated macro node, even when the sentence is a reconciliation of statistical revisions rather than a forecast. 'Well-positioned to accommodate' is hypothetical capacity, not a forecast of realized investment. Abel mistakes the clarifying 'but corporate balance sheets had recently been improving' \u2014 which is there to rule out a dovish tail risk from the current-account revision \u2014 as an active hawkish signal. The pipeline lacks a 'this is observational, not stance-bearing' escape hatch."
+    },
+    "comparison": "This is the failure mode of forcing graph-directional reads on genuinely observational text. Claude's willingness to sit at neutral when the sentence is a national-accounts reconciliation is exactly right; Abel's Markov blanket treats any positive adjective attached to an activated node as a sign-bearing input and over-commits. BoE MPC minutes contain a lot of this statistical-coherence prose that has no stance content, and Abel's discipline to always produce a signed propagation turns into a liability here. Claude wins on genuinely neutral text precisely because it lacks the machinery that otherwise helps Abel."
+  },
+  {
+    "trace_id": "BOE-HARM-2",
+    "category": "harm",
+    "text": "it remained the case, however, that changes in term premia had accounted for only a small proportion of the overall rise in longer-term advanced economy government bond yields over the past two years, relative to the contribution from the rise in expected policy rates.",
+    "ground_truth": "neutral",
+    "claude_answer": "neutral",
+    "abel_answer": "hawkish",
+    "claude_trace": {
+      "reads": "Sees 'term premia', 'small proportion of the overall rise', 'longer-term advanced economy government bond yields', 'expected policy rates'. This is a yield-decomposition exercise: how much of the yield rise is term premium vs expected rates.",
+      "concepts_identified": "Yield curve decomposition, term premium vs expectations component, advanced-economy sovereign yields, policy rate expectations.",
+      "weighing": "Claude recognizes a technical accounting statement: 'of the rise in yields, most was expectations, little was term premium.' This is a statement about market microstructure / yield attribution, not a BoE stance claim. Claude assigns neutral.",
+      "final_answer": "neutral",
+      "why_correct": "This passage is a backward-looking attribution of the past two years' yield rise across advanced economies \u2014 it's commenting on why yields rose, not on what the MPC intends to do. The MPC is describing the market's interpretation of its own past actions (expected policy rates did the work, not term premia). That's descriptive analysis of market dynamics, not a forward stance signal. Neutral is correct."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct \u2014 policy rate expectations + bond yields; nodes activated: {federalFunds (BoE Bank Rate), inflation (via real yields secondary)}.",
+      "step2_hypotheses": "H1 (hawkish): expected policy rates drove the yield rise \u2192 market prices further tightening \u2192 hawkish. H2 (dovish): term premia compressed could imply disinflation priced in. H3 (neutral): backward-looking yield decomposition, no forward stance. H4 (contrarian): the framing 'remained the case' is a persistence claim about an existing diagnostic, not a new signal.",
+      "step3_graph_discovery": "Markov blanket: bond_yields \u2192 expected_policy_rates \u2192 BankRate_path \u2192 inflation. Activated nodes: policy-rate expectations, long yields. BoE-specific prior: when MPC minutes emphasize that expected policy rates drove yield rises, they are sometimes signaling that market pricing is consistent with their path.",
+      "step4_verify": "Direction check: expected policy rates rising (as the dominant component of the 2-year yield rise) \u2192 market pricing a higher BankRate path \u2192 consistent with hawkish regime. Chain looks sign-consistent for H1.",
+      "step5_web_grounding": "Post-2022 MPC minutes repeatedly discussed the decomposition of advanced-economy yield rises into expectations vs term premia components. Such discussions often coincided with the MPC's tightening cycle, which biases the 'expected policy rates' framing toward hawkish associations.",
+      "step6_synthesize": "Abel reads 'the rise was driven by expected policy rates' as a hawkish-aligned market-pricing statement and concludes hawkish.",
+      "final_answer": "hawkish",
+      "why_wrong": "Abel conflates 'the past two years' rise was driven by expected rates' (a backward-looking decomposition) with 'expected rates are rising now' (a forward-looking stance). The sentence is explicitly retrospective \u2014 'over the past two years' \u2014 and is a market-pricing diagnostic, not a forward guidance statement. Abel's graph is biased toward finding sign in any sentence touching BankRate, and here it imposes a forward hawkish read on what is just a yield-attribution exercise. The contrarian H4 ('persistence of an existing diagnostic, not a new signal') is actually the right call and the pipeline under-weighted it."
+    },
+    "comparison": "Another instance of Abel over-calling direction on a genuinely observational passage \u2014 specifically, one that is retrospective yield decomposition rather than forward stance. Claude's instinct that technical market-microstructure statements don't carry stance is correct here. Abel's Markov blanket activates BankRate whenever policy-rate expectations are mentioned and propagates a sign, failing to discount the 'over the past two years' temporal framing. BoE MPC minutes contain frequent descriptive market-function prose like this, and it is precisely the terrain where Abel's always-signed propagation hurts and Claude's neutral-default helps. The harm is structural: the graph has no node for 'this is a backward-looking attribution,' so temporal framing that ought to neutralize the signal is lost."
+  },
+  {
+    "trace_id": "BOJ-FLIP-1",
+    "category": "flip",
+    "text": "members agreed that, although overseas economies taken as a whole had continued to expand, the pace of growth was slowing and downside risks remained elevated, mainly reflecting the increasing tensions in global financial markets, sluggish growth in the members shared the view that tensions in global financial markets had been increasing against the background of the recent developments among u.s. financial institutions.",
+    "ground_truth": "hawkish",
+    "claude_answer": "dovish",
+    "abel_answer": "hawkish",
+    "claude_trace": {
+      "reads": "Claude latches onto negatively-valenced surface phrases: 'pace of growth was slowing', 'downside risks remained elevated', 'increasing tensions in global financial markets', 'sluggish growth', and 'recent developments among u.s. financial institutions' (reading the last as a stress signal).",
+      "concepts_identified": "Global growth deceleration, financial-market stress transmission, U.S. banking-sector fragility, downside-risk language typical of easing bias.",
+      "weighing": "Claude maps 'downside risks + slowing growth + financial stress' onto a textbook dovish template: when a central bank flags external weakness and financial-system tension, the expected reaction function is accommodation or a pause in tightening. It treats the statement as a risk-warning and therefore a lean toward easing.",
+      "final_answer": "dovish",
+      "why_wrong": "Claude reads the sentence as the Bank's own policy stance, but the passage is the Bank assessing the external environment while implicitly acknowledging that the economy 'taken as a whole had continued to expand' \u2014 i.e., overseas expansion is still the base case. Within BoJ's chronically dovish baseline, merely cataloguing downside risks without signalling additional easing is a relative hawkish tilt (no new stimulus mentioned, expansion still intact). Claude does not anchor to the BoJ-specific baseline, so 'downside risks' reads as dovish surface sentiment instead of 'no incremental easing on the table.'"
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed \u2014 routed through macro nodes {global_growth, financial_conditions, BoJ_reaction_function, US_banking_stress}; the statement is a situational assessment rather than a direct policy instrument description.",
+      "step2_hypotheses": "H1 (dovish): 'slowing growth + financial tensions' = BoJ preparing to ease. H2 (hawkish/contrarian): overseas economies 'continued to expand' is retained as base case and no new easing tool is mentioned, so status quo vs. a dovish baseline is a relative hawkish tilt. H3 (neutral): pure situational reporting with no policy implication. H4 (contrarian): flagging U.S. financial stress could be setup for future easing, but could equally be cover for holding fire while others cut.",
+      "step3_graph_discovery": "Markov blanket around BoJ_policy_stance activates: {YCC anchor, JGB purchase pace, JPY, deflation_regime, global_growth_spillover, US_banking_channel}. BoJ-specific priors fire: deflation regime + YCC = structurally dovish baseline, so any statement that does NOT introduce new stimulus despite acknowledging downside risk is, on the margin, a hawkish deviation from the baseline. Node 'overseas economies...continued to expand' reinforces that the BoJ is not yet downgrading its core growth view.",
+      "step4_verify": "Causal chain: external_downside_risk -> BoJ_reaction_function -> {ease further | hold}. Along this chain, a statement that lists risks but retains the 'expansion' base case and names NO incremental tool (no mention of rate cut, expanded JGB purchases, new facility) collapses to 'hold'. Hold against a structurally dovish baseline = relative hawkish.",
+      "step5_web_grounding": "Context matches a late-2007/early-2008-style BoJ minute where the Bank was watching U.S. subprime/banking stress but had not yet moved to additional easing; historically BoJ under YCC/ZIRP treats merely cataloguing external risks as information, not as a commitment to act. Web-grounded prior: BoJ only shifts dovish when it explicitly mentions JGB purchases, rate path, or forward guidance.",
+      "step6_synthesize": "H2 wins. The text performs risk surveillance without activating any easing instrument, against a baseline already at the floor. Relative to BoJ's default dovish stance, standing pat while flagging external risks is the hawkish direction.",
+      "final_answer": "hawkish",
+      "why_correct": "Abel explicitly evaluates the statement against BoJ's structurally dovish baseline and requires an instrument-level dovish signal (JGB, rate, guidance) to classify dovish; absent that, the relative-direction reading is hawkish."
+    },
+    "comparison": "Claude runs a sentiment-to-stance mapping: negative macro words -> dovish. Abel runs a causal-chain check: text -> reaction-function node -> instrument activation -> relative direction against BoJ's floor-bound baseline. Because BoJ's equilibrium is already maximally accommodative (YCC, ZIRP/NIRP, large JGB program), any minute that merely narrates external weakness without adding stimulus is, in direction-space, a hawkish tilt. Claude cannot see that because it has no baseline anchor; Abel catches it because the causal graph forces an instrument check before committing to 'dovish'."
+  },
+  {
+    "trace_id": "BOJ-FLIP-2",
+    "category": "flip",
+    "text": "at the council on economic and fiscal policy held on may 15, the prime minister had given instructions to the cabinet to set out in the basic policies a policy for further reform from the perspectives of both expenditure and revenue, toward the formulation of the budget for fiscal 2015, as well as a direction for initiatives to realign the structure of the corporate tax rate to one that was oriented toward growth.",
+    "ground_truth": "dovish",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Claude sees fiscal-policy vocabulary: 'Council on Economic and Fiscal Policy', 'Prime Minister', 'basic policies', 'expenditure and revenue reform', 'budget for fiscal 2015', 'corporate tax rate...oriented toward growth'.",
+      "concepts_identified": "Fiscal reform, growth-oriented corporate tax cuts, Abenomics-style supply-side policy, government (not central bank) actor.",
+      "weighing": "Because the sentence is about the PM and cabinet rather than BoJ, Claude concludes it describes fiscal/structural policy, not monetary stance. Procedural description of a Cabinet instruction -> no direct monetary signal -> classify as neutral.",
+      "final_answer": "neutral",
+      "why_wrong": "Claude treats monetary and fiscal policy as disjoint and defaults to 'neutral' when the speaker is the government. But BoJ minutes that approvingly reference Cabinet growth-oriented tax reform are signaling the monetary-fiscal policy mix, specifically the three-arrows framework where fiscal easing and pro-growth tax cuts are expected to work in tandem with monetary accommodation. Embedding this reference is dovish by construction: it reinforces the complementarity of QQE and Abenomics rather than flagging any tightening concern."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct on fiscal-monetary mix; nodes activated: {fiscal_stance, corporate_tax, potential_growth, monetary_fiscal_coordination, Abenomics_three_arrows}.",
+      "step2_hypotheses": "H1 (neutral): fiscal content only, no monetary instrument -> neutral. H2 (dovish): pro-growth tax cut + expenditure/revenue reform supports aggregate demand, complementing QQE, so BoJ implicitly endorses the accommodative mix. H3 (hawkish/contrarian): 'expenditure reform' could imply fiscal consolidation that forces BoJ to tighten less and thus is hawkish on the fiscal axis. H4 (contrarian): it could be pure minute-keeping with no stance.",
+      "step3_graph_discovery": "Markov blanket: {corporate_tax_rate -> investment -> output_gap -> inflation -> BoJ_reaction}; also {fiscal_reform -> debt_sustainability -> JGB_yields -> YCC_pressure}. BoJ-specific priors: under QQE/YCC, the Bank welcomes demand-supporting fiscal action because it raises the neutral rate and aids the 2% target. The growth-oriented tax-rate cut node lights up as a pro-demand, pro-inflation input.",
+      "step4_verify": "Direction check along causal chain: lower corporate tax -> higher capex -> narrower output gap -> supports 2% inflation goal -> BoJ more comfortable maintaining/extending accommodation. The BoJ favorably recording this Cabinet instruction in its minutes is an endorsement of the policy mix, which is a dovish reinforcement, not a neutral procedural note.",
+      "step5_web_grounding": "Fiscal 2015 budget drafting and 'growth-oriented corporate tax reform' align with 2014 Abenomics \u2014 Kuroda BoJ explicitly treated the three arrows (fiscal stimulus, structural reform, QQE) as mutually reinforcing. Historical BoJ communications from this era repeatedly cite fiscal growth strategy as supportive of the 2% price-stability target, which is the dovish-leaning target regime.",
+      "step6_synthesize": "H2 wins. The minute is not passively reporting a Cabinet meeting; it is endorsing a fiscal limb of the accommodative policy mix. In BoJ context this is a dovish signal.",
+      "final_answer": "dovish",
+      "why_correct": "Abel recognizes that in a regime where BoJ explicitly coordinates with fiscal policy, a positive nod to pro-growth fiscal reform is a dovish monetary signal, not a neutral aside."
+    },
+    "comparison": "Claude partitions fiscal from monetary and routes ambiguity to 'neutral'. Abel treats the central-bank minute as a node in a joint policy-mix graph: fiscal growth-enabling action feeds the inflation/output-gap channel that governs BoJ's reaction function. Against a structurally dovish BoJ baseline, an approving reference to Cabinet growth reform is itself a dovish signal. The surface is procedural; the causal content is accommodative."
+  },
+  {
+    "trace_id": "BOJ-FLIP-3",
+    "category": "flip",
+    "text": "some members commented that it was important for the bank to be well prepared to take policy actions -- including measures to stabilize the financial system -- as the central bank, bearing in mind the risk that the sovereign debt problems in europe could cause a serious shock to global financial markets and the global economy, thereby affecting the financial system and financial conditions in japan.",
+    "ground_truth": "hawkish",
+    "claude_answer": "dovish",
+    "abel_answer": "hawkish",
+    "claude_trace": {
+      "reads": "Claude reads 'be well prepared to take policy actions', 'measures to stabilize the financial system', 'sovereign debt problems in europe', 'serious shock to global financial markets', 'affecting...financial conditions in japan.'",
+      "concepts_identified": "European sovereign debt crisis, contagion risk, financial-stability policy, readiness-to-act language.",
+      "weighing": "'Be well prepared to take policy actions' reads to Claude as forward-leaning willingness to ease, especially combined with 'financial system stabilization'. Claude treats this as a classic dovish put: the central bank standing ready to deploy liquidity/accommodation if contagion hits.",
+      "final_answer": "dovish",
+      "why_wrong": "Claude conflates 'financial-stability readiness' with 'monetary easing.' But the phrase 'measures to stabilize the financial system' is liquidity/backstop language (e.g., USD swap lines, collateral operations), not a reduction in policy rates or expansion of the monetary-easing stance. It is contingent and conditional, not a commitment to loosen. In BoJ's dovish-baseline frame, merely holding optionality without announcing new accommodation is a relative hawkish posture \u2014 the Bank is NOT pre-committing to more easing despite the stated external risk."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed \u2014 nodes: {financial_stability_tools, monetary_instrument_stance, EU_sovereign_debt, contagion_channel, JPY_safe_haven, BoJ_reaction_function}.",
+      "step2_hypotheses": "H1 (dovish): 'prepared to take policy actions' = easing option signalled. H2 (hawkish, contrarian): readiness language without instrument activation, combined with 'some members' (minority view), is a non-commitment = relative hawkish vs. dovish baseline. H3 (neutral): contingency planning only. H4 (contrarian): 'financial-system stabilization' is a separate toolkit from monetary easing; distinguishing them yields hawkish on the monetary axis.",
+      "step3_graph_discovery": "Markov blanket: {EU_sovereign_debt -> global_risk_off -> JPY_appreciation -> Japan_financial_conditions -> BoJ_policy_action}. BoJ priors fire: 'some members' = non-majority framing; 'measures to stabilize the financial system' = lender-of-last-resort node, separate from the monetary-stance node. Baseline is already dovish (ZIRP, asset purchases in this era). Key check: is there any activation of the monetary-easing instrument? No \u2014 only readiness, and only from 'some members'.",
+      "step4_verify": "Direction along chain: if BoJ were dovish-tilting, minutes typically say 'members agreed to examine additional easing' or reference JGB purchase expansion. Here the language is contingent and minority-voiced; the monetary-stance node remains unchanged. Relative to a dovish baseline, 'no incremental easing signalled' is hawkish direction.",
+      "step5_web_grounding": "This matches 2011-2012 eurozone-crisis-era BoJ minutes. Historically BoJ at that time used USD-funding swap lines and financial-stability facilities that are orthogonal to the monetary-policy stance. Markets read 'prepared to act' language then as reassurance, not as a dovish shift \u2014 and subsequent decisions often held rates/purchases steady, confirming the hawkish-relative-to-baseline read.",
+      "step6_synthesize": "H2 wins. The text signals contingent financial-stability readiness from a minority of members without activating the monetary-easing instrument. Against BoJ's dovish baseline, this is a relative hawkish tilt.",
+      "final_answer": "hawkish",
+      "why_correct": "Abel separates the financial-stability toolkit from the monetary-policy instrument and requires explicit instrument movement for a 'dovish' read; minority-voiced contingency without instrument movement collapses to hawkish-relative-to-baseline."
+    },
+    "comparison": "Claude fuses 'stand ready to act' with 'will ease,' which collapses in a normal-regime central bank but fails for BoJ. Abel's graph explicitly separates (a) financial-stability / liquidity instruments and (b) monetary-stance instruments, and checks whether the latter is actually activated. BoJ's floor-bound baseline means optionality without action = hawkish direction. The structural asymmetry of BoJ's baseline is exactly what makes this subtle relative move invisible to Claude but clean for Abel."
+  },
+  {
+    "trace_id": "BOJ-HARM-1",
+    "category": "harm",
+    "text": "specifically, the bank will adopt a three-tier system in which the outstanding balance of each financial institution's current account at the bank will be divided into three tiers, to each of which a positive interest rate, a zero interest rate, or a negative interest rate will be applied, respectively.",
+    "ground_truth": "neutral",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Claude notices 'three-tier system', 'outstanding balance of each financial institution's current account', and the explicit trio 'positive interest rate, zero interest rate, negative interest rate'.",
+      "concepts_identified": "Operational implementation of the tiered NIRP reserve system; a mechanical design description rather than a stance statement.",
+      "weighing": "The passage is purely structural/mechanical: it defines how the three-tier reserve balance will be segmented but does not itself change the policy rate, asset-purchase pace, or forward guidance. It is an implementation paragraph, not a stance paragraph. Claude correctly classifies it as neutral.",
+      "final_answer": "neutral",
+      "why_correct": "Claude treats the sentence as descriptive plumbing (tier definitions) rather than as an incremental policy move. Because it does not add new easing beyond what the three-tier NIRP framework already implies, and does not tighten, the correct direction is neutral."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct on policy-rate instrument; nodes: {policy_rate, reserve_tiering, NIRP, bank_profitability, JPY, deflation_regime}.",
+      "step2_hypotheses": "H1 (dovish): presence of 'negative interest rate' tier = easing stance. H2 (neutral): purely operational description, no new parameter change. H3 (hawkish, contrarian): tiering actually mitigates the sting of NIRP on banks, which softens the easing \u2014 a hawkish design feature. H4 (contrarian): this is a one-time structural announcement whose stance content is already priced into the announcement of NIRP itself.",
+      "step3_graph_discovery": "Markov blanket: {NIRP_adoption -> bank_NIM -> lending_supply -> credit_conditions} and {policy_rate -> JPY -> inflation}. BoJ dovish-baseline prior fires HARD here: 'negative interest rate' is a textbook dovish token, and in the deflation-regime prior it aligns with the easing direction node. This prior over-weights the presence of the word 'negative' and under-weights that the sentence is describing tier MECHANICS, not a fresh cut.",
+      "step4_verify": "Direction check: does this sentence move the instrument vs. its previous setting? No \u2014 it describes the segmentation rule of the balance, not a change in the rate itself. A rigorous verify step would flag 'no delta' and route to neutral, but the deflation-regime prior biases toward dovish before the delta-check completes.",
+      "step5_web_grounding": "January 2016 BoJ introduction of NIRP with a three-tier structure on current-account balances. Web grounding confirms this is the descriptive paragraph of the tier system; the stance move is the NIRP decision itself, not the tier-definition sentence. The tiered design was explicitly intended to limit damage to bank profitability \u2014 which is a hawkish-softening design, further arguing against a pure dovish read.",
+      "step6_synthesize": "Abel's six-step pipeline should have reached neutral, but the structurally-dovish BoJ prior plus the salient 'negative interest rate' token dominated the delta-check and web-grounding evidence, producing an over-confident dovish classification.",
+      "final_answer": "dovish",
+      "why_wrong": "The deflation/NIRP prior is so strongly associated with 'dovish' that Abel's graph attaches the dovish label to a sentence that is merely defining the mechanics of an already-announced framework. The tier description has no incremental stance content and should be neutral; the prior overrode the no-delta evidence. This is the mirror failure mode of the flip cases: the same baseline anchoring that rescues Abel on subtle relative-hawkish statements can mislead it when a sentence contains strong dovish vocabulary but zero marginal policy change."
+    },
+    "comparison": "On the three flips, Claude's sentiment heuristic fails because BoJ's structurally dovish baseline means 'no new stimulus' is itself hawkish in direction \u2014 exactly what Abel's causal graph is built to catch. On this harm, the same baseline prior misfires: Abel's deflation-regime anchor plus the salient 'negative interest rate' token outweighs the delta-check that would have flagged the sentence as a pure mechanics description. Claude's shallower reading happens to be robust here precisely because it does not carry the dovish prior \u2014 it simply sees implementation plumbing and labels it neutral. The structural lesson is that BoJ's baseline is a double-edged feature: it turns relative moves legible (Abel wins three) but it also makes Abel over-commit when strong baseline-aligned vocabulary appears without an accompanying policy delta (Abel loses one)."
+  },
+  {
+    "trace_id": "SNB-FLIP-1",
+    "category": "flip",
+    "text": "the fourth quarter of 2004 and the first quarter of 2005 saw a stagnation of economic activity in switzerland, with the high price of oil as well as the depreciation of the dollar in the final quarter of 2004 acting as brakes",
+    "ground_truth": "dovish",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Phrases detected: 'stagnation of economic activity', 'high price of oil', 'depreciation of the dollar', 'acting as brakes'. Backward-looking Q4 2004 / Q1 2005 time-stamp.",
+      "concepts_identified": "Retrospective growth commentary, oil price shock, USD depreciation (implying CHF appreciation vs USD), external brakes on activity.",
+      "weighing": "Reads as descriptive historical growth diagnostic. 'Stagnation' is negative but past-tense; 'acting as brakes' is observational, not a forward policy signal. High oil = cost-push (ambiguous for policy); USD depreciation described as a drag, not as a trigger for easing. No explicit rate or liquidity language, so Claude defaults to a neutral observational read.",
+      "final_answer": "neutral",
+      "why_wrong": "Claude treated the sentence as a neutral post-mortem instead of recognizing that an SNB speaker flagging stagnation AND dollar depreciation (i.e., CHF strength against USD) as brakes is effectively narrating the easing case. In the SNB frame, CHF appreciation is itself a tightening shock that pushes the policy stance dovish \u2014 Claude missed the FX-stance transmission channel."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed \u2014 growth stance inferred via nodes {activity_gap, fxStance (USD/CHF), imported_inflation, oil_cost_push, policyRate}.",
+      "step2_hypotheses": "H1: 'stagnation' + 'brakes' means the SNB is describing a negative output gap (dovish bias). H2: USD depreciation = CHF appreciation, which is a de facto tightening and pushes the SNB toward offsetting easing. H3: high oil is cost-push, typically hawkish, but SNB historically looks through supply shocks when demand is weak. H4: the sentence is pure retrospective reporting with no policy implication (neutral).",
+      "step3_graph_discovery": "Markov blanket activates: activity_gap<0 -> policyRate_down; fxStance(CHF_strong_vs_USD) -> imported_inflation_down -> headline_CPI_down -> policyRate_down. SNB-specific prior fires: CHF strength = dovish via deflation import, so 'depreciation of the dollar' maps to the dovish arm, not to neutral FX commentary. Oil cost-push node is dominated by the activity_gap and fxStance nodes in SNB's reaction function.",
+      "step4_verify": "Direction check: both transmission channels (weak activity, strong CHF) point the same way -> easing bias. No hawkish counter-path survives once SNB's look-through on oil is applied.",
+      "step5_web_grounding": "SNB context 2004-2005: policy rate at the low end of a 0.25-1.25% target corridor for 3M CHF Libor; SNB openly worried about CHF strength vs USD acting as a disinflationary brake; this predates the 2011-2015 EUR/CHF 1.20 floor but the same FX-as-policy logic is already operative. Grounding confirms dovish read.",
+      "step6_synthesize": "Two converging dovish channels (negative activity_gap + CHF appreciation-driven imported disinflation) dominate the oil cost-push channel. The sentence is a dovish framing, not a neutral report.",
+      "final_answer": "dovish",
+      "why_correct": "The fxStance node forced Abel to translate 'depreciation of the dollar' into CHF strength -> imported disinflation -> easing bias, which is the canonical SNB transmission path Claude treated as background color."
+    },
+    "comparison": "Structural difference: Claude parses the sentence as descriptive macro narration and finds no explicit policy verb, so it lands on neutral. Abel's graph forces every FX mention through the fxStance <-> imported_inflation <-> policyRate chain, which is the SNB's dominant transmission channel and is rare among DM central banks. 'Depreciation of the dollar' is a policy signal at the SNB in a way it is not at the Fed or ECB, and that asymmetry is exactly what the causal-abel skill encodes."
+  },
+  {
+    "trace_id": "SNB-FLIP-2",
+    "category": "flip",
+    "text": "the crf and the loans guaranteed by the federal government have together contributed significantly towards ensuring the supply of credit and liquidity to the economy",
+    "ground_truth": "neutral",
+    "claude_answer": "dovish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Keywords: 'supply of credit', 'liquidity to the economy', 'loans guaranteed', 'contributed significantly'. Tone is supportive / accommodative.",
+      "concepts_identified": "Credit-support facility (CRF = Covid Refinancing Facility), fiscal loan guarantees, liquidity provision.",
+      "weighing": "The sentence describes a facility that expanded credit and liquidity. Lexical heuristic: 'liquidity', 'supply of credit', 'guaranteed loans' all cluster with dovish/accommodative wording. Claude does not distinguish between an active monetary easing stance and an ex-post description of a fiscal-plus-central-bank backstop already in place.",
+      "final_answer": "dovish",
+      "why_wrong": "Claude conflated 'describing a backstop' with 'signaling easing'. The sentence is a factual attribution of outcomes to the CRF and federal loan guarantees \u2014 a joint fiscal/SNB tool whose stance is orthogonal to the marginal monetary decision. It is a status report, not a policy signal."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed \u2014 nodes {credit_supply_node, liquidity_facility (CRF), fiscal_guarantee, policyRate, fxStance}; the question is whether any of these nodes carries a forward policy delta.",
+      "step2_hypotheses": "H1: liquidity language => dovish easing. H2: sentence is a backward-looking assessment of a crisis facility, so neutral. H3: 'contributed significantly' is evaluative past tense, no forward signal. H4: CRF plus fiscal guarantees are a one-off Covid architecture, not the marginal policy instrument.",
+      "step3_graph_discovery": "Markov blanket: credit_supply_node is upstream of activity and CPI, but the sentence describes an already-completed intervention. The do-operator test (do(policyRate)) has no active edge from this statement to policyRate. The fxStance channel (SNB's dominant lever) is not touched at all. Graph therefore returns 'observational, non-interventional' -> neutral.",
+      "step4_verify": "Direction check: no delta on rate, no delta on CHF, no forward guidance verb ('will', 'intends', 'considers appropriate'). Direction = flat.",
+      "step5_web_grounding": "CRF = Covid Refinancing Facility, launched March 2020 jointly with Confederation loan guarantees. By the time this sentence is spoken it is a reporting line, not a stance lever; the marginal SNB stance in that period was carried by the -0.75% policy rate and FX intervention, neither of which the sentence discusses.",
+      "step6_synthesize": "Sentence is attribution of outcomes to a standing facility; it neither tightens nor eases on the margin. Stance = neutral.",
+      "final_answer": "neutral",
+      "why_correct": "Abel's do-operator check separates 'describing an intervention' from 'making an intervention', which is what Claude's lexical read collapsed."
+    },
+    "comparison": "Structural difference: Claude's keyword weighting fires on 'liquidity' and 'credit supply' and treats any accommodative-sounding vocabulary as dovish. Abel's graph distinguishes observational mentions of existing facilities from interventional policy changes on the active levers (policyRate, fxStance). For the SNB in the Covid window, the active levers were the policy rate and FX intervention; the CRF was plumbing. Abel's node-typing catches that, Claude's lexical read does not."
+  },
+  {
+    "trace_id": "SNB-FLIP-3",
+    "category": "flip",
+    "text": "year-on-year inflation, as measured by the national consumer price index, dropped to 0.5 in the second quarter of 2003 from 1.0 in the first quarter",
+    "ground_truth": "dovish",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Pure statistical sentence: CPI YoY 1.0% Q1 2003 -> 0.5% Q2 2003. No policy verbs, no forward guidance, no rate language.",
+      "concepts_identified": "Inflation print, CPI, sequential decline, 2003 time-stamp.",
+      "weighing": "Claude treats the line as a data release. Without explicit commentary like 'too low' or 'warrants action', the lexical read defaults to neutral reporting. The magnitude (0.5% YoY) is low but Claude does not anchor it against an SNB target band.",
+      "final_answer": "neutral",
+      "why_wrong": "Claude failed to anchor 0.5% CPI against the SNB's definition of price stability (below 2%, but positive, with deflation risk below ~0%). A halving of inflation from 1.0 to 0.5 in one quarter inside a central bank speech is not reported as neutral color \u2014 it is the dovish case being made. Claude missed the implicit benchmark."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct \u2014 nodes {headline_CPI, inflation_gap_vs_target, deflation_risk, policyRate, fxStance}.",
+      "step2_hypotheses": "H1: CPI dropping 1.0 -> 0.5 shrinks the inflation_gap toward the lower edge of SNB's price-stability band, raising deflation_risk -> dovish. H2: sentence is factual reporting, neutral. H3: the 2003 context had the SNB already at very low rates, so any downside miss skews dovish. H4: one-quarter move is noise.",
+      "step3_graph_discovery": "Markov blanket activates: headline_CPI_down -> inflation_gap_down -> policyRate_down. SNB-specific prior: price-stability target is 'below 2% but positive', so 0.5% sits near the deflation-risk boundary, not in the middle of the band. Additional SNB prior: CHF strength was already importing disinflation in 2003, so CPI drops of this size correlate with a dovish reaction function, not symmetric noise.",
+      "step4_verify": "Direction check: gap narrows on the low side, deflation_risk node lights up, policyRate arm points down. No hawkish counter-signal.",
+      "step5_web_grounding": "Switzerland 2003: SNB's 3M CHF Libor target at 0.00-0.75%; SNB had been cutting through 2001-2003 and was actively worried about deflation risk. This sentence is characteristic framing material for a dovish assessment round.",
+      "step6_synthesize": "A CPI print that halves in one quarter inside SNB commentary, anchored against a 'below 2% but positive' target with a deflation floor, is dovish framing.",
+      "final_answer": "dovish",
+      "why_correct": "Abel treats CPI numbers as nodes that must be evaluated against the central bank's target function, not as free-standing statistics. The SNB's asymmetric target (deflation is the forbidden tail) makes 0.5% CPI structurally dovish."
+    },
+    "comparison": "Structural difference: Claude needs explicit policy language to escape neutral; a bare CPI number is just data. Abel's graph attaches every CPI node to an inflation_gap node that is evaluated against the specific central bank's target, so the same 0.5% print is dovish for the SNB (asymmetric, deflation-averse) in a way it would not be for, say, the RBI. That central-bank-specific anchoring is the main lift Abel provides on SNB text."
+  },
+  {
+    "trace_id": "SNB-HARM-1",
+    "category": "harm",
+    "text": "the situation on the labour market is not likely to undergo any sustained changes, and the unemployment rate should rise only slightly",
+    "ground_truth": "neutral",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Phrases: 'not likely to undergo any sustained changes', 'unemployment rate should rise only slightly'. Forward-looking but low-magnitude.",
+      "concepts_identified": "Labour-market outlook, unemployment trajectory, qualifier 'only slightly'.",
+      "weighing": "The sentence is a calibrated labour-market forecast. 'No sustained changes' explicitly dampens any directional read; 'only slightly' is a minimization hedge. The speaker is telling the audience not to expect a regime shift. Claude recognizes this as the textbook neutral framing.",
+      "final_answer": "neutral",
+      "why_correct": "Claude correctly read the double hedge ('not sustained', 'only slightly') as the speaker explicitly flagging a steady-state outlook. Neither rate path nor inflation path is implied; it is genuine observational language."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed \u2014 nodes {labour_slack, unemployment_rate, wage_pressure, activity_gap, policyRate}.",
+      "step2_hypotheses": "H1: rising unemployment -> more slack -> dovish. H2: 'only slightly' neutralizes the signal. H3: no change in labour market = neutral. H4: weak labour => downward pressure on wages => dovish on inflation.",
+      "step3_graph_discovery": "Markov blanket: unemployment_rate_up -> labour_slack_up -> wage_pressure_down -> CPI_down -> policyRate_down. The skill routes through this chain and flags a dovish tilt via the slack-inflation link. The 'only slightly' modifier should dampen the edge weights to near zero, but the graph still treats the sign as negative for activity.",
+      "step4_verify": "Direction check over-weights sign and under-weights magnitude: even 'slightly up' unemployment keeps the chain pointing dovish.",
+      "step5_web_grounding": "SNB reaction function does put some weight on labour slack, but CHF-centric transmission is usually the binding channel; labour data rarely drives SNB stance on its own.",
+      "step6_synthesize": "Chain returns dovish because the sign of the unemployment delta is positive. Magnitude and hedging language are not strong enough to flip the node back to neutral.",
+      "final_answer": "dovish",
+      "why_wrong": "Abel's directional chain is triggered by the sign of 'rise' on unemployment and under-weights the hedges 'not sustained' and 'only slightly'. The skill over-calls direction on what is linguistically a steady-state statement \u2014 a classic harm mode on genuine neutral labour commentary."
+    },
+    "comparison": "Structural difference: Claude's lexical read is attentive to hedging operators and downgrades signals that are explicitly minimized. Abel's graph is sign-driven \u2014 once a node moves, the chain fires \u2014 and its magnitude/hedging discount is coarser. For SNB statements in particular, labour-market lines are rarely the binding stance channel (FX and CPI dominate), so forcing them through a proxy chain introduces false positives. This is where the causal skill over-reaches and Claude's surface-lexical read is actually better calibrated."
+  },
+  {
+    "trace_id": "SNB-HARM-2",
+    "category": "harm",
+    "text": "the m3 aggregate, which was still increasing at a moderate rate at our last assessment in june, has begun to advance more rapidly",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Phrases: 'M3 aggregate', 'moderate rate' -> 'advance more rapidly'. Explicit acceleration signal.",
+      "concepts_identified": "Broad money growth (M3), sequential acceleration vs. previous assessment, central-bank monitoring vocabulary.",
+      "weighing": "An SNB speaker flagging that M3 is accelerating relative to a prior assessment is a textbook hawkish tell. Monetary aggregates inside SNB speeches historically carry an inflation-upside read, especially when the comparison is explicitly 'moderate then, faster now'. The speaker would not volunteer this phrasing unless it was a risk factor.",
+      "final_answer": "hawkish",
+      "why_correct": "Claude picked up the comparative acceleration signal ('moderate' -> 'more rapidly') and correctly mapped it to the SNB's historical concern about excess money growth fueling inflation \u2014 a hawkish signal."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct \u2014 nodes {money_supply_M3, credit_growth, inflation_expectations, policyRate, fxStance}.",
+      "step2_hypotheses": "H1: faster M3 => inflation upside => hawkish. H2: M3 is a weak/lagged indicator, neutral. H3: central banks have de-emphasized aggregates post-1990s, so it is observational. H4: without explicit inflation linkage the sentence is descriptive.",
+      "step3_graph_discovery": "Markov blanket: M3_up -> inflation_expectations_up -> policyRate_up is a valid path, but the skill's general-purpose prior treats monetary aggregates as weak predictors and heavily discounts the edge weight. The SNB-specific historical prior (SNB was one of the last DM banks to monitor aggregates seriously) is not in the default graph. The fxStance channel is untouched, so the do-operator test does not fire on the main SNB lever.",
+      "step4_verify": "Direction check sees a weak, discounted path to hawkish and a zero path through fxStance; net resolves toward neutral.",
+      "step5_web_grounding": "Grounding note: monetary aggregates as policy guides were largely abandoned by the ECB/Fed; Abel's default web prior pulls toward 'aggregates = observational', which is the wrong SNB-specific prior for the era this sentence is from.",
+      "step6_synthesize": "Graph returns neutral because the aggregates-to-rate edge is under-weighted and the fxStance channel is not engaged.",
+      "final_answer": "neutral",
+      "why_wrong": "Abel's general DM prior on monetary aggregates (weak signal) overrides the SNB-specific prior (M3 was an explicit hawkish tell at the SNB through the 2000s). The skill under-weights a central-bank-specific signal in favor of a generic cross-bank prior, which harms it on this case."
+    },
+    "comparison": "Structural difference: Claude's read is tuned to the speaker's rhetorical intent \u2014 if an SNB official voluntarily contrasts 'moderate' against 'more rapidly' on M3, the lexical pattern is hawkish. Abel's graph applies a generic DM prior that treats money aggregates as low-signal, which is correct for the Fed/ECB and wrong for the SNB in the 2000s. This is the mirror image of SNB-FLIP-1: when the SNB-specific prior aligns with the graph (FX/CHF), Abel wins; when the SNB-specific prior conflicts with Abel's default DM prior (M3), Abel loses and Claude's surface read happens to land on the correct historical reading."
+  },
+  {
+    "trace_id": "BOC-FLIP-1",
+    "category": "flip",
+    "text": "core inflation is expected to increase gradually over coming quarters, reaching 2 per cent by the middle of 2013 as the economy gradually absorbs the current small degree of slack, the growth of labour compensation remains moderate and inflation expectations stay well-anchored.",
+    "ground_truth": "neutral",
+    "claude_answer": "dovish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: 'small degree of slack' (output gap language), 'moderate' labour compensation, 'well-anchored' expectations, 'gradual' absorption, core inflation still below 2% and only reaching target by mid-2013.",
+      "concepts_identified": "Output gap, labour market slack, wage moderation, inflation expectations anchoring, path-to-target inflation forecast.",
+      "weighing": "Sub-target core inflation combined with 'slack' and 'moderate' wage growth sounds like disinflationary conditions still lingering. 'Gradual' absorption implies monetary accommodation is doing work slowly. Claude weights the collection of soft-economy descriptors as signaling the BoC's preference to keep policy supportive, i.e. a dovish lean.",
+      "final_answer": "dovish",
+      "why_wrong": "This is a conditional forecast, not a policy intention. The BoC is describing the expected convergence path to the 2% target under baseline assumptions (standard macro bookkeeping). 'Gradual', 'moderate', 'well-anchored' are the canonical neutral-forecast adjectives, not easing signals. Claude conflates description of a glide path with prescription of looser policy."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed; nodes = {output_gap, core_inflation_path, wage_growth, inflation_expectations, policy_stance}.",
+      "step2_hypotheses": "H1: Sub-target inflation forecast => dovish tilt. H2: Slack absorption described as on-track => neutral forecast bookkeeping. H3: Wage moderation and anchored expectations => confirms steady-state convergence => neutral. H4: 'Gradually' language signals patience but not easing => neutral.",
+      "step3_graph_discovery": "Markov blanket {output_gap -> inflation, wages -> inflation, expectations -> inflation, inflation -> policy_stance} activates \u2014 but this blanket merely recovers the convergence-to-target narrative Claude already saw. Redundant with Claude's read because BoC's reaction function mirrors Fed's flexible IT framework.",
+      "step4_verify": "Direction check: does the statement call for rate changes, or describe equilibration under current stance? It describes equilibration. No asymmetric risk language, no mention of 'further stimulus' or 'removal of accommodation'.",
+      "step5_web_grounding": "BoC operates a 2% inflation target with a 1-3% control band. A forecast of reaching 2% by mid-2013 under modest slack absorption is exactly the on-target baseline \u2014 not a deviation requiring policy adjustment. Overnight rate context (circa 2012) was 1.00%, a holding pattern.",
+      "step6_synthesize": "Forecast-of-convergence language with no directional policy asymmetry resolves to neutral. The blanket adds no new causal info beyond Claude's read, but the hypothesis-testing step forces distinguishing 'describing a path' from 'advocating a path', flipping the answer.",
+      "final_answer": "neutral",
+      "why_correct": "Abel's step 2 hypotheses explicitly include 'neutral forecast bookkeeping' as a candidate, and step 4's direction check finds no policy-change verb. Correctly classified as neutral."
+    },
+    "comparison": "BoC's policy logic here is pure Fed-shadow: flexible inflation targeting with an output-gap reaction function. Abel's Markov blanket is therefore redundant with Claude's already-identified concepts \u2014 nothing new is discovered. What helps is step 2's explicit hypothesis that 'neutral forecast' is a viable category, which counter-weights Claude's tendency to read soft-economy descriptors as dovish policy advocacy. For this flip case, the hypothesis-enumeration step, not the graph step, carries the load."
+  },
+  {
+    "trace_id": "BOC-FLIP-2",
+    "category": "flip",
+    "text": "however, a range of export subsectors have been growing in line with fundamentals, which suggests that as the u.s. recovery gathers momentum and becomes more broadly-based, many of our exports will benefit.",
+    "ground_truth": "neutral",
+    "claude_answer": "hawkish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: 'growing', 'U.S. recovery gathers momentum', 'broadly-based', 'exports will benefit' \u2014 a string of positive-growth verbs and a cleaner external outlook.",
+      "concepts_identified": "Export channel, US trade linkage (Canada's dominant export market), external demand as growth driver, positive spillover.",
+      "weighing": "Positive growth descriptors combined with an improving US outlook suggest tightening output gap and reduced need for accommodation. Claude reads 'exports will benefit' as a growth-supportive signal that would tilt the reaction function toward hawkish.",
+      "final_answer": "hawkish",
+      "why_wrong": "This is a conditional observation about export composition ('a range of subsectors... in line with fundamentals'), plus a conditional forward statement ('as the U.S. recovery gathers momentum'). It does not claim that the US recovery is actually happening now, nor that Canadian exports are currently overheating. It is a contingent, descriptive remark, not a stance shift."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed; nodes = {us_demand, canadian_exports, output_gap, policy_stance}.",
+      "step2_hypotheses": "H1: Positive export outlook => tightening bias => hawkish. H2: Conditional ('as recovery gathers') => neutral contingent statement. H3: 'In line with fundamentals' => describing equilibrium behavior, not overshoot => neutral. H4: No mention of inflation pressure or rate path => absence of policy signal => neutral.",
+      "step3_graph_discovery": "Markov blanket {us_gdp -> cad_exports -> output_gap -> policy_stance} activates via the trade channel. Because BoC policy tracks Fed policy through this same channel, the blanket simply retraces Claude's reasoning \u2014 redundant.",
+      "step4_verify": "Direction check: is this a realized shock or a conditional forecast? The 'as... gathers momentum' framing is explicitly conditional. No verb of policy intent (no 'we will', 'appropriate to', 'warranted').",
+      "step5_web_grounding": "Canada-US trade share ~75%; BoC's reaction to US demand flows through exports -> output gap. But the statement is an if-then about sector composition under a future US recovery \u2014 the BoC is explaining why a US pickup would help Canada, not announcing a tightening response.",
+      "step6_synthesize": "Conditional forward-looking descriptive statement with no policy-change language. The blanket adds no incremental signal; step 2's conditional-hypothesis enumeration reclassifies as neutral.",
+      "final_answer": "neutral",
+      "why_correct": "Abel flags the conditional framing and the absence of any policy verb. The statement is observational explanation, not stance."
+    },
+    "comparison": "Again the BoC blanket is redundant with Claude's read because the trade -> output-gap -> policy chain is standard Fed-correlate logic. The correction comes from step 2's disciplined hypothesis enumeration \u2014 treating 'conditional observational statement' as a first-class candidate class. Claude's error is over-calling hawkish from any positive-growth verb; Abel's scaffolding catches this by requiring a policy-change verb before committing."
+  },
+  {
+    "trace_id": "BOC-FLIP-3",
+    "category": "flip",
+    "text": "at the same time, its composition is expected to broaden as the pace of household spending, especially residential investment, slows while the contributions from exports and business investment increase.",
+    "ground_truth": "neutral",
+    "claude_answer": "hawkish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: 'household spending slows', 'residential investment slows', 'exports and business investment increase' \u2014 a GDP-composition rotation away from consumer/housing toward tradables and capex.",
+      "concepts_identified": "Growth composition rebalancing, housing cooling, business investment pickup, export contribution.",
+      "weighing": "A rotation from household/housing demand (interest-sensitive) to business investment and exports is typically the BoC's desired 'handoff' narrative \u2014 and that handoff is what allows tightening without killing domestic activity. Claude reads the composition language as a precursor to a tightening stance.",
+      "final_answer": "hawkish",
+      "why_wrong": "The statement is an expected-composition forecast. 'Composition is expected to broaden' is descriptive bookkeeping: as housing cools naturally, other components fill in. It's not a claim that the BoC will tighten because of this; it's a claim about the pattern of growth. No policy verb, no asymmetric language."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed; nodes = {household_spending, residential_investment, exports, business_investment, gdp_composition, policy_stance}.",
+      "step2_hypotheses": "H1: Handoff from housing to business/exports => BoC's desired rebalancing => tightening-friendly => hawkish. H2: Composition-forecast language => neutral bookkeeping. H3: 'Slows while... increase' is a balance, not an acceleration => neutral. H4: No mention of inflation, rate path, or excess demand => neutral.",
+      "step3_graph_discovery": "Markov blanket {mortgage_rates -> housing -> hh_spending; us_demand -> exports; capex -> business_investment} activates \u2014 these are BoC's standard expenditure-side nodes, identical to Fed's composition-of-growth framework. Blanket redundant with Claude's read.",
+      "step4_verify": "Direction check: does the text propose changing rates, or describe how growth will redistribute? Only the latter. No 'warranted', 'appropriate', 'will require'.",
+      "step5_web_grounding": "BoC routinely narrates the housing-to-exports-and-capex rotation as part of its MPR base case (2010-2013 era), consistent with overnight rate held at 1.00%. The rotation story is a standing feature of neutral-stance communications.",
+      "step6_synthesize": "Composition bookkeeping with no policy verb resolves to neutral. Blanket adds no extra info; step 2 and step 4 discipline the decision.",
+      "final_answer": "neutral",
+      "why_correct": "Abel correctly distinguishes 'expected composition of growth' from 'policy response to growth composition'. The verb check in step 4 seals it."
+    },
+    "comparison": "A third instance where Claude's error is over-indexing on rotation/growth vocabulary that reads hawkish-adjacent in Fed-speak. Because BoC uses the same composition-of-growth language, the Abel blanket adds nothing new structurally. What flips the answer is the rigorous verb-check in step 4 ('is there a policy-change verb?') \u2014 a discipline, not a discovery. For BoC's Fed-like rhetoric, Abel's value-add on flips is procedural rather than causal."
+  },
+  {
+    "trace_id": "BOC-HARM-1",
+    "category": "harm",
+    "text": "it is expected to return to the 2 per cent target by the middle of 2012 as the temporary factors unwind, excess supply in the economy is gradually absorbed, labour compensation growth stays modest, productivity recovers, and inflation expectations remain well-anchored.",
+    "ground_truth": "neutral",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Surface cues: inflation forecast returning to target, 'temporary factors unwind', 'excess supply... gradually absorbed', 'modest' labour compensation, 'well-anchored' expectations.",
+      "concepts_identified": "Path-to-target inflation forecast, transitory inflation decomposition, output gap closure, wage moderation, expectations anchoring.",
+      "weighing": "A textbook BoC convergence statement: every ingredient is on baseline \u2014 excess supply absorbing on schedule, wages modest, expectations anchored. No policy verb, no directional tilt. Claude recognizes this as a neutral forecast bookkeeping paragraph.",
+      "final_answer": "neutral",
+      "why_correct": "Claude correctly identifies that the statement narrates an on-track convergence, not a call for policy change. No asymmetric risk language, no 'further stimulus' or 'removal of accommodation'."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed; nodes = {inflation_path, output_gap, wages, expectations, temp_shocks, policy_stance}.",
+      "step2_hypotheses": "H1: 'Excess supply', 'modest wages', 'productivity recovers' => accommodation still appropriate => dovish. H2: On-target forecast with all inputs on baseline => neutral. H3: 'Temporary factors unwind' => no policy action needed => neutral. H4: Language mirrors global IT central-bank boilerplate => neutral.",
+      "step3_graph_discovery": "Markov blanket {excess_supply -> wages -> core_inflation; expectations -> inflation} \u2014 but here the blanket lights up heavily on the 'excess supply' node, which the retrieval layer tags as a dovish-adjacent signal in training data. This creates an over-reading.",
+      "step4_verify": "Direction check: the statement is a conditional convergence forecast. But the blanket-weighted prior pulls Abel toward H1 (excess supply => accommodation implied).",
+      "step5_web_grounding": "BoC's 2% target and the overnight rate context (around 1.00% in 2011) are consistent with a hold, not an easing. However the grounding layer, seeing 'excess supply' plus 'return to target by 2012', over-weights the dovish interpretation as 'they will need to keep rates low to achieve this'.",
+      "step6_synthesize": "Abel over-commits to H1 because the 'excess supply' node has strong dovish priors in the knowledge base, despite the forecast framing being neutral. The blanket's redundancy with standard IT logic here becomes a liability \u2014 it reinforces rather than corrects.",
+      "final_answer": "dovish",
+      "why_wrong": "Abel treats the observation 'there is excess supply that will be absorbed' as an implicit policy claim ('therefore rates must stay low'). But the statement is a forecast of the absorption itself, not a prescription. Over-calling dovish from a neutral convergence paragraph."
+    },
+    "comparison": "This is the quintessential BoC harm: Claude correctly parses the statement as neutral-forecast bookkeeping, while Abel's pipeline over-activates on specific concept nodes ('excess supply', 'modest wages') that carry dovish priors in the graph. Because BoC's logic mirrors Fed's, the blanket adds no orthogonal information \u2014 and when its priors misalign with a genuinely observational statement, it actively pulls the answer off the correct neutral class. The structural redundancy means Abel can only hurt or tie, not help, on statements Claude already reads correctly."
+  },
+  {
+    "trace_id": "BOC-HARM-2",
+    "category": "harm",
+    "text": "robust business investment, labour productivity growth and higher immigration will add to the economy's productive capacity, while higher interest rates should moderate growth in domestic demand.",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: 'higher interest rates should moderate growth in domestic demand' \u2014 this is an explicit policy verb ('higher interest rates') combined with an intended effect ('moderate growth'). Also 'robust business investment', 'productivity growth', 'higher immigration' on the supply side.",
+      "concepts_identified": "Supply-side expansion (capacity), demand-side moderation via rates, explicit tightening mechanism.",
+      "weighing": "The phrase 'higher interest rates should moderate growth in domestic demand' is a direct statement of tightening intent and mechanism. Combined with a supply-side that is expanding (capacity growing), this is a classic hawkish composition: tighter policy needed to prevent demand from outrunning even-an-expanding supply.",
+      "final_answer": "hawkish",
+      "why_correct": "Claude correctly identifies the explicit tightening verb ('higher interest rates should moderate growth'). This is a policy-action statement, not a forecast. The BoC is endorsing rate increases as the mechanism for demand moderation."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct; nodes = {productive_capacity, business_investment, immigration, interest_rates, domestic_demand, policy_stance}.",
+      "step2_hypotheses": "H1: 'Higher interest rates moderate demand' => explicit tightening => hawkish. H2: Capacity expanding + demand moderating => both sides balanced => neutral. H3: Supply-side gains reduce inflationary pressure from given demand => neutral or dovish. H4: Statement is a mechanism explanation, not a commitment => neutral.",
+      "step3_graph_discovery": "Markov blanket {capacity -> potential_gdp; rates -> domestic_demand -> output_gap}. Both sides of the gap are represented, and the blanket computes the net as approximately balanced (supply expanding, demand cooling). This 'balance' reading is an artifact of BoC's Fed-mirror framework \u2014 the blanket treats the two offsets as neutralizing.",
+      "step4_verify": "Direction check: the statement contains the explicit verb 'higher interest rates should moderate', which IS a hawkish signal. But Abel's balance-framing weights it against the supply-side expansion clause and dilutes the hawkish read.",
+      "step5_web_grounding": "BoC context: 2010-2011 exit-from-ELB discussions when productive capacity and immigration narratives featured alongside rate-hike language. Grounding layer identifies both capacity and rate-hike mentions, over-weights the capacity half.",
+      "step6_synthesize": "Abel's blanket treats this as a balanced two-sided description (supply up, demand moderated) and synthesizes neutral. The explicit tightening verb is averaged away against the supply-side expansion narrative.",
+      "final_answer": "neutral",
+      "why_wrong": "Abel over-interprets a two-clause statement as a 'balance' when in fact the second clause explicitly endorses higher rates. The blanket's symmetry bias dilutes an explicit hawkish verb. Claude, reading surface cues, correctly gave the tightening clause its full weight."
+    },
+    "comparison": "Here Abel's causal blanket actively hurts by treating the two clauses as offsetting forces (capacity up, demand down) and collapsing the answer to neutral \u2014 when the text actually commits to the hawkish mechanism ('higher interest rates should moderate'). Because BoC's logic mirrors Fed's gap-based framework, the blanket has a built-in bias toward 'balance' framings of two-sided statements. Claude's simpler surface-verb detection gets it right; Abel's structural reasoning talks itself out of the correct answer. This is the structural reason Abel is mildly negative on BoC \u2014 the bank's own rhetoric is already well-served by Claude's Fed-trained priors, and added causal machinery introduces averaging noise."
+  },
+  {
+    "trace_id": "RBI-FLIP-1",
+    "category": "flip",
+    "text": "however, demand will take time to li d k i t i t th t i th i t corporate pricing power is unlikely to recover, though upside risks to inflation remain from possible collusive behaviour in less competitive industries, as also further unforeseen supply disruptions in food.",
+    "ground_truth": "hawkish",
+    "claude_answer": "dovish",
+    "abel_answer": "hawkish",
+    "claude_trace": {
+      "reads": "Surface cues: 'demand will take time', 'corporate pricing power is unlikely to recover' \u2014 these read as weakness in aggregate demand and absence of pass-through pressure. Claude anchors on the demand-side weakness.",
+      "concepts_identified": "Weak demand recovery, subdued pricing power, with a trailing caveat about 'upside risks to inflation' from collusion and food-supply shocks.",
+      "weighing": "Claude weights the dominant sentence about weak demand and weak pricing power heavily, treats the 'however... upside risks' clause as a minor hedge. Reads the whole statement as a setup for continued accommodation.",
+      "final_answer": "dovish",
+      "why_wrong": "Claude misses that in the RBI Monetary Policy Report, the 'however' clause is the operative policy signal \u2014 the MPC is explicitly flagging UPSIDE inflation risks (collusion, food supply disruptions) that must be watched. In RBI prose the policy-relevant hawkish signal is typically the final risk-list clause, not the preceding demand commentary. Claude applied a DM-style reading where demand weakness dominates, but in India's FIT regime upside inflation flags carry more policy weight."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct \u2014 inflation risk assessment. Nodes: coreInflation, foodInflation, outputGap, pricingPower.",
+      "step2_hypotheses": "H1: Demand weakness dominates -> dovish. H2: Supply-side food shock and collusion pricing raise upside inflation risk -> hawkish. H3: Neutral balance between demand slack and supply risk. H4: Forward-guidance on watchful stance given asymmetric inflation risks -> hawkish.",
+      "step3_graph_discovery": "Markov blanket around inflationRisk activates: foodSupplyShock -> headlineCPI -> inflationExpectations -> policyStance. Blanket also activates outputGap -> corePricingPower. Here Abel gets partial alignment: food-supply shocks ARE in the RBI-relevant subgraph, and 'collusive behaviour in less competitive industries' maps to pricingPower -> coreInflation. Because the sentence contains both demand-slack and supply-shock nodes, Abel's directionality test tilts to the ASYMMETRIC RISK node (upside risks to inflation), which is structurally hawkish.",
+      "step4_verify": "Direction check: does 'upside risks to inflation remain' increase P(hawkish tilt)? Yes \u2014 the MPC uses 'upside risks' as a coded hawkish signal. Verified against policyResponse node.",
+      "step5_web_grounding": "RBI MPC minutes repeatedly flag food-supply disruptions and collusive pricing as core hawkish concerns under FIT. Grounding confirms that 'however... upside risks' is the operative sentence.",
+      "step6_synthesize": "Weighted synthesis: even with demand slack, asymmetric upside inflation risks dominate the policy signal. Resolve to hawkish.",
+      "final_answer": "hawkish",
+      "why_correct": "Abel's supply-shock node and asymmetric-risk weighting happened to align with RBI's FIT framework here. The 'upside risks to inflation' phrasing is literally the kind of risk flag Abel's blanket is trained to elevate, and food-supply shocks appear in both DM and EM monetary graphs, so the blanket was not mis-calibrated on this specific case."
+    },
+    "comparison": "On this flip Abel's blanket happened to include food supply shocks and pricing power as hawkish nodes, overlapping enough with the RBI-specific structure that the right answer fell out. But this overlap is coincidental \u2014 Abel read this as demand-side pricing power risk in a Phillips-curve frame, whereas the RBI MPC is actually flagging a supply-side/market-structure concern in a FIT frame. The right answer for the wrong structural reason."
+  },
+  {
+    "trace_id": "RBI-FLIP-2",
+    "category": "flip",
+    "text": "lead indicators for the hotels sub-segment, _viz., foreign tourist arrivals and air passenger traffic, point to softening in_ contracted in october-november, while that of broadband continued to expand in october.",
+    "ground_truth": "neutral",
+    "claude_answer": "dovish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: 'softening', 'contracted' \u2014 both dovish-coded words in DM monetary prose. Claude latches onto the activity-weakness signal.",
+      "concepts_identified": "Hotels and air travel softening/contracting; broadband expanding. Mixed high-frequency indicators.",
+      "weighing": "Claude weights the contraction in hotels/air travel more heavily than broadband expansion, treating the passage as describing a softening services sector, and reads through to an easier policy bias.",
+      "final_answer": "dovish",
+      "why_wrong": "This is descriptive high-frequency-indicator reporting typical of RBI's Assessment of the Economy section. It is not policy-directional \u2014 it is a mixed-indicator readout (hotels soft, broadband strong). Claude treated mixed-sector data as a policy tilt. RBI Monetary Policy Reports routinely include such neutral stocktaking without any policy implication."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed \u2014 high-frequency activity indicator readout. Nodes: servicesActivity, highFrequencyIndicators, mixedSignal.",
+      "step2_hypotheses": "H1: Softening services -> dovish. H2: Mixed indicators with some contraction and some expansion -> neutral. H3: No policy signal, pure description -> neutral. H4: Sectoral weakness localized, not macro -> neutral.",
+      "step3_graph_discovery": "Blanket activates: servicesPMI -> aggregateDemand -> outputGap -> policyStance. However, the directional probes also activate the 'mixed-indicator' node which short-circuits a single-direction read. Abel's blanket has a MIXED_SIGNAL gate that resolves conflicting sectoral signals to neutral when no unified demand-side story emerges.",
+      "step4_verify": "Direction check: does contraction in one sub-segment + expansion in another imply a policy tilt? No. Mixed_signal gate dominates.",
+      "step5_web_grounding": "RBI typically lists high-frequency indicators as descriptive economic-activity readouts in the Assessment section; these rarely carry policy tilt.",
+      "step6_synthesize": "Resolve to neutral given offsetting sectoral signals and descriptive tone.",
+      "final_answer": "neutral",
+      "why_correct": "Abel's mixed_signal gate correctly prevented over-weighting one sub-sector contraction. The blanket's sector-aggregation logic worked here because this passage is about aggregate-demand high-frequency reads, which are universal across DM and EM central banks."
+    },
+    "comparison": "This is a case where the RBI text happens to be in the intersection of DM and EM central-bank prose \u2014 it is just a high-frequency activity readout. Abel's blanket handles mixed-sector descriptive passages via its mixed_signal gate, and that gate is regime-agnostic, so the DM-calibrated blanket did not misfire. Claude over-weighted 'contracted' as a policy-direction word; Abel correctly read it as descriptive."
+  },
+  {
+    "trace_id": "RBI-FLIP-3",
+    "category": "flip",
+    "text": "food inflation continued to surprise on the downside; widening of deflation in pulses, vegetables, and sugar, along with broad-based moderation in other food items moved the food group into deflation.",
+    "ground_truth": "dovish",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Surface cues: 'deflation', 'moderation'. But Claude hedges because DM central banks treat food inflation as volatile and 'look-through' \u2014 so Claude reads this as non-core and withholds a direction call.",
+      "concepts_identified": "Food deflation in pulses/vegetables/sugar, broad-based moderation.",
+      "weighing": "Claude discounts food inflation as a signal because in DM frameworks core inflation drives policy. Treats this as a noisy component that policy looks through -> neutral.",
+      "final_answer": "neutral",
+      "why_wrong": "In India, food is ~46% of the CPI basket and is explicitly part of the FIT headline-CPI target. Food deflation is a first-order dovish signal for the MPC because it directly lowers the targeted index. Claude mis-imported the DM 'look-through food' convention into an RBI context where food IS the policy target."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct \u2014 headline CPI component read. Nodes: foodCPI, headlineCPI, inflationTarget.",
+      "step2_hypotheses": "H1: Food deflation lowers headline CPI -> dovish. H2: Food is transient, look through -> neutral. H3: Supply-side food normalization -> dovish. H4: Risk of second-round deflation expectations -> dovish.",
+      "step3_graph_discovery": "Blanket activates: foodCPI -> headlineCPI -> inflationGap -> policyStance. Critically, Abel's web-grounding step pulls in RBI's FIT framework where food weight is ~46%, overriding the DM 'look-through' default. This is a case where step5 web grounding corrects a DM-calibrated prior.",
+      "step4_verify": "Direction check: does food deflation lower headline CPI below target midpoint? Yes. Does that pull MPC toward accommodation? Yes.",
+      "step5_web_grounding": "RBI FIT: 4% +/- 2% band on headline CPI; food is dominant component. Broad-based food deflation is unambiguously dovish.",
+      "step6_synthesize": "Resolve to dovish \u2014 food deflation lowers targeted headline CPI.",
+      "final_answer": "dovish",
+      "why_correct": "Abel's web-grounding step did the heavy lifting here by injecting the RBI-specific CPI basket weights, overriding the DM look-through prior. This is one of the few RBI cases where the web-grounding step corrects the blanket's structural bias."
+    },
+    "comparison": "This flip demonstrates that Abel's web-grounding step can sometimes repair the DM-blanket bias when the local-regime fact (food is 46% of Indian CPI) is strong enough to overwrite the default. Claude applied the DM 'look-through food' heuristic and hedged to neutral. The flip works because RBI-specific CPI structure is well-documented in the grounding layer."
+  },
+  {
+    "trace_id": "RBI-HARM-1",
+    "category": "harm",
+    "text": "the latest agreement within the organisation of petroleum countries (opec) plus to raise oil production for a likely restoration of output to the prepandemic levels by september 2022 imparted transient softening to spot and future crude prices from the recent peak in early july.",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: OPEC+ production raise, softening crude prices from recent peak. For India, lower crude is unambiguously dovish \u2014 India imports ~85% of its crude.",
+      "concepts_identified": "OPEC+ supply increase, crude price softening, India's import dependence, transmission to fuel and transport CPI.",
+      "weighing": "Lower oil -> lower fuel CPI -> lower headline CPI -> lower inflation expectations -> more room for accommodation. Textbook EM oil-importer dovish chain.",
+      "final_answer": "dovish",
+      "why_correct": "Claude is correct. For a large net oil importer like India, falling crude prices are a first-order dovish shock: fuel group is a meaningful direct CPI weight, and the transport/logistics pass-through into core inflation is well documented. Lower oil also eases current-account pressure on the rupee, which itself reduces imported inflation. In the RBI context this is as clear a dovish signal as they come."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed \u2014 commodity shock via crude prices. Nodes: oilPrice, energyCPI, coreInflation.",
+      "step2_hypotheses": "H1: Lower oil -> lower CPI -> dovish. H2: 'Transient' softening, may reverse -> neutral. H3: OPEC+ ambiguity means no directional read -> neutral. H4: Oil supply shock affects producers differently from consumers -> ambiguous.",
+      "step3_graph_discovery": "Blanket activates: oilPrice -> energyCPI -> coreInflation -> Phillips curve -> policyStance. BUT Abel's DM-calibrated blanket treats oil as a two-sided shock (bad for US consumers but part of a commodity-sector production input graph) and the directional probe encounters AMBIGUITY because the blanket does not encode net-importer status as a structural prior. In the US/ECB subgraph, oil shocks flow through energyCPI AND through inflationExpectations AND through a supply-side Phillips shift \u2014 the net directional read is mixed. Abel's blanket lacks the EM_NET_IMPORTER node that would break the tie toward dovish.",
+      "step4_verify": "Direction check: the word 'transient' triggers a 'look-through' flag \u2014 DM central banks are trained to look through transient oil moves. This routes Abel away from a direct dovish read.",
+      "step5_web_grounding": "Web grounding returns generic oil-price coverage without emphasizing India's 85% import dependence. The grounding step is under-weighted relative to the blanket's structural prior.",
+      "step6_synthesize": "Blanket ambiguity + 'transient' qualifier + no EM-importer node -> resolve to neutral.",
+      "final_answer": "neutral",
+      "why_wrong": "Structural failure: Abel's blanket lacks a NET_OIL_IMPORTER structural node. For the US (roughly oil-balanced) oil price moves are genuinely two-sided in policy implication. For India they are unambiguously one-sided: lower oil is dovish, higher oil is hawkish. The DM blanket's two-sided Phillips/cost-push treatment mutes the clear dovish signal. Additionally, 'transient' is coded as a look-through flag in Abel's DM training, whereas RBI treats even transient oil moves as policy-relevant because rupee-crude pass-through is near-instant."
+    },
+    "comparison": "Classic DM-vs-EM blanket mismatch: (a) Abel's oil node is symmetric because the US is roughly oil-balanced, but India is ~85% oil-importer so the node should be asymmetrically dovish-on-down; (b) the 'transient' qualifier triggers a DM-calibrated look-through, but RBI's rupee-oil pass-through is fast enough that transient matters; (c) Abel's web grounding under-emphasizes net-importer status. Claude's simpler 'India imports oil, oil is down, that's dovish' chain is structurally the right read for the regime."
+  },
+  {
+    "trace_id": "RBI-HARM-2",
+    "category": "harm",
+    "text": "the imminent approvals for vaccines for the covid-19 pandemic have raised the prospects of return to normal economic activities at the global level, subject of course to all the safety considerations until the vaccination programs cover all the population.",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: 'imminent vaccine approvals', 'return to normal economic activities'. In the RBI Dec-2020 / Feb-2021 context, vaccine news reduced tail risk and supported the accommodative stance.",
+      "concepts_identified": "Pandemic tail-risk reduction, return to normalization, global activity normalization as supportive backdrop for continued accommodation.",
+      "weighing": "In pandemic-era RBI minutes, any sentence signaling reduced downside/tail risk and continued activity normalization is coded as support for the prevailing accommodative stance -> dovish.",
+      "final_answer": "dovish",
+      "why_correct": "Claude correctly reads the pandemic-era RBI framing: the MPC was explicitly using vaccine progress as a reason to maintain accommodation to 'nurture the recovery'. The full policy record from those meetings shows every such sentence was a dovish hold justification. Claude's read is aligned with the actual MPC stance at the time."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed \u2014 global activity normalization shock. Nodes: globalGrowth, outputGap, supplyConstraints.",
+      "step2_hypotheses": "H1: Recovery reduces output gap -> eventually hawkish -> but near-term support for accommodation -> dovish. H2: Vaccine normalization is supply-positive, demand-positive, ambiguous inflation impact -> neutral. H3: Reopening increases demand faster than supply -> hawkish. H4: Pure forward-looking optimism with no near-term policy implication -> neutral.",
+      "step3_graph_discovery": "Blanket activates: reopening -> aggregateDemand -> Phillips curve -> inflation -> policyStance. Abel's DM-calibrated blanket was shaped during 2021-2022 when Fed/ECB reopening was directly linked to demand-pull inflation risk. The reopening-to-hawkish pathway is strongly encoded. That pulls the direction away from the clean dovish RBI read toward an ambiguous neutral.",
+      "step4_verify": "Direction check: does reopening normalization increase inflation risk? In the DM 2021-22 blanket, yes (demand recovery + supply bottlenecks). Abel weighs this pathway, gets ambiguous net signal.",
+      "step5_web_grounding": "Web grounding returns vaccine-era RBI context but is outweighed by the blanket's strong reopening-hawkish pathway from DM calibration.",
+      "step6_synthesize": "Conflicting pathways -> neutral fallback.",
+      "final_answer": "neutral",
+      "why_wrong": "Structural failure: Abel's blanket was trained on DM pandemic-era prose where reopening -> demand-pull inflation was the dominant story. But at the RBI, the 2020-21 framing was the OPPOSITE: reopening = recovery nurturing = justification to stay accommodative. The DM blanket's reopening-hawkish pathway mis-routes EM reopening sentences. Additionally, RBI's output gap was still deeply negative during this period, so even the Phillips-curve logic would not apply \u2014 but Abel's blanket applies the pathway symmetrically."
+    },
+    "comparison": "Structural mismatch: Abel's DM blanket encodes reopening -> demand-pull -> inflation -> hawkish, but RBI's 2020-21 MPC framing used vaccine/reopening news as justification for continuing accommodation. The Phillips-curve pathway in Abel's blanket fires regardless of where the output gap actually sits; RBI-specific context (large negative gap, nascent recovery) is not a structural node in Abel's blanket, it is only a retrievable fact in web grounding which gets outweighed. Claude's flatter reading \u2014 pandemic context + RBI accommodative stance = dovish \u2014 is the structurally correct read for this regime and time."
+  },
+  {
+    "trace_id": "RBI-HARM-3",
+    "category": "harm",
+    "text": "instead, reasonable conclusion is that vegetable prices continue to show seasonality over years, something amenable to monetary policy actions, and certainly not at short horizon of a few months at which it is likely to, and typically does, revert.",
+    "ground_truth": "neutral",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Surface cues: 'vegetable prices show seasonality', 'revert', 'not amenable at short horizon'. This is an analytical / methodological statement about what monetary policy can and cannot do.",
+      "concepts_identified": "Seasonality, mean reversion, monetary policy transmission horizon \u2014 a discussion of the policy reaction function, not a policy direction signal.",
+      "weighing": "This sentence is argumentatively justifying NOT reacting to short-horizon vegetable price spikes. It is a commentary on reaction-function calibration, not a stance tilt. Neutral.",
+      "final_answer": "neutral",
+      "why_correct": "Claude correctly identifies this as a reaction-function / methodological passage from an MPC minute where an individual member is explaining why short-horizon vegetable price noise should not drive policy. It is a 'don't react' argument, which translates to 'keep current stance' \u2014 not a tilt in either direction. Neutral is the right call."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct \u2014 food CPI / vegetable prices. Nodes: foodCPI, headlineCPI, transienceFlag.",
+      "step2_hypotheses": "H1: Vegetable prices revert -> future food CPI down -> dovish. H2: Methodological statement about policy reaction function -> neutral. H3: Signals patience/look-through -> neutral-dovish. H4: No direct policy tilt -> neutral.",
+      "step3_graph_discovery": "Blanket activates: foodCPI -> headlineCPI -> inflationGap. 'Revert' is coded in Abel's blanket as a mean-reversion signal implying future inflation down -> dovish. The blanket does not distinguish between 'prices will revert, therefore inflation will come down' (forecast claim) and 'prices are seasonal, policy should not react at short horizon' (reaction-function claim). Both surface as 'food prices reverting = dovish'.",
+      "step4_verify": "Direction check: does mean-reversion in food imply easier future policy? The blanket says yes, routing to dovish.",
+      "step5_web_grounding": "Web grounding pulls in RBI vegetable-price volatility literature, which actually supports the neutral reaction-function read \u2014 but the blanket's directional prior dominates.",
+      "step6_synthesize": "Mean-reversion signal + lower future food CPI pathway -> dovish.",
+      "final_answer": "dovish",
+      "why_wrong": "Structural failure: Abel's blanket conflates PRICE-FORECAST signals with REACTION-FUNCTION signals. In RBI MPC minutes, individual members frequently discuss what policy should and should not respond to \u2014 these are methodological/meta statements about the reaction function, not directional forecasts. The blanket's 'mean reversion -> lower future inflation -> dovish' pathway fires on the word 'revert' regardless of whether the sentence is a forecast or a reaction-function argument. RBI minutes contain far more of these meta discussions than Fed minutes, so the blanket's miscoding hits RBI harder."
+    },
+    "comparison": "Key structural failure: Abel's DM blanket lacks a REACTION_FUNCTION_META node that would distinguish 'I forecast food prices will revert' from 'policy should not react to short-horizon food-price noise'. The first is dovish, the second is neutral. RBI MPC minutes are dense with reaction-function meta-discussion (members often explain the logic of not acting), and these systematically mis-route in Abel's blanket. This is a major driver of the dovish-recall drop from 66% to 42% on RBI \u2014 Abel spuriously converts neutral meta-discussion into dovish, AND (as in this case) also flips neutral cases to dovish when mean-reversion keywords appear."
+  },
+  {
+    "trace_id": "RBI-HARM-4",
+    "category": "harm",
+    "text": "cpi inflation excluding food and fuel also increased in december, partly due to housing inflation driven by the effects of house rent allowance for government employees under the 7[th] central pay commission.",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: 'CPI inflation excluding food and fuel increased' \u2014 this is core inflation rising, which is the RBI's most closely watched underlying inflation gauge. Housing subcomponent driven by HRA revision.",
+      "concepts_identified": "Core CPI up, housing inflation up, 7th Pay Commission HRA fiscal wage-push shock propagating into rents and core CPI.",
+      "weighing": "Rising core CPI is the textbook hawkish signal. The HRA-driven housing inflation is a direct wage/fiscal channel pushing core up. Even if the MPC discusses HRA as a one-off statistical effect, the line-item read is unambiguously hawkish: core is rising.",
+      "final_answer": "hawkish",
+      "why_correct": "Claude is right. Core CPI rising is the cleanest hawkish signal in any inflation-targeting regime. And the 7th Central Pay Commission HRA shock was historically a major RBI hawkish concern (2017-18) because it fed directly into sticky housing inflation. The MPC cited HRA pass-through repeatedly in rate-hike deliberations of that period."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct \u2014 core CPI read. Nodes: coreCPI, housingCPI, wageGrowth, fiscalShock.",
+      "step2_hypotheses": "H1: Core up -> hawkish. H2: One-off HRA statistical effect -> look through -> neutral. H3: Fiscal wage-push is transitory -> neutral. H4: Second-round effects into rents are persistent -> hawkish.",
+      "step3_graph_discovery": "Blanket activates: coreCPI -> policyStance (hawkish pathway) AND housingCPI -> Phillips curve. But the phrase 'house rent allowance for government employees under the 7th central pay commission' encodes a FISCAL_ADMINISTRATIVE_SHOCK that is NOT in Abel's DM blanket. The DM blanket has no node for 'government pay commission housing allowance' \u2014 in the US, OER (owner-equivalent rent) is a market-based measure; there is no equivalent fiscal-administrative wage-setting mechanism feeding housing CPI. Abel's blanket treats this as a 'transitory administrative effect' and triggers a look-through flag, which dampens the core-up hawkish signal.",
+      "step4_verify": "Direction check: does administrative wage revision = transitory = look-through? In DM blanket yes. In RBI reality, HRA pass-through was persistent and policy-relevant.",
+      "step5_web_grounding": "Web grounding returns 7th CPC HRA effect, but labels it as 'statistical / one-off', which reinforces the look-through rather than correcting it.",
+      "step6_synthesize": "Core up (hawkish) minus look-through-administrative (neutral dampener) -> net neutral.",
+      "final_answer": "neutral",
+      "why_wrong": "Structural failure: fiscal-dominance / administered-price effects are a first-order driver of Indian core CPI but are not represented as nodes in Abel's DM-calibrated blanket. In the US/ECB world, there is no analogue to a central pay commission driving housing CPI. Abel's blanket therefore mis-classifies the HRA pass-through as a 'statistical one-off look-through' rather than as a fiscal-wage transmission channel that the MPC explicitly responded to with rate hikes in 2017-18. The blanket's Fed-style federalFunds independence assumption also means fiscal shocks are under-weighted as policy-relevant inputs."
+    },
+    "comparison": "Structural failure on four axes simultaneously: (a) fiscal dominance \u2014 Abel's blanket assumes monetary-fiscal independence in the Fed style, so admin wage shocks are under-weighted; (b) no pay-commission node \u2014 the DM blanket has no analogue for pay-commission-driven housing inflation; (c) 'one-off' look-through heuristic over-fires because Abel's training data treated similar admin effects as noise; (d) core-CPI-up-means-hawkish pathway gets diluted by the spurious look-through dampener. Claude's simpler direct read \u2014 'core inflation up, including sticky housing, is hawkish' \u2014 is correct precisely because it does not apply a DM-specific look-through heuristic."
+  }
+]

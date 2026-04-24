@@ -1,0 +1,132 @@
+[
+  {
+    "trace_id": "BOC-FLIP-1",
+    "category": "flip",
+    "text": "core inflation is expected to increase gradually over coming quarters, reaching 2 per cent by the middle of 2013 as the economy gradually absorbs the current small degree of slack, the growth of labour compensation remains moderate and inflation expectations stay well-anchored.",
+    "ground_truth": "neutral",
+    "claude_answer": "dovish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: 'small degree of slack' (output gap language), 'moderate' labour compensation, 'well-anchored' expectations, 'gradual' absorption, core inflation still below 2% and only reaching target by mid-2013.",
+      "concepts_identified": "Output gap, labour market slack, wage moderation, inflation expectations anchoring, path-to-target inflation forecast.",
+      "weighing": "Sub-target core inflation combined with 'slack' and 'moderate' wage growth sounds like disinflationary conditions still lingering. 'Gradual' absorption implies monetary accommodation is doing work slowly. Claude weights the collection of soft-economy descriptors as signaling the BoC's preference to keep policy supportive, i.e. a dovish lean.",
+      "final_answer": "dovish",
+      "why_wrong": "This is a conditional forecast, not a policy intention. The BoC is describing the expected convergence path to the 2% target under baseline assumptions (standard macro bookkeeping). 'Gradual', 'moderate', 'well-anchored' are the canonical neutral-forecast adjectives, not easing signals. Claude conflates description of a glide path with prescription of looser policy."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed; nodes = {output_gap, core_inflation_path, wage_growth, inflation_expectations, policy_stance}.",
+      "step2_hypotheses": "H1: Sub-target inflation forecast => dovish tilt. H2: Slack absorption described as on-track => neutral forecast bookkeeping. H3: Wage moderation and anchored expectations => confirms steady-state convergence => neutral. H4: 'Gradually' language signals patience but not easing => neutral.",
+      "step3_graph_discovery": "Markov blanket {output_gap -> inflation, wages -> inflation, expectations -> inflation, inflation -> policy_stance} activates — but this blanket merely recovers the convergence-to-target narrative Claude already saw. Redundant with Claude's read because BoC's reaction function mirrors Fed's flexible IT framework.",
+      "step4_verify": "Direction check: does the statement call for rate changes, or describe equilibration under current stance? It describes equilibration. No asymmetric risk language, no mention of 'further stimulus' or 'removal of accommodation'.",
+      "step5_web_grounding": "BoC operates a 2% inflation target with a 1-3% control band. A forecast of reaching 2% by mid-2013 under modest slack absorption is exactly the on-target baseline — not a deviation requiring policy adjustment. Overnight rate context (circa 2012) was 1.00%, a holding pattern.",
+      "step6_synthesize": "Forecast-of-convergence language with no directional policy asymmetry resolves to neutral. The blanket adds no new causal info beyond Claude's read, but the hypothesis-testing step forces distinguishing 'describing a path' from 'advocating a path', flipping the answer.",
+      "final_answer": "neutral",
+      "why_correct": "Abel's step 2 hypotheses explicitly include 'neutral forecast bookkeeping' as a candidate, and step 4's direction check finds no policy-change verb. Correctly classified as neutral."
+    },
+    "comparison": "BoC's policy logic here is pure Fed-shadow: flexible inflation targeting with an output-gap reaction function. Abel's Markov blanket is therefore redundant with Claude's already-identified concepts — nothing new is discovered. What helps is step 2's explicit hypothesis that 'neutral forecast' is a viable category, which counter-weights Claude's tendency to read soft-economy descriptors as dovish policy advocacy. For this flip case, the hypothesis-enumeration step, not the graph step, carries the load."
+  },
+  {
+    "trace_id": "BOC-FLIP-2",
+    "category": "flip",
+    "text": "however, a range of export subsectors have been growing in line with fundamentals, which suggests that as the u.s. recovery gathers momentum and becomes more broadly-based, many of our exports will benefit.",
+    "ground_truth": "neutral",
+    "claude_answer": "hawkish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: 'growing', 'U.S. recovery gathers momentum', 'broadly-based', 'exports will benefit' — a string of positive-growth verbs and a cleaner external outlook.",
+      "concepts_identified": "Export channel, US trade linkage (Canada's dominant export market), external demand as growth driver, positive spillover.",
+      "weighing": "Positive growth descriptors combined with an improving US outlook suggest tightening output gap and reduced need for accommodation. Claude reads 'exports will benefit' as a growth-supportive signal that would tilt the reaction function toward hawkish.",
+      "final_answer": "hawkish",
+      "why_wrong": "This is a conditional observation about export composition ('a range of subsectors... in line with fundamentals'), plus a conditional forward statement ('as the U.S. recovery gathers momentum'). It does not claim that the US recovery is actually happening now, nor that Canadian exports are currently overheating. It is a contingent, descriptive remark, not a stance shift."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed; nodes = {us_demand, canadian_exports, output_gap, policy_stance}.",
+      "step2_hypotheses": "H1: Positive export outlook => tightening bias => hawkish. H2: Conditional ('as recovery gathers') => neutral contingent statement. H3: 'In line with fundamentals' => describing equilibrium behavior, not overshoot => neutral. H4: No mention of inflation pressure or rate path => absence of policy signal => neutral.",
+      "step3_graph_discovery": "Markov blanket {us_gdp -> cad_exports -> output_gap -> policy_stance} activates via the trade channel. Because BoC policy tracks Fed policy through this same channel, the blanket simply retraces Claude's reasoning — redundant.",
+      "step4_verify": "Direction check: is this a realized shock or a conditional forecast? The 'as... gathers momentum' framing is explicitly conditional. No verb of policy intent (no 'we will', 'appropriate to', 'warranted').",
+      "step5_web_grounding": "Canada-US trade share ~75%; BoC's reaction to US demand flows through exports -> output gap. But the statement is an if-then about sector composition under a future US recovery — the BoC is explaining why a US pickup would help Canada, not announcing a tightening response.",
+      "step6_synthesize": "Conditional forward-looking descriptive statement with no policy-change language. The blanket adds no incremental signal; step 2's conditional-hypothesis enumeration reclassifies as neutral.",
+      "final_answer": "neutral",
+      "why_correct": "Abel flags the conditional framing and the absence of any policy verb. The statement is observational explanation, not stance."
+    },
+    "comparison": "Again the BoC blanket is redundant with Claude's read because the trade -> output-gap -> policy chain is standard Fed-correlate logic. The correction comes from step 2's disciplined hypothesis enumeration — treating 'conditional observational statement' as a first-class candidate class. Claude's error is over-calling hawkish from any positive-growth verb; Abel's scaffolding catches this by requiring a policy-change verb before committing."
+  },
+  {
+    "trace_id": "BOC-FLIP-3",
+    "category": "flip",
+    "text": "at the same time, its composition is expected to broaden as the pace of household spending, especially residential investment, slows while the contributions from exports and business investment increase.",
+    "ground_truth": "neutral",
+    "claude_answer": "hawkish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: 'household spending slows', 'residential investment slows', 'exports and business investment increase' — a GDP-composition rotation away from consumer/housing toward tradables and capex.",
+      "concepts_identified": "Growth composition rebalancing, housing cooling, business investment pickup, export contribution.",
+      "weighing": "A rotation from household/housing demand (interest-sensitive) to business investment and exports is typically the BoC's desired 'handoff' narrative — and that handoff is what allows tightening without killing domestic activity. Claude reads the composition language as a precursor to a tightening stance.",
+      "final_answer": "hawkish",
+      "why_wrong": "The statement is an expected-composition forecast. 'Composition is expected to broaden' is descriptive bookkeeping: as housing cools naturally, other components fill in. It's not a claim that the BoC will tighten because of this; it's a claim about the pattern of growth. No policy verb, no asymmetric language."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed; nodes = {household_spending, residential_investment, exports, business_investment, gdp_composition, policy_stance}.",
+      "step2_hypotheses": "H1: Handoff from housing to business/exports => BoC's desired rebalancing => tightening-friendly => hawkish. H2: Composition-forecast language => neutral bookkeeping. H3: 'Slows while... increase' is a balance, not an acceleration => neutral. H4: No mention of inflation, rate path, or excess demand => neutral.",
+      "step3_graph_discovery": "Markov blanket {mortgage_rates -> housing -> hh_spending; us_demand -> exports; capex -> business_investment} activates — these are BoC's standard expenditure-side nodes, identical to Fed's composition-of-growth framework. Blanket redundant with Claude's read.",
+      "step4_verify": "Direction check: does the text propose changing rates, or describe how growth will redistribute? Only the latter. No 'warranted', 'appropriate', 'will require'.",
+      "step5_web_grounding": "BoC routinely narrates the housing-to-exports-and-capex rotation as part of its MPR base case (2010-2013 era), consistent with overnight rate held at 1.00%. The rotation story is a standing feature of neutral-stance communications.",
+      "step6_synthesize": "Composition bookkeeping with no policy verb resolves to neutral. Blanket adds no extra info; step 2 and step 4 discipline the decision.",
+      "final_answer": "neutral",
+      "why_correct": "Abel correctly distinguishes 'expected composition of growth' from 'policy response to growth composition'. The verb check in step 4 seals it."
+    },
+    "comparison": "A third instance where Claude's error is over-indexing on rotation/growth vocabulary that reads hawkish-adjacent in Fed-speak. Because BoC uses the same composition-of-growth language, the Abel blanket adds nothing new structurally. What flips the answer is the rigorous verb-check in step 4 ('is there a policy-change verb?') — a discipline, not a discovery. For BoC's Fed-like rhetoric, Abel's value-add on flips is procedural rather than causal."
+  },
+  {
+    "trace_id": "BOC-HARM-1",
+    "category": "harm",
+    "text": "it is expected to return to the 2 per cent target by the middle of 2012 as the temporary factors unwind, excess supply in the economy is gradually absorbed, labour compensation growth stays modest, productivity recovers, and inflation expectations remain well-anchored.",
+    "ground_truth": "neutral",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Surface cues: inflation forecast returning to target, 'temporary factors unwind', 'excess supply... gradually absorbed', 'modest' labour compensation, 'well-anchored' expectations.",
+      "concepts_identified": "Path-to-target inflation forecast, transitory inflation decomposition, output gap closure, wage moderation, expectations anchoring.",
+      "weighing": "A textbook BoC convergence statement: every ingredient is on baseline — excess supply absorbing on schedule, wages modest, expectations anchored. No policy verb, no directional tilt. Claude recognizes this as a neutral forecast bookkeeping paragraph.",
+      "final_answer": "neutral",
+      "why_correct": "Claude correctly identifies that the statement narrates an on-track convergence, not a call for policy change. No asymmetric risk language, no 'further stimulus' or 'removal of accommodation'."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed; nodes = {inflation_path, output_gap, wages, expectations, temp_shocks, policy_stance}.",
+      "step2_hypotheses": "H1: 'Excess supply', 'modest wages', 'productivity recovers' => accommodation still appropriate => dovish. H2: On-target forecast with all inputs on baseline => neutral. H3: 'Temporary factors unwind' => no policy action needed => neutral. H4: Language mirrors global IT central-bank boilerplate => neutral.",
+      "step3_graph_discovery": "Markov blanket {excess_supply -> wages -> core_inflation; expectations -> inflation} — but here the blanket lights up heavily on the 'excess supply' node, which the retrieval layer tags as a dovish-adjacent signal in training data. This creates an over-reading.",
+      "step4_verify": "Direction check: the statement is a conditional convergence forecast. But the blanket-weighted prior pulls Abel toward H1 (excess supply => accommodation implied).",
+      "step5_web_grounding": "BoC's 2% target and the overnight rate context (around 1.00% in 2011) are consistent with a hold, not an easing. However the grounding layer, seeing 'excess supply' plus 'return to target by 2012', over-weights the dovish interpretation as 'they will need to keep rates low to achieve this'.",
+      "step6_synthesize": "Abel over-commits to H1 because the 'excess supply' node has strong dovish priors in the knowledge base, despite the forecast framing being neutral. The blanket's redundancy with standard IT logic here becomes a liability — it reinforces rather than corrects.",
+      "final_answer": "dovish",
+      "why_wrong": "Abel treats the observation 'there is excess supply that will be absorbed' as an implicit policy claim ('therefore rates must stay low'). But the statement is a forecast of the absorption itself, not a prescription. Over-calling dovish from a neutral convergence paragraph."
+    },
+    "comparison": "This is the quintessential BoC harm: Claude correctly parses the statement as neutral-forecast bookkeeping, while Abel's pipeline over-activates on specific concept nodes ('excess supply', 'modest wages') that carry dovish priors in the graph. Because BoC's logic mirrors Fed's, the blanket adds no orthogonal information — and when its priors misalign with a genuinely observational statement, it actively pulls the answer off the correct neutral class. The structural redundancy means Abel can only hurt or tie, not help, on statements Claude already reads correctly."
+  },
+  {
+    "trace_id": "BOC-HARM-2",
+    "category": "harm",
+    "text": "robust business investment, labour productivity growth and higher immigration will add to the economy's productive capacity, while higher interest rates should moderate growth in domestic demand.",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: 'higher interest rates should moderate growth in domestic demand' — this is an explicit policy verb ('higher interest rates') combined with an intended effect ('moderate growth'). Also 'robust business investment', 'productivity growth', 'higher immigration' on the supply side.",
+      "concepts_identified": "Supply-side expansion (capacity), demand-side moderation via rates, explicit tightening mechanism.",
+      "weighing": "The phrase 'higher interest rates should moderate growth in domestic demand' is a direct statement of tightening intent and mechanism. Combined with a supply-side that is expanding (capacity growing), this is a classic hawkish composition: tighter policy needed to prevent demand from outrunning even-an-expanding supply.",
+      "final_answer": "hawkish",
+      "why_correct": "Claude correctly identifies the explicit tightening verb ('higher interest rates should moderate growth'). This is a policy-action statement, not a forecast. The BoC is endorsing rate increases as the mechanism for demand moderation."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct; nodes = {productive_capacity, business_investment, immigration, interest_rates, domestic_demand, policy_stance}.",
+      "step2_hypotheses": "H1: 'Higher interest rates moderate demand' => explicit tightening => hawkish. H2: Capacity expanding + demand moderating => both sides balanced => neutral. H3: Supply-side gains reduce inflationary pressure from given demand => neutral or dovish. H4: Statement is a mechanism explanation, not a commitment => neutral.",
+      "step3_graph_discovery": "Markov blanket {capacity -> potential_gdp; rates -> domestic_demand -> output_gap}. Both sides of the gap are represented, and the blanket computes the net as approximately balanced (supply expanding, demand cooling). This 'balance' reading is an artifact of BoC's Fed-mirror framework — the blanket treats the two offsets as neutralizing.",
+      "step4_verify": "Direction check: the statement contains the explicit verb 'higher interest rates should moderate', which IS a hawkish signal. But Abel's balance-framing weights it against the supply-side expansion clause and dilutes the hawkish read.",
+      "step5_web_grounding": "BoC context: 2010-2011 exit-from-ELB discussions when productive capacity and immigration narratives featured alongside rate-hike language. Grounding layer identifies both capacity and rate-hike mentions, over-weights the capacity half.",
+      "step6_synthesize": "Abel's blanket treats this as a balanced two-sided description (supply up, demand moderated) and synthesizes neutral. The explicit tightening verb is averaged away against the supply-side expansion narrative.",
+      "final_answer": "neutral",
+      "why_wrong": "Abel over-interprets a two-clause statement as a 'balance' when in fact the second clause explicitly endorses higher rates. The blanket's symmetry bias dilutes an explicit hawkish verb. Claude, reading surface cues, correctly gave the tightening clause its full weight."
+    },
+    "comparison": "Here Abel's causal blanket actively hurts by treating the two clauses as offsetting forces (capacity up, demand down) and collapsing the answer to neutral — when the text actually commits to the hawkish mechanism ('higher interest rates should moderate'). Because BoC's logic mirrors Fed's gap-based framework, the blanket has a built-in bias toward 'balance' framings of two-sided statements. Claude's simpler surface-verb detection gets it right; Abel's structural reasoning talks itself out of the correct answer. This is the structural reason Abel is mildly negative on BoC — the bank's own rhetoric is already well-served by Claude's Fed-trained priors, and added causal machinery introduces averaging noise."
+  }
+]

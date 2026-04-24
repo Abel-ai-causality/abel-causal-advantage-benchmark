@@ -119,6 +119,10 @@ The original [Abel Benchmark](https://github.com/Abel-ai-causality/abel-benchmar
 
 ---
 
+## End-to-End Traces
+
+For 26 hand-selected cases (15 flips + 11 harms) across BoE, BoJ, SNB, RBI, BoC, full dual reasoning traces are in [NEW_BENCH_TRACES.md](NEW_BENCH_TRACES.md). Each trace captures Claude's 5-step pipeline (reads → concepts → weighing → answer → why) against Abel's 6-step workflow (classify → hypotheses → graph discovery → verify → web grounding → synthesize) on the same statement.
+
 ## Raw Results
 
 - [results/new_ab_boe.json](results/new_ab_boe.json) — +37.0pp

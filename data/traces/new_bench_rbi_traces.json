@@ -1,0 +1,184 @@
+[
+  {
+    "trace_id": "RBI-FLIP-1",
+    "category": "flip",
+    "text": "however, demand will take time to li d k i t i t th t i th i t corporate pricing power is unlikely to recover, though upside risks to inflation remain from possible collusive behaviour in less competitive industries, as also further unforeseen supply disruptions in food.",
+    "ground_truth": "hawkish",
+    "claude_answer": "dovish",
+    "abel_answer": "hawkish",
+    "claude_trace": {
+      "reads": "Surface cues: 'demand will take time', 'corporate pricing power is unlikely to recover' — these read as weakness in aggregate demand and absence of pass-through pressure. Claude anchors on the demand-side weakness.",
+      "concepts_identified": "Weak demand recovery, subdued pricing power, with a trailing caveat about 'upside risks to inflation' from collusion and food-supply shocks.",
+      "weighing": "Claude weights the dominant sentence about weak demand and weak pricing power heavily, treats the 'however... upside risks' clause as a minor hedge. Reads the whole statement as a setup for continued accommodation.",
+      "final_answer": "dovish",
+      "why_wrong": "Claude misses that in the RBI Monetary Policy Report, the 'however' clause is the operative policy signal — the MPC is explicitly flagging UPSIDE inflation risks (collusion, food supply disruptions) that must be watched. In RBI prose the policy-relevant hawkish signal is typically the final risk-list clause, not the preceding demand commentary. Claude applied a DM-style reading where demand weakness dominates, but in India's FIT regime upside inflation flags carry more policy weight."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct — inflation risk assessment. Nodes: coreInflation, foodInflation, outputGap, pricingPower.",
+      "step2_hypotheses": "H1: Demand weakness dominates -> dovish. H2: Supply-side food shock and collusion pricing raise upside inflation risk -> hawkish. H3: Neutral balance between demand slack and supply risk. H4: Forward-guidance on watchful stance given asymmetric inflation risks -> hawkish.",
+      "step3_graph_discovery": "Markov blanket around inflationRisk activates: foodSupplyShock -> headlineCPI -> inflationExpectations -> policyStance. Blanket also activates outputGap -> corePricingPower. Here Abel gets partial alignment: food-supply shocks ARE in the RBI-relevant subgraph, and 'collusive behaviour in less competitive industries' maps to pricingPower -> coreInflation. Because the sentence contains both demand-slack and supply-shock nodes, Abel's directionality test tilts to the ASYMMETRIC RISK node (upside risks to inflation), which is structurally hawkish.",
+      "step4_verify": "Direction check: does 'upside risks to inflation remain' increase P(hawkish tilt)? Yes — the MPC uses 'upside risks' as a coded hawkish signal. Verified against policyResponse node.",
+      "step5_web_grounding": "RBI MPC minutes repeatedly flag food-supply disruptions and collusive pricing as core hawkish concerns under FIT. Grounding confirms that 'however... upside risks' is the operative sentence.",
+      "step6_synthesize": "Weighted synthesis: even with demand slack, asymmetric upside inflation risks dominate the policy signal. Resolve to hawkish.",
+      "final_answer": "hawkish",
+      "why_correct": "Abel's supply-shock node and asymmetric-risk weighting happened to align with RBI's FIT framework here. The 'upside risks to inflation' phrasing is literally the kind of risk flag Abel's blanket is trained to elevate, and food-supply shocks appear in both DM and EM monetary graphs, so the blanket was not mis-calibrated on this specific case."
+    },
+    "comparison": "On this flip Abel's blanket happened to include food supply shocks and pricing power as hawkish nodes, overlapping enough with the RBI-specific structure that the right answer fell out. But this overlap is coincidental — Abel read this as demand-side pricing power risk in a Phillips-curve frame, whereas the RBI MPC is actually flagging a supply-side/market-structure concern in a FIT frame. The right answer for the wrong structural reason."
+  },
+  {
+    "trace_id": "RBI-FLIP-2",
+    "category": "flip",
+    "text": "lead indicators for the hotels sub-segment, _viz., foreign tourist arrivals and air passenger traffic, point to softening in_ contracted in october-november, while that of broadband continued to expand in october.",
+    "ground_truth": "neutral",
+    "claude_answer": "dovish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: 'softening', 'contracted' — both dovish-coded words in DM monetary prose. Claude latches onto the activity-weakness signal.",
+      "concepts_identified": "Hotels and air travel softening/contracting; broadband expanding. Mixed high-frequency indicators.",
+      "weighing": "Claude weights the contraction in hotels/air travel more heavily than broadband expansion, treating the passage as describing a softening services sector, and reads through to an easier policy bias.",
+      "final_answer": "dovish",
+      "why_wrong": "This is descriptive high-frequency-indicator reporting typical of RBI's Assessment of the Economy section. It is not policy-directional — it is a mixed-indicator readout (hotels soft, broadband strong). Claude treated mixed-sector data as a policy tilt. RBI Monetary Policy Reports routinely include such neutral stocktaking without any policy implication."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed — high-frequency activity indicator readout. Nodes: servicesActivity, highFrequencyIndicators, mixedSignal.",
+      "step2_hypotheses": "H1: Softening services -> dovish. H2: Mixed indicators with some contraction and some expansion -> neutral. H3: No policy signal, pure description -> neutral. H4: Sectoral weakness localized, not macro -> neutral.",
+      "step3_graph_discovery": "Blanket activates: servicesPMI -> aggregateDemand -> outputGap -> policyStance. However, the directional probes also activate the 'mixed-indicator' node which short-circuits a single-direction read. Abel's blanket has a MIXED_SIGNAL gate that resolves conflicting sectoral signals to neutral when no unified demand-side story emerges.",
+      "step4_verify": "Direction check: does contraction in one sub-segment + expansion in another imply a policy tilt? No. Mixed_signal gate dominates.",
+      "step5_web_grounding": "RBI typically lists high-frequency indicators as descriptive economic-activity readouts in the Assessment section; these rarely carry policy tilt.",
+      "step6_synthesize": "Resolve to neutral given offsetting sectoral signals and descriptive tone.",
+      "final_answer": "neutral",
+      "why_correct": "Abel's mixed_signal gate correctly prevented over-weighting one sub-sector contraction. The blanket's sector-aggregation logic worked here because this passage is about aggregate-demand high-frequency reads, which are universal across DM and EM central banks."
+    },
+    "comparison": "This is a case where the RBI text happens to be in the intersection of DM and EM central-bank prose — it is just a high-frequency activity readout. Abel's blanket handles mixed-sector descriptive passages via its mixed_signal gate, and that gate is regime-agnostic, so the DM-calibrated blanket did not misfire. Claude over-weighted 'contracted' as a policy-direction word; Abel correctly read it as descriptive."
+  },
+  {
+    "trace_id": "RBI-FLIP-3",
+    "category": "flip",
+    "text": "food inflation continued to surprise on the downside; widening of deflation in pulses, vegetables, and sugar, along with broad-based moderation in other food items moved the food group into deflation.",
+    "ground_truth": "dovish",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Surface cues: 'deflation', 'moderation'. But Claude hedges because DM central banks treat food inflation as volatile and 'look-through' — so Claude reads this as non-core and withholds a direction call.",
+      "concepts_identified": "Food deflation in pulses/vegetables/sugar, broad-based moderation.",
+      "weighing": "Claude discounts food inflation as a signal because in DM frameworks core inflation drives policy. Treats this as a noisy component that policy looks through -> neutral.",
+      "final_answer": "neutral",
+      "why_wrong": "In India, food is ~46% of the CPI basket and is explicitly part of the FIT headline-CPI target. Food deflation is a first-order dovish signal for the MPC because it directly lowers the targeted index. Claude mis-imported the DM 'look-through food' convention into an RBI context where food IS the policy target."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct — headline CPI component read. Nodes: foodCPI, headlineCPI, inflationTarget.",
+      "step2_hypotheses": "H1: Food deflation lowers headline CPI -> dovish. H2: Food is transient, look through -> neutral. H3: Supply-side food normalization -> dovish. H4: Risk of second-round deflation expectations -> dovish.",
+      "step3_graph_discovery": "Blanket activates: foodCPI -> headlineCPI -> inflationGap -> policyStance. Critically, Abel's web-grounding step pulls in RBI's FIT framework where food weight is ~46%, overriding the DM 'look-through' default. This is a case where step5 web grounding corrects a DM-calibrated prior.",
+      "step4_verify": "Direction check: does food deflation lower headline CPI below target midpoint? Yes. Does that pull MPC toward accommodation? Yes.",
+      "step5_web_grounding": "RBI FIT: 4% +/- 2% band on headline CPI; food is dominant component. Broad-based food deflation is unambiguously dovish.",
+      "step6_synthesize": "Resolve to dovish — food deflation lowers targeted headline CPI.",
+      "final_answer": "dovish",
+      "why_correct": "Abel's web-grounding step did the heavy lifting here by injecting the RBI-specific CPI basket weights, overriding the DM look-through prior. This is one of the few RBI cases where the web-grounding step corrects the blanket's structural bias."
+    },
+    "comparison": "This flip demonstrates that Abel's web-grounding step can sometimes repair the DM-blanket bias when the local-regime fact (food is 46% of Indian CPI) is strong enough to overwrite the default. Claude applied the DM 'look-through food' heuristic and hedged to neutral. The flip works because RBI-specific CPI structure is well-documented in the grounding layer."
+  },
+  {
+    "trace_id": "RBI-HARM-1",
+    "category": "harm",
+    "text": "the latest agreement within the organisation of petroleum countries (opec) plus to raise oil production for a likely restoration of output to the prepandemic levels by september 2022 imparted transient softening to spot and future crude prices from the recent peak in early july.",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: OPEC+ production raise, softening crude prices from recent peak. For India, lower crude is unambiguously dovish — India imports ~85% of its crude.",
+      "concepts_identified": "OPEC+ supply increase, crude price softening, India's import dependence, transmission to fuel and transport CPI.",
+      "weighing": "Lower oil -> lower fuel CPI -> lower headline CPI -> lower inflation expectations -> more room for accommodation. Textbook EM oil-importer dovish chain.",
+      "final_answer": "dovish",
+      "why_correct": "Claude is correct. For a large net oil importer like India, falling crude prices are a first-order dovish shock: fuel group is a meaningful direct CPI weight, and the transport/logistics pass-through into core inflation is well documented. Lower oil also eases current-account pressure on the rupee, which itself reduces imported inflation. In the RBI context this is as clear a dovish signal as they come."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed — commodity shock via crude prices. Nodes: oilPrice, energyCPI, coreInflation.",
+      "step2_hypotheses": "H1: Lower oil -> lower CPI -> dovish. H2: 'Transient' softening, may reverse -> neutral. H3: OPEC+ ambiguity means no directional read -> neutral. H4: Oil supply shock affects producers differently from consumers -> ambiguous.",
+      "step3_graph_discovery": "Blanket activates: oilPrice -> energyCPI -> coreInflation -> Phillips curve -> policyStance. BUT Abel's DM-calibrated blanket treats oil as a two-sided shock (bad for US consumers but part of a commodity-sector production input graph) and the directional probe encounters AMBIGUITY because the blanket does not encode net-importer status as a structural prior. In the US/ECB subgraph, oil shocks flow through energyCPI AND through inflationExpectations AND through a supply-side Phillips shift — the net directional read is mixed. Abel's blanket lacks the EM_NET_IMPORTER node that would break the tie toward dovish.",
+      "step4_verify": "Direction check: the word 'transient' triggers a 'look-through' flag — DM central banks are trained to look through transient oil moves. This routes Abel away from a direct dovish read.",
+      "step5_web_grounding": "Web grounding returns generic oil-price coverage without emphasizing India's 85% import dependence. The grounding step is under-weighted relative to the blanket's structural prior.",
+      "step6_synthesize": "Blanket ambiguity + 'transient' qualifier + no EM-importer node -> resolve to neutral.",
+      "final_answer": "neutral",
+      "why_wrong": "Structural failure: Abel's blanket lacks a NET_OIL_IMPORTER structural node. For the US (roughly oil-balanced) oil price moves are genuinely two-sided in policy implication. For India they are unambiguously one-sided: lower oil is dovish, higher oil is hawkish. The DM blanket's two-sided Phillips/cost-push treatment mutes the clear dovish signal. Additionally, 'transient' is coded as a look-through flag in Abel's DM training, whereas RBI treats even transient oil moves as policy-relevant because rupee-crude pass-through is near-instant."
+    },
+    "comparison": "Classic DM-vs-EM blanket mismatch: (a) Abel's oil node is symmetric because the US is roughly oil-balanced, but India is ~85% oil-importer so the node should be asymmetrically dovish-on-down; (b) the 'transient' qualifier triggers a DM-calibrated look-through, but RBI's rupee-oil pass-through is fast enough that transient matters; (c) Abel's web grounding under-emphasizes net-importer status. Claude's simpler 'India imports oil, oil is down, that's dovish' chain is structurally the right read for the regime."
+  },
+  {
+    "trace_id": "RBI-HARM-2",
+    "category": "harm",
+    "text": "the imminent approvals for vaccines for the covid-19 pandemic have raised the prospects of return to normal economic activities at the global level, subject of course to all the safety considerations until the vaccination programs cover all the population.",
+    "ground_truth": "dovish",
+    "claude_answer": "dovish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: 'imminent vaccine approvals', 'return to normal economic activities'. In the RBI Dec-2020 / Feb-2021 context, vaccine news reduced tail risk and supported the accommodative stance.",
+      "concepts_identified": "Pandemic tail-risk reduction, return to normalization, global activity normalization as supportive backdrop for continued accommodation.",
+      "weighing": "In pandemic-era RBI minutes, any sentence signaling reduced downside/tail risk and continued activity normalization is coded as support for the prevailing accommodative stance -> dovish.",
+      "final_answer": "dovish",
+      "why_correct": "Claude correctly reads the pandemic-era RBI framing: the MPC was explicitly using vaccine progress as a reason to maintain accommodation to 'nurture the recovery'. The full policy record from those meetings shows every such sentence was a dovish hold justification. Claude's read is aligned with the actual MPC stance at the time."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed — global activity normalization shock. Nodes: globalGrowth, outputGap, supplyConstraints.",
+      "step2_hypotheses": "H1: Recovery reduces output gap -> eventually hawkish -> but near-term support for accommodation -> dovish. H2: Vaccine normalization is supply-positive, demand-positive, ambiguous inflation impact -> neutral. H3: Reopening increases demand faster than supply -> hawkish. H4: Pure forward-looking optimism with no near-term policy implication -> neutral.",
+      "step3_graph_discovery": "Blanket activates: reopening -> aggregateDemand -> Phillips curve -> inflation -> policyStance. Abel's DM-calibrated blanket was shaped during 2021-2022 when Fed/ECB reopening was directly linked to demand-pull inflation risk. The reopening-to-hawkish pathway is strongly encoded. That pulls the direction away from the clean dovish RBI read toward an ambiguous neutral.",
+      "step4_verify": "Direction check: does reopening normalization increase inflation risk? In the DM 2021-22 blanket, yes (demand recovery + supply bottlenecks). Abel weighs this pathway, gets ambiguous net signal.",
+      "step5_web_grounding": "Web grounding returns vaccine-era RBI context but is outweighed by the blanket's strong reopening-hawkish pathway from DM calibration.",
+      "step6_synthesize": "Conflicting pathways -> neutral fallback.",
+      "final_answer": "neutral",
+      "why_wrong": "Structural failure: Abel's blanket was trained on DM pandemic-era prose where reopening -> demand-pull inflation was the dominant story. But at the RBI, the 2020-21 framing was the OPPOSITE: reopening = recovery nurturing = justification to stay accommodative. The DM blanket's reopening-hawkish pathway mis-routes EM reopening sentences. Additionally, RBI's output gap was still deeply negative during this period, so even the Phillips-curve logic would not apply — but Abel's blanket applies the pathway symmetrically."
+    },
+    "comparison": "Structural mismatch: Abel's DM blanket encodes reopening -> demand-pull -> inflation -> hawkish, but RBI's 2020-21 MPC framing used vaccine/reopening news as justification for continuing accommodation. The Phillips-curve pathway in Abel's blanket fires regardless of where the output gap actually sits; RBI-specific context (large negative gap, nascent recovery) is not a structural node in Abel's blanket, it is only a retrievable fact in web grounding which gets outweighed. Claude's flatter reading — pandemic context + RBI accommodative stance = dovish — is the structurally correct read for this regime and time."
+  },
+  {
+    "trace_id": "RBI-HARM-3",
+    "category": "harm",
+    "text": "instead, reasonable conclusion is that vegetable prices continue to show seasonality over years, something amenable to monetary policy actions, and certainly not at short horizon of a few months at which it is likely to, and typically does, revert.",
+    "ground_truth": "neutral",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Surface cues: 'vegetable prices show seasonality', 'revert', 'not amenable at short horizon'. This is an analytical / methodological statement about what monetary policy can and cannot do.",
+      "concepts_identified": "Seasonality, mean reversion, monetary policy transmission horizon — a discussion of the policy reaction function, not a policy direction signal.",
+      "weighing": "This sentence is argumentatively justifying NOT reacting to short-horizon vegetable price spikes. It is a commentary on reaction-function calibration, not a stance tilt. Neutral.",
+      "final_answer": "neutral",
+      "why_correct": "Claude correctly identifies this as a reaction-function / methodological passage from an MPC minute where an individual member is explaining why short-horizon vegetable price noise should not drive policy. It is a 'don't react' argument, which translates to 'keep current stance' — not a tilt in either direction. Neutral is the right call."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct — food CPI / vegetable prices. Nodes: foodCPI, headlineCPI, transienceFlag.",
+      "step2_hypotheses": "H1: Vegetable prices revert -> future food CPI down -> dovish. H2: Methodological statement about policy reaction function -> neutral. H3: Signals patience/look-through -> neutral-dovish. H4: No direct policy tilt -> neutral.",
+      "step3_graph_discovery": "Blanket activates: foodCPI -> headlineCPI -> inflationGap. 'Revert' is coded in Abel's blanket as a mean-reversion signal implying future inflation down -> dovish. The blanket does not distinguish between 'prices will revert, therefore inflation will come down' (forecast claim) and 'prices are seasonal, policy should not react at short horizon' (reaction-function claim). Both surface as 'food prices reverting = dovish'.",
+      "step4_verify": "Direction check: does mean-reversion in food imply easier future policy? The blanket says yes, routing to dovish.",
+      "step5_web_grounding": "Web grounding pulls in RBI vegetable-price volatility literature, which actually supports the neutral reaction-function read — but the blanket's directional prior dominates.",
+      "step6_synthesize": "Mean-reversion signal + lower future food CPI pathway -> dovish.",
+      "final_answer": "dovish",
+      "why_wrong": "Structural failure: Abel's blanket conflates PRICE-FORECAST signals with REACTION-FUNCTION signals. In RBI MPC minutes, individual members frequently discuss what policy should and should not respond to — these are methodological/meta statements about the reaction function, not directional forecasts. The blanket's 'mean reversion -> lower future inflation -> dovish' pathway fires on the word 'revert' regardless of whether the sentence is a forecast or a reaction-function argument. RBI minutes contain far more of these meta discussions than Fed minutes, so the blanket's miscoding hits RBI harder."
+    },
+    "comparison": "Key structural failure: Abel's DM blanket lacks a REACTION_FUNCTION_META node that would distinguish 'I forecast food prices will revert' from 'policy should not react to short-horizon food-price noise'. The first is dovish, the second is neutral. RBI MPC minutes are dense with reaction-function meta-discussion (members often explain the logic of not acting), and these systematically mis-route in Abel's blanket. This is a major driver of the dovish-recall drop from 66% to 42% on RBI — Abel spuriously converts neutral meta-discussion into dovish, AND (as in this case) also flips neutral cases to dovish when mean-reversion keywords appear."
+  },
+  {
+    "trace_id": "RBI-HARM-4",
+    "category": "harm",
+    "text": "cpi inflation excluding food and fuel also increased in december, partly due to housing inflation driven by the effects of house rent allowance for government employees under the 7[th] central pay commission.",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Surface cues: 'CPI inflation excluding food and fuel increased' — this is core inflation rising, which is the RBI's most closely watched underlying inflation gauge. Housing subcomponent driven by HRA revision.",
+      "concepts_identified": "Core CPI up, housing inflation up, 7th Pay Commission HRA fiscal wage-push shock propagating into rents and core CPI.",
+      "weighing": "Rising core CPI is the textbook hawkish signal. The HRA-driven housing inflation is a direct wage/fiscal channel pushing core up. Even if the MPC discusses HRA as a one-off statistical effect, the line-item read is unambiguously hawkish: core is rising.",
+      "final_answer": "hawkish",
+      "why_correct": "Claude is right. Core CPI rising is the cleanest hawkish signal in any inflation-targeting regime. And the 7th Central Pay Commission HRA shock was historically a major RBI hawkish concern (2017-18) because it fed directly into sticky housing inflation. The MPC cited HRA pass-through repeatedly in rate-hike deliberations of that period."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct — core CPI read. Nodes: coreCPI, housingCPI, wageGrowth, fiscalShock.",
+      "step2_hypotheses": "H1: Core up -> hawkish. H2: One-off HRA statistical effect -> look through -> neutral. H3: Fiscal wage-push is transitory -> neutral. H4: Second-round effects into rents are persistent -> hawkish.",
+      "step3_graph_discovery": "Blanket activates: coreCPI -> policyStance (hawkish pathway) AND housingCPI -> Phillips curve. But the phrase 'house rent allowance for government employees under the 7th central pay commission' encodes a FISCAL_ADMINISTRATIVE_SHOCK that is NOT in Abel's DM blanket. The DM blanket has no node for 'government pay commission housing allowance' — in the US, OER (owner-equivalent rent) is a market-based measure; there is no equivalent fiscal-administrative wage-setting mechanism feeding housing CPI. Abel's blanket treats this as a 'transitory administrative effect' and triggers a look-through flag, which dampens the core-up hawkish signal.",
+      "step4_verify": "Direction check: does administrative wage revision = transitory = look-through? In DM blanket yes. In RBI reality, HRA pass-through was persistent and policy-relevant.",
+      "step5_web_grounding": "Web grounding returns 7th CPC HRA effect, but labels it as 'statistical / one-off', which reinforces the look-through rather than correcting it.",
+      "step6_synthesize": "Core up (hawkish) minus look-through-administrative (neutral dampener) -> net neutral.",
+      "final_answer": "neutral",
+      "why_wrong": "Structural failure: fiscal-dominance / administered-price effects are a first-order driver of Indian core CPI but are not represented as nodes in Abel's DM-calibrated blanket. In the US/ECB world, there is no analogue to a central pay commission driving housing CPI. Abel's blanket therefore mis-classifies the HRA pass-through as a 'statistical one-off look-through' rather than as a fiscal-wage transmission channel that the MPC explicitly responded to with rate hikes in 2017-18. The blanket's Fed-style federalFunds independence assumption also means fiscal shocks are under-weighted as policy-relevant inputs."
+    },
+    "comparison": "Structural failure on four axes simultaneously: (a) fiscal dominance — Abel's blanket assumes monetary-fiscal independence in the Fed style, so admin wage shocks are under-weighted; (b) no pay-commission node — the DM blanket has no analogue for pay-commission-driven housing inflation; (c) 'one-off' look-through heuristic over-fires because Abel's training data treated similar admin effects as noise; (d) core-CPI-up-means-hawkish pathway gets diluted by the spurious look-through dampener. Claude's simpler direct read — 'core inflation up, including sticky housing, is hawkish' — is correct precisely because it does not apply a DM-specific look-through heuristic."
+  }
+]

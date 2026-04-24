@@ -27,7 +27,7 @@ Real A/B testing of **Claude Code alone** vs **Claude Code + [causal-abel](https
 | RBI | 63.5% | 54.0% | **−9.5pp** | 19 | 38 |
 | **New-corpus net** | **67.5%** | **73.1%** | **+5.6pp** | **193** | **104** |
 
-Full cross-benchmark writeup: [CROSS_BENCHMARK_ANALYSIS.md](CROSS_BENCHMARK_ANALYSIS.md).
+Full cross-benchmark writeup: [CROSS_BENCHMARK_ANALYSIS.md](CROSS_BENCHMARK_ANALYSIS.md). End-to-end dual traces for 26 hand-selected cases (both wins and losses): [NEW_BENCH_TRACES.md](NEW_BENCH_TRACES.md).
 
 ## What Was Tested
 

@@ -1,0 +1,132 @@
+[
+  {
+    "trace_id": "SNB-FLIP-1",
+    "category": "flip",
+    "text": "the fourth quarter of 2004 and the first quarter of 2005 saw a stagnation of economic activity in switzerland, with the high price of oil as well as the depreciation of the dollar in the final quarter of 2004 acting as brakes",
+    "ground_truth": "dovish",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Phrases detected: 'stagnation of economic activity', 'high price of oil', 'depreciation of the dollar', 'acting as brakes'. Backward-looking Q4 2004 / Q1 2005 time-stamp.",
+      "concepts_identified": "Retrospective growth commentary, oil price shock, USD depreciation (implying CHF appreciation vs USD), external brakes on activity.",
+      "weighing": "Reads as descriptive historical growth diagnostic. 'Stagnation' is negative but past-tense; 'acting as brakes' is observational, not a forward policy signal. High oil = cost-push (ambiguous for policy); USD depreciation described as a drag, not as a trigger for easing. No explicit rate or liquidity language, so Claude defaults to a neutral observational read.",
+      "final_answer": "neutral",
+      "why_wrong": "Claude treated the sentence as a neutral post-mortem instead of recognizing that an SNB speaker flagging stagnation AND dollar depreciation (i.e., CHF strength against USD) as brakes is effectively narrating the easing case. In the SNB frame, CHF appreciation is itself a tightening shock that pushes the policy stance dovish — Claude missed the FX-stance transmission channel."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed — growth stance inferred via nodes {activity_gap, fxStance (USD/CHF), imported_inflation, oil_cost_push, policyRate}.",
+      "step2_hypotheses": "H1: 'stagnation' + 'brakes' means the SNB is describing a negative output gap (dovish bias). H2: USD depreciation = CHF appreciation, which is a de facto tightening and pushes the SNB toward offsetting easing. H3: high oil is cost-push, typically hawkish, but SNB historically looks through supply shocks when demand is weak. H4: the sentence is pure retrospective reporting with no policy implication (neutral).",
+      "step3_graph_discovery": "Markov blanket activates: activity_gap<0 -> policyRate_down; fxStance(CHF_strong_vs_USD) -> imported_inflation_down -> headline_CPI_down -> policyRate_down. SNB-specific prior fires: CHF strength = dovish via deflation import, so 'depreciation of the dollar' maps to the dovish arm, not to neutral FX commentary. Oil cost-push node is dominated by the activity_gap and fxStance nodes in SNB's reaction function.",
+      "step4_verify": "Direction check: both transmission channels (weak activity, strong CHF) point the same way -> easing bias. No hawkish counter-path survives once SNB's look-through on oil is applied.",
+      "step5_web_grounding": "SNB context 2004-2005: policy rate at the low end of a 0.25-1.25% target corridor for 3M CHF Libor; SNB openly worried about CHF strength vs USD acting as a disinflationary brake; this predates the 2011-2015 EUR/CHF 1.20 floor but the same FX-as-policy logic is already operative. Grounding confirms dovish read.",
+      "step6_synthesize": "Two converging dovish channels (negative activity_gap + CHF appreciation-driven imported disinflation) dominate the oil cost-push channel. The sentence is a dovish framing, not a neutral report.",
+      "final_answer": "dovish",
+      "why_correct": "The fxStance node forced Abel to translate 'depreciation of the dollar' into CHF strength -> imported disinflation -> easing bias, which is the canonical SNB transmission path Claude treated as background color."
+    },
+    "comparison": "Structural difference: Claude parses the sentence as descriptive macro narration and finds no explicit policy verb, so it lands on neutral. Abel's graph forces every FX mention through the fxStance <-> imported_inflation <-> policyRate chain, which is the SNB's dominant transmission channel and is rare among DM central banks. 'Depreciation of the dollar' is a policy signal at the SNB in a way it is not at the Fed or ECB, and that asymmetry is exactly what the causal-abel skill encodes."
+  },
+  {
+    "trace_id": "SNB-FLIP-2",
+    "category": "flip",
+    "text": "the crf and the loans guaranteed by the federal government have together contributed significantly towards ensuring the supply of credit and liquidity to the economy",
+    "ground_truth": "neutral",
+    "claude_answer": "dovish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Keywords: 'supply of credit', 'liquidity to the economy', 'loans guaranteed', 'contributed significantly'. Tone is supportive / accommodative.",
+      "concepts_identified": "Credit-support facility (CRF = Covid Refinancing Facility), fiscal loan guarantees, liquidity provision.",
+      "weighing": "The sentence describes a facility that expanded credit and liquidity. Lexical heuristic: 'liquidity', 'supply of credit', 'guaranteed loans' all cluster with dovish/accommodative wording. Claude does not distinguish between an active monetary easing stance and an ex-post description of a fiscal-plus-central-bank backstop already in place.",
+      "final_answer": "dovish",
+      "why_wrong": "Claude conflated 'describing a backstop' with 'signaling easing'. The sentence is a factual attribution of outcomes to the CRF and federal loan guarantees — a joint fiscal/SNB tool whose stance is orthogonal to the marginal monetary decision. It is a status report, not a policy signal."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed — nodes {credit_supply_node, liquidity_facility (CRF), fiscal_guarantee, policyRate, fxStance}; the question is whether any of these nodes carries a forward policy delta.",
+      "step2_hypotheses": "H1: liquidity language => dovish easing. H2: sentence is a backward-looking assessment of a crisis facility, so neutral. H3: 'contributed significantly' is evaluative past tense, no forward signal. H4: CRF plus fiscal guarantees are a one-off Covid architecture, not the marginal policy instrument.",
+      "step3_graph_discovery": "Markov blanket: credit_supply_node is upstream of activity and CPI, but the sentence describes an already-completed intervention. The do-operator test (do(policyRate)) has no active edge from this statement to policyRate. The fxStance channel (SNB's dominant lever) is not touched at all. Graph therefore returns 'observational, non-interventional' -> neutral.",
+      "step4_verify": "Direction check: no delta on rate, no delta on CHF, no forward guidance verb ('will', 'intends', 'considers appropriate'). Direction = flat.",
+      "step5_web_grounding": "CRF = Covid Refinancing Facility, launched March 2020 jointly with Confederation loan guarantees. By the time this sentence is spoken it is a reporting line, not a stance lever; the marginal SNB stance in that period was carried by the -0.75% policy rate and FX intervention, neither of which the sentence discusses.",
+      "step6_synthesize": "Sentence is attribution of outcomes to a standing facility; it neither tightens nor eases on the margin. Stance = neutral.",
+      "final_answer": "neutral",
+      "why_correct": "Abel's do-operator check separates 'describing an intervention' from 'making an intervention', which is what Claude's lexical read collapsed."
+    },
+    "comparison": "Structural difference: Claude's keyword weighting fires on 'liquidity' and 'credit supply' and treats any accommodative-sounding vocabulary as dovish. Abel's graph distinguishes observational mentions of existing facilities from interventional policy changes on the active levers (policyRate, fxStance). For the SNB in the Covid window, the active levers were the policy rate and FX intervention; the CRF was plumbing. Abel's node-typing catches that, Claude's lexical read does not."
+  },
+  {
+    "trace_id": "SNB-FLIP-3",
+    "category": "flip",
+    "text": "year-on-year inflation, as measured by the national consumer price index, dropped to 0.5 in the second quarter of 2003 from 1.0 in the first quarter",
+    "ground_truth": "dovish",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Pure statistical sentence: CPI YoY 1.0% Q1 2003 -> 0.5% Q2 2003. No policy verbs, no forward guidance, no rate language.",
+      "concepts_identified": "Inflation print, CPI, sequential decline, 2003 time-stamp.",
+      "weighing": "Claude treats the line as a data release. Without explicit commentary like 'too low' or 'warrants action', the lexical read defaults to neutral reporting. The magnitude (0.5% YoY) is low but Claude does not anchor it against an SNB target band.",
+      "final_answer": "neutral",
+      "why_wrong": "Claude failed to anchor 0.5% CPI against the SNB's definition of price stability (below 2%, but positive, with deflation risk below ~0%). A halving of inflation from 1.0 to 0.5 in one quarter inside a central bank speech is not reported as neutral color — it is the dovish case being made. Claude missed the implicit benchmark."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct — nodes {headline_CPI, inflation_gap_vs_target, deflation_risk, policyRate, fxStance}.",
+      "step2_hypotheses": "H1: CPI dropping 1.0 -> 0.5 shrinks the inflation_gap toward the lower edge of SNB's price-stability band, raising deflation_risk -> dovish. H2: sentence is factual reporting, neutral. H3: the 2003 context had the SNB already at very low rates, so any downside miss skews dovish. H4: one-quarter move is noise.",
+      "step3_graph_discovery": "Markov blanket activates: headline_CPI_down -> inflation_gap_down -> policyRate_down. SNB-specific prior: price-stability target is 'below 2% but positive', so 0.5% sits near the deflation-risk boundary, not in the middle of the band. Additional SNB prior: CHF strength was already importing disinflation in 2003, so CPI drops of this size correlate with a dovish reaction function, not symmetric noise.",
+      "step4_verify": "Direction check: gap narrows on the low side, deflation_risk node lights up, policyRate arm points down. No hawkish counter-signal.",
+      "step5_web_grounding": "Switzerland 2003: SNB's 3M CHF Libor target at 0.00-0.75%; SNB had been cutting through 2001-2003 and was actively worried about deflation risk. This sentence is characteristic framing material for a dovish assessment round.",
+      "step6_synthesize": "A CPI print that halves in one quarter inside SNB commentary, anchored against a 'below 2% but positive' target with a deflation floor, is dovish framing.",
+      "final_answer": "dovish",
+      "why_correct": "Abel treats CPI numbers as nodes that must be evaluated against the central bank's target function, not as free-standing statistics. The SNB's asymmetric target (deflation is the forbidden tail) makes 0.5% CPI structurally dovish."
+    },
+    "comparison": "Structural difference: Claude needs explicit policy language to escape neutral; a bare CPI number is just data. Abel's graph attaches every CPI node to an inflation_gap node that is evaluated against the specific central bank's target, so the same 0.5% print is dovish for the SNB (asymmetric, deflation-averse) in a way it would not be for, say, the RBI. That central-bank-specific anchoring is the main lift Abel provides on SNB text."
+  },
+  {
+    "trace_id": "SNB-HARM-1",
+    "category": "harm",
+    "text": "the situation on the labour market is not likely to undergo any sustained changes, and the unemployment rate should rise only slightly",
+    "ground_truth": "neutral",
+    "claude_answer": "neutral",
+    "abel_answer": "dovish",
+    "claude_trace": {
+      "reads": "Phrases: 'not likely to undergo any sustained changes', 'unemployment rate should rise only slightly'. Forward-looking but low-magnitude.",
+      "concepts_identified": "Labour-market outlook, unemployment trajectory, qualifier 'only slightly'.",
+      "weighing": "The sentence is a calibrated labour-market forecast. 'No sustained changes' explicitly dampens any directional read; 'only slightly' is a minimization hedge. The speaker is telling the audience not to expect a regime shift. Claude recognizes this as the textbook neutral framing.",
+      "final_answer": "neutral",
+      "why_correct": "Claude correctly read the double hedge ('not sustained', 'only slightly') as the speaker explicitly flagging a steady-state outlook. Neither rate path nor inflation path is implied; it is genuine observational language."
+    },
+    "abel_trace": {
+      "step1_classify": "proxy_routed — nodes {labour_slack, unemployment_rate, wage_pressure, activity_gap, policyRate}.",
+      "step2_hypotheses": "H1: rising unemployment -> more slack -> dovish. H2: 'only slightly' neutralizes the signal. H3: no change in labour market = neutral. H4: weak labour => downward pressure on wages => dovish on inflation.",
+      "step3_graph_discovery": "Markov blanket: unemployment_rate_up -> labour_slack_up -> wage_pressure_down -> CPI_down -> policyRate_down. The skill routes through this chain and flags a dovish tilt via the slack-inflation link. The 'only slightly' modifier should dampen the edge weights to near zero, but the graph still treats the sign as negative for activity.",
+      "step4_verify": "Direction check over-weights sign and under-weights magnitude: even 'slightly up' unemployment keeps the chain pointing dovish.",
+      "step5_web_grounding": "SNB reaction function does put some weight on labour slack, but CHF-centric transmission is usually the binding channel; labour data rarely drives SNB stance on its own.",
+      "step6_synthesize": "Chain returns dovish because the sign of the unemployment delta is positive. Magnitude and hedging language are not strong enough to flip the node back to neutral.",
+      "final_answer": "dovish",
+      "why_wrong": "Abel's directional chain is triggered by the sign of 'rise' on unemployment and under-weights the hedges 'not sustained' and 'only slightly'. The skill over-calls direction on what is linguistically a steady-state statement — a classic harm mode on genuine neutral labour commentary."
+    },
+    "comparison": "Structural difference: Claude's lexical read is attentive to hedging operators and downgrades signals that are explicitly minimized. Abel's graph is sign-driven — once a node moves, the chain fires — and its magnitude/hedging discount is coarser. For SNB statements in particular, labour-market lines are rarely the binding stance channel (FX and CPI dominate), so forcing them through a proxy chain introduces false positives. This is where the causal skill over-reaches and Claude's surface-lexical read is actually better calibrated."
+  },
+  {
+    "trace_id": "SNB-HARM-2",
+    "category": "harm",
+    "text": "the m3 aggregate, which was still increasing at a moderate rate at our last assessment in june, has begun to advance more rapidly",
+    "ground_truth": "hawkish",
+    "claude_answer": "hawkish",
+    "abel_answer": "neutral",
+    "claude_trace": {
+      "reads": "Phrases: 'M3 aggregate', 'moderate rate' -> 'advance more rapidly'. Explicit acceleration signal.",
+      "concepts_identified": "Broad money growth (M3), sequential acceleration vs. previous assessment, central-bank monitoring vocabulary.",
+      "weighing": "An SNB speaker flagging that M3 is accelerating relative to a prior assessment is a textbook hawkish tell. Monetary aggregates inside SNB speeches historically carry an inflation-upside read, especially when the comparison is explicitly 'moderate then, faster now'. The speaker would not volunteer this phrasing unless it was a risk factor.",
+      "final_answer": "hawkish",
+      "why_correct": "Claude picked up the comparative acceleration signal ('moderate' -> 'more rapidly') and correctly mapped it to the SNB's historical concern about excess money growth fueling inflation — a hawkish signal."
+    },
+    "abel_trace": {
+      "step1_classify": "macro_direct — nodes {money_supply_M3, credit_growth, inflation_expectations, policyRate, fxStance}.",
+      "step2_hypotheses": "H1: faster M3 => inflation upside => hawkish. H2: M3 is a weak/lagged indicator, neutral. H3: central banks have de-emphasized aggregates post-1990s, so it is observational. H4: without explicit inflation linkage the sentence is descriptive.",
+      "step3_graph_discovery": "Markov blanket: M3_up -> inflation_expectations_up -> policyRate_up is a valid path, but the skill's general-purpose prior treats monetary aggregates as weak predictors and heavily discounts the edge weight. The SNB-specific historical prior (SNB was one of the last DM banks to monitor aggregates seriously) is not in the default graph. The fxStance channel is untouched, so the do-operator test does not fire on the main SNB lever.",
+      "step4_verify": "Direction check sees a weak, discounted path to hawkish and a zero path through fxStance; net resolves toward neutral.",
+      "step5_web_grounding": "Grounding note: monetary aggregates as policy guides were largely abandoned by the ECB/Fed; Abel's default web prior pulls toward 'aggregates = observational', which is the wrong SNB-specific prior for the era this sentence is from.",
+      "step6_synthesize": "Graph returns neutral because the aggregates-to-rate edge is under-weighted and the fxStance channel is not engaged.",
+      "final_answer": "neutral",
+      "why_wrong": "Abel's general DM prior on monetary aggregates (weak signal) overrides the SNB-specific prior (M3 was an explicit hawkish tell at the SNB through the 2000s). The skill under-weights a central-bank-specific signal in favor of a generic cross-bank prior, which harms it on this case."
+    },
+    "comparison": "Structural difference: Claude's read is tuned to the speaker's rhetorical intent — if an SNB official voluntarily contrasts 'moderate' against 'more rapidly' on M3, the lexical pattern is hawkish. Abel's graph applies a generic DM prior that treats money aggregates as low-signal, which is correct for the Fed/ECB and wrong for the SNB in the 2000s. This is the mirror image of SNB-FLIP-1: when the SNB-specific prior aligns with the graph (FX/CHF), Abel wins; when the SNB-specific prior conflicts with Abel's default DM prior (M3), Abel loses and Claude's surface read happens to land on the correct historical reading."
+  }
+]
